@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/next/WorkSpace/Bitrix_Custom/Bitrix_Scheduler_Files/sent_asyn_mail.py", line 1, in <module>
+    from bitrix24 import *
+ModuleNotFoundError: No module named 'bitrix24'

@@ -1,0 +1,723 @@
+#Cmenu_overlay {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #E52B50;
+	opacity: 0;
+	position: fixed;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	visibility: hidden;
+	z-index: -3;
+}
+#Cmenu_overlay p {
+	font-size: 50px;
+	display: block;
+	width: 30%;
+	margin: 0px auto;
+	color: #FFF;
+	background-color: #333;
+	padding: 10px;
+	box-shadow: 5px 5px 5px #000;
+	margin-top: 250px;
+}
+#Cmenu_wrap_top {
+	width: 400px;
+	height: 400px;
+	position: fixed;
+	left: 40%;
+	border-radius: 50%;
+	text-align: center;
+	margin-top: -200px;
+	z-index: 3;
+}
+#Cmenu_wrap_top #Cmenu_menu {
+	display: none;
+}
+#Cmenu_wrap_top #Cmenu_trigger {
+	display: block;
+	width: 100px;
+	height: 100px;
+	color: #E52B50;
+	background-color: #FFF;
+	border-radius: 50%;
+	margin: 0px auto;
+	margin-top: 150px;
+	line-height: 145px;
+	cursor: pointer;
+	z-index: 1;
+	font-size: 30px;
+	box-shadow: 0px 3px 10px -3px #333;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+#Cmenu_wrap_top #Cmenu_trigger:hover {
+	background-color: #333;
+	color: #FFF;
+	border: 5px solid #E52B50;
+}
+#Cmenu_wrap_top #Cmenu_circle {
+	width: 400px;
+	height: 400px;
+	position: fixed;
+	left: 40%;
+	border-radius: 50%;
+	text-align: center;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	-moz-transform: scale(0);
+	transform: scale(0);
+	z-index: -1;
+	opacity: 0;
+	background: #7d7e7d;
+	/* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkN2U3ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZTBlMGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7d7e7d), color-stop(100%, #0e0e0e));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #7d7e7d 0%, #0e0e0e 100%);
+    /* W3C */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e', GradientType=0);
+	/* IE6-8 */
+	box-shadow: 0px 3px 20px -3px #333;
+}
+#Cmenu_wrap_top #Cmenu_menu_top:checked~#Cmenu_circle {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+#Cmenu_wrap_top #Cmenu_menu_top:checked~#Cmenu_trigger {
+	box-shadow: 0px 0px 30px #333 inset;
+	border: 5px solid #E52B50;
+}
+#Cmenu_wrap_top #Cmenu_menu_top:checked~#Cmenu_overlay {
+	opacity: 0.7;
+	visibility: visible;
+}
+#Cmenu_circle a {
+	text-decoration: none;
+}
+#Cmenu_wrap_top #Cmenu_circle i {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	background-color: #E52B50;
+	color: #666;
+	font-size: 30px;
+	display: block;
+	text-align: center;
+	line-height: 65px;
+	margin-left: 15px;
+	margin-right: 15px;
+	color: #FFF;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+#Cmenu_wrap_top #Cmenu_circle i:hover {
+	color: #E52B50;
+	background-color: #000;
+	border: 2px dotted #E52B50;
+	-webkit-transform: scale(1.2);
+}
+#Cmenu_wrap_top #Cmenu_circle a:nth-child(1) {
+	margin-top: 210px;
+	margin-left: -180px;
+	position: absolute;
+}
+#Cmenu_wrap_top #Cmenu_circle a:nth-child(2) {
+	margin-top: 275px;
+	margin-left: -125px;
+	position: absolute;
+}
+#Cmenu_wrap_top #Cmenu_circle a:nth-child(3) {
+	margin-top: 310px;
+	margin-left: -50px;
+	position: absolute;
+}
+#Cmenu_wrap_top #Cmenu_circle a:nth-child(4) {
+	margin-top: 275px;
+	margin-left: 25px;
+	position: absolute;
+}
+#Cmenu_wrap_top #Cmenu_circle a:nth-child(5) {
+	margin-top: 210px;
+	margin-left: 80px;
+	position: absolute;
+}
+/*.page-content-wrapper {margin-bottom:0px;}*/
+
+#Cmenu_overlay {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .8);
+	opacity: 0;
+	position: fixed;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	visibility: hidden;
+	z-index: -3;
+}
+#Cmenu_overlay p {
+	font-size: 50px;
+	display: block;
+	width: 30%;
+	margin: 0px auto;
+	color: #FFF;
+	background-color: #333;
+	padding: 10px;
+	box-shadow: 5px 5px 5px #000;
+	margin-top: 250px;
+}
+#Cmenu_wrap_right input, #Cmenu_wrap_left input {
+	display: none;
+}
+/*** LEFT ***/
+
+#Cmenu_wrap_left {
+position: fixed;
+border-radius: 50%;
+    text-align: center;
+    top: 40%;
+    z-index: 9999;
+    left: -60px;
+}
+
+#Cmenu_wrap_left #Cmenu_menu {
+	display: none;
+}
+#Cmenu_wrap_left #Cmenu_trigger {
+    display: block;
+    width: 100px;
+    height: 100px;
+    color: #506c91;
+    background-image: linear-gradient(to top, #0b2c62, #0b2c62 50%, #3b5683 50%);
+    border-radius: 50% !important;
+    line-height: 100px !important;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 30px;
+    box-shadow: 3px 1px 10px -3px #333;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+a#closeicon, a#closeicon1 {
+	display: block;
+	color: #8999b3;
+}
+#closeicon .fa-caret-right, #closeicon1 .fa-caret-left {
+	font-size: 50px;
+	padding-top: 25px;
+}
+#Cmenu_wrap_left #Cmenu_trigger:hover {
+	background-color: #0b2c62;
+	color: #FFF;
+}
+#Cmenu_wrap_left #Cmenu_circle {
+	width: 400px;
+	height: 400px;
+	position: fixed;
+	margin-left: -160px;
+	border-radius: 50%;
+	text-align: center;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	-moz-transform: scale(0);
+	transform: scale(0);
+	z-index: -3;
+	opacity: 0;
+}
+#Cmenu_wrap_left i {
+	padding-left: 52px;
+}
+#Cmenu_wrap_left #Cmenu_menu_left:checked~#Cmenu_circle {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+/*#Cmenu_wrap_left #Cmenu_menu_left:checked ~ #Cmenu_trigger {box-shadow:0px 0px 30px #333 inset; border:5px solid #E52B50;}*/
+
+#Cmenu_menu_left:checked~#Cmenu_overlay {
+	opacity: 0.7;
+	visibility: visible;
+}
+#Cmenu_circle a {
+	text-decoration: none;
+}
+#Cmenu_wrap_left #Cmenu_circle i {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	background-image: linear-gradient(to top, #8fadde, #0b2c62 50%, #3b5683 50%);
+	box-shadow: 0px 5px rgba(59, 86, 131, 0.8);
+	-moz-box-shadow: 0px 5px rgba(59, 86, 131, 0.8);
+	-webkit-box-shadow: 0px 5px rgba(59, 86, 131, 0.8);
+	-o-box-shadow: 0px 5px rgba(59, 86, 131, 0.8);
+	color: #666;
+	font-size: 30px;
+	display: block;
+	text-align: center;
+	line-height: 65px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: #FFF;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	padding: 0px;
+}
+#Cmenu_wrap_left #Cmenu_circle i:hover {
+	 color: #002451;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    text-shadow: 1px 1px 2px #ffffff, 0 0 1em #fafbfb, 0 0 0.2em #ffffff;
+
+}
+#Cmenu_wrap_left #Cmenu_circle a:nth-child(1) {
+	margin-left: 40px;
+	position: absolute;
+	margin-top: -260px;
+}
+#Cmenu_wrap_left #Cmenu_circle a:nth-child(2) {
+	margin-left: 150px;
+	position: absolute;
+	margin-top: -200px;
+}
+#Cmenu_wrap_left #Cmenu_circle a:nth-child(3) {
+	margin-left: 220px;
+	position: absolute;
+	margin-top: -90px;
+}
+#Cmenu_wrap_left #Cmenu_circle a:nth-child(4) {
+	margin-left: 240px;
+	position: absolute;
+	margin-top: 30px;
+}
+#Cmenu_wrap_left #Cmenu_circle a:nth-child(5) {
+	margin-left: 220px;
+	position: absolute;
+	margin-top: 150px;
+}
+#Cmenu_wrap_left #Cmenu_circle a:nth-child(6) {
+	margin-left: 140px;
+	position: absolute;
+	margin-top: 246px;
+}
+#Cmenu_wrap_left #Cmenu_circle a:nth-child(7) {
+	margin-left: 40px;
+	position: absolute;
+	margin-top: 290px;
+}
+#Cmenu_lights {
+	width: 10%;
+	height: 210px;
+	background-color: #000;
+	float: left;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+#Cmenu_lights:nth-child(1) {
+	background-color: #0F0;
+	box-shadow: 0px 0px 10px #000 inset;
+	-webkit-animation: zianimation 0.1s infinite linear;
+	-moz-animation: zianimation 0.1s infinite linear;
+	-o-animation: zianimation 0.1s infinite linear;
+	-ms-animation: zianimation 0.1s infinite linear;
+	animation: zianimation 0.1s infinite linear;
+}
+#Cmenu_lights:nth-child(2) {
+	background-color: #FF0;
+	box-shadow: 0px 0px 10px #000 inset;
+	-webkit-animation: zianimation 0.2s infinite linear;
+	-moz-animation: zianimation 0.2s infinite linear;
+	-o-animation: zianimation 0.2s infinite linear;
+	-ms-animation: zianimation 0.2s infinite linear;
+	animation: zianimation 0.2s infinite linear;
+}
+#Cmenu_lights:nth-child(3) {
+	background-color: #0FF;
+	box-shadow: 0px 0px 10px #000 inset;
+	-webkit-animation: zianimation 0.3s infinite linear;
+	-moz-animation: zianimation 0.3s infinite linear;
+	-o-animation: zianimation 0.3s infinite linear;
+	-ms-animation: zianimation 0.3s infinite linear;
+	animation: zianimation 0.3s infinite linear;
+}
+#Cmenu_lights:nth-child(4) {
+	background-color: #F90;
+	box-shadow: 0px 0px 10px #000 inset;
+	-webkit-animation: zianimation 0.4s infinite linear;
+	-moz-animation: zianimation 0.4s infinite linear;
+	-o-animation: zianimation 0.4s infinite linear;
+	-ms-animation: zianimation 0.4s infinite linear;
+	animation: zianimation 0.4s infinite linear;
+}
+#Cmenu_lights:nth-child(5) {
+	background-color: #F0F;
+	box-shadow: 0px 0px 10px #000 inset;
+	-webkit-animation: zianimation 0.5s infinite linear;
+	-moz-animation: zianimation 0.5s infinite linear;
+	-o-animation: zianimation 0.5s infinite linear;
+	-ms-animation: zianimation 0.5s infinite linear;
+	animation: zianimation 0.5s infinite linear;
+}
+#Cmenu_lights:nth-child(6) {
+	background-color: #63F;
+	box-shadow: 0px 0px 10px #000 inset;
+	-webkit-animation: zianimation 0.6s infinite linear;
+	-moz-animation: zianimation 0.6s infinite linear;
+	-o-animation: zianimation 0.6s infinite linear;
+	-ms-animation: zianimation 0.6s infinite linear;
+	animation: zianimation 0.6s infinite linear;
+}
+#Cmenu_lights:nth-child(7) {
+	background-color: #F00;
+	box-shadow: 0px 0px 10px #000 inset;
+	-webkit-animation: zianimation 0.6s infinite linear;
+	-moz-animation: zianimation 0.6s infinite linear;
+	-o-animation: zianimation 0.6s infinite linear;
+	-ms-animation: zianimation 0.6s infinite linear;
+	animation: zianimation 0.6s infinite linear;
+}
+#Cmenu_lights:nth-child(8) {
+	background-color: #00F;
+	box-shadow: 0px 0px 10px #000 inset;
+	-webkit-animation: zianimation 0.8s infinite linear;
+	-moz-animation: zianimation 0.8s infinite linear;
+	-o-animation: zianimation 0.8s infinite linear;
+	-ms-animation: zianimation 0.8s infinite linear;
+	animation: zianimation 0.8s infinite linear;
+}
+#Cmenu_lights:nth-child(9) {
+	background-color: #F6F;
+	box-shadow: 0px 0px 10px #000 inset;
+	-webkit-animation: zianimation 0.9s infinite linear;
+	-moz-animation: zianimation 0.9s infinite linear;
+	-o-animation: zianimation 0.9s infinite linear;
+	-ms-animation: zianimation 0.9s infinite linear;
+	animation: zianimation 0.9s infinite linear;
+}
+#Cmenu_lights:nth-child(10) {
+	background-color: #F60;
+	box-shadow: 0px 0px 10px #000 inset;
+	-webkit-animation: zianimation 1s infinite linear;
+	-moz-animation: zianimation 1s infinite linear;
+	-o-animation: zianimation 1s infinite linear;
+	-ms-animation: zianimation 1s infinite linear;
+	animation: zianimation 1s infinite linear;
+}
+ @-webkit-keyframes zianimation {
+ 0% {
+ -webkit-transform: scale(0);
+}
+ 50% {
+ -webkit-transform: scale(1);
+}
+ 100% {
+ -webkit-transform: scale(0);
+}
+}
+ @-moz-keyframes zianimation {
+ 0% {
+ -moz-transform: scale(0);
+}
+ 50% {
+ -moz-transform: scale(1);
+}
+ 100% {
+ -moz-transform: scale(0);
+}
+}
+ @-o-keyframes zianimation {
+ 0% {
+ -o-transform: scale(0);
+}
+ 50% {
+ -o-transform: scale(1);
+}
+ 100% {
+ -o-transform: scale(0);
+}
+}
+ @-ms-keyframes zianimation {
+ 0% {
+ -ms-transform: scale(0);
+}
+ 50% {
+ -ms-transform: scale(1);
+}
+ 100% {
+ -ms-transform: scale(0);
+}
+}
+ @keyframes zianimation {
+ 0% {
+ transform: scale(0);
+}
+ 50% {
+ transform: scale(1);
+}
+ 100% {
+ transform: scale(0);
+}
+}
+/** RIGHT ***/
+
+#Cmenu_wrap_right {
+    position: fixed;
+    border-radius: 50%;
+    text-align: center;
+    top: 40%;
+    right: 0;
+    z-index: 9999;
+    right: -53px;
+}
+
+#Cmenu_wrap_right #Cmenu_menu {
+	display: none;
+}
+#Cmenu_wrap_right #Cmenu_trigger {
+    display: block;
+    width: 100px;
+    height: 100px;
+    color: #506c91;
+    background-image: linear-gradient(to top, #0b2c62, #0b2c62 50%, #3b5683 50%);
+    border-radius: 50% !important;
+    line-height: 100px !important;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 30px;
+    box-shadow: -3px 1px 10px -3px #333;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+#Cmenu_wrap_right #Cmenu_trigger:hover {
+	background-color: #0b2c62;
+	color: #FFF;
+}
+#Cmenu_wrap_right #Cmenu_circle1 {
+	width: 100px;
+	height: 400px;
+	position: fixed;
+	margin-right: 200px;
+	border-radius: 50%;
+	text-align: center;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	-moz-transform: scale(0);
+	transform: scale(0);
+	z-index: -3;
+	opacity: 0;
+	background: none;
+}
+#Cmenu_wrap_right i {
+	margin-left: -48px;
+}
+#Cmenu_wrap_right #Cmenu_menu_right:checked~#Cmenu_circle1 {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+#Cmenu_wrap_right #Cmenu_menu_right:checked~#Cmenu_trigger {
+	box-shadow: 0px 0px 30px #333 inset;
+}
+#Cmenu_menu_right:checked~#Cmenu_overlay {
+	opacity: 0.7;
+	visibility: visible;
+}
+#Cmenu_circle1 a {
+	text-decoration: none;
+}
+#Cmenu_wrap_right #Cmenu_circle1 i {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	background-image:linear-gradient(to top, #8fadde, #0b2c62 50%, #3b5683 50%);
+	box-shadow: 0px 5px rgba(59, 86, 131, 0.8);
+	-moz-box-shadow: 0px 5px rgba(59, 86, 131, 0.8);
+	-webkit-box-shadow: 0px 5px rgba(59, 86, 131, 0.8);
+	-o-box-shadow: 0px 5px rgba(59, 86, 131, 0.8);
+	color: #666;
+	font-size: 30px;
+	display: block;
+	text-align: center;
+	line-height: 65px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: #FFF;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	padding: 0px;
+}
+#Cmenu_wrap_right #Cmenu_circle1 i:hover {
+	 color: #002451;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    text-shadow: 1px 1px 2px #ffffff, 0 0 1em #fafbfb, 0 0 0.2em #ffffff;
+    
+   }
+
+
+#Cmenu_wrap_right #Cmenu_circle1 a:nth-child(1) {
+	margin-left: -40px;
+	position: absolute;
+	margin-top: -260px;
+}
+#Cmenu_wrap_right #Cmenu_circle1 a:nth-child(2) {
+	margin-left: -150px;
+	position: absolute;
+	margin-top: -200px;
+}
+#Cmenu_wrap_right #Cmenu_circle1 a:nth-child(3) {
+	margin-left: -220px;
+	position: absolute;
+	margin-top: -90px;
+}
+#Cmenu_wrap_right #Cmenu_circle1 a:nth-child(4) {
+	margin-left: -240px;
+	position: absolute;
+	margin-top: 30px;
+}
+#Cmenu_wrap_right #Cmenu_circle1 a:nth-child(5) {
+	margin-left: -220px;
+	position: absolute;
+	margin-top: 150px;
+}
+#Cmenu_wrap_right #Cmenu_circle1 a:nth-child(6) {
+	margin-left: -140px;
+	position: absolute;
+	margin-top: 246px;
+}
+#Cmenu_wrap_right #Cmenu_circle1 a:nth-child(7) {
+	margin-left: -40px;
+	position: absolute;
+	margin-top: 290px;
+}
+
+/**** IE 10 FIX ****/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+/**** LEFT ****/
+#Cmenu_wrap_left #Cmenu_circle a:nth-child(1) {
+	margin-left: 210px;
+	position: absolute;
+	margin-top: 25px;
+}
+#Cmenu_wrap_left #Cmenu_circle a:nth-child(2) {
+	margin-left: 275px;
+	position: absolute;
+	margin-top: 85px;
+}
+#Cmenu_wrap_left #Cmenu_circle a:nth-child(3) {
+	margin-left: 315px;
+	position: absolute;
+	margin-top: 155px;
+}
+#Cmenu_wrap_left #Cmenu_circle a:nth-child(4) {
+	margin-left: 275px;
+	position: absolute;
+	margin-top: 225px;
+}
+#Cmenu_wrap_left #Cmenu_circle a:nth-child(5) {
+	margin-left: 210px;
+	position: absolute;
+	margin-top: 285px;
+}
+/**** RIGHT *****/
+#Cmenu_wrap_right #Cmenu_circle1 a:nth-child(1) {
+	margin-left: 170px;
+	position: absolute;
+	margin-top: 25px;
+}
+#Cmenu_wrap_right #Cmenu_circle1 a:nth-child(2) {
+	margin-left: 110px;
+	position: absolute;
+	margin-top: 85px;
+}
+#Cmenu_wrap_right #Cmenu_circle1 a:nth-child(3) {
+	margin-left: 70px;
+	position: absolute;
+	margin-top: 155px;
+}
+#Cmenu_wrap_right #Cmenu_circle1 a:nth-child(4) {
+	margin-left: 110px;
+	position: absolute;
+	margin-top: 225px;
+}
+#Cmenu_wrap_right #Cmenu_circle1 a:nth-child(5) {
+	margin-left: 170px;
+	position: absolute;
+	margin-top: 285px;
+}
+}

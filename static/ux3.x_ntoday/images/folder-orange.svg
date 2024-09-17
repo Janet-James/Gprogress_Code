@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<rect x="9.117" y="7.832" fill="none" width="81.383" height="81.383"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-649.3573" y1="461.0055" x2="-586.7353" y2="461.0055" gradientTransform="matrix(1 0 0 1 836.08 -494.32)">
+	<stop  offset="0" style="stop-color:#F6D166"/>
+	<stop  offset="1" style="stop-color:#FDA284"/>
+</linearGradient>
+<path fill="url(#SVGID_1_)" d="M223.253-54.188H197.16v5.219h26.093V-54.188z M233.69-69.844h-46.967V3.215h62.622v-57.403
+	L233.69-69.844z M244.127-2.003h-52.185v-62.622h36.53l15.655,15.655V-2.003z M197.16-12.44h41.748v-5.218H197.16V-12.44z
+	 M197.16-22.877h41.748v-5.218H197.16V-22.877z M197.16-33.314h41.748v-5.218H197.16V-33.314z"/>
+<g>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="9.8045" y1="51.523" x2="86.0485" y2="51.523">
+		<stop  offset="0" style="stop-color:#F6D166"/>
+		<stop  offset="1" style="stop-color:#FDA284"/>
+	</linearGradient>
+	<path fill="none" stroke="url(#SVGID_2_)" stroke-width="3" stroke-miterlimit="10" d="M84.549,34.433v-6.511
+		c0-1.797-1.458-3.255-3.255-3.255c0,0-40.119,0-42.319,0c-2.391,0-4.043-6.511-6.511-6.511H14.56c-1.797,0-3.255,1.458-3.255,3.255
+		v6.511v47.202v6.511c0,1.797,1.458,3.255,3.255,3.255h63.479c1.797,0,3.255-1.458,3.255-3.255"/>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="9.8286" y1="57.4216" x2="90.9305" y2="57.4216">
+		<stop  offset="0" style="stop-color:#F6D166"/>
+		<stop  offset="1" style="stop-color:#FDA284"/>
+	</linearGradient>
+	<path fill="none" stroke="url(#SVGID_3_)" stroke-width="3" stroke-miterlimit="10" d="M11.304,81.636l8.138-43.947
+		c0-1.797,1.458-3.255,3.255-3.255h63.479c1.797,0,3.255,1.458,3.255,3.255l-8.138,43.947"/>
+</g>
+</svg>

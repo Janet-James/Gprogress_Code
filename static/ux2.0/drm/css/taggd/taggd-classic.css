@@ -1,0 +1,70 @@
+.taggd__button {
+display: block;
+height: 14px;
+width: 14px;
+border-radius: 100%;
+background-color: #ff0000;
+box-shadow: 1px 1px 1px #000;
+}
+
+.taggd__button:hover {
+background-color: #db3330;
+z-index: 10;
+}
+
+.taggd__popup {
+display: block ! important;
+padding: .75rem;
+position: absolute;
+left: 50%;
+top: 125%;
+color: #262626;
+text-align: center;
+white-space: nowrap;
+background-color:rgba(255, 255, 255, 1);
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+transform: translateX(-50%);
+border: 1px solid #eee;
+/* border-bottom: 1px solid #000; */
+text-decoration:underline;
+text-underline-position:under;
+}
+.taggd__editor-input{
+width:204px;
+}
+.taggd__editor-input,
+.taggd__editor-button {
+padding: 6px 10px;
+border: 1px solid #fff;
+margin: 10px 0px 5px 0px;
+background-color: transparent;
+color: #262626 !important;
+border: 0px;
+border-bottom-width: 0px;
+border-bottom-style: none;
+border-bottom-color: currentcolor;
+border-bottom: 1px solid #000;
+float: left;
+margin-top:0px !important
+}
+
+.taggd__editor-button--Save {
+background: #00afff;
+border: 1px solid transparent;
+border-radius: 4px;
+font-weight: 400;
+margin-right: 4px;
+width: 100px;    
+height: auto;
+color: #fff !important;
+}
+.taggd__editor-button--Delete {
+background: #ef5350;
+border: 1px solid transparent;
+border-radius: 4px;
+font-weight: 400;
+margin-right:0;
+width: 100px;    
+height: auto;
+color: #fff !important;
+}

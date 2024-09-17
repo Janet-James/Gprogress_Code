@@ -1,0 +1,17 @@
+45 13 * * * /var/www/gpros/GProgress/Crontab_Scripts/SCM-PG_Purchase_Order_Approval_Reminder.sh > /dev/null 2>&1
+
+35 13 * * * /var/www/gpros/GProgress/Crontab_Scripts/SCM-PG_Purchase_Order_Authorization_Reminder.sh > /dev/null 2>&1
+
+30 3 * * 1-6 /var/www/gpros/GProgress/Crontab_Scripts/FINAC-PG_Invoice_Payment_Reminder.sh >/dev/null 2>&1
+
+50 13 * * * /var/www/gpros/GProgress/Crontab_Scripts/Reminder_Voucher_FINAC_PG_Approval.sh > /dev/null 2>&1
+
+00 16 * * * /var/www/gpros/GProgress/Crontab_Scripts/Reminder_Voucher_FINAC_IN_Approval.sh > /dev/null 2>&1
+
+00 8 * * 1-6 /var/www/gpros/GProgress/Crontab_Scripts/Reminder_ServiceDesk_Overdue.sh > /dev/null 2>&1
+
+30 12 * * * /var/www/gpros/GProgress/Crontab_Scripts/Reminder_Voucher_Supplier_Payment_Receipt_Attachment.sh > /dev/null 2>&1
+
+35 12 * * * /var/www/gpros/GProgress/Crontab_Scripts/Reminder_Voucher_Bank_Receipt_Attachment.sh > /dev/null 2>&1
+
+#30 3 * * 1-6 /var/www/gpros/GProgress/Crontab_Scripts/Client_Partner_Invitation.sh >/dev/null 2>&1

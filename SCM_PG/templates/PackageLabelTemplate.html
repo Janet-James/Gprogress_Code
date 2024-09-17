@@ -1,0 +1,322 @@
+<html>
+  <body>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+    <table style="width: 100%">
+      <tr>
+        <td style="width: 100%; height: 500px">
+          <!-- 1 -->
+          <table
+            cellpadding="0"
+            cellspacing="0"
+            style="
+              width: 100%;
+              height: 100%;
+              background: #fff;
+              border-radius: 10px;
+              border: 3px solid;
+              box-shadow: 0px 0px 0px 8px #fff;
+            "
+          >
+            <tr>
+              <td>
+                <!-- 2 -->
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="width: 100%; border-bottom: 3px solid #000"
+                >
+                  <tr>
+                    <td>
+                      <p style="font-size: 40px; font-weight: bold;"> LOGO</p>
+                                            <!-- 5 -->
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        style="width: 100%"
+                      >
+                        <tr>
+                          <td>
+                            <p
+                              style="
+                                font-size: 20px;
+                                font-weight: bold;
+                                margin-left: 10px;
+                                margin-top: -2.1em;
+                              "
+                            >
+                              SHIP FROM :
+                            </p>
+                          </td>
+                          <td>
+                            <p style="font-size: 15px; margin-right: 20em">
+                              {{json_data.shipment_from_name}}
+                            </p>
+                            <p style="font-size: 15px">{{json_data.shipment_from_address}}</p>
+                            <p style="font-size: 15px">{{json_data.shipment_from_phone}}</p>
+                          </td>
+
+                          <td>
+                            <p
+                              style="
+                                font-size: 20px;
+                                font-weight: bold;
+                                margin-top: -2.1em;
+                              "
+                            >
+                              SHIP TO:
+                            </p>
+                          </td>
+                          <td>
+                            <p style="font-size: 15px; margin-right: 20em">
+                              {{json_data.consignee_name}}
+                            </p>
+                            <p style="font-size: 15px">{{json_data.consignee_address}}</p>
+                            <p style="font-size: 15px">{{json_data.consignee_phone}}       </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td style="width: 150px">
+                      <img
+                        src="http://127.0.0.1:80/{{json_data.qr_code}}"
+                        width="250"
+                      />
+                    </td>
+                  </tr>
+                </table>
+                <!-- 6 -->
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="width: 100%; border-bottom: 3px solid #000"
+                >
+                  <tr>
+                    <td>
+                      <p
+                        style="
+                          font-size: 36px;
+                          font-weight: bold;
+                          margin-left: 10px;
+                        "
+                      >
+                        Shipment Type : {{json_data.freight}}
+                      </p>
+                    </td>
+                    <td>
+                      <p
+                        style="
+                          font-size: 15px;
+                          font-weight: bold;
+                          padding-top: 10px;
+                          margin-left: -40em;
+                        "
+                      >
+                        Ship Date :
+                      </p>
+                      <p
+                        style="
+                          font-size: 15px;
+                          font-weight: bold;
+                          padding-bottom: 10px;
+                          margin-left: -40em;
+                        "
+                      >
+                        Shipment Number :
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <!-- 7-->
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="width: 100%; border-bottom: 3px solid #000"
+                >
+                  <tr>
+                    <td style="width: 50%; border-right: 3px solid #000">
+                      <p
+                        style="
+                          font-size: 15px;
+                          font-weight: bold;
+                          padding-bottom: 10px;
+                          margin-left: 10px;
+                        "
+                      >
+                        Order Details : {{json_data.title}}
+                      </p>
+                      <p
+                        style="
+                          font-size: 15px;
+                          font-weight: bold;
+                          padding-bottom: 10px;
+                          margin-left: 10px;
+                        "
+                      >
+                        PO NO.: {{json_data.po_name}}
+                      </p>
+                      <p
+                        style="
+                          font-size: 15px;
+                          font-weight: bold;
+                          margin-left: 10px;
+                        "
+                      >
+                        Item Number.:
+                      </p>
+                    </td>
+
+                    <td>
+                      <p
+                        style="
+                          font-size: 15px;
+                          font-weight: bold;
+                          padding-bottom: 10px;
+                          padding-top: 10px;
+                          margin-left: 10px;
+                        "
+                      >
+                        Packing Details :
+                      </p>
+                      <p
+                        style="
+                          font-size: 15px;
+                          font-weight: bold;
+                          padding-bottom: 10px;
+                          margin-left: 10px;
+                        "
+                      >
+                        Lot NO.:
+                      </p>
+                      <p
+                        style="
+                          font-size: 15px;
+                          font-weight: bold;
+                          padding-bottom: 10px;
+                          margin-left: 10px;
+                        "
+                      >
+                        Package Number.:
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <!-- 7.1 -->
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="width: 100%; border-bottom: 3px solid #000"
+                >
+                  <tr>
+                    <td style="width: 50%">
+                      <p
+                        style="
+                          font-size: 20px;
+                          font-weight: bold;
+                          margin-left: 10px;
+                          margin-left: 10px;
+                        "
+                      >
+                        DIMENSIONS
+                      </p>
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        style="width: 100%"
+                      >
+                        <tr>
+                          <td style="width: 33%">
+                            <p
+                              style="
+                                font-size: 15px;
+                                font-weight: bold;
+                                margin-left: 10px;
+                              "
+                            >
+                              L: <span> {{json_data.length}}</span>
+                            </p>
+                          </td>
+                          <td style="width: 33%">
+                            <p
+                              style="
+                                font-size: 15px;
+                                font-weight: bold;
+                                margin-left: 10px;
+                              "
+                            >
+                              W: <span> {{json_data.width}}</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p
+                              style="
+                                font-size: 15px;
+                                font-weight: bold;
+                                margin-left: 10px;
+                              "
+                            >
+                              H: <span> {{json_data.height}}</span>
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                      <p
+                        style="
+                          font-size: 20px;
+                          font-weight: bold;
+                          margin-left: 10px;
+                        "
+                      >
+                        WEIGHT : <span style="width: 120px">{{json_data.net_weight}}</span>
+                      </p>
+                    </td>
+                    <td style="text-align: center">
+                      <img
+                        src="https://gprogress.green.com.pg/{{json_data.barcode}}"
+                        width="100%" height="43%"
+                      />
+                    </td>
+                  </tr>
+                </table>
+                <!-- 8 -->
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="
+                    width: 100%;
+                    border-bottom: 3px solid #000;
+                    padding-top: 35px;
+                    padding-bottom: 35px;
+                  "
+                >
+                  <tr>
+                    <td style="width: 150px">
+                      <img
+                        style="margin-left: 10px"
+                        src="http://10.1.1.18/static/images/shipment/collage3.jpg"
+                        width="60%"
+                      />
+                    </td>
+                  </tr>
+                </table>
+                <p
+                  style="
+                    font-size: 15px;
+                    font-weight: bold;
+                    padding-bottom: 20px;
+                    margin-left: 10px;
+                  "
+                >
+                  Delivery Note : <span> </span>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

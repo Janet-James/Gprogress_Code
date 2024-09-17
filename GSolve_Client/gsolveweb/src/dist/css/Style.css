@@ -1,0 +1,420 @@
+.full-height {
+	height: 100vh;
+}
+
+.green-btn {
+	background: linear-gradient(30deg, #36dd68 0%, #dddf78 100%);
+	padding: 10px 35px;
+	color: #fff;
+	font-size: 16px;
+	border: 0;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+	/* margin-left: 20px; */
+	min-width: 125px;
+}
+
+.login-wrapper h1 {
+	font-size: 28px;
+}
+
+.login-wrapper h2 {
+	margin-top: 175px;
+}
+
+.login-wrapper input.form-control,
+.login-wrapper input.form-control:focus,
+.login-wrapper input.form-control:focus-visible {
+	border: 1px solid #36dd68;
+	background-color: #f5f5f5;
+	border-image: linear-gradient(to right top, #36dd68, #dddf78) 1 !important;
+	border-left-width: 0;
+	border-right-width: 0;
+	padding: 15px 25px !important;
+	border-color: transparent !important;
+	outline: -webkit-focus-ring-color auto 0px;
+	color: #23B14D;
+	text-align: justify;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-size: 16px;
+	text-align: center;
+	max-width: 100%;
+	box-shadow: none !important;
+	font-family: "Raleway SemiBold";
+	width: 450px;
+	max-width: 100%;
+}
+
+.login-wrapper input.form-control::placeholder {
+	color: #23B14D;
+	opacity: 1;
+	font-family: "Raleway";
+}
+
+.login-wrapper input.form-control::-moz-placeholder {
+	color: #23B14D;
+	opacity: 1;
+	font-family: "Raleway";
+}
+
+.login-wrapper input.form-control::-webkit-input-placeholder {
+	color: #23B14D;
+	opacity: 1;
+	font-family: "Raleway";
+}
+
+
+.login-sec {
+	background: url('./../images/bg-2.png') no-repeat top center;
+	position: relative;
+	background-size: 100% auto;
+	position: relative;
+	background-color: #F5F5F5;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.login-sec::before {
+	content: "";
+	background: url('./../images/bg-1.png') no-repeat bottom right;
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	bottom: 0;
+}
+
+.login-block {
+	padding: 100px 50px;
+	position: relative;
+	z-index: 1000;
+	padding-bottom: 350px;
+	min-height: 100vh;
+}
+
+.client-title {
+	color: #000;
+	font-size: 40px;
+	font-weight: 600;
+	margin-top: 13px;
+}
+
+.loginBgAnimation {
+	display: flex;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	bottom: 0;
+	left: 0;
+	transition: 0.5s;
+}
+
+.loginBgAnimation img {
+	transition: 0.5s;
+}
+
+.loginBgAnimation h4 {
+	color: #FFF;
+	font-size: 36px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.login-sec .btn-transparent {
+	border: 0;
+	background: transparent;
+	position: absolute;
+	right: 0px;
+	background: transparent;
+	border: 0;
+	top: 9px;
+}
+
+.loginInput,
+.loginPassword,
+.forgotPassword {
+	position: relative;
+	display: inline-block;
+}
+
+/* .loginInput.show, .loginPassword.show, .forgotPassword.show {
+display: inline-block;
+} */
+.register-link {
+	text-align: center;
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.register-link a {
+	color: #23B14D !important;
+	font-size: 16px;
+	font-family: "Raleway SemiBold";
+	display: inline-block;
+	margin: 0 10px;
+	line-height: 1;
+	text-decoration: none;
+}
+
+
+.bgWhite {
+	background-color: #fff;
+}
+
+.secPad {
+	padding: 50px;
+}
+
+.fmDashboard {
+	position: relative;
+}
+
+.fmDashboardTabGrp {
+    padding: 30px;
+}
+.createTemplateBtn {
+	position: absolute;
+    right: 80px;
+    top: 75px;
+}
+
+.fmDashboardTabGrp .nav-tabs .nav-link {
+	color: #303030;
+	font-family: 'Raleway SemiBold';
+	font-size: 18px;
+	transition: 0s;
+	padding: 15px;
+	border-bottom: 2px solid transparent;
+	border: 0;
+}
+
+.fmDashboardTabGrp .nav-tabs .nav-link.active,
+.fmDashboardTabGrp .nav-tabs .nav-link:hover {
+	color: #23b14d;
+	font-family: 'Raleway SemiBold';
+	font-size: 18px;
+	border: 0;
+	border-bottom: 2px solid #23b14d;
+}
+
+.fmDashboardTabGrp .tab-content>.tab-pane {
+	padding: 25px 0;
+}
+
+.proposalGrp {
+	box-shadow: 0 4px 9px 0 #0000000d;
+	border-radius: 10px;
+	overflow: hidden;
+	max-width: 400px;
+	margin-bottom: 35px;
+}
+
+.proposalDetails {
+	padding: 15px;
+}
+
+.proposalDetails h3 {
+	font-size: 18px;
+	font-family: 'Raleway SemiBold';
+}
+
+.proposalDetails .date {
+	color: #838383;
+}
+
+.proposalDetails .users {
+	display: flex;
+}
+
+.proposalDetails .users img {
+	margin-right: -20px;
+}
+
+.btn-grn-bor-2 {
+	border-width: 2px;
+	border-style: solid;
+	border-image: linear-gradient(to right top, #36dd68, #dddf78) 1;
+	background-color: #fff;
+	color: #23b14d;
+	font-size: 14px;
+	padding: 8px 15px;
+	font-weight: 600;
+	letter-spacing: .7px;
+}
+
+
+
+.floatInputDsn .form-control,
+.floatSelectDsn .form-select {
+	border: 0;
+	border-bottom: 1px solid #D6D6D6;
+	border-radius: 0;
+}
+
+.floatInputDsn .form-control:focus,
+.floatSelectDsn .form-select:focus {
+	box-shadow: 0 0 0 .25rem transparent;
+}
+.createProposalDsn form {
+    padding: 30px;
+}
+.createProposalDsn h3 {
+	font-size: 19px;
+	font-family: "Raleway SemiBold";
+	color: #303030;
+}
+
+.createProposalDsn h3 img {
+	margin-right: 10px;
+	position: relative;
+	top: -2px;
+}
+
+.previewDocDsn {
+	box-shadow: 0 4px 9px 0 #00000026;
+	min-height: 700px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 5px;
+	margin-bottom: 25px;
+}
+
+.previewDocDsn img {
+	margin-bottom: 15px;
+}
+
+.previewDocDsn p {
+	color: #212529a6;
+	font-size: 14px;
+}
+
+button[disabled] {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.formDataDetails .dataLabel {
+	font-size: 14px;
+	color: #212529a6;
+	margin-bottom: 0;
+}
+.inner-container {
+    padding: 30px;
+}
+.previewDocDsn .content {
+	width: 100%;
+}
+
+.iconForm.form-floating input{
+	padding-left: 40px;
+}
+
+.iconForm{
+	position: relative;
+}
+.iconForm.form-floating label{
+	left: 30px;
+	z-index: 0;
+}
+.iconForm input, .iconForm select{
+	padding-left: 40px;
+}
+.iconForm img {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    top: 5px;
+    /* z-index: 10; */
+}
+.iconForm.multiSelect .css-13cymwt-control {
+    border: 0;
+    border-bottom: 1px solid #D6D6D6;
+    border-radius: 0;   
+    background: transparent;
+	padding-left: 30px;
+}
+.iconForm img.plusIconDsn {
+    position: absolute;
+    right: -40px;
+    cursor: pointer;
+}
+.iconForm.multiSelect.tagDsn .css-1xc3v61-indicatorContainer,
+.iconForm.multiSelect.tagDsn .css-1u9des2-indicatorSeparator{
+	display: none;
+}
+.iconForm.multiSelect.tagDsn {
+    max-width: 300px;
+    transition: 0.5s;
+    border: 2px solid #fff;
+    padding: 5px 20px;
+	font-weight: 600;
+}
+.iconForm.multiSelect.tagDsn .css-13cymwt-control {
+    border-bottom: 0px solid #D6D6D6;
+}
+/* .iconForm.multiSelect.tagDsn:hover{
+		border-width: 2px;
+		border-style: solid;
+		border-image: linear-gradient(to right top, #36dd68, #dddf78) 1;
+		background-color: #fff;
+		color: #23b14d;
+} */
+.iconForm.tagDsn img {
+    top: 12px;
+}
+
+.iconForm.multiSelect.tagDsn:before {
+	content: "";
+	position: absolute;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	top: calc(2px/ -1);
+	left: calc(2px/ -1);
+	background: linear-gradient(to right, #36dd68 0%, #dddf78 100%), linear-gradient(to top, #36dd68 50%, transparent 50%), linear-gradient(to top, #dddf78 50%, transparent 50%), linear-gradient(to right, #36dd68 0%, #dddf78 100%), linear-gradient(to left, #36dd68 0%, #36dd68 100%);
+	background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+	background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+	background-repeat: no-repeat, no-repeat;
+	transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out;
+	transform: scaleX(0) rotate(0deg);
+	transition-delay: 0.6s, 0.3s, 0s;
+  }
+  .iconForm.multiSelect.tagDsn:hover:before {
+	background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+	background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+	transform: scaleX(1) rotate(0deg);
+	transition-delay: 0s, 0.3s, 0.6s;
+  }
+  .iconForm.multiSelect.tagDsn .css-b62m3t-container:hover{
+	outline: -webkit-focus-ring-color auto 0px;
+  }
+  .iconForm.multiSelect.tagDsn input:hover, 
+  .iconForm.multiSelect.tagDsn input:focus{
+	outline: -webkit-focus-ring-color auto 0px;
+  }
+
+  .viewDsn{
+	  display: flex;
+  }
+
+  .viewDsn ul{
+	padding-left: 15px;
+  }
+  .viewDsn li{
+	list-style-type: none;
+	display: inline-block;
+	padding-right: 10px;
+	
+}
+
+.viewDsn li img {
+	 width: 20px;
+	 height: 20px;
+	 object-fit: contain;
+}

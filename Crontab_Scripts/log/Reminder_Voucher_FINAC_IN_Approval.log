@@ -1,0 +1,5 @@
+ 64%|██████▍   | 50/78 [00:00<?, ?it/s]100%|██████████| 78/78 [00:00<00:00, 122.44it/s]100%|██████████| 78/78 [00:00<00:00, 122.23it/s]
+Traceback (most recent call last):
+  File "/var/www/gpros/GProgress/Crontab_Scripts/Reminder_Voucher_FINAC_IN_Approval.py", line 99, in <module>
+    finacial_year_name = financial_year_value
+NameError: name 'financial_year_value' is not defined

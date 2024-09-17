@@ -1,0 +1,1059 @@
+{% extends 'gsolve_base.html' %} {% load staticfiles %} {%block content%}
+<div class="main_arr_dsn_1">
+	<div class="main_arr_content ">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="portlet light bordered d-flex f-wrap">
+					<div class="wizrd-tab">
+						<ul class="ul-wizrd-tab">
+							<li class="tab-list lock" id="step-pre">
+								<span><img class="" src="/static/images/download_green.png"></span>
+								<p>Download Documents</p>
+							</li>
+							<li class="tab-list lock" id="step-1">
+								<span><img class="step_image" src="/static/images/edit_green.png"></span>
+								<p>PNG VISA Proceedure</p>
+							</li>
+							<li class="tab-list lock" id="step-2">
+								<span><img class="step_image" src="/static/images/lock_green.png"></span>
+								<p>Work Permit</p>
+							</li>
+							<li class="tab-list lock" id="step-3">
+								<span><img class="step_image" src="/static/images/lock_green.png"></span>
+								<p>India VISA Process</p>
+							</li>
+							<li class="tab-list lock last" id="step-4">
+								<span><img class="step_image" src="/static/images/lock_green.png"></span>
+								<p>Download</p>
+							</li>
+						</ul>
+
+					</div>
+					<div class="w-100 visa_main_form">
+						<div class="portlet-title col-md-12 mb-30px">
+							<div class="caption">
+								<span class="caption-subject  bold uppercase">VISA Process </span>
+							</div>
+						</div>
+						<form>
+
+							<div class="col-md-2 col-sm-12">
+								{% csrf_token %}
+								<div class="form-group">
+									<label>Full Name <span class="asterisk">*</span></label>
+									<input id="full_name" name="" placeholder="Full Name"
+										class="form-control form-control-inline emp_data" size="16" value=""
+										type="text" disabled="disabled">
+								</div>
+							</div>
+							<div class="col-md-2 col-sm-12">
+								<div class="form-group">
+									<label>Designation <span class="asterisk">*</span></label>
+									<input id="designation" name="" placeholder="Designation"
+										class="form-control form-control-inline emp_data" size="16" value=""
+										type="text" disabled="disabled">
+								</div>
+							</div>
+							<div class="col-md-2 col-sm-12">
+								<div class="form-group">
+									<label>Gender <span class="asterisk">*</span></label>
+									<input id="visa_gender" name="" placeholder="Gender"
+										class="form-control form-control-inline emp_data" size="16" value=""
+										type="text" disabled="disabled">
+								</div>
+							</div>
+
+							<div class="col-md-2 col-sm-12">
+								<div class="form-group">
+									<label>Application Date <span class="asterisk">*</span></label>
+									<div class="input-icon">
+										<input id="application_date" name="" placeholder="Date of Birth "
+											class="form-control form-control-inline emp_data" data-field="date"
+											size="16" value="" type="text" disabled="disabled">
+										<div id="application_date_dtbox"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-2 col-sm-12">
+								<div class="form-group">
+									<label>Location <span class="asterisk">*</span></label>
+									<input id="location" name="" placeholder="Location"
+										class="form-control form-control-inline emp_data" size="16" value=""
+										type="text" disabled="disabled">
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 form-visa show" id="tab-step-pre-form">
+				<h4 class="bold cl-blue pl-25px">Download Documents</h4>
+				<!-- <div class="portlet-title">
+						<div class="caption">
+							<span class="caption-subject  bold uppercase">Generalinfo
+								 Details</span>
+						</div>
+					</div> -->
+				<div class="portlet-body">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<table class="table primary_table_dgn" id="employee_visa_table">
+								<thead>
+									<tr>
+										<th>Name of the Document</th>
+										<th>Download </th>
+										<th>Remark/Reason</th>
+									</tr>
+								</thead>
+								<tbody id="invoice_item_table_body">
+									<tr>
+										<td>1. Application for entry permit form</td>
+										<td>
+
+                                        <button type="button" class="btn btn-success btn-eql-wid btn-animate" onclick="employee_report_download('entry_permit')">Download</button>
+											 <p style="display:none" id="entry_permit_pdf_download">PDF</p>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input document_remarks" id="entry_permit_form_reason">
+
+											</div>
+										</td>
+										
+									</tr>
+									<tr>
+										<td>2. New Work Permit Application</td>
+										<td>
+
+                                        <button type="button" class="btn btn-success btn-eql-wid btn-animate" onclick="employee_report_download('work_permit')">Download</button>
+											 <p style="display:none" id="work_permit_pdf_download">PDF</p>
+
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input document_remarks" id="work_permit_form_reason">
+
+											</div>
+										</td>
+										
+									</tr>
+									<tr>
+										<td>3. Radiological report fillable savable</td>
+										<td>
+											<button type="button" class="btn btn-success btn-eql-wid btn-animate" onclick="employee_report_download('radiological_report')">Download</button>
+											 <p style="display:none" id="radiological_report_pdf_download">PDF</p>
+
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input document_remarks" id="radiology_report_reason" >
+
+											</div>
+										</td>
+										
+									</tr>
+									<tr>
+										<td>4. Self Decalration Corona Virus Form</td>
+										<td>
+
+                                        <button type="button" class="btn btn-success btn-eql-wid btn-animate" onclick="employee_report_download('self_declaration')">Download</button>
+											 <p style="display:none" id="self_declaration_pdf_download">PDF</p>
+
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input document_remarks" id="self_declaration_form_reason">
+
+											</div>
+										</td>
+										
+									</tr>
+									<tr>
+										<td>5. Visa Medical Examiantion Form</td>
+										<td>
+
+                                        <button type="button" class="btn btn-success btn-eql-wid btn-animate" onclick="employee_report_download('medical_examination')">Download</button>
+											 <p style="display:none" id="medical_examination_pdf_download">PDF</p>
+
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input document_remarks" id="medical_examination_form_reason">
+
+											</div>
+										</td>
+										
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 pull-right">
+							<div class="pull-right group-btn-sec conform-sec">
+
+								<button type="button" class="btn btn-success btn-eql-wid btn-animate" id="" onclick="VisaRemarkSubmit()">Submit</button>
+								<button type="button" class="btn btn-success btn-eql-wid btn-animate go-to-step-1" id="next-1">Next</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-md-12 form-visa" id="tab-step-1-form">
+				<h4 class="bold cl-blue pl-25px">Document Details</h4>
+				<!-- <div class="portlet-title">
+						<div class="caption">
+							<span class="caption-subject  bold uppercase">Generalinfo
+								 Details</span>
+
+
+
+						</div>
+					</div> -->
+				<div class="portlet-body">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<table class="table primary_table_dgn" id="employee_visa_table">
+								<thead>
+									<tr>
+										<th>Name of the Document</th>
+										<th>Attachment</th>
+										<th>Remark/Reason</th>
+										<th>Result</th>
+									</tr>
+								</thead>
+								<tbody id="invoice_item_table_body">
+									<tr>
+										<td>1. Passport Copy</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step1_passport_copy_upload_file">
+												<input type="file" class="form-control-file" id="step1_passport_copy"
+													onchange="step1_passport_copy(this.files)" multiple>
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step1_passport_copy_uploaded_file">
+												<div id="step1_passport_copy_file_name"></div>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step1_passport_copy_reason">
+
+											</div>
+										</td>
+										<td id="step1_passport_copy_status">
+											<div class="validation_correct" id="step1_passport_copy_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+												<span class="download_eye_view" id="step1_passport_copy_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step1_passport_copy_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>2. Updated CV</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step1_updated_cv_upload_file">
+												<input type="file" class="form-control-file" id="step1_updated_cv"
+													onchange="step1_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step1_updated_cv_uploaded_file">
+												<span class="file_name_span" id="step1_updated_cv_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step1_updated_cv_reason">
+
+											</div>
+										</td>
+										<td id="step1_updated_cv_status">
+											<div class="validation_correct" id="step1_updated_cv_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+												<span class="download_eye_view" id="step1_updated_cv_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step1_updated_cv_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>3. Job Description<br>
+											<small>(Please list out the Jobs going to be carried out in PNG) 1 or 2
+												page</small>
+										</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step1_job_description_upload_file">
+												<input type="file" class="form-control-file" id="step1_job_description"
+													onchange="step1_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step1_job_description_uploaded_file">
+												<span class="file_name_span"
+													id="step1_job_description_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step1_job_description_reason">
+
+											</div>
+										</td>
+										<td id="step1_job_description_status">
+											<div class="validation_correct" id="step1_job_description_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+												<span class="download_eye_view" id="step1_job_description_eye_view"></span>
+												</div>
+											<div class="validation_incorrect" id="step1_job_description_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>4. Employment Agreement</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step1_employee_agreement_upload_file">
+												<input type="file" class="form-control-file"
+													id="step1_employee_agreement" onchange="step1_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step1_employee_agreement_uploaded_file">
+												<span class="file_name_span"
+													id="step1_employee_agreement_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step1_employee_agreement_reason">
+
+											</div>
+										</td>
+										<td id="step1_employee_agreement_status">
+											<div class="validation_correct" id="step1_employee_agreement_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+												<span class="download_eye_view" id="step1_employee_agreement_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step1_employee_agreement_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>5. Copy of Highest Qualification Certificates</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step1_qualification_certificate_upload_file">
+												<input type="file" class="form-control-file"
+													id="step1_qualification_certificate"
+													onchange="step1_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step1_qualification_certificate_uploaded_file">
+												<span class="file_name_span"
+													id="step1_qualification_certificate_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step1_qualification_certificate_reason">
+
+											</div>
+										</td>
+										<td id="step1_qualification_certificate_status">
+											<div class="validation_correct"
+												id="step1_qualification_certificate_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+												<span class="download_eye_view" id="step1_qualification_certificate_eye_view"></span>
+												
+											</div>
+											<div class="validation_incorrect"
+												id="step1_qualification_certificate_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>6. Passport Size photo</td>
+										<td>
+											<!-- <div class="form-group upload_file doc mb-0"> -->
+											<div class="form-group upload_file doc_up mb-0"
+												id="step1_passport_size_photo_upload_file">
+												<input type="file" class="form-control-file"
+													id="step1_passport_size_photo" onchange="step1_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step1_passport_size_photo_uploaded_file">
+												<span class="file_name_span"
+													id="step1_passport_size_photo_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step1_passport_size_photo_reason">
+
+											</div>
+										</td>
+										<td id="step1_passport_size_photo_status">
+											<div class="validation_correct" id="step1_passport_size_photo_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+												<span class="download_eye_view" id="step1_passport_size_photo_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step1_passport_size_photo_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>7. Application Form to be signed</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step1_application_form_upload_file">
+												<input type="file" class="form-control-file" id="step1_application_form"
+													onchange="step1_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step1_application_form_uploaded_file">
+												<span class="file_name_span"
+													id="step1_application_form_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step1_application_form_reason">
+
+											</div>
+										</td>
+										<td id="step1_application_form_status">
+											<div class="validation_correct" id="step1_application_form_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+												<span class="download_eye_view" id="step1_application_form_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step1_application_form_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 pull-right">
+							<div class="pull-right group-btn-sec conform-sec">
+
+								<button type="button" class="btn btn-warning btn-eql-wid btn-animate " id=""
+									onclick="clear_step1()">Cancel /
+									Clear</button>
+								<!-- 
+								<button type="button" class="btn btn-success btn-eql-wid btn-animate" id="">Save as
+									Draft</button> -->
+								<button type="button" onclick="VisaDocSubmit()"
+									class="btn btn-success btn-eql-wid btn-animate go-to-step-2"
+									id="next-2">Submit</button>
+
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+			</div>
+
+
+			<div class="col-md-12 form-visa" id="tab-step-2-form">
+				<div class="caption pb-30px  text-center">
+					<h3 class="caption-subject  bold uppercase" id="work_permit_title">Upload Johnny’s Work Permit </h3>
+				</div>
+
+
+				<div class="form-group upload_file  text-center  upload-center">
+					<input type="file" class="form-control-file enable-ind-visa-doc" id="step2_work_permit_upload"
+						onchange="step2_file_upload(this)">
+					<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+				</div>
+
+
+
+
+				<div class="text-right"><i class="fa fa-trash delete-dsn" onclick="clear_step2()"
+						aria-hidden="true"></i></div>
+				<div class=" text-center">
+
+					<p>to open in new tab <a href="" target="_blank" id="work_permit_link" class="link">click here</a>
+					</p>
+					<a id="step2_work_permit_download" href="#" download><button type="button" class="btn btn-success btn-eql-wid btn-animate" >Direct Download</button></a>
+
+					<div class="mt-20px"><img id="work_permit_file_show" src="/static/images/sample-work-permit.png"
+							width="500" /></div>
+				</div>
+
+			</div>
+			<div class="col-md-12 form-visa " id="tab-step-3-form">
+				<h4 class="bold cl-blue pl-25px">Document Details</h4>
+				<!-- <div class="portlet-title">
+						<div class="caption">
+							<span class="caption-subject  bold uppercase">Generalinfo
+								 Details</span>
+						</div>
+					</div> -->
+				<div class="portlet-body">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<table class="table primary_table_dgn" id="employee_visa_table">
+								<thead>
+									<tr>
+										<th>Name of the Document</th>
+										<th>Attachment</th>
+										<th>Remark/Reason</th>
+										<th>Result</th>
+									</tr>
+								</thead>
+								<tbody id="invoice_item_table_body">
+									<tr>
+										<td>1. Completed Entry Permit Application
+											<br>
+											<small>(www.ica.gov.pg)</small>
+										</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step3_entry_permit_upload_file">
+												<input type="file" class="form-control-file" id="step3_entry_permit"
+													onchange="step3_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step3_entry_permit_uploaded_file">
+												<span class="file_name_span" id="step3_entry_permit_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step3_entry_permit_reason">
+											</div>
+										</td>
+										<td id="step3_entry_permit_status">
+											<div class="validation_correct" id="step3_entry_permit_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+                        <span class="download_eye_view" id="step3_entry_permit_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step3_entry_permit_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>2. Police Clearance Certificate</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step3_police_clearance_upload_file">
+												<input type="file" class="form-control-file" id="step3_police_clearance"
+													onchange="step3_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step3_police_clearance_uploaded_file">
+												<span class="file_name_span"
+													id="step3_police_clearance_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step3_police_clearance_reason">
+											</div>
+										</td>
+										<td id="step3_police_clearance_status">
+											<div class="validation_correct" id="step3_police_clearance_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+                        <span class="download_eye_view" id="step3_police_clearance_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step3_police_clearance_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>3. Passport validity - 6 months plus<br>
+
+										</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step3_passport_validity_upload_file">
+												<input type="file" class="form-control-file"
+													id="step3_passport_validity" onchange="step3_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step3_passport_validity_uploaded_file">
+												<span class="file_name_span"
+													id="step3_passport_validity_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step3_passport_validity_reason">
+
+											</div>
+										</td>
+										<td id="step3_passport_validity_status">
+											<div class="validation_correct" id="step3_passport_validity_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+                        <span class="download_eye_view" id="step3_passport_validity_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step3_passport_validity_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>4. Medical Examination</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step3_medical_exam_upload_file">
+												<input type="file" class="form-control-file" id="step3_medical_exam"
+													onchange="step3_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step3_medical_exam_uploaded_file">
+												<span class="file_name_span" id="step3_medical_exam_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step3_medical_exam_reason">
+
+											</div>
+										</td>
+										<td id="step3_medical_exam_status">
+											<div class="validation_correct" id="step3_medical_exam_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+                        <span class="download_eye_view" id="step3_medical_exam_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step3_medical_exam_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>5. Chest X-ray Radiology Report</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step3_chest_xray_radiology_upload_file">
+												<input type="file" class="form-control-file"
+													id="step3_chest_xray_radiology" onchange="step3_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step3_chest_xray_radiology_uploaded_file">
+												<span class="file_name_span"
+													id="step3_chest_xray_radiology_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step3_chest_xray_radiology_reason">
+
+											</div>
+										</td>
+										<td id="step3_chest_xray_radiology_status">
+											<div class="validation_correct" id="step3_chest_xray_radiology_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+                        <span class="download_eye_view" id="step3_chest_xray_radiology_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step3_chest_xray_radiology_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>6. Supplementary Health Form -
+											Coronavirus must complete</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step3_supplementary_health_form_upload_file">
+												<input type="file" class="form-control-file"
+													id="step3_supplementary_health_form"
+													onchange="step3_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step3_supplementary_health_form_uploaded_file">
+												<span class="file_name_span"
+													id="step3_supplementary_health_form_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step3_supplementary_health_form_reason">
+
+											</div>
+										</td>
+										<td id="step3_supplementary_health_form_status">
+											<div class="validation_correct"
+												id="step3_supplementary_health_form_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+                        <span class="download_eye_view" id="step3_supplementary_health_form_eye_view"></span>
+											</div>
+											<div class="validation_incorrect"
+												id="step3_supplementary_health_form_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>7. Passport Bio Page - Copy</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step3_passport_bio_page_upload_file">
+												<input type="file" class="form-control-file"
+													id="step3_passport_bio_page"
+													onchange="step3_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step3_passport_bio_page_uploaded_file">
+												<span class="file_name_span"
+													id="step3_passport_bio_page_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step3_passport_bio_page_reason">
+
+											</div>
+										</td>
+										<td id="step3_passport_bio_page_status">
+											<div class="validation_correct"
+												id="step3_passport_bio_page_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+                        <span class="download_eye_view" id="step3_passport_bio_page_eye_view"></span>
+											</div>
+											<div class="validation_incorrect"
+												id="step3_passport_bio_page_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>8. Passport size photos (X2)</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step3_passport_size_photo_upload_file">
+												<input type="file" class="form-control-file"
+													id="step3_passport_size_photo" onchange="step3_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step3_passport_size_photo_uploaded_file">
+												<span class="file_name_span"
+													id="step3_passport_size_photo_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step3_passport_size_photo_reason">
+
+											</div>
+										</td>
+										<td id="step3_passport_size_photo_status">
+											<div class="validation_correct" id="step3_passport_size_photo_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+                        <span class="download_eye_view" id="step3_passport_size_photo_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step3_passport_size_photo_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>9. Copies of education documents</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step3_education_document_upload_file">
+												<input type="file" class="form-control-file"
+													id="step3_education_document" onchange="step3_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step3_education_document_uploaded_file">
+												<span class="file_name_span"
+													id="step3_education_document_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step3_education_document_reason">
+
+											</div>
+										</td>
+										<td id="step3_education_document_status">
+											<div class="validation_correct" id="step3_education_document_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+                        <span class="download_eye_view" id="step3_education_document_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step3_education_document_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>10. Work permit copy</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step3_work_permit_upload_file">
+												<input type="file" class="form-control-file" id="step3_work_permit"
+													onchange="step3_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step3_work_permit_uploaded_file">
+												<span class="file_name_span" id="step3_work_permit_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step3_work_permit_reason">
+
+											</div>
+										</td>
+										<td id="step3_work_permit_status">
+											<div class="validation_correct" id="step3_work_permit_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+                        <span class="download_eye_view" id="step3_work_permit_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step3_work_permit_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>11. Employment Contract copy</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step3_employment_contract_upload_file">
+												<input type="file" class="form-control-file"
+													id="step3_employment_contract" onchange="step3_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step3_employment_contract_uploaded_file">
+												<span class="file_name_span"
+													id="step3_employment_contract_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step3_employment_contract_reason">
+
+											</div>
+										</td>
+										<td id="step3_employment_contract_status">
+											<div class="validation_correct" id="step3_employment_contract_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+                        <span class="download_eye_view" id="step3_employment_contract_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step3_employment_contract_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>12. DD - 600 INR to: Papua New Genua High Commission, New Delhi</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step3_dd_png_upload_file">
+												<input type="file" class="form-control-file" id="step3_dd_png"
+													onchange="step3_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step3_dd_png_uploaded_file">
+												<span class="file_name_span" id="step3_dd_png_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step3_dd_png_reason">
+
+											</div>
+										</td>
+										<td id="step3_dd_png_status">
+											<div class="validation_correct" id="step3_dd_png_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+                        <span class="download_eye_view" id="step3_dd_png_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step3_dd_png_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>13. VARN copy (optional)</td>
+										<td>
+											<div class="form-group upload_file doc_up mb-0"
+												id="step3_varn_copy_upload_file">
+												<input type="file" class="form-control-file" id="step3_varn_copy"
+													onchange="step3_file_upload(this)">
+												<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+											</div>
+											<div class="form-group upload_file doc mb-0"
+												id="step3_varn_copy_uploaded_file">
+												<span class="file_name_span" id="step3_varn_copy_file_name"></span>
+											</div>
+										</td>
+										<td>
+											<div class="form-group reason mb-0">
+												<input type="text" class="form-control reason_input"
+													id="step3_varn_copy_reason">
+
+											</div>
+										</td>
+										<td id="step3_varn_copy_status">
+											<div class="validation_correct" id="step3_varn_copy_correct">
+												<i class="fa fa-check check" aria-hidden="true"></i>
+                        <span class="download_eye_view" id="step3_varn_copy_eye_view"></span>
+											</div>
+											<div class="validation_incorrect" id="step3_varn_copy_incorrect">
+												<i class="fa fa-times incorrect" aria-hidden="true"></i>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 pull-right">
+							<div class="pull-right group-btn-sec conform-sec">
+
+								<button type="button" class="btn btn-warning btn-eql-wid btn-animate"
+									onclick="clear_step3()" id="">Cancel /
+									Clear</button>
+								<!-- 
+								<button type="button" class="btn btn-success btn-eql-wid btn-animate" id="">Save as
+									Draft</button> -->
+								<button type="button" class="btn btn-success btn-eql-wid btn-animate go-to-step-2"
+									onclick="IndiaVisaProcessSubmit()" id="next-4">Submit</button>
+
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+			<div class="col-md-12 form-visa" id="tab-step-4-form">
+
+
+				<div class="caption pb-30px  text-center">
+					<h3 class="caption-subject  bold uppercase" id="visa_process_title">Johnson’s VISA has been issued
+					</h3>
+				</div>
+
+
+				<div class="form-group upload_file  text-center  upload-center">
+					<input type="file" class="form-control-file" id="step4_visa_process_upload"
+						onchange="step4_file_upload(this)">
+					<span>Upload <i class="fa fa-plus" aria-hidden="true"></i></span>
+				</div>
+
+
+				<div class="text-right"><i class="fa fa-trash delete-dsn" aria-hidden="true"
+						onclick='clear_step4()'></i></div>
+
+				<div class=" text-center">
+
+					<p>to open in new tab <a href="" target="_blank" id="visa_process_link" class="link">click here</a>
+					</p>
+					<a id="step4_visa_process_download" href="#" download><button type="button" class="btn btn-success btn-eql-wid btn-animate" >Direct Download</button></a>
+
+					<div class="mt-20px"><img id="visa_process_file_show" src="/static/images/sample-visa.png"
+							width="500" class="border-1px-grn" /></div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<div class="main_arr_arrow_part">
+		<div class="portlet light bordered ">
+			<div class="d-flex f-wrap">
+				<i class="fa fa-angle-left arrow_clk " aria-hidden="true"></i>
+
+				<div class="caption pl-25px hid-content">
+					<span class="caption-subject bold  ">Applicant Details </span>
+				</div>
+			</div>
+
+			<div class="hid-content">
+
+				<div class=" col-sm-12 mt-10px">
+					<div class="form-group">
+						<input id="searchInput" name="" placeholder="Search by Name"
+							class="form-control form-control-inline" size="16" value="" type="text">
+					</div>
+				</div>
+				<div id="overall_candidate_div">
+					<div class="sgl_candidate_list select">
+
+						<!-- static table -->
+
+					</div>
+				</div>
+
+
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+{% endblock %} {%block scripts%}
+
+<script type="text/javascript" src="/static/dev/js/visa_emp_add/addemp.js"></script>
+<script type="text/javascript" src="/static/dev/js/visa_emp_add/visaprocess.js"></script>
+
+
+{%endblock%}

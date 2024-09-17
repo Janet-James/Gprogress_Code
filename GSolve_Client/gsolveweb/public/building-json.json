@@ -1,0 +1,280 @@
+{
+"building_details":[
+     {
+         "building_1":{
+            "building_function_name":"testing",
+            "building_location":"png",
+            "building_type":"concrete",
+            "building_tier":"double",
+            "appearance":"good",
+            "pre_existing_issue":"no"
+         },
+         "room_details":[
+            {
+             "room_1":{
+                 "room_functional_name":"testing room1 ",
+                 "room_type":"storage_room",
+                 "add_new_equipment":"solar bulb",
+                 "equipment":[
+                     {
+                        "equipment_name":"tv",
+                        "equipment_type":"led",
+                        "wattage":"77w",
+                        "quantity":"2",
+                        "operating_hours":"6hrs",
+                        "wattage_summary":"Lorem ipsum is a placeholder text"
+                     },
+                     {
+                        "equipment_name":"monitor",
+                        "equipment_type":"led",
+                        "wattage":"78w",
+                        "quantity":"3",
+                        "operating_hours":"6hrs",
+                        "wattage_summary":"Lorem ipsum is a placeholder text"
+                     }
+                 ]
+                }
+            },
+            {
+             "room_2":{
+                 "room_functional_name":"testing",
+                 "room_type":"electrical_room",
+                 "add_new_equipment":"solar fan",
+                 "equipment":[
+                     {
+                        "equipment_name":"tv",
+                        "equipment_type":"led",
+                        "wattage":"77w",
+                        "quantity":"2",
+                        "operating_hours":"6hrs",
+                        "wattage_summary":"Lorem ipsum is a placeholder text"
+                     },
+                     {
+                        "equipment_name":"monitor",
+                        "equipment_type":"led",
+                        "wattage":"77w",
+                        "quantity":"3",
+                        "operating_hours":"6hrs",
+                        "wattage_summary":"Lorem ipsum is a placeholder text"
+                     }
+                 ]
+             }
+            }
+         ],
+         "roof_mount":{
+            "roof_condition":"good",
+            "roof_material":"wood",
+            "roof_age":"5 years",
+            "roof_orientation":"North - South Slope",
+            "roof_size":"2*3",
+            "rafter_spacing":"12",
+            "purlin_size":"2*3",
+            "purlin_spacing":"12",
+            "adjacent_shadow":"Building",
+            "availability_of_crane_service":"yes",
+            "welding_facility_in_site":"yes",
+            "availability_of_ladder_facility":"yes",
+            "scaffolding_during_installation":"yes",
+            "scaffolding_details":"Lorem ipsum is a placeholder text"
+         },
+         "building_and_roof_images": {
+            "building": {
+                "images": {
+                    "building_images": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "videos": {
+                    "building_videos": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "drawings": {
+                 "building_drawings": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "raw_images": {
+                    "building_raw_images": ["image_1", "image_2", "image_3", "image_4"]
+                }
+            },
+            "room": [{
+            "room_1_images": {
+                "images": {
+                    "room_images": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "videos": {
+                    "room_videos": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "drawings": {
+                 "room_drawings": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "raw_images": {
+                    "room_raw_images": ["image_1", "image_2", "image_3", "image_4"]
+                }
+            },
+            "room_2_images": {
+                "images": {
+                    "room_images": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "videos": {
+                    "room_videos": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "drawings": {
+                 "room_drawings": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "raw_images": {
+                    "room_raw_images": ["image_1", "image_2", "image_3", "image_4"]
+                }
+            }
+            }],
+            "roof": {
+                "images": {
+                    "roof_images": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "videos": {
+                    "roof_videos": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "drawings": {
+                 "roof_drawings": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "raw_images": {
+                    "roof_raw_images": ["image_1", "image_2", "image_3", "image_4"]
+                }
+            }
+        }
+     },
+     {
+         "building_2":{
+            "building_function_name":"testing Building 2",
+            "building_location":"png",
+            "building_type":"steel",
+            "building_tier":"double",
+            "appearance":"good",
+            "pre_existing_issue":"no"
+         },
+         "room_details":[
+            {
+             "room_1":{
+                 "room_functional_name":"testing",
+                 "room_type":"storage_room",
+                 "add_new_equipment":"solar bulb",
+                 "equipment":[
+                     {
+                        "equipment_name":"tv",
+                        "equipment_type":"led",
+                        "wattage":"77w",
+                        "quantity":"2",
+                        "operating_hours":"6hrs",
+                        "wattage_summary":"Lorem ipsum is a placeholder text"
+                     },
+                     {
+                        "equipment_name":"monitor",
+                        "equipment_type":"led",
+                        "wattage":"77w",
+                        "quantity":"3",
+                        "operating_hours":"6hrs",
+                        "wattage_summary":"Lorem ipsum is a placeholder text"
+                     }
+                 ]
+             }
+            },
+            {
+             "room_2":{
+                 "room_functional_name":"testing",
+                 "room_type":"electrical_room",
+                 "add_new_equipment":"solar fan",
+                 "equipment":[
+                     {
+                        "equipment_name":"tv",
+                        "equipment_type":"led",
+                        "wattage":"77w",
+                        "quantity":"2",
+                        "operating_hours":"6hrs",
+                        "wattage_summary":"Lorem ipsum is a placeholder text"
+                     },
+                     {
+                        "equipment_name":"monitor",
+                        "equipment_type":"led",
+                        "wattage":"77w",
+                        "quantity":"3",
+                        "operating_hours":"6hrs",
+                        "wattage_summary":"Lorem ipsum is a placeholder text"
+                     }
+                 ]
+             }
+            }
+         ],
+         "roof_mount":{
+            "roof_condition":"good",
+            "roof_material":"wood",
+            "roof_age":"5 years",
+            "roof_orientation":"North - South Slope",
+            "roof_size":"2*3",
+            "rafter_spacing":"12",
+            "purlin_size":"2*3",
+            "purlin_spacing":"12",
+            "adjacent_shadow":"Building",
+            "availability_of_crane_service":"yes",
+            "welding_facility_in_site":"yes",
+            "availability_of_ladder_facility":"yes",
+            "scaffolding_during_installation":"yes",
+            "scaffolding_details":"Lorem ipsum is a placeholder text"
+         },
+         "building_and_roof_images": {
+            "buildings": {
+                "images": {
+                    "building_images": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "videos": {
+                    "building_videos": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "drawings": {
+                 "building_drawings": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "raw_images": {
+                    "building_raw_images": ["image_1", "image_2", "image_3", "image_4"]
+                }
+            },
+            "room": [{
+            "room_1_images": {
+                "images": {
+                    "room_images": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "videos": {
+                    "room_videos": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "drawings": {
+                 "room_drawings": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "raw_images": {
+                    "room_raw_images": ["image_1", "image_2", "image_3", "image_4"]
+                }
+            },
+            "room_2_images": {
+                "images": {
+                    "room_images": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "videos": {
+                    "room_videos": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "drawings": {
+                 "room_drawings": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "raw_images": {
+                    "room_raw_images": ["image_1", "image_2", "image_3", "image_4"]
+                }
+            }
+            }],
+            "roof": {
+                "images": {
+                    "roof_images": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "videos": {
+                    "roof_videos": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "drawings": {
+                 "roof_drawings": ["image_1", "image_2", "image_3", "image_4"]
+                },
+                "raw_images": {
+                    "roof_raw_images": ["image_1", "image_2", "image_3", "image_4"]
+                }
+            }
+        }
+     }
+]
+}

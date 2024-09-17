@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Report {{ responsible }}</title>
+    <style>
+         /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Page Styles */
+        .page {
+            width: 100%;
+        }
+
+        /* Header Styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 100px; /* Adjust logo size as needed */
+            height: auto;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 2px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <div class="header">
+            <h1>Task Report of {{ responsible }}</h1>
+            <img src="https://gprogress.green.com.pg/static/images/green-logo.png" alt="Company Logo" class="logo">
+        </div>
+
+        <!-- Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <!-- <th>Task ID</th> -->
+                    <th>Title</th>
+                    <th>Created Date</th>
+                    <!-- <th>Start Date (Plan)</th> -->
+                    <!-- <th>End Date (Plan)</th> -->
+                    <th>Deadline</th>
+                    <!-- <th>Date Start</th> -->
+                    <th>Closed Date</th>
+                    <th>Responsible</th>
+                    <!-- <th>Created By</th> -->
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populate table rows with data -->
+                {% for task in data %}
+                <tr>
+                    <td>{{ task.no }}</td>
+                    <!-- <td>{{ task.task_id }}</td> -->
+                    <td>{{ task.title }}</td>
+                    <td>{{ task.createdDate }}</td>
+                    <!-- <td>{{ task.startDatePlan }}</td> -->
+                    <!-- <td>{{ task.endDatePlan }}</td> -->
+                    <td>{{ task.deadline }}</td>
+                    <!-- <td>{{ task.dateStart }}</td> -->
+                    <td>{{ task.closedDate }}</td>
+                    <td>{{ task.responsible }}</td>
+                    <!-- <td>{{ task.createdBy }}</td> -->
+                    <td>{{ task.status }}</td>
+                </tr>
+                {% endfor %}
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

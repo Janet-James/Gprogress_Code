@@ -1,0 +1,202 @@
+<html>
+  <body>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      table, th, td {
+        border-collapse: collapse;
+      }     
+    </style>
+        <table style="width: 100%">
+          <tr>            
+            <td>
+              <table style="width: 100%" cellpadding="4" cellspacing="0">
+                <tr style="vertical-align: top;">            
+                  <td  style=" width: 50%;border: 1px solid #000;border-bottom: 0;border-right: 0">                   
+                     <h2 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;margin-left: 0;font-size: 32px;font-style: italic;"><i>PACKING LIST</i></h2>
+                  </td>
+                  <td  style="border: 1px solid #000;border-bottom: 0;border-left: 0;">
+                    <div style="text-align: right;"><img src="{{shipment_detail[0].company_logo_link}}" width="300" /></div>
+                  </td>
+                </tr>
+              </table>
+              
+              <table style="width: 100%" cellpadding="4" cellspacing="0">
+                <tr>            
+                  <td  style="border: 1px solid #000; width: 50%;">
+                    <h4 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">EXPORTER</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;">
+                    <h4 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">CONSIGNEE</h5>
+                  </td>
+                </tr>
+                <tr>            
+                  <td  style="border: 1px solid #000; width: 50%;">
+                    <h5 style="margin-top: 10px;margin-bottom: 0px;font-weight: bold;">{{shipment_detail[0].shipment_from_name}}</h5>
+                    <p style="margin-top: 5px;margin-bottom: 10px;">
+                      {{shipment_detail[0].company_address}}<br/>
+                      Phone No: {{shipment_detail[0].shipment_from_phone}}</p>
+                  </td>
+                  <td  style="border: 1px solid #000;">
+                    <h5 style="margin-top: 10px;margin-bottom: 5px;font-weight: bold;">{{shipment_detail[0].consignee_name}}</h5>
+                    <p style="margin-top: 5px;margin-bottom: 10px;">{{shipment_detail[0].consignee_address}}<br/>
+                      Phone No: {{shipment_detail[0].consignee_phone}}</p>
+                  </td>
+                </tr>
+                <tr>            
+                  <td  style="border: 1px solid #000; width: 50%; border-bottom: 0;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">GST NO : {{shipment_detail[0].gst_no}}</h5>
+                  </td>
+                  <td  style="border: 1px solid #000; border-bottom: 0;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">PO No:{{shipment_detail[0].po_name}}, PO. Dated: {{shipment_detail[0].po_created_date}} </h5>
+                  </td>
+                </tr>
+              </table>
+              <table style="width: 100%" cellpadding="4" cellspacing="0">
+                <tr>            
+                  <td  style="border: 1px solid #000; width: 50%;border-bottom: 0;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">LUT NO : ARN No.:  {{shipment_detail[0].lut_no}}</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;width: 13%;border-bottom: 0;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">PERIOD OF LUT</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;border-bottom: 0;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">{{shipment_detail[0].period_of_lut}}</h5>
+                  </td>
+                </tr>
+              </table>
+              <table style="width: 100%" cellpadding="4" cellspacing="0">
+                <tr>            
+                  <td  style="border: 1px solid #000; width: 15%;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">Pre-Carrier by</h5>
+                  </td>
+                  <td  style="border: 1px solid #000; width: 20%;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">Place of Receipt by Pre-Carrier</h5>
+                  </td>
+                  <td  style="border: 1px solid #000; width: 15%;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">Currency</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;width: 13%;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">Place of Export</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;width: 11%;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">Vessel</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;width: 13%;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">Place of Delivery/ Discharge</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">Country of Origin</h5>
+                  </td>
+                </tr>
+                <tr>            
+                  <td  style="border: 1px solid #000;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">{{shipment_detail[0].pre_carrier_by}}</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">{{shipment_detail[0].place_of_receipt_by_pre_carrier}}</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">{{shipment_detail[0].currency_name}}</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">{{shipment_detail[0].place_of_export}}</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">{{shipment_detail[0].freight}}</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">{{shipment_detail[0].place_of_delivery}}</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;text-align: center;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">{{shipment_detail[0].country_of_origin}}</h5>
+                  </td>
+                </tr>
+              </table>
+              <br>
+
+              <!-- <<<< Dynamic Packing List Start >>>> -->
+              <table style="width: 100%;" cellpadding="4" cellspacing="0">
+                
+                <thead>
+                    <tr>
+                      <td style="border: 1px solid #000;width: 10%;text-align: center; font-weight: bold;">Box No</td>
+                      <td style="border: 1px solid #000;width: 5%;text-align: center; font-weight: bold;">S.No</td>
+                      <td style="border: 1px solid #000;width: 20%;text-align: center; font-weight: bold;">Description Of Goods</td>
+                      <td style="border: 1px solid #000;width: 8%;text-align: center; font-weight: bold;">Quantity</td>
+                      <td style="border: 1px solid #000;width: 14%;text-align: center; font-weight: bold;">HSN Code</td>
+                      <td style="border: 1px solid #000;width: 6%;text-align: center; font-weight: bold;">Gross Weight</td>
+                      <td style="border: 1px solid #000;width: 11%;text-align: center; font-weight: bold;">Net Weight</td>
+                      <td style="border: 1px solid #000;width: 8.5%;text-align: center; font-weight: bold;">Length</td>
+                      <td style="border: 1px solid #000;width: 8.5%;text-align: center; font-weight: bold;">Width</td>
+                      <td style="border: 1px solid #000;text-align: center; font-weight: bold;">Height</td>
+                    </tr>
+                </thead>
+                                  
+
+                <tbody>
+                  {% for box_name, box_data in data.items() %}
+
+                  {% with rowspan=box_data.item_detail|length %}
+                    {% for item_detail in box_data.item_detail %}
+                      <tr>
+                        {% if loop.first %}
+                        <td style="border: 1px solid #000;width: 10%;text-align: center; font-weight: bold;border-bottom: 0;" rowspan="{{ rowspan }}">{{ box_name }}</td>
+                        <td style="border: 1px solid #000;width: 5%;text-align: center;border-bottom: 0;">{{ item_detail.s_no }}</td>
+                        <td style="border: 1px solid #000;width: 20%;text-align: center;border-bottom: 0;">{{ item_detail.name }}</td>
+                        <td style="border: 1px solid #000;width: 8%;text-align: center;border-bottom: 0;">{{ item_detail.quantity }}</td>
+                        <td style="border: 1px solid #000;width: 8%;text-align: center;border-bottom: 0;">{{ item_detail.hsn_code }}</td>
+                        <td style="border: 1px solid #000;width: 6%;text-align: center;border-bottom: 0;" rowspan="{{ rowspan }}">{{ box_data.box_detail.gross_weight }}</td>
+                        <td style="border: 1px solid #000;width: 11%;text-align: center;border-bottom: 0;" rowspan="{{ rowspan }}">{{ box_data.box_detail.net_weight }}</td>
+                        <td style="border: 1px solid #000;width: 8.5%;text-align: center;border-bottom: 0;" rowspan="{{ rowspan }}">{{ box_data.box_detail.length }}</td>
+                        <td style="border: 1px solid #000;width: 8.5%;text-align: center;border-bottom: 0;" rowspan="{{ rowspan }}">{{ box_data.box_detail.width }}</td>
+                        <td style="border: 1px solid #000;text-align: center;border-bottom: 0;" rowspan="{{ rowspan }}">{{ box_data.box_detail.height }}</td>
+                        {% else %}
+                        <td style="border: 1px solid #000;width: 5%;text-align: center;border-bottom: 0;">{{ item_detail.s_no }}</td>
+                        <td style="border: 1px solid #000;width: 20%;text-align: center;border-bottom: 0;">{{ item_detail.name }}</td>
+                        <td style="border: 1px solid #000;width: 8%;text-align: center;border-bottom: 0;">{{ item_detail.quantity }}</td>
+                        <td style="border: 1px solid #000;width: 8%;text-align: center;border-bottom: 0;">{{ item_detail.hsn_code }}</td>
+
+
+                        {% endif %}
+                      </tr>
+                    {% endfor %}
+                  {% endwith %}
+                  {% endfor %}
+
+
+                </tbody>
+              </table>
+              <!-- <<<< Dynamic Packing List End >>>> -->
+
+              <table style="width: 100%;" cellpadding="4" cellspacing="0">
+                <tr>            
+                  <td  style="border: 1px solid #000; width: 63%;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">We declare that this Invoice shows the actual price of the goods described and that all particulars are true and correct.</h5>
+                  </td>
+                  <td  style="border: 1px solid #000;">
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">for GREEN TELEMED INDIA PVT LTD</h5>
+                    <table style="width: 100%;" cellpadding="0" cellspacing="0">
+                      <tr>            
+                        <td  style="width: 63%;">
+                          <img src="{{shipment_detail[0].auther_sign}}" width="100"/>
+                        </td>
+                        
+                        <td style="width: 63%;">
+                          <img src="{{shipment_detail[0].company_stamp}}" width="100"/>
+                        </td>
+                      </tr>
+                    </table>
+                    <h5 style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">Authorized Signature</h5>
+                  </td>
+                  
+                </tr>
+              </table>
+
+              
+            </td>
+          </tr>
+        </table>
+  </body>
+</html>

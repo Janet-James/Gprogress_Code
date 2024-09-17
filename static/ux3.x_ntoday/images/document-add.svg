@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="document_x5F_text_x5F_add_1_">
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-401.102" y1="212.3405" x2="-332.977" y2="212.3405" gradientTransform="matrix(1 0 0 -1 418.04 262.34)">
+		<stop  offset="0" style="stop-color:#57C3FF"/>
+		<stop  offset="1" style="stop-color:#2CE7C7"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M68.03,45.867V27.825L56.138,15.937h-39.2v68.125h51.094v-0.125
+		c9.579-1.065,17.026-9.174,17.031-19.035C85.057,55.037,77.609,46.926,68.03,45.867z M55.253,21.075l7.638,7.636h-7.638V21.075z
+		 M21.194,79.806V20.191h29.805v12.775h12.773v12.902c-3.73,0.414-7.136,1.894-9.903,4.133H25.452v4.258h24.519
+		c-0.878,1.311-1.582,2.744-2.116,4.258H25.452v4.258h21.414c-0.078,0.7-0.125,1.408-0.125,2.129c0,6.023,2.784,11.392,7.13,14.902
+		C53.871,79.806,21.194,79.806,21.194,79.806z M65.901,79.556c-8.092-0.019-14.639-6.565-14.658-14.654
+		c0.019-8.092,6.565-14.639,14.658-14.658c8.088,0.019,14.634,6.565,14.654,14.658C80.535,72.99,73.989,79.537,65.901,79.556z
+		 M59.516,41.484H25.452v4.258h34.064C59.516,45.742,59.516,41.484,59.516,41.484z"/>
+	<g>
+		
+			<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-362.7823" y1="197.4367" x2="-341.4934" y2="197.4367" gradientTransform="matrix(1 0 0 -1 418.04 262.34)">
+			<stop  offset="0" style="stop-color:#57C3FF"/>
+			<stop  offset="1" style="stop-color:#2CE7C7"/>
+		</linearGradient>
+		<polygon fill="url(#SVGID_2_)" points="76.547,62.773 68.034,62.773 68.034,54.259 63.772,54.259 63.772,62.773 55.258,62.773 
+			55.258,67.031 63.772,67.031 63.772,75.548 68.034,75.548 68.034,67.031 76.547,67.031 		"/>
+	</g>
+</g>
+</svg>

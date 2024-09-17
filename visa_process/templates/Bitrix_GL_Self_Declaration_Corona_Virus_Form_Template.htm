@@ -1,0 +1,432 @@
+<html>
+
+<head>
+	<title>Self Decalration Corona Virus Form </title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body style="padding: 0 55px;">
+
+
+
+
+	<table cellpadding="2" style="width:100%; text-align:center;  margin-bottom:10px; margin-top: 70px;">
+		<tr>
+			<td>
+				<!-- <img src="http://127.0.0.1:8000/static/images/visa/bsp_logo.png"/> -->
+				<img src="http://127.0.0.1:8000/static/images/visa/self_Decalration_logo.png"  />
+				<br/><br/>
+				<h2 style="font-size:20px;letter-spacing: 0.5px;margin-bottom: 40px;padding-top: 20px;">PNG IMMIGRATIN AND CITIZENSHIP AUTHORITY</h2>
+				<h2 style="font-size:20px;letter-spacing: 0.5px;margin-bottom: 40px;">SUPPLEMENTARY HEALTH FORM</h2>
+			</td>
+
+		</tr>
+	</table>
+
+
+	<h2 style="font-size:18px;letter-spacing: 0.5px;margin-bottom: 20px;">THIS FORM MUST BE COMPLETED BY ALL FOREIGN NATIONAL APPLYING<br> FOR
+		A PNG VISA </h2>
+
+	<p style="font-size:16px;text-align: justify;line-height: 1.5;margin-bottom: 30px;">The Papua New Guinea Immigration and Citizenship Service Authority (ICA) administer the Migration<br>
+		and Citizenship Acts and are responsible for assessing and issuing visas to foreign nationals and passports<br>
+		to PNG Citizens. Foreign nationals seeking to travel and enter PNG cannot be granted a visa or entry to<br>
+		PNG if they represent a public health risk to the PNG Community. </p>
+
+	<p style="font-size:16px;text-align: justify;line-height: 1.5;margin-bottom: 30px;">The Corona Virus causing pneumonia like symptoms is of the same viral family as the Middle East<br>
+		Respiratory Syndrome (MERS) which present a very serious public health risk. The following questions<br>
+		are to enable appropriate assessment of persons under the PNG Migration, Quarantine and Health Acts. </p>
+
+	<p style="font-size:16px;margin-bottom:0px;text-align: justify;line-height: 1.5;margin-bottom: 30px;">This form should be completed by visa applicants 18 years or over. Parents who have included minors on<br>
+		their visa application form should complete a separate form on each minor&apos;s behalf.</p>
+
+	<p style="font-size: 16px; margin-bottom:40px;padding: 0px 10px; border-bottom: 1px solid black;margin-top:0px"> &nbsp;</p>
+
+	<table cellpadding="0" style="width:100%; margin-bottom:30px">
+		<tr>
+			<td style="width:50%">
+				<p style="font-size: 16px;margin-top: 0;">Name:</p>
+			</td>
+			<td style="width:50%">
+				<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black;"> {{json_data.full_name}}</p>
+			</td>
+		</tr>
+	</table>
+	<table cellpadding="0" style="width:100%; margin-bottom:30px">
+		<tr>
+			<td style="width:50%">
+				<p style="font-size: 16px;margin-top: 0;">Date of Birth:</p>
+			</td>
+			<td style="width:50%;">
+				<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black;"> {{json_data.dob.strftime('%d-%b-%Y')}}</p>
+			</td>
+		</tr>
+	</table>
+	<table cellpadding="0" style="width:100%; margin-bottom:30px">
+		<tr>
+			<td style="width:50%">
+				<p style="font-size: 16px;margin-top: 0;">Nationality: </p>
+			</td>
+			<td style="width:50%">
+				<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black;"> {{json_data.nationality}} </p>
+			</td>
+		</tr>
+	</table>
+	<table cellpadding="0" style="width:100%; margin-bottom:30px">
+		<tr>
+			<td style="width:50%">
+				<p style="font-size: 16px; ;margin-top: 0;">Passport Number:
+				</p>
+			</td>
+			<td style="width:50%">
+				<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black;"> {{json_data.passport_no}} </p>
+			</td>
+		</tr>
+	</table>
+	<table cellpadding="0" style="width:100%; margin-bottom:50px">
+		<tr>
+			<td style="width:50%">
+				<p style="font-size: 16px; ;margin-top: 0;">Date of arrival or intended arrival in PNG:
+				</p>
+			</td>
+      {% if json_data.arrival_date != " " %}
+    <td style="width:50%">
+      <p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black;"> {{json_data.arrival_date.strftime('%d-%b-%Y')}} </p>
+			</td>
+      {% else %}
+      <td style="width:50%">
+        <p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black;"> <span style="visibility: hidden;">Nill</span></p>
+        </td>
+      {% endif %}
+		</tr>
+
+	</table>
+	
+
+	<ol style="font-size: 16px; padding-top:20px">
+		<li>
+			<p style="font-size:16px;margin-bottom:0px;text-align: justify;line-height: 1.5;">In the last 21 days have you visited or transited through Wuhan in China and or; transited through<br>
+South Korea, Japan, Taiwan, Macau, Hong Kong, Singapore, Malaysia and the United States of<br>
+America where cases have been reported</p>			
+			<table cellpadding="0" style="width:100%; margin-bottom:10px; padding-top: 15px;">
+				<tr>
+					<td style="width:60px">
+						<p style="font-size: 16px; ;margin-top: 0;">Yes/No</p>
+					</td>
+					<td >	
+						{% if json_data.corona_case_country_visit == True %}
+							<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black; width: 100%;">Yes</p>
+						{% else %}
+							<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black; width: 100%;">No</p>
+						{% endif %}
+					</td>
+				</tr>
+			</table>
+		</li>
+		<br/>
+	<br/><br/>
+	<br/><br/>
+	<br/><br/>
+	<br/><br/>
+		<li>
+			<p style="font-size:16px;margin-bottom:0px;text-align: justify;line-height: 1.5;">If you circled &quot;Yes&quot; to question 1, please provide further details of when you were in these countries;<br>
+			the nature/purpose of your travel/stay there; the areas in these countries you visited; and whether you<br>
+			came into any contact with anyone (alive or dead) who was or may have been infected by the<br>
+			Coronavirus.</p>
+			<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black; width: 100%; ">
+				{{json_data.corona_case_country_visit_detail}} &nbsp;</p>
+				<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black; width: 100%;">
+					 &nbsp;</p>
+					<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black; width: 100%; ">
+						 &nbsp;</p>
+						 <br><br>
+		</li>
+		<li>Do you currently have any of the following symptoms below?
+			<br><br>
+
+			<table cellpadding="0" style="width:50%; margin-bottom:10px;padding-left: 50px;">
+			
+				
+				<tr>
+					<td style="width:350px; min-width: 200px;">
+						<ul style="list-style-type:disc">
+							<li>
+								<p style="font-size: 16px;margin-top: 0;position: relative;margin-bottom:10px">
+									Coughing: 
+								</p>
+							</li>
+						</ul>						
+					</td>
+					<td style="width:25px">
+						<p style="font-size: 16px;margin-top: 0;position: relative;padding-left: 25px;margin-bottom:0">Yes</p>
+					</td>
+					<td >
+          {% if '3258' in json_data.symptoms %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tic.png" width="20"/>
+					{% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untic.png" width="20"/>
+					{% endif %}
+					</td>
+					<td style="width:25px">
+						No
+					</td>
+					<td>
+					{% if '3258' not in json_data.symptoms %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tic.png" width="20"/>
+					{% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untic.png" width="20"/>
+					{% endif %}
+					</td>
+					<td style="width:30%">
+					</td>
+					
+				</tr>
+				
+				<tr>
+					<td >
+						<ul style="list-style-type:disc">
+							<li>
+								<p style="font-size: 16px;margin-top: 0;position: relative; margin-bottom:10px">
+									Running nose:
+								</p>
+							</li>
+						</ul>	
+					</td>
+					<td style="width:25px">
+					
+						<p style="font-size: 16px;margin-top: 0;position: relative;padding-left: 25px;margin-bottom:0">Yes</p>
+					</td>
+					<td >
+          {% if '3260' in json_data.symptoms %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tic.png" width="20"/>
+					{% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untic.png" width="20"/>
+					{% endif %}
+					</td>
+					<td style="width:25px">
+						No
+					</td>
+					<td>
+          {% if '3260' not in json_data.symptoms %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tic.png" width="20"/>
+					{% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untic.png" width="20"/>
+					{% endif %}
+					</td>
+					<td style="width:30%">
+					</td>
+				</tr>
+				
+				<tr>
+					<td >
+						<ul style="list-style-type:disc">
+							<li>
+								<p style="font-size: 16px;margin-top: 0;position: relative; margin-bottom:10px">
+									A high fever : 
+								</p>
+							</li>
+						</ul>
+						
+					</td>
+					<td style="width:25px">
+					
+						<p style="font-size: 16px;margin-top: 0;position: relative;padding-left: 25px;margin-bottom:0">Yes</p>
+					</td>
+					<td >
+            {% if '3262' in json_data.symptoms %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tic.png" width="20"/>
+					{% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untic.png" width="20"/>
+					{% endif %}
+					</td>
+					<td style="width:25px">
+						No
+					</td>
+					<td>
+          {% if '3262' not in json_data.symptoms %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tic.png" width="20"/>
+					{% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untic.png" width="20"/>
+					{% endif %}
+					</td>
+					<td style="width:30%">
+					</td>
+					
+				</tr>
+				<tr>
+					<td >
+						<ul style="list-style-type:disc">
+							<li>
+								<p style="font-size: 16px;margin-top: 0;position: relative;margin-bottom:10px">
+									A sore throat : 
+								</p>
+							</li>
+						</ul>
+						
+					</td>
+					<td style="width:25px">
+					
+						<p style="font-size: 16px;margin-top: 0;position: relative;padding-left: 25px;margin-bottom:0">Yes</p>
+					</td>
+					<td >
+          {% if '3264' in json_data.symptoms %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tic.png" width="20"/>
+					{% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untic.png" width="20"/>
+					{% endif %}
+					</td>
+					<td style="width:25px">
+						No
+					</td>
+					<td>
+          {% if '3264' not in json_data.symptoms %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tic.png" width="20"/>
+					{% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untic.png" width="20"/>
+					{% endif %}
+					</td>
+					<td style="width:30%">
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						<ul style="list-style-type:disc">
+							<li>
+								<p style="font-size: 16px;margin-top: 0;position: relative;margin-bottom:10px">
+									Headaches : 
+								</p>
+							</li>
+						</ul>
+						
+					</td>
+					<td style="width:25px">
+					
+						<p style="font-size: 16px;margin-top: 0;position: relative;padding-left: 25px;margin-bottom:0">Yes</p>
+					</td>
+					<td >
+          {% if '3266' in json_data.symptoms %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tic.png" width="20"/>
+					{% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untic.png" width="20"/>
+					{% endif %}
+					</td>
+					<td style="width:25px">
+						No
+					</td>
+					<td>
+          {% if '3266' not in json_data.symptoms %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tic.png" width="20"/>
+					{% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untic.png" width="20"/>
+					{% endif %}
+					</td>
+					<td style="width:30%">
+					</td>
+					
+				</tr>
+				
+
+				
+			</table>
+			<br>
+			<br>
+
+		</li>
+		<li>
+			<p style="font-size:16px;margin-bottom:0px;text-align: justify;line-height: 1.5;">If you circled &quot;Yes&quot; to any of the above symptoms in Question 3, please provide full details<br> below:</p>
+			
+				<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black; width: 100%; ">
+					{{json_data.corona_case_country_visit_detail}} &nbsp;</p>
+					<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black; width: 100%;">
+						 &nbsp;</p>
+						<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black; width: 100%; ">
+							 &nbsp;</p>
+							 <p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black; width: 100%; ">
+								&nbsp;</p>
+							 <br><br>
+
+		</li>
+		<li>
+			<p style="font-size:16px;margin-bottom:0px;text-align: justify;line-height: 1.5;">Will you be travelling to, visiting or transiting through China or any other country where the<br>
+			Coronavirus has not been contained prior to travelling to PNG?</p>
+			<table cellpadding="0" style="width:100%; margin-bottom:10px; padding-top: 15px;">
+				<tr>
+					<td style="width:60px">
+						<p style="font-size: 16px; ;margin-top: 0;">Yes/No</p>
+					</td>
+					<td >	
+						{% if json_data.future_travel_to_corona_country == True %}
+							<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black; width: 100%;">Yes</p>
+						{% else %}
+							<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black; width: 100%;">No</p>
+						{% endif %}
+					</td>
+				</tr>
+			</table>
+			<p style="font-size:16px;margin-bottom:0px;text-align: justify;line-height: 1.5;">It is an offence under the Migration Act to provide false or misleading information in respect of <br>
+			entry to PNG which can lead to visa, uplift or entry refusal and/or criminal charges.
+			<br><br>
+			I hereby declare that the information I have provided is truthful and accurate.</p>
+
+			<br><br>
+
+		</li>
+	</ol>
+
+
+	<table cellpadding="0" style="width:100%; margin-bottom:10px">
+		<tr>
+			<td style="width:40%; padding-left: 35px;">
+				<p style="width:100%; border-bottom: 1.5px dotted ">&nbsp;</p>
+				<p style="font-size: 16px; ;margin-top: 0; ">
+					
+					Signature
+				</p>
+				<table cellpadding="0" style="width:100%; margin-bottom:10px;">
+				<tr>
+					<td style="width:60px">
+						<p style="font-size: 16px; ;margin-top: 0;">Date</p>
+					</td>
+					<td >
+						<p style="font-size: 16px;padding: 0px 10px; border-bottom: 1px solid black; width: 100%;">
+							&nbsp;</p>
+					</td>
+				</tr>
+			</table>
+				
+
+			</td>
+			<td style="width:15%">
+
+			</td>
+			<td style="width:45%">
+			
+				<p style="font-size: 13px;padding: 13px 25px 13px 16px;border: 1px solid black; float: right;">
+								<span style="font-size: 15px;font-weight: bold;">FOR OFFICE USE ONLY:</span> <br><br>
+					From assessed by:<br><br>
+					Date:<br><br>
+					Assessment: Cleared/Additional Medical Check
+
+				</p>
+				<!-- <table cellpadding="0" style="width:100%; margin-bottom:10px">
+				<tr>
+					<td style="width:110px">
+						<p style="float: right;font-size: 12px;color: #da1e35;padding: 7px 10px 5px;background: #c0c0c0;border: 2px solid #000;font-weight: bold;letter-spacing: 0.5px;font-family: sans-serif;margin-top: 50px;width:110px; line-height:1">CLEAR FORM</p>
+					</td>
+					
+				</tr>
+			</table> -->
+				
+			</td>
+		</tr>
+	</table>
+
+
+
+
+
+
+</body>
+
+</html>

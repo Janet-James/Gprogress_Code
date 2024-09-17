@@ -1,0 +1,166 @@
+:root {
+    --toastify-toast-width: 350px;
+}
+/* @font-face {
+    font-family: "Raleway";
+    src: url("./../fonts/Raleway-Regular.woff") format("woff"),
+        url("./../fonts/fonts/Raleway-Regular.ttf") format("ttf");
+    font-display: swap;
+} */
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway-Regular.woff") format("woff"),
+        url("../fonts/Raleway-SemiBold.ttf") format("ttf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Raleway Bold";
+    src: url("../fonts/Raleway-Bold.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway Medium";
+    src: url('../fonts/Raleway-Medium.woff2') format('woff2'),
+        url('../fonts/Raleway-Medium.woff') format('woff');
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Raleway SemiBold";
+    src: url("./../fonts/Raleway-SemiBold.woff") format("woff"),
+        url("./../fonts/Raleway-SemiBold.ttf") format("ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway Black";
+    src: url("./../fonts/Raleway-Black.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway ExtraBold";
+    src: url("./../fonts/Raleway-ExtraBold.ttf");
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #F5F5F5;
+    font-family: "Raleway";
+    font-variant-numeric: lining-nums;
+    counter-reset: counter;
+}
+h4 {
+    font-size: 18px;
+    font-family: "Raleway SemiBold";
+}
+.main-container {
+    padding-left: 80px;
+    background-color: #ffffff;
+}
+.container {
+    max-width: 100%;
+}
+header {
+    padding:8px 25px;
+    background-color: #58BA63;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+    display: none;
+}
+header .logo img {
+    max-width: 150px;
+}
+header .userinfo {
+    line-height: 1;
+}
+header .userinfo h6{
+    font-size: 19px;
+    margin-bottom: 0px;
+}
+header .userinfo a, header .userinfo button  {
+    color: #fff;    
+    font-size: 12px;
+    border: 0px;
+    padding: 0px;
+    text-decoration: none;
+    background-color: transparent;
+}
+.navbar {
+    width: 80px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    background-color: #ffffff;
+    border-right: 1px solid #D6D6D6;
+}
+.navbar-collapse.d-none {
+    display: none !important;
+}
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+    margin-top: 24px;
+}
+.cl-green {
+    color: #23B14D;
+}
+
+h2{
+    font-size: 22px;
+    font-weight: bold;
+    color: #303030;
+    font-family: "Raleway SemiBold";
+}
+
+.btn-green {
+	background: linear-gradient(30deg, #36dd68 0%, #dddf78 100%);
+	padding: 10px 15px;
+	color: #fff;
+	font-size: 14px;
+	border: 0;
+	font-weight: 700;
+	letter-spacing: .5px;
+	min-width: 80px;
+}
+
+.btn-green-2 {
+	background: linear-gradient(30deg, rgb(54 221 104 / 20%) 0%, rgb(221 223 120 / 20%) 100%);
+	padding: 10px 15px;
+	color: #23b14d;
+	font-size: 14px;
+	border: 0;
+	font-weight: 700;
+	letter-spacing: .5px;
+	min-width: 80px;
+}
+
+.btn-green-3 {
+	background-color: #23b14d;
+	padding: 10px 15px;
+	color: #fff;
+	font-size: 14px;
+	border: 0;
+	font-weight: 700;
+	letter-spacing: .5px;
+	min-width: 80px;
+}
+.error-msg {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #d30202;
+    padding-top: 5px;
+}
+.boxShadow{
+    box-shadow: 0 4px 9px 0 #00000026;
+    border-radius: 5px;
+}

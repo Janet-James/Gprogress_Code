@@ -1,0 +1,81 @@
+.calendar {
+    font-size: 14px;
+    width: 100%;
+    overflow: auto;
+    transform: translateZ(0deg);
+    font-family: 'Poppins', sans-serif;
+}
+.calendar .header {
+    background: none;
+    padding: 0;
+}
+.calendar .day,
+.calendar .weekday {
+    display: block;
+    width: 14.2857142857%;
+    padding: 5px;
+    box-sizing: border-box;
+    float: left;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    border: 1px solid #dbfef9;
+}
+
+.calendar .day {
+    position: relative;
+    cursor: pointer;
+}
+
+.calendar .day[data-event]::before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 1rem 1rem 0;
+    border-color: transparent #27cfb8 transparent transparent;
+    content: '';
+}
+
+.calendar .inactive {
+    color: #bdbdbd;
+}
+
+.calendar .month {
+    width: 70%;
+}
+
+.calendar .month,
+.calendar .year {
+    display: block;
+    padding: 1rem;
+    box-sizing: border-box;
+    float: left;
+    font-size: 14px;
+    /*background-color: #ebfefb;*/
+    border: 1px solid #dbfef9;
+    outline: 0;
+    text-align: center;
+}
+
+.calendar .year {
+    width: 30%;
+}
+
+.calendar .event {
+    display: none;
+    background-color: #27cfb8;
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    float: left;
+    width: 100%;
+}

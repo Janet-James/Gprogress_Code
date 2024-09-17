@@ -1,0 +1,71 @@
+{% extends 'ntoday_base.html' %} {% load staticfiles %} {%block content%}
+<div class="row">
+	<!-- BEGIN CONTAINER -->
+	<div id="menuOverlay">
+		<div class="page-container" id="maincontent">
+			<div class="page-content-wrapper">
+				<!-- BEGIN CONTENT BODY -->
+				<div class="RS-data" id="RS-data">
+					<div class="row">
+						<div class="content-wrapper transformNav-wrapper">
+							<div class="col-lg-12 col-md-12 col-sm-12">
+								<div class="content-body padding-top-45">
+									<div class="row">
+										<div class="libery">
+											<div class="panel-body">
+											
+											<div class="col-md-12">
+            <!-- BEGIN PANELS PORTLET-->
+            <div class="portlet light bordered">
+              <div class="portlet-title">
+                <div class="caption"> <span class="caption-subject  bold uppercase">Alert Notification </span> </div>
+              </div>
+              <div class="portlet-body group-btn-sec">
+               <div class="row">
+													<span class="notifi_alert_img">
+														<img src="/static/ux2.0/images/login-logo.png" class="" />
+													</span>
+												</div>
+												<div class="row">
+													<h1 class="txt-center animated infinite pulse color_red">Access
+														Denied</h1>
+												</div>
+												<div class="row">
+													<div class="board transparent txt-center">
+														<p>This Message is being displayed because you
+															attempted to access an page that requires authorization
+															that is not part of your user profile.</p>
+														<p>
+															<a href="#">Click on the application logo to continue
+																your activities.</a>
+														</p>
+													</div>
+												</div>
+
+
+              </div>
+            </div>
+            <!-- BEGIN PANELS PORTLET-->
+          </div>
+          
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %} 
+{%block scripts%}
+<script>
+$('.main_title').html('NToday - Authorization');
+$('.header').html('Authorization');
+$('#loading').hide();
+</script>
+{% endblock %}

@@ -1,0 +1,174 @@
+/* Notification Customize  */
+.lobibox-notify-wrapper.right {
+	right: 0px;
+	margin-left: 0px;
+}
+.lobibox-notify-wrapper.top {
+	top: 0px;
+}
+.lobibox-notify-wrapper {
+	z-index: 5000;
+	position: fixed;
+}
+.lobibox-notify-wrapper.right .lobibox-notify {
+	margin-left: auto;
+}
+
+.lobibox-notify {
+	position: relative;
+	min-height: 85px;
+	font-size: 14px;
+	margin: 7px 0;
+	border-radius: 0;
+	border: 1px solid transparent;
+	-webkit-box-shadow: 2px 2px 5px #aaa;
+	box-shadow: 2px 2px 5px #aaa;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.fadeInDown {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+}
+.animated-super-fast {
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.animated-fast {
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.animated-slow {
+	-webkit-animation-duration: 1.3s;
+	animation-duration: 1.3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInDown {
+ from {
+ opacity: 0;
+ -webkit-transform: translate3d(0, -100%, 0);
+ transform: translate3d(0, -100%, 0);
+}
+ to {
+ opacity: 1;
+ -webkit-transform: none;
+ transform: none;
+}
+}
+@keyframes fadeInDown {
+ from {
+ opacity: 0;
+ -webkit-transform: translate3d(0, -100%, 0);
+ transform: translate3d(0, -100%, 0);
+}
+ to {
+ opacity: 1;
+ -webkit-transform: none;
+ transform: none;
+}
+}
+.lobibox-notify .lobibox-notify-body {
+	margin: 10px 20px;
+	margin-left: 30px;
+}
+.lobibox-notify .lobibox-notify-title {
+	font-size: 20px;
+}
+.lobibox-notify .lobibox-notify-msg {
+	overflow: hidden;
+}
+.lobibox-notify .lobibox-close {
+	position: absolute;
+	text-align: center;
+	border-radius: 50%;
+	right: 10px;
+	top: 10px;
+	font-size: 20px;
+	line-height: 19px;
+	width: 19px;
+	height: 19px;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.lobibox-notify .lobibox-close:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+	font-weight: bold;
+	cursor: pointer;
+}
+.lobibox-notify .lobibox-delay-indicator {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 3px;
+}
+.lobibox-notify .lobibox-delay-indicator > div {
+	position: relative;
+	height: 100%;
+	width: 0;
+	background-color: #e8e8e8;
+}
+.zoomOut {
+	-webkit-animation-name: zoomOut;
+	animation-name: zoomOut;
+}
+ @-webkit-keyframes zoomOut {
+ 0% {
+ opacity: 1;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 50% {
+ opacity: 0;
+ -webkit-transform: scale(0.3);
+ transform: scale(0.3);
+}
+ 100% {
+ opacity: 0;
+}
+}
+@keyframes zoomOut {
+ 0% {
+ opacity: 1;
+ -webkit-transform: scale(1);
+ -ms-transform: scale(1);
+ transform: scale(1);
+}
+ 50% {
+ opacity: 0;
+ -webkit-transform: scale(0.3);
+ -ms-transform: scale(0.3);
+ transform: scale(0.3);
+}
+ 100% {
+ opacity: 0;
+}
+}
+
+.lobibox-notify.lobibox-notify-primary {color: #fff;   background-color: #5867dd ;    border-color: #5867dd ;}
+.lobibox-notify.lobibox-notify-warning {color: #fff;    background-color: #ffb822;    border-color: #ffb822;    border-top: 2px solid rgba(255, 255, 255, 0.53) !important;
+    border-bottom: 3px solid rgba(31, 3, 3, 0.33) !important;}
+.lobibox-notify.lobibox-notify-error {	border-color: #ea5460;	background-color: #ed6b75;	color: #FFF;    border-top: 2px solid rgba(255, 255, 255, 0.53) !important;
+    border-bottom: 3px solid rgba(31, 3, 3, 0.33) !important;}
+.lobibox-notify.lobibox-notify-success {border-color: #37bd9c;	background-color: #37bd9c;	color: #FFF;    border-top: 2px solid rgba(255, 255, 255, 0.53) !important;
+    border-bottom: 3px solid rgba(31, 3, 3, 0.33) !important;}
+.lobibox-notify.lobibox-notify-info {background-color: #659be0;    border-color: #659be0;	color: #FFF;    border-top: 2px solid rgba(255, 255, 255, 0.53) !important;
+    border-bottom: 3px solid rgba(31, 3, 3, 0.33) !important;}
+
+    
+
+
+/* End Customize code */

@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Work Permit Application</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://gprogress.green.com.pg/static/css/visa1.css">
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <style>body {
+    margin: 0;  /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    color: #231f20;
+}
+.content {
+            margin: 100px; /* Adjust margin as needed */
+        }
+      /* .fontsaira{
+        font-family: 'Saira Extra Condensed', sans-serif;
+      } */
+      </style>
+
+</head>
+<body style="background: #e2efd5;" >
+<!-- page 1 -->
+  <table cellpadding="0" style="width:100%; margin-bottom: 0px;background: #e2efd5; ">
+    <tr>
+      <td style="width:100%;">
+        <img src="http://127.0.0.1:8000/static/images/visa/new_work_permit_main_header.png" width="100%" alt="new_work_permit_main_header">
+        <h2 style="background:#bcdc9d;color:#808285;padding-left:95px;padding-right:25px;padding-top:7px;line-height:1;padding-bottom:7px;font-size:18px">APPLICATION CHECKLIST</h2>
+        <p style="font-size: 17px; margin-bottom: 5px;line-height:1.25; margin-top: 0;padding-left:95px;padding-right:25px;"><b>All answers must be completed in block letters.<br>
+        Applications must be accompanied by the following:</b> <i>(please tick appropriate box).<br>
+        For further information, see notes page 4.</i></p>
+        <table cellpadding="2" style="width:100%; margin-bottom:5px;">
+          <tr>
+            <td style="width:90px;"></td>
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/gbox.png" width="100%" alt="gbox"></td>
+            <td>
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;">Copy of photo page of employee's passport</p>
+            </td>
+            {% if '3298' in json_data.application_checklist %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="100%" alt="LargeCheckBox_Selected"></td>
+            {% else %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="100%" alt="LargeCheckBox"></td>
+            {% endif %}
+            <td style="width:75px;"></td>
+          </tr>
+          <tr>
+            <td style="width:90px;"></td>
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/gbox.png" width="100%" alt="gbox"></td>
+            <td>
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;">Copy of updated curriculum vitae</p>
+            </td>
+            {% if '3306' in json_data.application_checklist %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="100%" alt="LargeCheckBox_Selected"></td>
+            {% else %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="100%" alt="LargeCheckBox"></td>
+            {% endif %}            
+            <td ></td>
+          </tr>
+          <tr>
+            <td style="width:90px;"></td>
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/gbox.png" width="100%" alt="gbox"></td>
+            <td>
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;">Copy of job description</p>
+            </td>
+            {% if '3314' in json_data.application_checklist %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="100%" alt="LargeCheckBox_Selected"></td>
+            {% else %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="100%" alt="LargeCheckBox"></td>
+            {% endif %}            
+            <td ></td>
+          </tr>
+          <tr>
+            <td style="width:90px;"></td>
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/gbox.png" width="100%" alt="gbox"></td>
+            <td>
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;">Certified evidence of education qualifications</p>
+            </td>
+            {% if '3300' in json_data.application_checklist %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="100%" alt="LargeCheckBox_Selected"></td>
+            {% else %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="100%" alt="LargeCheckBox"></td>
+            {% endif %}            
+            <td ></td>
+          </tr>
+          <tr>
+            <td style="width:90px;"></td>
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/gbox.png" width="100%" alt="gbox"></td>
+            <td>
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;">Copy of employment contract signed by both employee and employer</p>
+            </td>
+            {% if '3308' in json_data.application_checklist %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="100%" alt="LargeCheckBox_Selected"></td>
+            {% else %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="100%" alt="LargeCheckBox"></td>
+            {% endif %}            
+            <td ></td>
+          </tr>
+          <tr>
+            <td style="width:90px;"></td>
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/gbox.png" width="100%" alt="gbox"></td>
+            <td>
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;">Two recent, clear, colour passport sized photographs of employee</p>
+            </td>
+            {% if '3316' in json_data.application_checklist %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="100%" alt="LargeCheckBox_Selected"></td>
+            {% else %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="100%" alt="LargeCheckBox"></td>
+            {% endif %}            
+            <td ></td>
+          </tr>
+          <tr>
+            <td style="width:90px;"></td>
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/gbox.png" width="100%" alt="gbox"><br></td>
+            <td>
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1.25; margin-top: 0;padding-left:5px;">Employee's right thumb print - <i style="font-size: 14px;">note: if you have provided your thumb print with a previous work permit application, you do not need to provide it again</i></p>
+            </td>
+            {% if '3302' in json_data.application_checklist %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="100%" alt="LargeCheckBox_Selected"></td>
+            {% else %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="100%" alt="LargeCheckBox"></td>
+            {% endif %}            
+            <td ></td>
+          </tr>
+          <tr>
+            <td style="width:90px;"></td>
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/gbox.png" width="100%" alt="gbox"></td>
+            <td>
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;">Evidence of membership of professional association (where relevant)</p>
+            </td>
+            {% if '3310' in json_data.application_checklist %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="100%" alt="LargeCheckBox_Selected"></td>
+            {% else %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="100%" alt="LargeCheckBox"></td>
+            {% endif %}            
+            <td ></td>
+          </tr>
+          <tr>
+            <td style="width:90px;"></td>
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/gbox.png" width="100%" alt="gbox"></td>
+            <td>
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;">Evidence of English Language Proficiency (where relevant)</p>
+            </td>
+            {% if '3318' in json_data.application_checklist %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="100%" alt="LargeCheckBox_Selected"></td>
+            {% else %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="100%" alt="LargeCheckBox"></td>
+            {% endif %}            
+            <td ></td>
+          </tr>
+          <tr>
+            <td style="width:90px;"></td>
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/gbox.png" width="100%" alt="gbox"></td>
+            <td>
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;">Employers Certificate of Incorporation from Investment Promotion Authority (IPA)</p>
+            </td>
+            {% if '3304' in json_data.application_checklist %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="100%" alt="LargeCheckBox_Selected"></td>
+            {% else %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="100%" alt="LargeCheckBox"></td>
+            {% endif %}            
+            <td ></td>
+          </tr>
+          <tr>
+            <td style="width:90px;"></td>
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/gbox.png" width="100%" alt="gbox"></td>
+            <td>
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;">Evidence of payment of fee (non-refundable)</p>
+            </td>
+            {% if '3312' in json_data.application_checklist %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="100%" alt="LargeCheckBox_Selected"></td>
+            {% else %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="100%" alt="LargeCheckBox"></td>
+            {% endif %}            
+            <td ></td>
+          </tr>
+          <tr>
+            <td style="width:90px;"></td>
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/gbox.png" width="100%" alt="gbox"></td>
+            <td>
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;">If the applicant does not hold a valid work permit, the applicant is outside PNG</p>
+            </td>
+            {% if '3320' in json_data.application_checklist %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="100%" alt="LargeCheckBox_Selected"></td>
+            {% else %}
+            <td style="width:20px;"><img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="100%" alt="LargeCheckBox"></td>
+            {% endif %}            
+            <td ></td>
+          </tr>
+        </table>
+        <p style="font-size: 17px; margin-bottom: 5px;line-height:1.25; margin-top: 10px;padding-left:95px;padding-right:25px;padding-bottom: 10px;"><b>Supporting documents must be attached to your application in the above order.</b></p>
+        <h2 style="background:#bcdc9d;color:#808285;padding-left:95px;padding-right:25px;padding-top:7px;line-height:1;padding-bottom:5px;font-size:18px; margin-top:10px">NATURE OF APPLICATION</h2>
+        <table cellpadding="0" style="width:100%; margin-bottom:3px;">
+          <tr>
+            <td style="width:60px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 17px; background:#7fc14a;margin-bottom: 5px;line-height:1;color:#fff;padding:5px 5px 2px;"><b>&nbsp;1</b></p>
+              <p style="font-size: 17px;margin-bottom: 5px;line-height:1;color:#fff;">&nbsp;</p>
+            </td>
+            <td style="">
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1.25; margin-top: 0;padding-left:5px;background:#fff;padding:7px 7px 4px;">Is this an application for a General Work Permit?<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>(i.e. work of a commercial nature)</i></p>
+            </td>
+            <td style="width:100px;text-align:center">
+              <p style="font-size: 17px;line-height:1;margin-bottom: 3px; margin-top: 0;padding-left:5px;">Yes</p>
+              {% if json_data.general_work_permit == 1 %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox_Selected">
+              {% else %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox">
+              {% endif %}
+              <p style="font-size: 5px;margin-bottom: 5px;line-height:1;color:#fff;">&nbsp;</p>
+            </td>
+            <td style="width:90px;">
+              <p style="font-size: 17px;line-height:1;margin-bottom: 3px; margin-top: 0;padding-left:5px;">No</p>
+              {% if json_data.general_work_permit == 0 %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox_Selected">
+              {% else %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox">
+              {% endif %}
+              <p style="font-size: 5px;margin-bottom: 5px;line-height:1;color:#fff;">&nbsp;</p>
+            </td>
+            <td style="width:20px;"></td>
+          </tr>
+          <tr>
+            <td style="width:60px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 17px; background:#7fc14a;margin-bottom: 5px;line-height:1;color:#fff;padding:5px 5px 2px;"><b>&nbsp;2</b></p>
+              <p style="font-size: 17px;margin-bottom: 5px;line-height:1;color:#fff;">&nbsp;</p>
+            </td>
+            <td style="">
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1.25; margin-top: 0;padding-left:5px;background:#fff;padding:7px 7px 4px;">Is this an application for a Volunteer Work Permit?<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>(i.e. work of a non-commercial, voluntary nature)</i></p>
+            </td>
+            <td style="width:100px;text-align:center">
+              <p style="font-size: 17px;line-height:1;margin-bottom: 3px; margin-top: 0;padding-left:5px;">Yes</p>
+              {% if json_data.volunteer_work_permit == 1 %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox_Selected">
+              {% else %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox">
+              {% endif %}              
+              <p style="font-size: 5px;margin-bottom: 5px;line-height:1;color:#fff;">&nbsp;</p>
+            </td>
+            <td style="width:90px;">
+              <p style="font-size: 17px;line-height:1;margin-bottom: 3px; margin-top: 0;padding-left:5px;">No</p>
+              {% if json_data.volunteer_work_permit == 0 %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox_Selected">
+              {% else %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox">
+              {% endif %} 
+              <p style="font-size: 5px;margin-bottom: 5px;line-height:1;color:#fff;">&nbsp;</p>
+            </td>
+            <td ></td>
+          </tr>
+          <tr>
+            <td style="width:60px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 17px; background:#7fc14a;margin-bottom: 5px;line-height:1;color:#fff;padding:5px 5px 2px;"><b>&nbsp;3</b></p>
+              <p style="font-size: 17px;margin-bottom: 5px;line-height:1;color:#fff;">&nbsp;</p>
+            </td>
+            <td style="">
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1.25; margin-top: 0;padding-left:5px;background:#fff;padding:7px 7px 4px;">Is this an application for a Short Term Work Permit?<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>(i.e. six months)</i></p>
+            </td>
+            <td style="width:100px;text-align:center">
+              <p style="font-size: 17px;line-height:1;margin-bottom: 3px; margin-top: 0;padding-left:5px;">Yes</p>
+              {% if json_data.shortterm_work_permit == 1 %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox_Selected">
+              {% else %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox">
+              {% endif %} 
+              <p style="font-size: 5px;margin-bottom: 5px;line-height:1;color:#fff;">&nbsp;</p>
+            </td>
+            <td style="width:90px;">
+              <p style="font-size: 17px;line-height:1;margin-bottom: 3px; margin-top: 0;padding-left:5px;">No</p>
+              {% if json_data.shortterm_work_permit == 0 %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox_Selected">
+              {% else %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox">
+              {% endif %} 
+              <p style="font-size: 5px;margin-bottom: 5px;line-height:1;color:#fff;">&nbsp;</p>
+            </td>
+            <td ></td>
+          </tr>
+          <tr>
+            <td style="width:60px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 17px; background:#7fc14a;margin-bottom: 5px;line-height:1;color:#fff;padding:5px 5px 2px;"><b>&nbsp;4</b></p>
+              <p style="font-size: 17px;margin-bottom: 5px;line-height:1;color:#fff;">&nbsp;</p>
+            </td>
+            <td style="">
+              <p style="font-size: 17px; margin-bottom: 5px;line-height:1.25; margin-top: 0;padding-left:5px;background:#fff;padding:7px 7px 4px;">Is this an application for a Long Term Work Permit?<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>(i.e for twelve months or more)</i></p>
+            </td>
+            <td style="width:100px;text-align:center">
+              <p style="font-size: 17px;line-height:1;margin-bottom: 3px; margin-top: 0;padding-left:5px;">Yes</p>
+              {% if json_data.longterm_work_permit == 1 %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox_Selected">
+              {% else %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox">
+              {% endif %} 
+              <p style="font-size: 5px;margin-bottom: 5px;line-height:1;color:#fff;">&nbsp;</p>
+            </td>
+            <td style="width:90px;">
+              <p style="font-size: 17px;line-height:1;margin-bottom: 3px; margin-top: 0;padding-left:5px;">No</p>
+              {% if json_data.longterm_work_permit == 0 %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox_Selected">
+              {% else %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox">
+              {% endif %} 
+              <p style="font-size: 5px;margin-bottom: 5px;line-height:1;color:#fff;">&nbsp;</p>
+            </td>
+            <td ></td>
+          </tr>
+        </table>
+        <p style="font-size: 17px; margin-bottom: 5px;line-height:1.25;padding-left:95px;padding-right:25px;margin-top: 0;"><b>Please indicate term of work permit required:</b></p>
+        <table cellpadding="2" style="width:100%; margin-bottom:2px;">
+          <tr>
+            <td style="width:95px;"></td>
+            <td style="width:90px;">
+              <p style="font-size: 17px;line-height:1;margin-bottom: 3px; margin-top: 0;">6 Months</p>
+              {% if json_data.workpermit_term == 3322 %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox_Selected">
+              {% else %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox">
+              {% endif %}              
+              <p style="font-size: 14px;line-height:1;margin-bottom: 0px; margin-top: 0;padding-bottom: 5px;">Short term</p>
+            </td>
+            <td style="width:90px;">
+              <p style="font-size: 17px;line-height:1;margin-bottom: 3px; margin-top: 0;">1 Year</p>
+              {% if json_data.workpermit_term == 3324 %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox_Selected">
+              {% else %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox">
+              {% endif %}               
+              <p style="font-size: 14px;line-height:1;margin-bottom: 0px; margin-top: 0;padding-bottom: 5px;">&nbsp;</p>
+            </td>
+            <td style="width:90px;">
+              <p style="font-size: 17px;line-height:1;margin-bottom: 3px; margin-top: 0;">2 Years</p>
+              {% if json_data.workpermit_term == 3326 %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox_Selected">
+              {% else %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox">
+              {% endif %}        
+              <p style="font-size: 14px;line-height:1;margin-bottom: 0px; margin-top: 0;padding-bottom: 5px;">&nbsp;</p>
+            </td>
+            <td style="width:90px;">
+              <p style="font-size: 17px;line-height:1;margin-bottom: 3px; margin-top: 0;">3 Years</p>
+              {% if json_data.workpermit_term == 3328 %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox_Selected">
+              {% else %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox">
+              {% endif %}        
+              <p style="font-size: 14px;line-height:1;margin-bottom: 0px; margin-top: 0;padding-bottom: 5px;">&nbsp;</p>
+            </td>
+            <td>
+              <p style="font-size: 17px;line-height:1;margin-bottom: 3px; margin-top: 0;">5 Years <span style="font-size: 14px;">(Good Corporate Citizen Only - see Notes)</span></p>
+              {% if json_data.workpermit_term == 3330 %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox_Selected.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox_Selected">
+              {% else %}
+              <img src="http://127.0.0.1:8000/static/images/visa/LargeCheckBox.png" width="30" style="margin-bottom: 5px;" alt="LargeCheckBox">
+              {% endif %}
+              <p style="font-size: 14px;line-height:1;margin-bottom: 0px; margin-top: 0;padding-bottom: 5px;">&nbsp;</p>
+            </td>
+            <td style="width: 20px;" ></td>
+          </tr>
+        </table>
+        <h2 style="background:#bcdc9d;color:#808285;padding-left:95px;padding-right:25px;padding-top:10px;line-height:1;padding-bottom:10px;font-size:17px;margin-bottom: 0px;margin-top: 10px;">For official use only</h2>
+        <table cellpadding="0" style="width:100%; margin-bottom:15px; padding:0; margin:0">
+          <tr style="padding:0">
+            <td style="width:90px;"></td>
+            <td style="background:#fff; text-align:center">
+              <table cellpadding="2" style="width:100%; margin-bottom: 5px; ">
+                <tr>
+                  <td style="width:130px;">
+                    <p style="font-size: 17px;line-height:1;margin-bottom: 3px;margin-top: 0px;padding-top: 15px"><i>Recommendation</i></p>
+                  </td>
+                  <td>
+                    <p style="font-size: 17px;width:100%;border-bottom: 0.5px solid;line-height:1;margin-top: 0px;margin-bottom: 0;">&nbsp;</p>
+                  </td>
+                </tr>
+              </table>
+              <table cellpadding="2" style="width:100%; ">
+                <tr>
+                  <td>
+                    <p style="font-size: 17px;width:100%;border-bottom: 0.5px solid;line-height:1;margin-top: 0px;margin-bottom: 0;">&nbsp;</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="font-size: 17px;width:100%;border-bottom: 0.5px solid;line-height:1; margin-top: 5px; margin-bottom: 3px;">&nbsp;</p>
+                    <p style="font-size: 17px;width:100%;border-bottom: 0px solid;line-height:0.25; margin-top: 0px; margin-bottom: 5px;">&nbsp;</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <!-- <td style="width: 10px;"></td> -->
+            <td style="width:70px;text-align:right; padding:0">
+			<img src="http://127.0.0.1:8000/static/images/visa/page_number_1.png" width="100%" style="margin-bottom: 5px; position:relative; left: 15px;float:right" alt="page_number_1">
+              <br><br>
+    </td>
+          </tr>
+        </table>
+		 <!-- <p style="font-size: 17px;width:100%;line-height:1; margin-top: 10px">&nbsp;</p> -->
+		
+		
+      </td>
+    </tr>
+  </table>
+  <!-- page 2 -->
+  <table cellpadding="0" style="width:100%; margin-bottom: 5px;background: #e2efd5;margin-top: 0;">
+    <tr>
+      <td style="width:100%;">	  
+	  
+		<img src="http://127.0.0.1:8000/static/images/visa/new_work_permit_header.png" width="1005" alt="new_work_permit_header" style="margin-bottom: 0; position: relative; top: 0px;">
+		 <table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width:85px;"></td>
+            <td style="">
+              <h2 style="background:#bcdc9d;color:#808285;padding-left:15px;padding-right:25px;padding-top:10px;line-height:1;padding-bottom:10px;font-size:17px;margin-top: 10px;margin-bottom: 10px;">EMPLOYER DETAILS</h2>
+			  <p style="font-size: 15px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;">All answers must be competed in block letters.</p>
+            </td>
+			<td style="width:  65px;"></td>
+          </tr>
+        </table>
+        <table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>&nbsp;5</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Employer: <span>&nbsp;{{json_data.employer}}  </span></p>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>&nbsp;6</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Employer Address: <span>&nbsp;{{json_data.employer_address}}  </span></p>
+            </td>
+            <td style="width:  65px;"></td>
+          </tr>
+        </table>
+		<table cellpadding="0" style="width:100%; margin-bottom:2px;">         
+          <tr>
+            <td style="width:55px;"></td>
+            <td style="width:25px;"></td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;"><span>&nbsp;  </span></p>
+            </td>
+            <td style="width:  65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width:55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>&nbsp;7</b></p>
+            </td>
+            <td  style="width:220px;">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Tel: <span>&nbsp;{{json_data.telephone}}  </span></p>
+            </td>
+			<td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>&nbsp;8</b></p>
+            </td>
+            <td  style="width:220px;">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Fax: <span>&nbsp;{{json_data.fax}}  </span></p>
+            </td>
+			<td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>&nbsp;9</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">e-mail: <span>&nbsp;{{json_data.email}}  </span></p>
+            </td>
+            <td style="width:  65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1.15;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>10</b></p>
+			  <p style="font-size: 17px;margin-bottom: 5px;line-height:1;color:#fff;margin-top: 3px;">&nbsp;</p>
+            </td>
+            <td  style="width:400px;">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1.15; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Industrial Division <small style="letter-spacing:0.5px;font-size: 14px;">(selected from	 <br>"PNG Classification of Industrial Divisions"):</small><br>	<span>&nbsp;{{json_data.industrial_division}}  </span></p>
+            </td>
+			<td ><p >&nbsp;</p></td>
+			<td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1.15;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>11</b></p>
+			  <p style="font-size: 17px;margin-bottom: 5px;line-height:1;color:#fff;margin-top: 3px;">&nbsp;</p>
+            </td>
+            <td style="width:400px;">
+             <p style="font-size: 15px; margin-bottom: 0px;line-height:1.15; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Industrial Division <small style="letter-spacing:0.5px;font-size: 14px;">(selected from	 <br>"PNG Classification of Industrial Sub-Divisions"):</small><br>	<span>&nbsp;{{json_data.industrial_subdivision}}  </span></p>
+            </td>
+            <td style="width:   65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>12</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">How many Papua New Guinean employees are employed by this company? <span>&nbsp; {{json_data.png_employees_employed}} </span></p>
+            </td>
+            <td style="width:   65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>13</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">How many non-citizen employees are employed by this company? <span>&nbsp;{{json_data.non_citizen_employed}}  </span></p>
+            </td>
+            <td style="width:  65px;"></td>
+          </tr>
+        </table>
+		
+		
+		 <table cellpadding="0" style="width:100%; margin-bottom:10px;">         
+          <tr>
+            <td style="width:85px;"></td>
+            <td style="">
+              <h2 style="background:#bcdc9d;color:#808285;padding-left:15px;padding-right:25px;padding-top:10px;line-height:1;padding-bottom:10px;font-size:17px;margin-top: 20px;margin-bottom: 1px;">POSITION DETAILS</h2>			  
+            </td>
+			<td style="width:  65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>14</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Job Title <i>(as per position description)</i>: <span>&nbsp;{{json_data.job_title}}  </span></p>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width:55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>15</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Occupation <i>(selected from "PNG Classification of Occupations")</i> <span>&nbsp; {{json_data.occupation}} </span></p>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width:55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1.15;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>16</b></p>
+			  <p style="font-size: 17px;margin-bottom: 5px;line-height:1;color:#fff;margin-top: 3px;">&nbsp;</p>
+            </td>
+            <td  style="width:350px;">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1.15; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Job Code <small style="letter-spacing:0.5px;font-size: 14px;"><i>(selected from "PNG Classification of Occupations"):</i></small><br>	<span>&nbsp; {{json_data.job_code}} </span></p>
+            </td>
+			<td ><p>&nbsp;</p></td>
+			<td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1.15;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>17</b></p>
+			  <p style="font-size: 17px;margin-bottom: 5px;line-height:1;color:#fff;margin-top: 3px;">&nbsp;</p>
+            </td>
+            <td style="width:400px;">
+             <p style="font-size: 15px; margin-bottom: 0px;line-height:1.15; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Internal Company Position Code: <br>	<span>&nbsp;  <br>&nbsp;{{json_data.company_position_code}} </span></p>
+            </td>
+            <td style="width:  65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>18</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Province of Primary Work Location: <span>&nbsp; {{json_data.primary_work_location}} </span></p>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>19</b></p>
+            </td>
+            <td style="">
+				<table cellpadding="0" style="width:100%; margin-bottom: 5px;background:#fff;">         
+				  <tr>
+					<td >
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Will the employee be required to travel to locations other than the primary work location?</p>
+					</td>
+					<td style="width:30px;">
+						<p style="font-size: 14px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Yes</p>
+					</td>
+					<td style="width:18px;">
+                        {% if json_data.other_location_travel == 1 %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% endif %}
+					</td>
+					<td style="width:24px;">
+						<p style="font-size: 14px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">No</p>
+					</td>
+					<td style="width:18px;">
+                        {% if json_data.other_location_travel == o %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% endif %}
+					</td>
+					<td style="width:38px;">
+						<p style="font-size: 8.5px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Go to <br>question <br>21</p>
+					</td>
+				  </tr>
+				</table>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>20</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">If yes, please provide details: <span>&nbsp; {{ json_data.other_location_travel_detail}} </span></p>
+            </td>
+            <td style="width:  65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>21</b></p>
+            </td>
+            <td style="">
+				<table cellpadding="0" style="width:100%; margin-bottom:2px;background:#fff;margin-top:5px">         
+				  <tr>
+					<td >
+						<p style="font-size: 15px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">Is this position a reserved occupation <i>(see Notes)</i>?</p>
+					</td>
+					<td style="width:30px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Yes</p>
+					</td>
+					<td style="width:18px;">
+                        {% if json_data.reserved_occupation_position == 1 %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% endif %}
+					</td>
+					<td style="width:50px;">
+						<p style="font-size: 8.5px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Application <br>ineligible</p>
+					</td>
+					<td style="width:24px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">No</p>
+					</td>
+					<td style="width:18px;">
+						{% if json_data.reserved_occupation_position == 0 %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% endif %}
+					</td>
+					<td style="width:150px;">
+						<p style="font-size: 8.5px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Go to question 22 </p>
+					</td>
+				  </tr>
+				</table>
+            </td>
+            <td style="width:  65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>22</b></p>
+            </td>
+            <td style="">
+				<table cellpadding="0" style="width:100%; margin-bottom:2px;background:#fff;margin-top:5px">         
+				  <tr>
+					<td >
+						<p style="font-size: 15px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">Is it a requirement that this position be advertised <i>(see Notes)</i>?</p>
+					</td>
+					<td style="width:30px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Yes</p>
+					</td>
+					<td style="width:18px;">
+                        {% if json_data.advertised_position == 1 %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% endif %}
+					</td>
+					<td style="width:70px;">
+						<p style="font-size: 8.5px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Go to <br>question 23</p>
+					</td>
+					<td style="width:24px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">No</p>
+					</td>
+					<td style="width:18px;">
+						{% if json_data.advertised_position == 0 %}
+						<img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% endif %}
+					</td>
+					<td style="width:100px;">
+						<p style="font-size: 8.5px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Go to <br>question 24 </p>
+					</td>
+				  </tr>
+				</table>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width:  55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>23</b></p>
+            </td>
+            <td style="">
+				<table cellpadding="0" style="width:100%; margin-bottom:2px;background:#fff;margin-top:5px">         
+				  <tr>
+					<td >
+						<p style="font-size: 15px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">&nbsp;</p>
+					</td>
+					<td style="width:18px;">
+            {% if '3292' in json_data.advertised_detail %}
+            <img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+            {% else %}
+<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+            {% endif %}
+					</td>
+					<td style="width:150px;">
+						<p style="font-size: 12px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;"><i>Copy of Advertisement</i></p>
+					</td>
+					<td style="width:18px;">
+						{% if '3294' in json_data.advertised_detail %}
+                        <img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% endif %}
+					</td>
+					<td style="width:200px;">
+						<p style="font-size: 12px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;"><i>Details of dates advertised</i></p>
+					</td>
+					<td style="width:18px;">
+						{% if '3296' in json_data.advertised_detail %}
+                        <img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% endif %}
+					</td>
+					<td style="width:200px;">
+						<p style="font-size: 12px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;"><i>Statement why PNG <br>citizen not suitable </i></p>
+					</td>
+				  </tr>
+				</table>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%;margin-top: 10px; margin-bottom:8px;">         
+          <tr>
+            <td style="width:80px;"></td>
+            <td style="">
+              <h2 style="background:#bcdc9d;color:#808285;padding-left:15px;padding-right:25px;padding-top:10px;line-height:1;padding-bottom:10px;font-size:17px;margin-top: 20px;margin-bottom: 1px;">EMPLOYEE DETAILS</h2>			  
+            </td>
+			<td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>24</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Employee Surname <i>(as shown in passport)</i>: <span>&nbsp;{{json_data.surname}}  </span></p>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>25</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Employee Given Names <i>(as shown in passport)</i>: <span>&nbsp;{{json_data.given_name}}  </span></p>
+            </td>
+            <td style="width:65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1.15;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>26</b></p>
+			  <p style="font-size: 17px;margin-bottom: 0px;line-height:1;color:#fff;margin-top: 3px;">&nbsp;</p>
+            </td>
+            <td  style="width:270px;">
+              
+					  <table cellpadding="0" style="width:100%; margin-bottom: 5px;background:#fff;">         
+						  <tr>
+							<td style="width:200px;"><p style="font-size: 15px; margin-bottom: 0px;line-height:1.15; margin-top: 0;padding-left:5px;background:#fff;">Date of Birth: &nbsp;</p></td>
+							<td >
+							  <table cellpadding="0" style="width:100%; margin-bottom: 0px;">         
+								  <tr>
+									<td style=""> 
+                  <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;margin-bottom: 0;">&nbsp;{{json_data.dob_date.strftime('%d')}}</p>
+                </td>
+									<td style=""> 
+									 <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;margin-bottom: 0;">&nbsp;{{json_data.dob_date.strftime('%b')}}</p>
+									</td>	
+									<td style=""> 
+									  <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;margin-bottom: 0;">&nbsp;{{json_data.dob_date.strftime('%Y')}}</p>
+									</td>										
+								  </tr>
+								</table>
+							</td>							
+						  </tr>
+						  <tr>  
+							<td></td>
+							<td>
+							  <img src="http://127.0.0.1:8000/static/images/visa/dob.png" width="100%" alt="dob">
+							</td>							
+						  </tr>
+						</table>
+            </td>
+			<td ><p>&nbsp;</p></td>
+			<td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1.15;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>27</b></p>			  
+            </td>
+            <td style="width:300px;">
+            <table cellpadding="0" style="width:100%; margin-bottom:2px;background:#fff;margin-top:5px">         
+						  <tr>
+							<td style="width:90px;" >
+								<p style="font-size: 15px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 0;margin-bottom: 0;">Gender :</p>
+							</td>
+							<td style="width:45px;">
+								<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Male</p>
+							</td>
+							<td style="width:25px;">
+                {% if json_data.gender == 8486 %}
+                <img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                {% else %}
+								<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                {% endif %}
+              </td>
+							<td style="width:60px;">
+								<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Female</p>
+							</td>
+							<td style="">
+                {% if json_data.gender == 8488 %}
+                <img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                {% else %}
+								<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                {% endif %}							
+              </td>
+						  </tr>
+						</table>
+						
+            </td>
+            <td style="width:  65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width:  55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>28</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Passport Number: <span>&nbsp;{{json_data.passport_no}}  </span></p>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width:  55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>29</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Nationality (as shown in passport): <span>&nbsp;{{json_data.nationality}}  </span></p>
+            </td>
+            <td style="width:65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width:  55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>30</b></p>
+            </td>
+            <td style="">
+				<table cellpadding="0" style="width:100%; margin-bottom:2px;background:#fff;margin-top:5px">         
+				  <tr>
+					<td >
+						<p style="font-size: 15px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 0;margin-bottom: 0;">Will the employee be accompanied by dependents?</p>
+					</td>
+					<td style="width:35px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Yes</p>
+					</td>
+					<td style="width:30px;">
+                        {% if json_data.dependent_accompany == 1 %}
+                        <img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% endif %}
+					</td>
+					<td style="width:29px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">No</p>
+					</td>
+					<td style="width:30px;">
+                        {% if json_data.dependent_accompany == 0 %}
+                        <img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% endif %}
+					</td>
+					<td style="width:180px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">If yes, how many: <span>&nbsp;{{json_data.dependent_accompany_count}} </span></p>
+					</td>
+				  </tr>
+				</table>
+            </td>
+            <td style="width:65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width:  55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>31</b></p>
+            </td>
+            <td style="">
+				<table cellpadding="0" style="width:100%; margin-bottom:2px;background:#fff;margin-top:5px">         
+				  <tr>
+					<td >
+						<p style="font-size: 15px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 0;margin-bottom: 0;">Is the employee a dependent of a current work permit holder in PNG?</p>
+					</td>
+					<td style="width:30px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Yes</p>
+					</td>
+					<td style="width:18px;">
+                        {% if json_data.png_current_workpermit_holder == 1 %}
+                        <img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% endif %}
+					</td>
+					<td style="width:110px;">
+						<p style="font-size: 8.5px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Go to question 32</p>
+					</td>
+					<td style="width:24px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">No</p>
+					</td>
+					<td style="width:18px;">
+                        {% if json_data.png_current_workpermit_holder == 0 %}
+                        <img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% else %}
+						<img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+                        {% endif %}					</td>
+					<td style="width:110px;">
+						<p style="font-size: 8.5px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Go to question 33 </p>
+					</td>
+				  </tr>
+				</table>
+            </td>
+            <td style="width:  65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom:15px;">         
+          <tr>
+          <td style="width:60px;">
+				<img src="http://127.0.0.1:8000/static/images/visa/page_number_2.png" width="60" style="margin-bottom: 0px;" alt="page_number_2">
+			</td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>32</b></p>
+            </td>
+            <td style="width:520px;">
+				<table cellpadding="2" style="width:100%; margin-bottom:10px;background:#fff;margin-top:5px">         
+				  <tr>
+					<td style="width:750px">
+						<p style="font-size: 15px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 0;margin-bottom: 0;">If yes, please indicate the work permit number: </p>
+					</td>
+					<td style="width:22px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;border:1px solid #000;padding:3px 5px 0">&nbsp;{{json_data.workpermit_number[0]}}</p>
+					</td>
+					<td style="width:22px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;border:1px solid #000;padding:3px 5px 0">&nbsp;{{json_data.workpermit_number[1]}}</p>
+					</td>
+					<td style="width:22px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;border:1px solid #000;padding:3px 5px 0">&nbsp;{{json_data.workpermit_number[2]}}</p>
+					</td>
+					<td style="width:22px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;border:1px solid #000;padding:3px 5px 0">&nbsp;{{json_data.workpermit_number[3]}}</p>
+					</td>
+					<td style="width:22px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;border:1px solid #000;padding:3px 5px 0">&nbsp;{{json_data.workpermit_number[4]}}</p>
+					</td>
+					<td style="width:22px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;border:1px solid #000;padding:3px 5px 0">&nbsp;{{json_data.workpermit_number[5]}}</p>
+					</td>
+					<td style="width:22px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;border:1px solid #000;padding:3px 5px 0">&nbsp;{{json_data.workpermit_number[6]}}</p>
+					</td>
+					<td style="width:22px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;border:1px solid #000;padding:3px 5px 0;">&nbsp;{{json_data.workpermit_number[7]}}</p>
+					</td>
+					
+				  </tr>
+				</table>
+            </td>
+            <td style=""><p>&nbsp;</p></td>
+          </tr>
+        </table>
+		<p style="font-size: 15px; margin-bottom: 5px;line-height:1; margin-top: 10px;padding:3px 5px 0">&nbsp;</p>
+		
+		
+		 </td>
+    </tr>
+  </table>
+  <!-- page 3 -->
+  
+  <table cellpadding="0" style="width:100%; margin-bottom: 5px;background: #e2efd5;">
+    <tr>
+      <td style="width:100%;">	  
+	  
+		<img src="http://127.0.0.1:8000/static/images/visa/new_work_permit_header.png" width="1005" alt="new_work_permit_header" style="margin-bottom: 0;">
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 2px;">         
+          <tr>
+            <td style="width:55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>33</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Details of Employee's Education/Training <i>(two most recent qualifications)</i>:<span>&nbsp;  </span></p>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width:55px;"></td>
+            <td style="width:25px;"></td>
+            <td style="">
+				<table cellpadding="2" style="width:100%; margin-bottom:2px;background:#fff;margin-top:1px; border: 1px solid #e5f1db; border-collapse: collapse;">         
+				  <tr>
+					<td style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;" >Duration (dd/mm/yy)  </p>
+					</td>
+					
+					<td colspan="2"  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;" >Duration (dd/mm/yy)  </p>
+					</td>
+					
+					<td style="width:30%;border: 1px solid #e2efd5;" >
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;" >Qualification and Field of Study</p>
+					</td>	
+					
+				  </tr>
+				   <tr>
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"> {{json_data.training_institution_1}} </p>
+					</td>
+					
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"><span > From</span> &nbsp; {{json_data.from_duration_1.strftime('%d-%b-%Y')}} </p>
+					</td>
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"><span >To</span> &nbsp; {{json_data.to_duration_1.strftime('%d-%b-%Y')}} </p>
+					</td>
+					
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"> {{json_data.field_study_1}}</p>
+					</td>	
+					
+				  </tr>
+				  <tr>
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">&nbsp;{{json_data.training_institution_2}}	  </p>
+					</td>
+					
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">&nbsp;{{json_data.from_duration_2.strftime('%d-%b-%Y')}}	 </p>
+					</td>
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size:12px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">&nbsp;	{{json_data.to_duration_2.strftime('%d-%b-%Y')}} </p>
+					</td>
+					
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size:12px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">&nbsp;	{{json_data.field_study_2}}</p>
+					</td>
+					
+				  </tr>
+				</table>
+              
+			  
+			  
+			  
+			  
+            </td>
+            <td style="width:  65px;"></td>
+          </tr>
+        </table>
+		
+		
+				
+				
+				<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>34</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Details of Employee's Employment History <i>(last two positions held)</i>:<span>&nbsp;  </span></p>
+            </td>
+            <td style="width:  65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;"></td>
+            <td style="">
+				<table cellpadding="2" style="width:100%; margin-bottom:2px;background:#fff;margin-top:1px; border: 1px solid #e5f1db; border-collapse: collapse;">         
+				  <tr>
+					<td  style="width:35% ; border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"  >Employer and Location (Town, Country)  </p>
+					</td>
+					
+					<td style="width:15%; border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"  >Industry </p>
+					</td>
+					
+					<td colspan="2" style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"  >Duration (dd/mm/yy)  </p>
+					</td>
+					
+					<td  style="width:20%; border: 1px solid #e2efd5;" >
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"  >Occupation</p>
+					</td>	
+					
+				  </tr>
+				   <tr>
+					<td style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"> {{json_data.employer_location_1}} </p>
+					</td>
+					
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"> {{json_data.industry_1}} </p>
+					</td>
+					
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"><span  >From</span>  {{json_data.employment_from_duration_1.strftime('%d-%b-%Y')}}</p>
+					</td>
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"><span  >To</span>  {{json_data.employment_to_duration_1.strftime('%d-%b-%Y')}}</p>
+					</td>
+					
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">{{json_data.occupation_1}}</p>
+					</td>	
+					
+				  </tr>
+				  <tr>
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">&nbsp; {{json_data.employer_location_2}}	  </p>
+					</td>
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">  {{json_data.industry_2}}</p>
+					</td>
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">&nbsp;{{json_data.employment_from_duration_2.strftime('%d-%b-%Y')}}	 </p>
+					</td>
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size:12px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">&nbsp;{{json_data.employment_to_duration_2.strftime('%d-%b-%Y')}}	 </p>
+					</td>
+					
+					<td  style="border: 1px solid #e2efd5;" >
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size:12px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">&nbsp;{{json_data.occupation_2}}	</p>
+					</td>
+					
+				  </tr>
+				</table>
+				
+			 </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>35</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Please list the Country of Origin and Repatriation for the Employee <i>(see Notes)</i>: <span>&nbsp;  </span></p>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;"></td>
+            <td style="">
+				<table cellpadding="2" style="width:100%; margin-bottom:2px;background:#fff;margin-top:5px; border: 1px solid #e5f1db; border-collapse: collapse;">         
+				  <tr>
+					<td >
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"><span  >Country </span>  <span>&nbsp;{{json_data.origin_country_name}}  </span>            </p>
+					</td>
+					
+					<td>
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"><span  >City </span>  <span>&nbsp;{{json_data.origin_city}}  </span> </p>
+					</td>
+					
+						
+					
+				  </tr>
+				   
+				</table>
+				
+			 </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+
+
+
+        <table cellpadding="0" style="width:100%; margin-bottom: 5px;margin-top: 10px;">         
+          <tr>
+            <td style="width:85px;"></td>
+            <td style="">		  
+              <h2 style="background:#bcdc9d;color:#808285;padding-left:15px;padding-right:25px;padding-top:10px;line-height:1;padding-bottom:10px;font-size:17px;margin-top: 5px;margin-bottom: 1px;">ENGLISH LANGUAGE PROFICIENCY</h2>
+            </td>
+			<td style="width:  65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>36</b></p>
+            </td>
+            <td style="">
+				<table cellpadding="0" style="width:100%; margin-bottom:2px;background:#fff;margin-top:5px">         
+				  <tr>
+					<td >
+						<p style="font-size: 12.5px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">Is the employee from a designated English Speaking country (see Notes)?</p>
+					</td>
+					<td style="width:30px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Yes</p>
+					</td>
+					<td style="width:18px;">
+            {% if json_data.english_speaking_country == 1 %}
+            <img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+            {% else %}
+            <img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+            {% endif %}
+
+					</td>
+					<td style="width:60px;">
+						<p style="font-size: 8.5px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Go to <br>question 40</p>
+					</td>
+					<td style="width:24px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">No</p>
+					</td>
+					<td style="width:18px;">
+            {% if json_data.english_speaking_country == 0 %}
+            <img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+            {% else %}
+            <img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+            {% endif %}					</td>
+					<td style="width:60px;">
+						<p style="font-size: 8.5px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Go to <br>question 37 </p>
+					</td>
+				  </tr>
+				</table>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>37</b></p>
+            </td>
+            <td style="">
+				<table cellpadding="0" style="width:100%; margin-bottom:2px;background:#fff;margin-top:5px">         
+				  <tr>
+					<td >
+						<p style="font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">If no has the employee passed a test of English Language Proficiency?</p>
+					</td>
+					<td style="width:30px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Yes</p>
+					</td>
+					<td style="width:18px;">
+            {% if json_data.passed_english_proficiency == 1 %}
+            <img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+            {% else %}
+            <img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+            {% endif %}
+					</td>
+					<td style="width:75px;">
+						<p style="font-size: 8.5px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Provide details <br>at question 38</p>
+					</td>
+					<td style="width:24px;">
+						<p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">No</p>
+					</td>
+					<td style="width:18px;">
+            {% if json_data.passed_english_proficiency == 0 %}
+            <img src="http://127.0.0.1:8000/static/images/visa/tick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+            {% else %}
+            <img src="http://127.0.0.1:8000/static/images/visa/untick.png" width="18" style="margin-bottom: 0px;" alt="LargeCheckBox_Selected">
+            {% endif %}					</td>
+					<td style="width:65px;">
+						<p style="font-size: 8.5px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">Go to <br>question 39 </p>
+					</td>
+				  </tr>
+				</table>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+	
+        <table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>38</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Evidence of English Language Proficiency: <span>&nbsp;  </span></p>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;"></td>
+            <td style="">
+				<table cellpadding="2" style="width:100%; margin-bottom:2px;background:#fff;margin-top:1px; border: 1px solid #e5f1db; border-collapse: collapse;">         
+				  <tr>
+					<td style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"  >Education Institution</p>
+					</td>
+					
+					<td style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"  >Date test undertaken (dd/mm/yy)</p>
+					</td>
+					
+					<td style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;"  >Results (Attach Certified Copy)</p>
+					</td>
+				  </tr>
+				  <tr>
+					<td style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">&nbsp;{{json_data.english_proficiency_institution}}</p>
+					</td>
+					
+					<td style="border: 1px solid #e2efd5;">
+            {% if json_data.test_undertaken != None %}
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">&nbsp;{{json_data.test_undertaken.strftime('%d-%b-%Y')}}</p>
+            {% else %}
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">&nbsp;</p>
+            {% endif %}
+          </td>
+					
+					<td  style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 5px;margin-bottom: 5px;">&nbsp;{{json_data.results}}</p>
+					</td>
+				  </tr>
+				   
+				</table>
+				
+			 </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>39</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">Please provide alternative proof of English Language Proficiency <i>(see Notes).</i> <span>&nbsp;{{json_data.alternative_proof}}  </span></p>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width:85px;"></td>
+            <td style="">		  
+              <h2 style="background:#bcdc9d;color:#808285;padding-left:15px;padding-right:25px;padding-top:10px;line-height:1;padding-bottom:10px;font-size:17px;margin-top: 5px;margin-bottom: 1px;">SALARY PACKAGE OF EMPLOYEE</h2>
+            </td>
+			<td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>40</b></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;">What is the total salary package (Salary and Non-salary) of Employee <i>(see Notes)</i>? <span>&nbsp;  </span></p>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;"></td>
+            <td style="">
+				<table cellpadding="0" style="width:100%; margin-bottom:2px;background:#fff;margin-top:1px; border: 1px solid #e5f1db; border-collapse: collapse;">         
+				  <tr>
+					<td style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 2px;margin-bottom: 2px;"  >Salary (e.g. Take Home Pay)</p>
+					</td>
+					
+					<td style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 2px;margin-bottom: 2px;"  >Non-salary Allowances</p>
+					</td>
+					
+					<td style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 2px;margin-bottom: 2px;"  >Total Salary Package</p>
+					</td>
+				  </tr>
+				  <tr>
+					<td style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 2px;margin-bottom: 2px;">K &nbsp;{{json_data.take_home_salary}}</p>
+					</td>
+					
+					<td style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 2px;margin-bottom: 2px;">K &nbsp;{{json_data.non_salary_allowance}}</p>
+					</td>
+					
+					<td style="border: 1px solid #e2efd5;">
+						<p style="font-family: 'Roboto Condensed', sans-serif;font-size: 14px; padding-bottom: 5px;line-height:1; padding-top: 5px;padding-left:5px;margin-top: 2px;margin-bottom: 2px;">K {{json_data.total_salary_package}}&nbsp;</p>
+					</td>
+				  </tr>
+				   
+				</table>
+				
+			 </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width:85px;"></td>
+            <td style="">			  
+              <h2 style="background:#bcdc9d;color:#808285;padding-left:15px;padding-right:25px;padding-top:10px;line-height:1;padding-bottom:10px;font-size:17px;margin-top: 5px;margin-bottom: 1px;">DECLARATION</h2>
+            </td>
+			<td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr style="vertical-align: top;">
+            <td style="width: 55px;"></td>
+            <td style="width:25px;">
+              <p style="font-size: 15px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>41</b></p>
+			  <p style="font-size: 15px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;"></p>
+            </td>
+            <td style="">
+              <p style="font-size: 15px; margin-bottom: 4px;line-height:1; margin-top: 0;padding-left:5px;padding:5px 5px  2px;">We hereby declare that:</p>
+				<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+				  <tr>
+					<td style="width:  18px;"> 
+						<p style="font-size: 12.5px; margin-bottom: 0px;line-height:1.25; margin-top: 0;padding-left:5px;">(a)</p>
+					</td>
+					<td>
+						<p style="font-size: 14px; margin-bottom: 0px;line-height:1.25; margin-top: 0;padding-left:5px;">All information provided in this application (including all attached documentation) is true and correct; and</p>
+					</td>
+					 </tr>
+					 <tr style="vertical-align: top;">
+					<td> 
+						<p style="font-size: 12.5px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;">(b)</p>
+					</td>
+					<td>
+						<p style="font-size: 14px; margin-bottom: 0px;line-height:1.5; margin-top: 0;padding-left:5px;">We understand that the provision of false or misleading information may result in the refusal of this 
+
+                            application, or, in the event that the work permit is issued, cancellation.</p>
+					</td>
+					 </tr>
+				</table>
+            </td>
+            <td style="width: 65px;"></td>
+          </tr>
+        </table>
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom:0px; margin-top:0">         
+          <tr>
+            <td style="width: 55px;"></td>
+            <td style="width:25px;"></td>
+            <td style="">              
+				<table cellpadding="0" style="width:100%; margin-bottom: 0px; margin-top: 0;">         
+				  <tr>
+					<td style="width: 40%;"> 
+						<p style="font-size: 15px; margin-bottom: 5px;line-height:1; padding-top: 15px;padding-left:5px;border-bottom:1px solid #000;text-align:center">&nbsp;</p>
+						<p style="font-size: 15px; margin-bottom: 30px;line-height:1; margin-top: 0;padding-left:5px;text-align:center">Signature of Employer</p>
+						<p style="font-size: 15px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;border-bottom:1px solid #000;text-align:center">&nbsp;</p>
+						<p style="font-size: 15px; margin-bottom: 30px;line-height:1; margin-top: 0;padding-left:5px;text-align:center">Name of Employer (print) </p>
+						<p style="font-size: 15px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;border-bottom:1px solid #000;text-align:center">&nbsp;</p>
+						<p style="font-size: 15px; margin-bottom: 10px;line-height:1; margin-top: 0;padding-left:5px;text-align:center">Date </p>
+					</td>
+					<td style="text-align:center">
+					
+						<img src="http://127.0.0.1:8000/static/images/visa/stamp.png" alt="stamp" style="margin-bottom: 0; max-width:100%; height:240px;">
+						
+					</td>
+					
+					<td style="width: 40%;">
+						<p style="font-size: 15px; margin-bottom: 5px;line-height:1; padding-top: 25px;padding-left:5px;border-bottom:1px solid #000;text-align:center">&nbsp;</p>
+						<p style="font-size: 15px; margin-bottom: 20px;line-height:1; margin-top: 0;padding-left:5px;text-align:center">Signature of Employee</p>
+						<p style="font-size: 15px; margin-bottom: 10px;line-height:1; margin-top: 0;padding-left:5px;border-bottom:1px solid #000;text-align:center">&nbsp;</p>
+						<p style="font-size: 15px; margin-bottom: 3px;line-height:1; margin-top: 0;padding-left:5px;text-align:center">Name of Employee (print) </p>
+						<p style="font-size: 15px; margin-bottom: 10px;line-height:1; margin-top: 0;padding-left:5px;">&nbsp;</p>
+						<p style="font-size: 15px; margin-bottom: 3px;line-height:1; margin-top: 0;padding-left:5px;">Right thumb print of employee.</p>
+						<p style="font-size: 10px; padding-bottom: 5px;line-height:1.15; margin-top: 0;padding-left:5px;">Note: print must be clearly<br>distinguishable - use fingerprint ink</p>
+					</td>
+					
+					 </tr>
+					
+				</table>
+            </td>
+			 <td style="width: 20px;"></td>
+             <td style="width:60px;">
+				<p style="font-size: 15px; margin-bottom: 15px;line-height:2; margin-top: 0;padding-left:5px;"><br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</p>
+				<img src="http://127.0.0.1:8000/static/images/visa/page_number_3.png" width="60" style="margin-bottom: 0px;" alt="page_number_3">
+			</td>
+          </tr>
+        </table>
+		
+		
+		
+		
+	
+	</td>
+    </tr>
+  </table>
+  
+  <!-- page 4 -->
+  <table cellpadding="0" style="width:100%; margin-bottom:1px;background: #e2efd5;">
+    <tr>
+      <td style="width:100%;">	  
+	  
+		<img src="http://127.0.0.1:8000/static/images/visa/new_work_permit_header.png" width="1005" alt="new_work_permit_header" style="margin-bottom: 0;">
+		 <table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+          <tr>
+            <td style="width:85px;"></td>
+            <td style="">
+              <h2 style="background:#bcdc9d;color:#808285;padding-left:15px;padding-right:25px;padding-top:7px;line-height:1;padding-bottom:5px;font-size:17px;margin-top: 20px;margin-bottom: 15px;">NOTES</h2>
+			  <p style="font-size: 16px; margin-bottom: 20px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;">These notes are provided to assist applicants with completing this application form.</p>
+			  <p style="font-size: 16px; margin-bottom: 5px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-bottom:25px;">For further information, please refer to the <i>Employment of Non-citizens Act 2007</i>, the <br>Employment of Non-citizens Regulation 2008 and the Work Permit Guidelines.</p>
+            </td>
+			<td style="width:  65px;"></td>
+          </tr>
+        </table>
+        <table cellpadding="4" style="width:100%; margin-bottom: 5px;">         
+          <tr style="vertical-align: text-bottom;">
+            <td style="width: 30px;"></td>
+            <td style="width:  47%">
+				 <table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+				  <tr>
+					<td style="width:  25px;"></td>
+					<td style="width:25px;">
+					  <p style="font-size: 14.5px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>&nbsp;1</b></p>
+					</td>
+					<td style="">
+					  <p style="font-size: 14.5px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;"><b>FEE SCHEDULE  <span>&nbsp;  </span></b></p>
+					</td>
+					<td style="width: 40px;"></td>
+				  </tr>				  
+				  <tr>
+					<td></td>
+					<td></td>
+					<td style="" colspan="2">
+					  <p style="font-size: 14.5px; margin-bottom: 5px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:10px;padding-bottom:12px">
+					  General Long Term Work Permit:&nbsp;&nbsp;&nbsp;K1,000.00 per year<br>
+					  General Short Term Work Permit:&nbsp;&nbsp;K500.00  <br>
+					  Volunteer Long Term Work Permit:&nbsp;K100.00 per year<br>
+					  Volunteer Short Term Work Permit:K50.00 					  </p>
+					</td>
+				  </tr>
+				</table>
+				
+				<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+				  <tr>
+					<td style="width:  25px;"></td>
+					<td style="width:25px;">
+					  <p style="font-size: 14.5px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>&nbsp;2</b></p>
+					</td>
+					<td style="">
+					  <p style="font-size: 14.5px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;"><b>GOOD CORPORATE CITIZENSHIP <span>&nbsp;  </span></b></p>
+					</td>
+					<td style="width: 40px;"></td>
+				  </tr>				  
+				  <tr>
+					<td></td>
+					<td></td>
+					<td style="" colspan="2">
+					  <p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:10px;padding-bottom:5px">
+					  Only employers who have been granted Good <br>Corporate Citizenship status by the Minister for    <br>Labour and Industrial Relations may make   <br>application for five (5) year work permits.				  </p>
+					  
+					  <p style="font-size: 14.5px; margin-bottom: 5px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:0px;padding-bottom:12px">
+					  For further information, please see the Work Permit <br>Guidelines.			  </p>
+					</td>
+				  </tr>
+				</table>
+				
+				<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+				  <tr>
+					<td style="width:  25px;"></td>
+					<td style="width:25px;">
+					  <p style="font-size: 14.5px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>&nbsp;3</b></p>
+					</td>
+					<td style="">
+					  <p style="font-size: 14.5px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;"><b>RESERVED OCCUPATIONS <span>&nbsp;  </span></b></p>
+					</td>
+					<td style="width: 40px;"></td>
+				  </tr>				  
+				  <tr>
+					<td></td>
+					<td></td>
+					<td style="" colspan="2">
+					  <p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:10px;padding-bottom:12px">
+					  Certain positions are reserved for Papua New <br>       
+               Guinean citizens. Please refer to the <i>Guide to the  <br>  
+               Foreign Employment Industrial Divisions &  <br>           
+               Classification of Occupations</i> for further information. </p>
+					</td>
+				  </tr>
+				</table>
+				
+				<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+				  <tr>
+					<td style="width:  25px;"></td>
+					<td style="width:25px;">
+					  <p style="font-size: 14.5px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>&nbsp;4</b></p>
+					</td>
+					<td style="">
+					  <p style="font-size: 14.5px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;"><b>POSITIONS TO BE ADVERTISED<span>&nbsp;  </span></b></p>
+					</td>
+					<td style="width: 40px;"></td>
+				  </tr>				  
+				  <tr>
+					<td></td>
+					<td></td>
+					<td style="" colspan="2">
+					  <p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:10px;padding-bottom:5px">
+					  Certain jobs must be advertised in Papua New    <br>     
+               Guinea before a work Permit can be issued to a   <br>     
+               non-citizen. For further information, please refer to <br>
+               the <i>Guide to the Foreign Employment Industrial  <br>    
+               Divisions & Classification of Occupations.</i>   </p>
+					  
+					  <p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:0px;padding-bottom:5px">
+					  Where it is a requirement that a position be       <br> 
+               advertised, you must attach the following to this <br>
+               application:		  </p>
+						<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+						  <tr style="vertical-align: top;">
+							<td style="width: 15px;">
+								<p style="font-size: 13px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:5px;padding-top:0px;padding-bottom:2px">(a) </p>
+							</td>
+							<td>
+								<p style="font-size: 13px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:0px;padding-bottom:2px">copy of the original advertisement </p>
+							</td>
+						 </tr>
+						 <tr style="vertical-align: top;">
+							<td style="width: 15px;">
+								<p style="font-size: 13px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:5px;padding-top:0px;padding-bottom:2px">(b) </p>
+							</td>
+							<td>
+								<p style="font-size: 13px; margin-bottom:0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:0px;padding-bottom:2px">details of the dates the position was advertised; and </p>
+							</td>
+						 </tr>
+						 <tr style="vertical-align: top;">
+							<td style="width: 15px;">
+								<p style="font-size: 13px; margin-bottom:0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:5px;padding-top:0px;padding-bottom:2px">(c) </p>
+							</td>
+							<td>
+								<p style="font-size: 13px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:0px;padding-bottom:2px">statement why a PNG Citizen was not considered suitable  </p>
+							</td>
+						 </tr>
+						</table>
+						
+			   
+			   
+					</td>
+				  </tr>
+				</table>
+			
+			</td>
+            <td >
+				<table cellpadding="0" style="width:100%; margin-bottom:3px;">         
+				  <tr>
+					<td style="width:25px;">
+					  <p style="font-size: 14.5px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>&nbsp;5</b></p>
+					</td>
+					<td style="">
+					  <p style="font-size: 14.5px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;"><b>COUNTRY OF ORIGIN/REPATRIATION<span>&nbsp;  </span></b></p>
+					</td>
+					<td style="width: 10px;"></td>
+				  </tr>				  
+				  <tr>
+					<td></td>
+					<td style="" colspan="2">
+					  <p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:10px;padding-bottom:12px">
+					  The <i>Employment of Non-citizens Act 2007</i> requires <br>
+                             that non-citizens be repatriated to their country of <br>
+                    origin if their employment is terminated for any <br>
+                       reason. For further information, please see the <br>Work Permit Guidelines. </p>
+					</td>
+				  </tr>
+				</table>
+				
+				<table cellpadding="0" style="width:100%; margin-bottom: 5px;">         
+				  <tr>
+					<td style="width:25px;">
+					  <p style="font-size: 14.5px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>&nbsp;6</b></p>
+					</td>
+					<td style="">
+					  <p style="font-size: 14.5px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;"><b>ENGLISH LANGUAGE REQUIREMENTS<span>&nbsp;  </span></b></p>
+					</td>
+					<td style="width: 10px;"></td>
+				  </tr>				  
+				  <tr>
+					<td></td>
+					<td style="" colspan="2">
+					  <p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:10px;padding-bottom:5px">
+					  Section 17(1) of the Employment of Non-citizens <br>Act 2007 requires that all non-citizens prove that <br>they are proficient in English. </p>
+					  
+					  <p style="font-size: 14.5px; margin-bottom: 5px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:0px;padding-bottom:12px">
+					 Where a non-citizen is from a country not  <br>assumed to be proficient in English, they must <br>provide evidence of English Language proficiency   <br>
+           before the work permit can be granted. For     <br>further information, please see the Work Permit <br>Guidelines.			  </p>
+					</td>
+				  </tr>
+				</table>
+				
+				<table cellpadding="0" style="width:100%; margin-bottom:10px;margin-top: 10px;">         
+				  <tr>
+					<td style="width:25px;">
+					  <p style="font-size: 14.5px; background:#7fc14a;margin-bottom: 0px;line-height:1;color:#fff;padding:5px 5px 2px; margin-top: 0;"><b>&nbsp;7</b></p>
+					</td>
+					<td style="">
+					  <p style="font-size: 14.5px; margin-bottom: 5px;line-height:1; margin-top: 0;padding-left:5px;background:#fff;padding:5px 5px  2px;"><b>SALARY PACKAGE OF EMPLOYEE<span>&nbsp;  </span></b></p>
+					</td>
+					<td style="width: 10px;"></td>
+				  </tr>				  
+				  <tr>
+					<td></td>
+					<td style="" colspan="2">
+					  <p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:10px;padding-bottom:12px">
+					  The total salary package of an employee consists  <br>
+					  of actual take home pay (e.g. the annual salary <br>
+                paid to the employee) plus any other allowances  <br>
+				and benefits paid to, or on behalf of, the <br>
+                employee (e.g. air tickets, housing, living           <br>allowances etc). </p>
+					</td>
+				  </tr>
+				</table>
+				
+				
+				 <p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:10px;padding-bottom:12px">
+					  <br><br><br>	<br>				  </p>
+				
+				
+            </td>
+            <td style="width:   65px;"></td>
+          </tr>
+        </table>
+		
+		
+		
+		<table cellpadding="0" style="width:100%; margin-bottom: 3px;margin-top: 3px;">         
+          <tr>
+            <td style="width:60px;">
+			<p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:8px;padding-bottom:2px">
+					<br><br><br><br><br><br><br><br><br><br><br> </p>
+				<img src="http://127.0.0.1:8000/static/images/visa/page_number_4.png" width="60" style="margin-bottom: 0px;" alt="page_number_4">
+			</td>
+      <td style="width:25px;"></td>
+            <td style="">
+              <p style="font-size: 17px; margin-bottom: 0px;line-height:1; margin-top: 0;padding-left:5px;background:#84c458;color:#000;padding:10px 5px 7px;text-align:center"><b>HELPFUL HINTS:</b></p>
+			  <table cellpadding="0" style="width:100%; margin-top:0px;background:#b9da9d;margin-bottom:25px">    
+              
+				  <tr style="vertical-align: top;">
+					<td style="width:  30px;" ></td>
+					<td style="width:  15px;">
+						<img src="http://127.0.0.1:8000/static/images/visa/arrow.png" width="15" style="margin-bottom: 5px;margin-top:13px" alt="arrow"></td>					
+					<td>
+						<p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 5px;padding-left:0px;padding-right:25px;padding-top:8px;padding-bottom:2px">
+					  Keep a copy of this application and all supporting documentation for your records  </p>
+					</td>
+					<td style="width:  30px;" ></td>
+				  </tr>
+				  <tr style="vertical-align: top;">
+					<td ></td>
+					<td >
+						<img src="http://127.0.0.1:8000/static/images/visa/arrow.png" width="15" style="margin-bottom: 5px;margin-top:9px" alt="arrow"></td>					
+					<td>
+						<p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 5px;padding-left:0px;padding-right:25px;padding-top:3px;padding-bottom:2px">
+					  Ensure that the application is complete and signed  </p>
+					</td>
+					<td ></td>
+				  </tr>
+				  <tr style="vertical-align: top;">
+					<td ></td>
+					<td >
+						<img src="http://127.0.0.1:8000/static/images/visa/arrow.png" width="15" style="margin-bottom: 5px;margin-top:9px" alt="arrow"></td>					
+					<td>
+						<p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 5px;padding-left:0px;padding-right:25px;padding-top:3px;padding-bottom:2px">
+					  Consult the Work Permit Guidelines  </p>
+					</td>
+					<td  ></td>
+				  </tr>
+				  <tr style="vertical-align: top;">
+					<td ></td>
+					<td >
+						<img src="http://127.0.0.1:8000/static/images/visa/arrow.png" width="15" style="margin-bottom: 5px;margin-top:9px" alt="arrow"></td>					
+					<td>
+						<p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 5px;padding-left:0px;padding-right:25px;padding-top:3px;padding-bottom:2px">
+					  Ensure that all supporting documentation (other than originals) is certified true and correct </p>
+					</td>
+					<td ></td>
+				  </tr>
+				  <tr>
+					<td ></td>
+					<td >
+						</td>					
+					<td>
+						<p style="font-size: 14.5px; margin-bottom: 0px;line-height:0.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:2px;padding-bottom:2px">
+					  &nbsp;  </p>
+					</td>
+					<td ></td>
+				  </tr>
+				</table>
+				
+				<table cellpadding="5" style="width:100%; margin-bottom:0px;background:#cfe5bc;">         
+				  <tr>					
+					<td>
+						<p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:0px;padding-bottom:10x;text-align:center">
+						<b>Contact Us: Ph: 325 2911 &nbsp; &nbsp; &nbsp;  Fax: 325 6655 <br>
+                  Or visit us at: Ground Floor, Moale Haus, Melanesian Way, Waigani (contact office for opening hours)</b> </p>
+					</td>					
+				  </tr>
+				 
+				</table>
+			  <p style="font-size: 14.5px; margin-bottom: 0px;line-height:1.25; margin-top: 2px;padding-left:0px;padding-right:25px;padding-top:8px;padding-bottom:2px;text-align:center"> &nbsp; </p>
+            </td>
+            <td style="width:  65px;"></td>
+          </tr>
+        </table>
+		
+		
+		
+		
+	</td>
+    </tr>
+  </table>
+  
+  
+		
+</body>
+</html>

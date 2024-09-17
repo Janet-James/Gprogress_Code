@@ -1,0 +1,324 @@
+.smart_card_1 {
+  border-radius: 10px;
+  background: #f5f5f5;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  width: 288px;
+  padding: 8px 0px 7px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+body {
+  padding: 20px;
+}
+
+.container_task {
+  padding: 30px;
+}
+
+.b_icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background: url("/static/images/new-page\ 1.png"), lightgray 50% / cover no-repeat;
+  position: relative;
+  top: -2px;
+  left: 16px;
+  display: flex;
+}
+
+.b_icon1 {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: url("/static/images/check\ 1.png"), lightgray 50% / cover no-repeat;
+    position: relative;
+    top: -2px;
+    left: 16px;
+    display: flex;
+  }
+
+  .b_icon2 {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: url("/static/images/pending-tasks\ 1.png"), lightgray 50% / cover no-repeat;
+    position: relative;
+    top: -2px;
+    left: 16px;
+    display: flex;
+  }
+
+  .b_icon3 {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: url("/static/images/deadline\ 1.png"), lightgray 50% / cover no-repeat;
+    position: relative;
+    top: -2px;
+    left: 16px;
+    display: flex;
+  }
+
+.task_header {
+  position: relative;
+  left: 50px;
+}
+
+.task_view {
+  color: #111;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; 
+  white-space: nowrap;
+}
+
+.svg_con {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  position: absolute;
+  right: -242px;
+  top: -2px;
+}
+
+.ind_num {
+  color: #000;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Raleway;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 52px; /* 115.556% */
+}
+
+.ind_sec {
+  position: relative;
+  left: 11px;
+  display: flex;
+  gap: 81px;
+  top: 12px;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+  left: 13px;
+}
+
+.work_image {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: -21px;
+  display: flex;
+  gap: 0;
+}
+
+#container1{
+  height: 40vh;
+  width: 74%;
+  position: relative;
+  left: 13px;
+}
+
+#container1 path[id^="ac_path_"]{
+
+}
+
+
+    * {
+      margin: 0;
+      padding: 0;
+  }
+  body {
+      background: #fff;
+      font-family: 'Open-Sans',sans-serif;
+
+  }
+
+#container{
+  margin: 0 auto;
+  position: relative;
+  /* width:800px; */
+  overflow: visible;
+}
+
+
+  .svg {
+    width:800px;
+    height:400px;
+    overflow: visible;
+    position:absolute;
+}
+
+.grid .tick {
+    stroke: lightgrey;
+    opacity: 0.3;
+    shape-rendering: crispEdges;
+}
+.grid path {
+      stroke-width: 0;
+}
+
+
+#tag {
+  color: white;
+  background: #FA283D;
+  width: 150px;
+  position: absolute;
+  display: none;
+  padding:3px 6px;
+  margin-left: -80px;
+  font-size: 11px;
+}
+
+
+
+#tag:before {
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+  width: 0;
+  border-width: 10px;
+  border-bottom-color: #FA283D;
+  top: -20px;
+}
+
+
+.progress_sec {
+  display: flex;
+  align-items: flex-start;
+  gap: 188px;
+}
+.pro_ind {
+  color: #111;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+}
+
+.chart {
+  position: relative;
+  width: 800px;
+  height: 200px;
+  border: 1px solid #ccc;
+}
+.task {
+  position: absolute;
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.pro_ind_sec {
+  position: relative;
+  left: 20px;
+}
+
+.pro_num_text {
+  color: #111;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+}
+
+.pro_num {
+}
+
+.card_con {
+  display: flex;
+  gap: 8px;
+}
+
+.percentage-indicator {
+    width: 80%;
+    background-color: #D9D9D9;
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+    left: 19px;
+    top: -6px;
+}
+
+.filler {
+    width: 0;
+    background-color: black;
+    height: 100%;
+    transition: width 1s; /* Add a transition effect for smooth animation */
+    width: 50%;
+    border-radius: 5px;
+}
+
+.percentage-indicator1 {
+    width: 80%;
+    background-color: #D9D9D9;
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+    left: 19px;
+    top: -6px;
+}
+
+.filler1 {
+    width: 0;
+    background-color: black;
+    height: 100%;
+    transition: width 1s; /* Add a transition effect for smooth animation */
+    width: 50%;
+    border-radius: 5px;
+}
+
+.percentage-indicator2 {
+    width: 80%;
+    background-color: #D9D9D9;
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+    left: 19px;
+    top: -6px;
+}
+
+.filler2 {
+    width: 0;
+    background-color: black;
+    height: 100%;
+    transition: width 1s; /* Add a transition effect for smooth animation */
+    width: 50%;
+    border-radius: 5px;
+}
+
+.percentage-indicator3 {
+    width: 80%;
+    background-color: #D9D9D9;
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+    left: 19px;
+    top: -6px;
+}
+
+.filler3 {
+    width: 0;
+    background-color: black;
+    height: 100%;
+    transition: width 1s; /* Add a transition effect for smooth animation */
+    width: 50%;
+    border-radius: 5px;
+}

@@ -1,0 +1,99 @@
+
+/**** Task Reports CSS Mathi 11Dec2017 *****/
+.performer .member{font-size: 16px;color: #000;display: block;}
+.performer .team{font-size: 12px;color: #fff;padding: 3px 10px;background:#fb7676;border-radius: 6px;}
+.box{background:#fff;border:1px solid #dbeff8;margin-bottom:30px;}
+ .tasks-report .box h3.title{background-color: #e5f7ff;}
+.box h3.title{font-size: 16px;color: #262626;margin:0;background-color: #e5f7ff;padding: 10px;text-align: left;font-weight: 600;}
+.bar-charts .box h3.title {background-color: #e5f7ff;}
+h3 i {float: right;color: #666;}
+footer{background:#f7f7f7;padding: 10px;border-top: 1px solid #eaeaea;height: 35px;}
+.copyrights {font-size: 11px;color: #7c7b7b;font-weight: 600;text-align: center;padding-right: 90px;}
+.copyrights a {color: #42bef7;}
+.available-leave {background: #f9a825;padding: 15px 20px;display: inline-block;border-radius: 6px;font-size: 30px;color: #fff;margin-top: 20px;box-shadow: 2px 1px 6px #949494;line-height: 18px;font-weight: 600;min-width: 100px;}
+.label-desc{display: block;font-size: 12px;color: #000;margin-top: 15px; border-top: 1px solid black; padding-top: 3px;font-weight: normal;}
+ .bg-green{background: #43cb66;}
+.amcharts-chart-div a {display:none !important;}
+.pie-charts .statistics-chart{height:289px;}
+.bar-charts .statistics-chart{height:350px;}
+.engineer-board{background: #fff1da;display: inline-block;width: 100%;min-height: 330px;margin-bottom: 30px;}
+.ratings-reviews{min-height: 290px;}
+.round-label{color: #333;font-weight: normal;padding: 10px;font-size: 14px;}
+.performer{background-color: #ffcfcf;border-radius: 6px;padding: 10px;display: inline-block;margin:15px 0px 20px 0px;}
+.employee-photo img {width:70px;}
+.no-margin{margin:0px !important;}
+.tasks-active {/* background: #fbefdb; */padding: 20px;}
+.tasks-completed {/* background: #effff8; */padding: 20px;}
+.tasks-active .task-label{background-color: #fff1da;padding: 4px 12px;color: #000;font-size: 14px;text-align: left;width: 100%;}
+.tasks-completed .task-label{background-color:#cbf6e3;padding: 4px 12px;color: #000;font-size: 14px;text-align: left;width: 100%;}
+.task-title{font-size: 16px;font-weight: bold;color: #6b6b6b;}
+.tasks-active .last-date{font-size:13px;color: #de9216;}
+.tasks-completed .last-date{font-size:13px;color: #259464;}
+.tasks-active h6 , .tasks-completed h6 {color: #000;padding-bottom: 15px;border-bottom: 1px solid #ddd;margin-bottom: 25px;overflow: hidden;}
+.box1 label{background: #42bef7;padding: 2px 4px;border-radius: 4px;color: #fff;font-size: 14px;min-width:50px;}
+.box2 label{background: #f9a825;padding: 2px 4px;border-radius: 4px;color: #fff;font-size: 14px;min-width:50px;}
+.box3 label{background: #46be8a;padding: 2px 4px;border-radius: 4px;color: #fff;font-size: 14px;min-width:50px;}
+.box4 label{background: #fb7676;padding: 2px 4px;border-radius: 4px;color: #fff;font-size: 14px;min-width:50px;}
+.pie-charts {padding: 0px;}
+.report1{background-color: #42bef7;padding: 5px 10px;margin: 0px 0px 10px 0px;}
+.report2{background-color: #43cb66;padding: 5px 10px;margin: 0px 0px 10px 0px;}
+.report3{background-color: #f9a825;padding: 5px 10px;margin: 0px 0px 10px 0px;}
+.reports-box{height:350px;padding: 10px;}
+.report1 span, .report2 span, .report3 span{font-size: 14px;color: #262626;font-weight: 500;display: block;}
+.report1 label, .report2 label, .report3 label{font-size: 16px;color: #000;font-weight: normal;}
+.navbar-left h3{ color:#fff;     margin-top: 10px;    margin-bottom: 0;}    
+.no_data_found { display: flex;justify-content: center;align-items: center;height: 290px;font-size: 46px;color: ef5350;}
+.no_ratings_found{display: flex;justify-content: center;align-items: center;height: 350px;font-size: 46px; color: ef5350;}
+.no_data_found_info {display: flex;justify-content: center;align-items: center;height: 250px;font-size: 22px;color: #00afff;}
+.no_ratings_found_info{display: flex;justify-content: center;align-items: center; height: 350px;font-size: 21px;color: #00afff;}
+.timethrough span{font-size:11px;color:#fff;display:block;padding-right: 15px;font-weight: bold;}
+.timethrough label{font-size:18px;display:block;padding: 0px 5px;min-width: 80px;margin-bottom: 0px;}
+.text-ef5350{background-color: #fb7676;color:#fff;}
+.text-yellow{background-color: #f9a825;color:#fff;}
+.text-green{background-color: #43cb66;color:#fff;}
+.weare-text{color: #fff;font-size: 18px;padding: 15px;margin-left: 80px;}
+.timethrough { margin-top: 10px;}
+.row-count{background-color: #e1f5ff;padding: 4px;display: inline-block;border-radius: 50px;font-size: 10px;color: #000;min-width: 25px;text-align: center;margin-right: 10px;vertical-align: top;}
+.disclaimer{font-size: 12px;color: #666;padding: 10px 30px;text-align: left;}
+.performance-box{height:430px;}
+.project_title {font-size: 19px;color: #fff;font-weight: bold;margin-top: 6px;}
+.project_member{width: 100%;}
+/* Css for Manager Project list dashboard*/
+.status-bar{background: #8d8884;margin: 10px;}		
+#myProgress {width: 90%;background-color: #ddd;width: 98%;line-height: 24px;margin: 0 auto;margin-bottom: 5px;}
+.emp-list > img {width: 80px; /*height:95px;*/float: left; margin-right:10px;}
+/* 23.07*.17 */
+.padding-box #active{padding: 10px; padding-bottom:0;}
+.proj_listbox{padding:5px 10px;border: 0px solid #efefef;min-height: 110px;margin:5px 15px;min-width:23%;text-align: center;display: block !important;}
+.proj_listbox img{display: inline-block;text-align: center;float:none;margin: 0px !important;}
+.proj_listbox label {display: block !important;}
+.border-0{ border:none !important;margin-bottom: 10px;}
+.proname-title{border-radius: 0;padding: 10px;background: #00afff;color: #fff;}
+.team-title{color: #00afff; display:block;}
+.box-height{ height:auto !important; margin-bottom:0;}
+.pro-hours{min-width: 25%;overflow: hidden;display: block;float: left; margin-bottom:10px;margin-left: 44px;}
+.pro-hours label{float: right;margin-right: 20px;}
+.tasks-margin{margin-bottom: 0 !important;}
+.pro-title{text-align: center;background: #00afff;padding: 10px 10px;color: #fff;font-weight: bold;font-size: 18px;}
+.tasks-active h6{border:none; padding-bottom:0;}
+.tasks-active-padding{padding-top: 0; padding-left:0px;}
+.nodata{min-height: 137px;}
+.nodata-txt{    text-align: center;    padding-top: 30px;    font-weight: bold;    color: ef5350;}
+.datelabel{ margin-right: 15px;font-size: 14px;display: block;float: left;}
+.emp-pro-hours { min-width: 30%; overflow: hidden;display: block;float: left;margin-bottom: 10px;margin-left: 19px;}
+.emp-pro-hours label { float: right;margin-right: 20px;}
+.project-and-current{background-color: #c6e2f0; display: inline-block; width: 100%; margin: 10px 0px; padding: 25px 10px 5px 10px;}
+.project-individual{width: 100%;display: inline-block;border: 1px solid #ececec;padding: 20px 10px 0px 10px;margin-bottom: 10px;}
+.project-individual .box h3.title{background-color: #eaf8ff;}  
+.box h3.sub-title {background: #ffe3b2;}
+.project-status-box{min-height: 165px !important;border: 1px solid #ffe3b2;}
+.empty-project-list {text-align: center;padding: 40px 5px ;font-size: 40px; color: ef5350;}
+.tasks-report1{margin-top:20px;}
+.project-report{    padding: 30px 20px 80px 20px;background: #fff;}
+.project-report label {position: relative;top:0px;margin: 0px;display: inline-block;font-weight: 600;}
+.report7 {background-color: #42bef7;padding: 10px;margin: 0px 0px 10px 0px;}
+.weekly-status-report{padding-top:80px;}
+.weekly-project-title{background-color: #00afff;margin-bottom: 15px;text-align:center;display:inline-block;width:100%;}
+.project_active_text{color:#fff;padding-top:10px;}
+.project_active_text span {font-weight:600;}
+/*===================================================================================================================*/

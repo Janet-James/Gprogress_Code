@@ -1,0 +1,208 @@
+<html>
+
+<head>
+	<title>Radiological Report</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> </head>
+
+<body style="font-family: 'Roboto', sans-serif; ">
+	<table cellpadding="2" style="width:100%; text-align:center;  margin-bottom:5px; margin-top: 20px; padding-left: 40px;padding-right: 40px;">
+		<tr>
+			<td>
+				<!-- <img src="http://10.0.1.13:8026/static/dev/images/bsp_logo.png"/> --><img src="http://10.0.1.13:8026/static/dev/images/radiological_logo.png" />
+				<h2 style="letter-spacing: 1px;    font-size: 24px;">RADIOLOGICAL REPORT</h2> </td>
+		</tr>
+	</table>
+	<table cellpadding="2" style="width:100%;margin-bottom:10px; ">
+		<tr>
+			<td style="width:40%"> </td>
+			<td>
+				<p style="font-size: 13px;line-height:1.25"> PNG Immigration & Citizenship Service Authority
+					<br/> P.O. Box 1790
+					<br/> BOROKO NCD
+					<br/> Papua New Guinea
+					<br/> Action Office: …………………………
+					<br/> Telephone: ……………………………………
+					<br/> Our Reference: ………………………. </p>
+			</td>
+		</tr>
+	</table>
+	<p style="font-size: 13px;">PART A</p>
+	<ol >
+		<li style="margin-bottom: 5px;font-size: 13px;">Applicants aged 16 or more years are required to submit a 70mm, 100mm or full size plate chest X-ray.
+			<br> The film should be identified by the date taken and the full name of the applicant. This should be automatically inscribed during the photographic process if possible. If not, it should be written in English in white ink. </li>
+		<li style="margin-bottom: 5px;font-size: 13px;">The migrant or student must sign below. The original passport or ID card must be sigted by the radiographer </li>
+		<li style="margin-bottom: 5px;font-size: 13px;">Attach Radiographer’s report/results. </li>
+	</ol>
+	<table cellpadding="0" style="width:100%; margin-bottom:15px">
+		<tr>
+			<td style="width:50%">
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px solid black;">{{json_data.family_name}}</p>
+				<p style="font-size: 13px; margin-bottom: 0;margin-top: 5px;">APPLICANT’S FAMILY NAME </p>
+				<p style="font-size: 13px;margin-bottom: 0;margin-top: 0px;">(Block Letters) </p>
+			</td>
+			<td style="width:50%">
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px solid black;">{{json_data.full_name}}</p>
+				<p style="font-size: 13px; margin-bottom: 0;margin-top: 5px;">APPLICANT'S GIVEN NAMES</p>
+				<p style="font-size: 13px;margin-bottom: 0;margin-top: 0px;"> &nbsp; </p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:50%">
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px solid black;">{{json_data.citizenship}}</p>
+				<p style="font-size: 13px; margin-bottom: 0;margin-top: 5px;">Applicant's Citizenship</p>
+			</td>
+			<td style="width:50%">
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px solid black;">{{json_data.dob}}</p>
+				<p style="font-size: 13px; margin-bottom: 0;margin-top: 5px;">Applicant's Date of birth:</p>
+			</td>
+		</tr>
+	</table>
+	<table cellpadding="0" style="width:100%; margin-bottom:20px">
+		<tr>
+			<td style="width:25%">
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px; border-bottom: 1px solid black;"> Applicant's Passport / ID No:</p>
+				<p style="font-size: 13px; margin-bottom: 0;margin-top: 5px;"> (to be sighted by radiographer)</p>
+			</td>
+			<td style="width:25%">
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px solid black;">{{json_data.passport_no}}</p>
+				<p style="font-size: 13px; margin-bottom: 0;margin-top:5px;">&nbsp;</p>
+			</td>
+			<td style="width:50%">
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px solid black;"> Applicant Signature:</p>
+				<p style="font-size: 13px; margin-bottom: 0;margin-top: 5px;">(To be signed in radiographer’s presence)</p>
+			</td>
+		</tr>
+	</table>
+	<p style="font-size: 13px; border-top: 1px dashed #787878;padding-top: 15px;">PART B</p>
+	<p style="font-size: 13px;">RADIOLOGIST'S ASSESSMENT</p>
+	<table cellpadding="0" cellspacing="0" style="width:100%; margin-bottom:0px;">
+		<tr>
+			<td style="width:120px">
+				<p style="font-size: 13px; display: flex;margin-bottom:0px">I, (PRINTED NAME) </p>
+			</td>
+			<td>
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px dotted black; "> &nbsp; </p>
+			</td>
+			<td style="width:70px">
+				<p style="font-size: 13px;margin-bottom:0px">hereby</p>
+			</td>
+		</tr>
+	</table>
+	<p style="font-size: 13px;margin-top:5px;"> declare that I have carried out today an X-ray examination of the chest of the applicant whose signature is on this form. In my professional opinion the X-ray reveals:</p>
+	
+	<table cellpadding="0" cellspacing="0" style="width:100%; margin-bottom:0px;">
+		<tr>
+			<td style="width:38px; margin-left:20px">
+				<img src="http://10.0.1.13:8026/static/dev/images/untick.png" width="16" style="margin-right: 20px;">
+			</td>
+			<td>
+				<p style="font-size: 13px; padding-top:6px"> &nbsp;&nbsp; No significant abnormality, condition or illness; or</p>
+			</td>
+			
+		</tr>
+	</table>
+	<table cellpadding="0" cellspacing="0" style="width:100%; margin-bottom:0px;">
+		<tr>
+			<td style="width:38px; margin-left:20px">
+				<img src="http://10.0.1.13:8026/static/dev/images/untick.png" width="16" style="margin-right: 20px;">
+			</td>
+			<td style="width:250px;">
+				<p style="font-size: 13px; padding-top:6px"> &nbsp;&nbsp; The following condition/s of significance:</p>
+			</td>
+			<td>
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px dotted black; "> &nbsp; </p>
+			</td>
+			
+		</tr>
+	</table>
+	<table cellpadding="0" cellspacing="0" style="width:100%; margin-bottom:0px;margin-top:5px">
+		<tr>
+			<td style="width:38px; ">
+				
+			</td>
+			
+			<td>
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px dotted black; "> &nbsp; </p>
+			</td>
+			
+		</tr>
+	</table>
+	
+	<table cellpadding="0" cellspacing="0" style="width:100%; margin-bottom:0px;margin-top:25px">
+		<tr>
+			<td style="width:38px; margin-left:20px">
+				
+			</td>
+			<td style="width:150px;">
+				<p style="font-size: 13px; padding-top:6px"> &nbsp;&nbsp; Radiologist’s Signature</p>
+			</td>
+			<td>
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px dotted black; "> &nbsp; </p>
+			</td>
+			
+		</tr>
+	</table>
+	<table cellpadding="0" cellspacing="0" style="width:100%; margin-bottom:0px;margin-top:5px">
+		<tr>
+			<td style="width:38px; margin-left:20px">
+				
+			</td>
+			<td style="width:150px;">
+				<p style="font-size: 13px; padding-top:6px"> &nbsp;&nbsp; Radiologist’s Address</p>
+			</td>
+			<td>
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px dotted black; "> &nbsp; </p>
+			</td>
+			
+		</tr>
+	</table>
+	<table cellpadding="0" cellspacing="0" style="width:100%; margin-bottom:0px;margin-top:5px">
+		<tr>
+			<td style="width:38px; ">
+				
+			</td>
+			
+			<td>
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px dotted black; "> &nbsp; </p>
+			</td>
+			
+		</tr>
+	</table>
+	<table cellpadding="0" cellspacing="0" style="width:100%; margin-bottom:0px;margin-top:5px">
+		<tr>
+			<td style="width:38px; ">
+				
+			</td>
+			
+			<td>
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px dotted black; "> &nbsp; </p>
+			</td>
+			
+		</tr>
+	</table>
+	<table cellpadding="0" cellspacing="0" style="width:100%; margin-bottom:0px;margin-top:10px">
+		<tr>
+			<td style="width:200px; margin-left:20px">
+				
+			</td>
+			<td style="width:50px;">
+				<p style="font-size: 13px; padding-top:6px"> &nbsp;&nbsp; Date</p>
+			</td>
+			<td style="width:100px;">
+				<p style="font-size: 13px;margin-bottom:0;padding: 0px 10px; border-bottom: 1px dotted black; "> &nbsp; </p>
+			</td>
+			<td>
+				
+			</td>
+			
+		</tr>
+	</table>
+	
+	
+	
+	
+</body>
+
+</html>

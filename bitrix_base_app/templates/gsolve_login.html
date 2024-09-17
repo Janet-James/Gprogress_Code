@@ -1,0 +1,352 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Green::GProgress Login</title>
+<!-- Bootstrap -->
+<!-- BEGIN PLUGINS STYLES -->
+<link
+	href="/static/ux3.x_ntoday/plugins/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css" />
+<link
+	href="/static/ux3.x_ntoday/plugins/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet" type="text/css" />
+<link href="/static/ux3.x_ntoday/plugins/slick/slick.css"
+	rel="stylesheet" type="text/css" />
+<link href="/static/ux3.x_ntoday/plugins/slick/slick-theme.css"
+	rel="stylesheet" type="text/css" />
+<!-- BEGIN THEME GLOBAL STYLES -->
+<link href="/static/ux3.x_ntoday/css/default/components.min.css"
+	rel="stylesheet" id="style_components" type="text/css" />
+<link href="/static/ux3.x_ntoday/css/default/layout.min.css"
+	rel="stylesheet" type="text/css" />
+<!-- END THEME GLOBAL STYLES -->
+<!-- JQUERY ALERT NOTIFICATION-->
+<link
+	href="/static/ux3.x_ntoday/plugins/jquery-notification/css/lobibox.css"
+	rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet"
+	href="/static/ux3.x_ntoday/plugins/slideshow/vanillaSlideshow.css">
+<!-- New Styles -->
+<link rel="shortcut icon" href="images/favicon.png">
+<style>
+/*Preloader CSS Maruthu 02/05/2019 */
+.loader-wrapper {align-items: center;background: rgba(0, 0, 0, 0.65);display: flex;justify-content: center;position: absolute;z-index: 10051;left: 0px;right: 0px;top: 0px;bottom: 0px;}
+.loader{animation: rotate 1s infinite;height: 50px;width: 50px;}
+.loader:before, .loader:after {border-radius: 50%; content: '';display: block;height: 20px;width: 20px;}
+.loader:before {animation: ball1 1s infinite;background-color: #2ce7c7;box-shadow: 30px 0 0 #f6d166;margin-bottom: 10px;}
+.loader:after {animation: ball2 1s infinite;background-color: #55bbff;box-shadow: 30px 0 0 #ea8ecc;}
+@keyframes rotate {
+  0% {-webkit-transform: rotate(0deg) scale(0.8);-moz-transform: rotate(0deg) scale(0.8);}
+  50% {-webkit-transform: rotate(360deg) scale(1.2);-moz-transform: rotate(360deg) scale(1.2);}
+  100% {-webkit-transform: rotate(720deg) scale(0.8);-moz-transform: rotate(720deg) scale(0.8);}
+}
+@keyframes ball1 {
+  0% {box-shadow: 30px 0 0 #f6d166;}
+  50% {box-shadow: 0 0 0 #f6d166;margin-bottom: 0;-webkit-transform: translate(15px,15px);-moz-transform: translate(15px, 15px);}
+  100% {box-shadow: 30px 0 0 #f6d166;margin-bottom: 10px;}
+}
+@keyframes ball2 {
+  0% {box-shadow: 30px 0 0 #ea8ecc;}
+  50% {box-shadow: 0 0 0 #ea8ecc;margin-top: -20px;-webkit-transform: translate(15px,15px);-moz-transform: translate(15px, 15px);}
+    100% {box-shadow: 30px 0 0 #ea8ecc;margin-top: 0;}
+}
+/*******************************************************/
+</style>
+</head>
+
+<body>
+<!-- Preloader -->
+    <div class="loader-wrapper" id="loading"> 
+        <div class="loader"></div>
+    </div>
+	<div class="top-bg-img"></div>
+	<div class="btm-bg-img"></div>
+	<div class="login_fliplogo">
+		<a href="#"><img
+			src="/static/ux3.x_ntoday/images/login_fliplogo.png" alt=""></a>
+	</div>
+	<div class="product_logo">
+	<!--	<img src="/static/ux3.x_ntoday/images/product_logo.png">-->
+<span class="org_name">GREEN</span>
+<span>GProgress</span>
+	</div>
+	<div class="container-fluid login_wrapper">
+		<div class="row">
+			<div class="col-sm-12 col-lg-6 ">
+				<div class="login_LS">
+					<div class="product_details">
+						<h1>GProgress</h1>
+						<p>Lorem Ipsum is simply dummy text of the printing and
+							typesetting industry. Lorem Ipsum has been the industry's
+							standard dummy text ever since the 1500s, when an unknown printer
+							took a galley of type and scrambled it to make a type specimen
+							book. It has survived not only five centuries, but also the leap
+							into electronic typesetting, remaining essentially unchanged.It
+							was popularised in the 1960s with the release of Letraset sheets
+							containing Lorem Ipsum passages, and more recently with desktop
+							publishing software like Aldus PageMaker including versions of
+							Lorem Ipsum.</p>
+						<a href="#" class="read_more">Read more..</a>
+					</div>
+					<div class="product_tab">
+						<div class="tabbable-line">
+							<ul class="nav nav-tabs ">
+								<li class="active rr rr-left"><a href="#tab_15_1"
+									data-toggle="tab"> Your Enablement and Empowerment </a></li>
+								<li class="rr rr-right"><a href="#tab_15_2"
+									data-toggle="tab"> What’s New </a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="tab_15_1">
+									<ul class="Product_tab_data">
+										<li>Lone holistic assessment form that has cascaded goals
+											from balanced scorecards and individual objectives.</li>
+										<li>Customized KPI definition considering Role,
+											Organization cascaded goals, Individual goals that would suit
+											any industry.</li>
+									</ul>
+									<a href="#" class="read_more">Read more..</a>
+								</div>
+								<div class="tab-pane" id="tab_15_2">
+									<ul class="Product_tab_data">
+										<li>Powerful access framework that helps in information
+											going to the authorized people in the organization.</li>
+										<li>Lone holistic assessment form that has cascaded goals
+											from balanced scorecards and individual objectives.</li>
+
+									</ul>
+									<a href="#" class="read_more">Read more..</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 col-lg-6">
+				<div class="login_RS">
+					<div class="login_panel">
+						<h3>Begin your Digital Disruption here!</h3>
+						<div class="users_img">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="regular slider users_img">
+									{%for i in last_login%}
+										<div class="profile_img last_login_user" data-value="{{i.username}}">
+											<img src="http://mygreen.green.com.pg/media/user_profile/{{i.employee_image}}">
+										</div>
+									{%endfor%}
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="username_panel" id="username_panel">
+							<input type="text" placeholder="Your Username" id="username"><a
+								href="#" class="username_btn" id="username_btn"><img
+								src="/static/ux3.x_ntoday/images/username_btn.png"
+								class="tooltips" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Submit Username"></a>
+						</div>
+						<div class="password_panel" id="password_panel">
+							<input type="password" placeholder="Your Password" data-value=""
+								id="password-field" name="password" class="input"><a
+								href="#" class="password_btn" id="password_btn"><img
+								src="/static/ux3.x_ntoday/images/username_btn.png"
+								class="tooltips" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Login"></a> <span
+								toggle="#password-field"
+								class="fa field-icon toggle-password fa-eye tooltips"
+								data-toggle="tooltip" data-placement="top" title=""
+								data-original-title="Show/Hide Password"></span> <a
+								class="login_back"><i class="fa fa-long-arrow-left"
+								aria-hidden="true"></i> Back</a>
+						</div>
+					</div>
+
+					<!-- <a class="forgot_link" href="#forgot_password" role="button"
+						data-toggle="modal">Forgot Your Password?</a> -->
+					<div id="forgot_password" class="modal fade" tabindex="-1"
+						role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"
+										aria-hidden="true"></button>
+									<h4 class="modal-title">Forgot Password</h4>
+								</div>
+								<div class="modal-body">{% csrf_token %}
+									<form role="form">
+										<div class="form-body">
+											<div class="form-group">
+												<label>User Name <span class="required"
+													aria-required="true"> * </span></label>
+												<div class="input-icon">
+													<i class="fa fa-user"></i> <input type="text"
+														class="form-control" value="" id="forgot_password_username"
+														placeholder="Enter User Name">
+												</div>
+											</div>
+											
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button class="btn btn-success btn-eql-wid btn-animate" onclick="resetpassword();">Save</button>
+									<button class="btn btn-warning btn-eql-wid btn-animate pull-right" onclick="username_clear();">Clear</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="vanilla-slideshow-container">
+		<div id="vanilla-slideshow">
+			<div class="vanilla-slide">
+				<img src="/static/ux3.x_ntoday/images/login_banner_bg_1.jpg"
+					alt="NEXT"> <img
+					src="/static/ux3.x_ntoday/images/login_logo_bg_1.png" alt="NEXT"
+					class="banner_logo">
+				<!-- content here -->
+			</div>
+			<div class="vanilla-slide">
+				<img src="/static/ux3.x_ntoday/images/login_banner_bg_2.jpg"
+					alt="NEXT"> <img
+					src="/static/ux3.x_ntoday/images/login_logo_bg_2.png" alt="NEXT"
+					class="banner_logo">
+				<!-- content here -->
+			</div>
+			<div class="vanilla-slide">
+				<img src="/static/ux3.x_ntoday/images/login_banner_bg_3.jpg"
+					alt="NEXT"> <img
+					src="/static/ux3.x_ntoday/images/login_logo_bg_3.png" alt="NEXT"
+					class="banner_logo">
+				<!-- content here -->
+			</div>
+			<div class="vanilla-slide">
+				<img src="/static/ux3.x_ntoday/images/login_banner_bg_4.jpg"
+					alt="NEXT"> <img
+					src="/static/ux3.x_ntoday/images/login_logo_bg_4.png" alt="NEXT"
+					class="banner_logo">
+				<!-- content here -->
+			</div>
+			<div class="vanilla-slide">
+				<img src="/static/ux3.x_ntoday/images/login_banner_bg_5.jpg"
+					alt="NEXT"> <img
+					src="/static/ux3.x_ntoday/images/login_logo_bg_5.png" alt="NEXT"
+					class="banner_logo">
+				<!-- content here -->
+			</div>
+		</div>
+		<!-- slideshow indicators -->
+		<div id="vanilla-indicators"></div>
+		<!-- slideshow arrows -->
+		<div id="vanilla-slideshow-previous"></div>
+		<div id="vanilla-slideshow-next"></div>
+	</div>
+
+	<!-- BEGIN CORE PLUGINS -->
+	<script src="/static/ux3.x_ntoday/plugins/jquery.min.js"
+		type="text/javascript"></script>
+	<script
+		src="/static/ux3.x_ntoday/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!--Background change slider-->
+	<script
+		src="/static/ux3.x_ntoday/plugins/slideshow/vanillaSlideshow.min.js"></script>
+	<script>
+		vanillaSlideshow.init({
+			slideshow : true,
+			delay : 5000,
+			arrows : true,
+			indicators : true,
+			random : false,
+			animationSpeed : '1s'
+		});
+	</script>
+	<!--Background change slider-->
+	
+	<!--Toggle username and password panel-->
+	<script>
+		$("#password_panel, #loading").hide();
+		 $("input:text:visible:first").focus();
+		$(document).on("click", ".login_back", function() {
+			$(this).parent(".password_panel").hide();
+			$(this).parent().siblings(".username_panel").show();
+			$("input:text:visible:first").focus();
+		});
+	</script>
+	<!--Toggle username and password panel-->
+	
+	<!--Toggle password field-->
+	<script type="text/javascript">
+		$(".toggle-password").click(function() {
+			$(this).toggleClass("fa-eye fa-eye-slash");
+			var input = $($(this).attr("toggle"));
+			console.log(input);
+			if (input.attr("type") == "password") {
+				input.attr("type", "text");
+			} else {
+				input.attr("type", "password");
+			}
+		});
+	</script>
+	<!--Toggle password field-->
+	
+	<!--Slider for users session profiles in slider-->
+	<script type="text/javascript"
+		src="/static/ux3.x_ntoday/plugins/slick/slick.js"></script>
+	<script>
+		$(document).on('ready', function() {
+			$(".regular").slick({
+				dots : true,
+				infinite : true,
+				slidesToShow : 4,
+				slidesToScroll : 4,
+
+				responsive : [ {
+					breakpoint : 1024,
+					settings : {
+						slidesToShow : 3,
+						slidesToScroll : 3,
+						infinite : true,
+						dots : true
+					}
+				}, {
+					breakpoint : 600,
+					settings : {
+						slidesToShow : 2,
+						slidesToScroll : 2
+					}
+				}, {
+					breakpoint : 480,
+					settings : {
+						slidesToShow : 1,
+						slidesToScroll : 1
+					}
+				} ]
+			});
+		});
+	</script>
+
+	<!--JQUERY ALERT NOTIFICATION JS-->
+	<script
+		src="/static/ux3.x_ntoday/plugins/jquery-notification/js/lobibox.js"
+		type="text/javascript"></script>
+	<!-- BEGIN LOGIN VALIDATION SCRIPT -->
+	<script type="text/javascript"
+		src="/static/ux3.x_ntoday/js/default/ntoday.js"></script>
+	<script
+		src="{% static '/dev/js/login.js' %}"
+		type="text/javascript"></script>
+
+	<!--Slider for users session profiles in slider-->
+	<script src="/static/ux3.x_ntoday/js/default/custom_script.min.js"
+		type="text/javascript"></script>
+</body>
+</html>

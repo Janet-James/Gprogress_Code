@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="8.8818" y1="28.5205" x2="43.4976" y2="28.5205">
+		<stop  offset="0" style="stop-color:#EA8ECC"/>
+		<stop  offset="1" style="stop-color:#FA8E8F"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_1_)" points="12.225,16.92 41.134,45.828 43.498,43.465 14.589,14.556 30.614,14.556 30.614,11.213 
+		8.882,11.213 8.882,32.945 12.225,32.945 	"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="54.5074" y1="74.1461" x2="89.1231" y2="74.1461">
+		<stop  offset="0" style="stop-color:#EA8ECC"/>
+		<stop  offset="1" style="stop-color:#FA8E8F"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_2_)" points="85.78,85.747 56.871,56.838 54.507,59.202 83.416,88.111 67.391,88.111 67.391,91.454 
+		89.123,91.454 89.123,69.722 85.78,69.722 	"/>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="54.5074" y1="28.5205" x2="89.1231" y2="28.5205">
+		<stop  offset="0" style="stop-color:#EA8ECC"/>
+		<stop  offset="1" style="stop-color:#FA8E8F"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_3_)" points="67.391,14.556 83.416,14.556 54.507,43.465 56.871,45.828 85.78,16.92 85.78,32.945 
+		89.123,32.945 89.123,11.213 67.391,11.213 	"/>
+	<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="8.8818" y1="74.1461" x2="43.4976" y2="74.1461">
+		<stop  offset="0" style="stop-color:#EA8ECC"/>
+		<stop  offset="1" style="stop-color:#FA8E8F"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_4_)" points="30.614,88.111 14.589,88.111 43.498,59.202 41.134,56.838 12.225,85.747 12.225,69.722 
+		8.882,69.722 8.882,91.454 30.614,91.454 	"/>
+</g>
+</svg>

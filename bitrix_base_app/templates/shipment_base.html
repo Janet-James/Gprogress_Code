@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+<head>
+	<meta charset="utf-8" />
+	<title>Home | GProgress</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta content="NEXT UX 3.X Framework" name="description" />
+	<meta content="" name="author" />
+	<link rel="shortcut icon" href="favicon.png" />
+
+	<!-- Style Part-->
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->
+	<link href="/static/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/css/default/nfonts.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<!-- END GLOBAL MANDATORY STYLES -->
+
+	<!--Data Table Style-->
+	<link href="/static/ux3.x_ntoday/plugins/datatables/css/datatables.min.css" rel="stylesheet" type="text/css" />
+	<!-- Date picker -->
+	<link href="/static/ux3.x_ntoday/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet"
+		type="text/css" />
+	<!-- Single and multi select Dropdown-->
+	<link href="/static/ux3.x_ntoday/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<!-- Bootstrap Select Dropdown with Checkbox option   -->
+	<link href="/static/ux3.x_ntoday/plugins/bootstrap-multiselect/css/bootstrap-multiselect.css" rel="stylesheet"
+		type="text/css" />
+	<!-- Multiple Select List with Search -->
+	<link href="/static/ux3.x_ntoday/plugins/multiselect-list/css/listbox-multiselected.css" rel="stylesheet"
+		type="text/css" />
+	<!-- Multiple Select with Grouped  -->
+	<link href="/static/ux3.x_ntoday/plugins/jquery-multi-select/css/multi-select.min.css" rel="stylesheet"
+		type="text/css" />
+
+	<!-- Bootstrap Switch -->
+	<link href="/static/ux3.x_ntoday/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet"
+		type="text/css" />
+
+	<!-- JQUERY ALERT NOTIFICATION-->
+	<link href="/static/ux3.x_ntoday/plugins/jquery-notification/css/lobibox.css" rel="stylesheet" type="text/css" />
+	<!-- Date Picker Mobile -->
+	<link href="/static/ux3.x_ntoday/plugins/date-picker-mobile/css/date-picker-mobile.css" rel="stylesheet"
+		type="text/css" />
+	<!-- Time Picker Mobile -->
+	<link href="/static/ux3.x_ntoday/plugins/time-picker-mobile/css/time-picker-mobile.css" rel="stylesheet"
+		type="text/css" />
+	<link href="/static/ux3.x_ntoday/plugins/bootstrap-sweetalert/css/sweetalert.css" rel="stylesheet"
+		type="text/css" />
+
+	<!-- TOOLTIP PLUGINS -->
+	<link href="/static/ux3.x_ntoday/plugins/tooltip/css/tooltip.min.css" rel="stylesheet" type="text/css" />
+	<!-- BEGIN THEME LAYOUT STYLES -->
+	<link href="/static/ux3.x_ntoday/css/default/components.min.css" rel="stylesheet" id="style_components"
+		type="text/css" />
+	<link href="/static/ux3.x_ntoday/css/default/layout.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/themes/css/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
+	<link href="/static/ux3.x_ntoday/css/default/CircleMenu.min.css" rel="stylesheet" type="text/css" />
+	<!-- END THEME LAYOUT STYLES -->
+
+	<!-- CUSTOM STYLES -->
+	<link href="/static/ux3.x_ntoday/plugins/animate/css/animate.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/plugins/Standard-menu/Standard-menu.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/css/default/Glyphter.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/css/default/ntoday.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/css/default/responsive.css" rel="stylesheet" type="text/css" />
+
+	<link href="/static/ux3.x_ntoday/css/default/components.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ui/plugins/bootstrap-summernote/css/summernote.css" rel="stylesheet" type="text/css" />
+
+	<!-- Service Desk Dashboard -->
+	<link rel="stylesheet" href="/static/css/service_desk.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+	<link href="/static/css/font-awesome.min.css" rel="stylesheet">
+	{% comment %} <link rel="stylesheet" href="/static/css/responsive.css">
+	<link rel="stylesheet" href="/static/css/client_verification.css"> {% endcomment %}
+	{% comment %} <img src="/static/images/logo.png" alt="Green"> {% endcomment %}
+	<link rel="icon" type="image/x-icon" href="/static/images/foot-g.png">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	{% block module_css %}{% endblock %}
+	<!-- CUSTOM STYLES -->
+	<style>
+		/*Preloader CSS Maruthu 02/05/2019 */
+		.loader-wrapper {
+			align-items: center;
+			background: rgba(0, 0, 0, 0.65);
+			display: flex;
+			justify-content: center;
+			position: absolute;
+			z-index: 10051;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+		}
+
+		.loader {
+			animation: rotate 1s infinite;
+			height: 50px;
+			width: 50px;
+		}
+
+		.loader:before,
+		.loader:after {
+			border-radius: 50%;
+			content: '';
+			display: block;
+			height: 20px;
+			width: 20px;
+		}
+
+		.loader:before {
+			animation: ball1 1s infinite;
+			background-color: #2ce7c7;
+			box-shadow: 30px 0 0 #f6d166;
+			margin-bottom: 10px;
+		}
+
+		.loader:after {
+			animation: ball2 1s infinite;
+			background-color: #55bbff;
+			box-shadow: 30px 0 0 #ea8ecc;
+		}
+
+		@keyframes rotate {
+			0% {
+				-webkit-transform: rotate(0deg) scale(0.8);
+				-moz-transform: rotate(0deg) scale(0.8);
+			}
+
+			50% {
+				-webkit-transform: rotate(360deg) scale(1.2);
+				-moz-transform: rotate(360deg) scale(1.2);
+			}
+
+			100% {
+				-webkit-transform: rotate(720deg) scale(0.8);
+				-moz-transform: rotate(720deg) scale(0.8);
+			}
+		}
+
+		@keyframes ball1 {
+			0% {
+				box-shadow: 30px 0 0 #f6d166;
+			}
+
+			50% {
+				box-shadow: 0 0 0 #f6d166;
+				margin-bottom: 0;
+				-webkit-transform: translate(15px, 15px);
+				-moz-transform: translate(15px, 15px);
+			}
+
+			100% {
+				box-shadow: 30px 0 0 #f6d166;
+				margin-bottom: 10px;
+			}
+		}
+
+		@keyframes ball2 {
+			0% {
+				box-shadow: 30px 0 0 #ea8ecc;
+			}
+
+			50% {
+				box-shadow: 0 0 0 #ea8ecc;
+				margin-top: -20px;
+				-webkit-transform: translate(15px, 15px);
+				-moz-transform: translate(15px, 15px);
+			}
+
+			100% {
+				box-shadow: 30px 0 0 #ea8ecc;
+				margin-top: 0;
+			}
+		}
+
+		/*******************************************************/
+	</style>
+	<!-- End Style Part-->
+</head>
+<!-- END HEAD -->
+
+<body>
+
+	<div class="clearfix"></div>
+
+	<!-- BEGIN CONTAINER -->
+
+	{% block content %} {% endblock %}
+
+	<!-- Preloader -->
+	<div class="loader-wrapper" id="loading">
+		<div class="loader"></div>
+	</div>
+	<!-- END CONTENT -->
+
+	<!-- BEGIN CORE PLUGINS -->
+	<script src="/static/ux3.x_ntoday/plugins/jquery.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--LS-Menu SCRIPTS-->
+	<script src="/static/ux3.x_ntoday/plugins/Standard-menu/Standard-menu.js"></script>
+	<!--LS-Menu SCRIPTS-->
+
+
+	<!-- Data Tables-->
+	<script src="/static/ux3.x_ntoday/plugins/datatables/js/datatables.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js"
+		type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/datatables/js/table-datatables-colreorder.min.js"
+		type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
+	<!-- Data Tables-->
+
+	<!-- VERSION TOOLTIP  PLUGINS -->
+	<script src="/static/ux3.x_ntoday/plugins/tooltip/js/anime.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/tooltip/js/tooltip.min.js" type="text/javascript"></script>
+
+	<!-- Single and multi select Dropdown-->
+	<script src="/static/ux3.x_ntoday/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/select2/js/components-select2.min.js" type="text/javascript"></script>
+	<!-- Bootstrap Select Dropdown with Checkbox option   -->
+	<script src="/static/ux3.x_ntoday/plugins/bootstrap-multiselect/js/components-bootstrap-multiselect.min.js"
+		type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"
+		type="text/javascript"></script>
+	<!-- Multiple Select List with Search -->
+	<script src="/static/ux3.x_ntoday/plugins/multiselect-list/js/listbox-multiselected.js"></script>
+	<!-- End-->
+
+	<!-- Date Picker -->
+	<script src="/static/ux3.x_ntoday/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"
+		type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/bootstrap-datepicker/js/components-date-time-pickers.min.js"
+		type="text/javascript"></script>
+
+	<!-- Bootstrap Switch -->
+	<script src="/static/ux3.x_ntoday/plugins/bootstrap-switch/js/bootstrap-switch.min.js"
+		type="text/javascript"></script>
+	<script type="text/javascript" src="/static/NTree/plugins/bootstrap-sweetalert/js/sweetalert.min.js"></script>
+	<!--  SEARCH  -->
+	<script src="/static/ux3.x_ntoday/js/default/search.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/time-picker-mobile/js/time-picker-mobile.js"
+		type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/date-picker-mobile/js/date-picker-mobile.js"
+		type="text/javascript"></script>
+
+	<script src="/static/ux3.x_ntoday/plugins/jquery-notification/js/lobibox.js" type="text/javascript"></script>
+	{% block scripts %} {% endblock %}
+
+
+	<!--Menu flip-->
+	<script src="/static/ux3.x_ntoday/plugins/menuflip/js/modernizr.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/menuflip/js/menu-flip.min.js" type="text/javascript"></script>
+	<!--End Menu flip-->
+	<script src="/static/ux3.x_ntoday/js/default/custom_script.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/themes/js/layout.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/themes/js/theme_switches.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/static/ux3.x_ntoday/js/default/ntoday.js"></script>
+
+</html>

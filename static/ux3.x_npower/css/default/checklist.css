@@ -1,0 +1,84 @@
+/*Top Header CSS Mathi 04/24/2018 */
+.top-header {background: url(/static/ux3.x_npower/images/top-banner.jpg) no-repeat top right;padding: 50px;}
+.left-header {border-right: 1px solid #00afff;}
+.sub-title label {font-size: 25px; color: #2f2e2e;font-weight: 500; min-width: 130px;}
+.sub-title span {font-size: 25px; color: #2f2e2e;font-weight: 600;}
+.mini-sub-title label {font-size: 18px;color: #2f2e2e;font-weight: 500; min-width: 130px;}
+.mini-sub-title span {font-size: 18px;color: #2f2e2e;font-weight: 600;}
+.micro-title label {font-size: 14px;color: #2f2e2e;font-weight: 500;margin-bottom: 5px;min-width: 110px;}
+.micro-title span {font-size: 14px;color: #2f2e2e;font-weight: 600;}
+.main-title h4 {color: #fe938d;font-weight: 600;margin: 0px;}
+.must-text p {margin:10px 0px 0px 0px; font-size:13px;color: #00afff;}
+.top-header select.form-control {font-size: 25px;color: #2f2e2e;font-weight: 600;width: auto;padding: 0px;border: 0px !important; height: auto; display: inline-block;background: transparent;}
+.top-header .mini-sub-title select.form-control {font-size: 18px;color: #2f2e2e;font-weight: 600;width: auto;padding: 0px;border: 0px !important; height: auto; display: inline-block;}
+.top-header input.form-control {font-size: 18px;color: #2f2e2e;font-weight: 600;width: auto;padding: 0px;border: 0px !important; height: auto; display: inline-block;background: transparent;}
+.top-header .micro-title input.form-control {font-size: 14px;color: #2f2e2e;font-weight: 600;width: auto;padding: 0px;border: 0px !important; height: auto; display: inline-block;background: transparent;}
+.top-header .micro-title select.form-control {font-size: 14px;color: #2f2e2e;font-weight: 600;width: auto;padding: 0px;border: 0px !important; height: auto; display: inline-block;background: transparent;}
+.top-header .right-header input.form-control {width:100px;}
+@media (max-width:767px) {
+	.micro-title label{    min-width: 130px;}
+}
+@media (min-width:768px) and (max-width:1199px) {
+.sub-title label {width:100%;margin-bottom: 0px;}
+	.sub-title span {margin-bottom: 10px;display: block;}
+	.mini-sub-title label {width:100%; margin-bottom: 0px;}
+	.mini-sub-title span {margin-bottom: 10px;display: block;}
+	.micro-title label {width:100%; margin-bottom: 0px;}
+	.micro-title span {margin-bottom: 10px;display: block;}
+}
+@media (min-width:1200px) and (max-width:1359px) {
+	.sub-title label {width:100%;    margin-bottom: 0px;}
+	.sub-title span {margin-bottom: 10px;display: block;}
+	.mini-sub-title label {width:100%; margin-bottom: 0px;}
+	.mini-sub-title span {margin-bottom: 10px;display: block;}
+}
+
+/* General CSS Mathi 04/24/2018 */
+.padding-10 {padding: 10px;}.padding-20 {padding: 20px;}.padding-30 {padding: 30px;}.padding-40 {padding: 40px;}.padding-50 {padding: 50px;}.padding-60 {padding: 60px;}.padding-70 {padding: 70px;}.padding-80 {padding: 80px;}.padding-90 {padding: 90px;}.padding-100 {padding: 100px;}
+.padding-top-10 {padding-top: 10px;}.padding-top-20 {padding-top: 20px;}.padding-top-30 {padding-top: 30px;}.padding-top-40 {padding-top: 40px;}.padding-top-50 {padding-top:50px;}.padding-top-60 {padding-top: 60px;}.padding-top-70 {padding-top: 70px;}.padding-top-80 {padding-top: 80px;}.padding-top-90 {padding-top: 90px;}.padding-top-100 {padding-top: 100px;}
+.margin-bottom-10 {margin-bottom: 10px;}.margin-bottom-20 {margin-bottom: 20px;}.margin-bottom-30 {margin-bottom: 30px;}.margin-bottom-40 {margin-bottom: 40px;}.margin-bottom-50 {margin-bottom: 50px;}.margin-bottom-60 {margin-bottom: 60px;}.margin-bottom-70 {margin-bottom: 70px;}.margin-bottom-80 {margin-bottom: 80px;}.margin-bottom-90 {margin-bottom: 90px;}.margin-bottom-100 {margin-bottom: 100px;}
+
+/* Body CSS Mathi 04/24/2018 */
+.body-content {padding: 0px 50px 0px 50px;}
+.checklists {margin: 20px 0px 200px 0px;}
+.checklists .accordion-toggle:hover {background: transparent;}
+.checklists .accordion .panel .panel-title .accordion-toggle.accordion-toggle-styled {color:#000; text-shadow: none;font-weight: 600;}
+.checklists .radio label {padding: 0px; padding-right: 20px;}
+.checklist-question {font-size:14px;font-weight: 600;margin-top: 0px;}
+.actions-list input.form-control{font-size: 14px;color: #2f2e2e;font-weight: 600;padding: 0px;border: 0px !important; height: auto;margin:8px 0px;}
+.correct-by-list .form-control{font-size: 14px;color: #2f2e2e;font-weight: 600;padding: 0px;border: 0px !important; height: auto;margin:8px 0px;}
+.review-sign .form-control{font-size: 14px;color: #2f2e2e;font-weight: 600;padding: 0px;border: 0px !important; height: auto;margin:8px 0px;}
+.hours-spent .form-control{font-size: 14px;color: #2f2e2e;font-weight: 600;padding: 0px;border: 0px !important; height: auto;margin:8px 0px;}
+
+/* Footer CSS Mathi 04/25/2018 */
+.n-logo {background: #fff;}
+.n-logo:before {background: #92f4a3 none repeat scroll 0 0;content: ""; height: 68px;position: absolute;transform: skew(-21deg);width: 30px;left: 118px;}
+.navbar-fixed-bottom{background: #92f4a3;}
+.navbar-fixed-bottom ul li {padding:  0px 4px;}
+.navbar-fixed-bottom ul {margin:0px;}
+.navbar-fixed-bottom ul li.NPower-logo {padding:20px 10px 0px 10px;}
+.navbar-fixed-bottom ul li.view-update span {font-size: 14px;padding:0px 30px;border-right: 1px solid #000;}
+.navbar-fixed-bottom ul li.notification-icons {vertical-align: middle;}
+.navbar-fixed-bottom ul li.notification-icons span {color:#000;font-size: 20px;padding: 0px 5px;}
+.navbar-fixed-bottom ul li.copyrights span {color:#000;font-size: 13px;padding: 0px 50px;}
+.navbar-fixed-bottom ul li.social-icons span {font-size: 30px;color: #797979;padding: 0px 2px;}
+.navbar-fixed-bottom ul li.social-icons {float: right;  padding-right: 130px; margin-top: 15px;}
+.navbar-fixed-bottom ul li.fliplogo {position: absolute;bottom: 0;right:0;}
+@media (max-width:991px) {
+	.navbar-fixed-bottom ul li {text-align: center;width:100%;}
+	.navbar-fixed-bottom ul li.fliplogo {text-align: right;}
+	.navbar-fixed-bottom ul li.n-logo{text-align: left;position: absolute;width: auto;}
+	.navbar-fixed-bottom ul li.social-icons {float:none;padding-right: 0px;}
+	.navbar-fixed-bottom ul li.view-update span {display: block;margin-top:30px;}
+}
+@media (min-width:768px) and (max-width:1359px) {
+	.navbar-fixed-bottom ul li.view-update span {padding: 0px 5px;font-size: 11px;}
+	.navbar-fixed-bottom ul li.copyrights span {padding: 0px 0px;font-size: 11px;}
+	.navbar-fixed-bottom ul li.social-icons {float:none;padding-right: 0px;margin-top: 0px;}
+	.navbar-fixed-bottom ul li.social-icons span {font-size: 20px;padding: 0px 0px;}
+	.navbar-fixed-bottom ul li.notification-icons span{font-size: 18px;padding: 0px 0px;}
+}
+@media (min-width:1360px) and (max-width:1479px) {
+	.navbar-fixed-bottom ul li.view-update span {padding: 0px 5px;}
+	.navbar-fixed-bottom ul li.copyrights span {    padding: 0px 10px;}
+}

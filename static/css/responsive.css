@@ -1,0 +1,2105 @@
+@media only screen and (min-width: 2000px) {
+    #fixed-top .navbar-brand img {
+        width: 500px;
+    }
+    .project-des {
+        max-width: 1600px;
+        font-size: 24px;
+    }
+    .pro-title h5 {
+        font-size: 15px;
+    }
+    .main-project{
+        display: grid;
+        align-items: center;
+    }
+    .main-project-inner{  
+        height: 1200px;
+    }
+    .horizontal-scroll-wrapper {
+        left: -825px;
+        width: 975px;
+    }
+    .pro-non {
+        height: 765px !important;
+    }
+    .squares>div {
+        width: 450px;
+        height: 900px;
+        margin-left: 477px;
+        margin-bottom: -375px;
+    }
+    .flip-card {
+        width: 495px;
+        height: 900px;
+    }
+    .flip-card .project-img {
+        width: 495px;
+        height: 900px;
+    }
+    .progress-bar-sec p{
+        font-size: 15px;
+    }
+    .pro-title h4 {
+        font-size: 24px;
+    }
+    .pro-title p {
+        font-size: 21px;
+    }
+    .pro-tab-chart p {
+        padding: 10px 25px;
+        font-size: 21px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    .chartsection{
+        height: 300px; 
+    }
+    .pro-title {
+        padding: 30px;
+    }
+    .pro-details {
+        padding: 30px 20px;
+    }
+    .product-cart {
+        width: 50px;
+        height: 50px;
+        right: 85px;
+    }
+    .product-sunshine-info, 
+    .product-sunempawa-info, 
+    .product-sunsmart-info {
+        width: 50px;
+        height: 50px;
+    }
+    .product-des-item img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+    }
+    .content-icon-text {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    .product-detail {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    .content-text {
+        font-size: 24px;
+    }
+    .navbar-toggler {
+        font-size: 2.25rem;
+    }
+    .product-item img {
+        width: 55px;
+        height: 55px;
+    }
+    .product-item img.product-img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 30px;
+    }
+    .form-control {
+        font-size: 1.5rem;
+    }
+
+    .btn-light-green,
+    .btn-gra-green {
+        font-size: 24px;
+    }
+
+    .line {
+        width: 36px;
+        height: 3px;
+    }
+
+    .h3,
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    #jobdetails h5,
+    .single-job-details h5 {
+        font-size: 24px;
+    }
+
+    #jobdetails p.small,
+    .single-job-details p.small {
+        font-size: 18px;
+    }
+
+    #jobdetails p,
+    .single-job-details p {
+        font-size: 20px;
+    }
+
+    #jobdetails h6,
+    .single-job-details h6 {
+        font-size: 20px;
+    }
+
+    .btn-grn-bor {
+        font-size: 20px;
+    }
+
+    #jobTab h3 {
+        font-size: 20px;
+    }
+
+    .btn-green {
+        font-size: 24px;
+    }
+
+    #jobTab h5 {
+        font-size: 18px;
+    }
+
+    .hca-list li {
+        font-size: 24px;
+        max-width: 600px;
+    }
+
+    .grn-nav .line:nth-child(1) {
+        top: -5px;
+    }
+
+    .grn-nav .line:nth-child(2) {
+        top: 4px;
+    }
+
+    .grn-nav .line:nth-child(3) {
+        width: 26px;
+        top: 12px;
+    }
+
+    .sm-sec {
+        right: 175px;
+    }
+
+    .btn-line-white.small {
+        font-size: 20px;
+    }
+
+    .btn-line-white {
+        padding: 6px 32px;
+    }
+
+    .ul-sm-link img {
+        width: 40px;
+        height: 35px;
+    }
+
+    .chat-line::before {
+        left: -20px;
+        height: 30px;
+    }
+
+    .description-sec p {
+        font-size: 24px;
+    }
+
+    .description-sec h3 span {
+        font-size: 20px;
+    }
+
+    .icon-sec p {
+        font-size: 22px;
+    }
+
+    .subtitle-dsn-1 {
+        font-size: 42px;
+    }
+
+    .clear-content-grp h4 {
+        font-size: 3.5rem;
+    }
+
+    body {
+        font-size: 24px;
+    }
+
+    .solu-category .card-title h5 {
+        font-size: 15px;
+    }
+
+    .solution-sub-detail img {
+        width: 75px;
+    }
+
+    .sub-title h3 {
+        font-size: 60px;
+    }
+
+    .btn-dsn-1 {
+        font-size: 24px;
+    }
+
+    /* .single-solution .tittle-black-outline-4 {
+        display: none;
+    } */
+
+    div .solution7Carousal .card-img-top {
+        height: 800px;
+    }
+    .solution7Carousal .carousel-item {
+        height: 800px;
+    }
+
+    .solu7-hover-img img {
+        height: 800px;
+    }
+
+    .tittle-black-outline-5 {
+        font-size: 140px;
+        left: -236px;
+        letter-spacing: 5px;
+    }
+
+    .tab-list li {
+        width: 250px;
+    }
+
+    .tab-list li img {
+        height: 150px;
+    }
+
+    .product-sec .tab-list {
+        top: -100px;
+    }
+
+    .product-lrg-pt {
+        padding-top: 300px;
+    }
+
+    .productImg .carousel-inner {
+        height: 900px;
+    }
+
+    .productImg .slider-img {
+        height: 600px;
+    }
+
+    .productImg h5 {
+        font-size: 26px;
+    }
+
+    .productImg p {
+        font-size: 33px;
+    }
+
+    .productImg .carousel-control-next img,
+    .productImg .carousel-control-prev img {
+        width: 60px;
+    }
+
+    .productImg .carousel-control-next {
+        bottom: 235px;
+    }
+
+    .productImg .carousel-control-prev {
+        bottom: 185px;
+    }
+
+    .productImg .carousel-item {
+        height: calc(100% - 130px);
+    }
+
+    .productImg .carousel-indicators [data-bs-target] {
+        width: 80px;
+        height: 80px;
+    }
+
+    .productImg .carousel-indicators img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+    }
+
+    .product-sub-title h3 {
+        font-size: 51px;
+        margin-bottom: 25px;
+    }
+
+    .product-sub-title p {
+        max-width: 325px;
+        font-size: 28px;
+    }
+
+    .productImgTwo .slider-img {
+        height: 1150px;
+    }
+
+    .product-c02 h3 {
+        font-size: 50px;
+    }
+
+    .product-c02 h5 {
+        font-size: 24px;
+    }
+
+    .product-c02 img {
+        width: 100px;
+    }
+
+    .product-c02 {
+        padding: 25px;
+    }
+
+    .product-des-item .single-item h5 {
+        font-size: 20px;
+    }
+
+    .product-des-item .single-item p {
+        font-size: 18px;
+    }
+
+    .product-des-item .single-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .product-des-item .single-item p span {
+        font-size: 17px;
+    }
+
+    .tittle-black-outline-3 {
+        font-size: 140px;
+    }
+
+    .title-bg-dsn {
+        font-size: 75px;
+    }
+
+    #ServiceSevenTitleCarousal p {
+        font-size: 28px;
+    }
+
+    .solution7-arrow {
+        right: -75px;
+        top: calc(50% - 75px);
+        width: 150px;
+        height: 150px;
+    }
+
+    .service-arrow {
+        left: -65px;
+        top: calc(50% - 75px);
+        width: 150px;
+        height: 150px;
+    }
+
+    .onSolutionDetail .text,
+    .service-arrow .text {
+        width: 100px;
+    }
+
+    .solution7-arrow .arrow,
+    .service-arrow .arrow {
+        width: 30px;
+        height: 30px;
+        left: calc(50% - 30px);
+    }
+
+    #ServiceSevenImgCarousal .carousel-item img {
+        height: 1300px;
+    }
+
+    .gacarousel {
+        height: 1300px;
+    }
+
+    .ServiceSevenCategory h4 {
+        font-size: 45px;
+    }
+
+    .ServiceSevenCategory button {
+        font-size: 26px;
+    }
+
+    .ServiceSevenCategory button {
+        padding-bottom: 20px;
+        font-size: 30px;
+        padding-top: 20px;
+    }
+
+    .ServiceSevenCategory button img {
+        width: 30px;
+    }
+
+    .bg-service-d7 {
+        padding-top: calc(50vh - 700px);
+    }
+
+    .single-service-main-title.show {
+        margin-left: 60px;
+    }
+
+    .service-arrow-back {
+        left: 37.5px;
+        top: calc(57% - 46.5px);
+    }
+
+    .service-title-section::before {
+        left: 60px;
+    }
+
+    .service-title-section p {
+        font-size: 28px;
+    }
+
+    .engineering-img img {
+        height: 450px;
+    }
+
+    .single-service-title {
+        font-size: 36px;
+    }
+
+    .single-service-details h4 {
+        font-size: 32px;
+    }
+
+    .single-service-details p {
+        font-size: 23px;
+    }
+
+    .single-service-details {
+        height: 1100px;
+    }
+
+    .tab-service button {
+        font-size: 26px;
+    }
+
+    .map-location {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .contact-header h2 {
+        font-size: 55px;
+    }
+
+    .followus p {
+        font-size: 28px;
+    }
+
+    .followus li img {
+        width: 50px;
+    }
+
+    .onContactForm img {
+        width: 125px;
+    }
+
+    .contact-form {
+        padding: 60px 50px;
+    }
+
+    .contact-form .close {
+        width: 50px;
+    }
+
+    .input-dsn {
+        width: 400px;
+        height: 55px;
+        font-size: 16px;
+    }
+
+    .grp-form {
+        margin-bottom: 20px;
+    }
+
+    .btn-submit {
+        padding: 12px;
+        font-size: 22px;
+    }
+
+    .address-block .map-icon:before,
+    .address-block p:before {
+        background-size: 34px 34px !important
+    }
+
+    .onminimize {
+        right: 30px;
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .cleantitle h3 {
+        font-size: 185px;
+    }
+
+    .about-para {
+        padding: 40px 40px 30px;
+    }
+
+    .what-pad {
+        padding-top: 40px;
+    }
+
+    .about-para {
+        padding: 0px 10px;
+    }
+
+    .clear-content-top-sec {
+        left: -100px;
+    }
+
+    /* .single-service-details p {
+        line-height: 1.25;
+    } */
+
+    .tab-service button {
+        padding: 15px 20px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .solution-7-details {
+        padding-top: 80px;
+        padding-left: 150px;
+    }
+
+    /* .single-solution .tittle-black-outline-4 {
+        display: none;
+    } */
+
+    .solu-category {
+        padding-left: 15px;
+    }
+
+    .sub-title h3 {
+        font-size: 30px;
+    }
+
+    .solution-single-data {
+        padding: 50px 50px;
+    }
+
+    .solution-single-data p {
+        line-height: 1.5;
+    }
+
+    .title-bg-dsn {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    .tab-service button {
+        padding: 15px 20px;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 1366px) {
+    .tittle-black-outline-9 {
+        font-size: 75px;
+        transform: rotate(0deg);
+        left: 0px;
+        top: 0px;
+        position: relative;
+    }
+    .main-project {
+        min-height: 1000px;
+        padding: 50px 50px 0 50px;
+    }
+    .productImgTwo .slider-img {
+        height: 595px;
+    }
+    .productImg .slider-img {
+        height: 300px;
+    }
+    .productImg .carousel-inner {
+        height: 495px;
+    }
+    .description-sec h3 {
+        font-size: 22px;
+    }
+
+    .cleantitle h3 {
+        font-size: 150px;
+    }
+
+    #joinus {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .clear-content-btm-sec h3 {
+        font-size: 25px;
+    }
+
+    .about-para p {
+        letter-spacing: 0.5px;
+        font-size: 12px;
+    }
+
+    .section {
+        scroll-snap-align: none;
+    }
+
+    .solution-7 .mh-100vh {
+        min-height: auto;
+    }
+
+    .solution-bg-main {
+        display: none;
+    }
+
+
+    .tab-algn-dash {
+        width: 100%;
+    }
+
+    .tab-algn-dash-non {
+        display: none;
+    }
+
+    .solution-single-data {
+        position: relative;
+    }
+
+    .solution-single-data-btn {
+        content: "1";
+        position: absolute;
+        left: 20px;
+        top: 52px;
+        width: 20px;
+        height: 20px;
+        opacity: 0.3;
+        display: block
+    }
+
+    .solution-rgt-dsn-sec {
+        width: 100%;
+    }
+
+    .product-sub-title h3 {
+        font-size: 32px;
+    }
+
+    .tittle-black-outline-5 {
+        font-size: 75px;
+        transform: rotate(0deg);
+        left: 70px;
+        top: -85px;
+    }
+
+    .tittle-black-outline-3 {
+        font-size: 75px;
+        transform: rotate(0deg);
+        left: 0px;
+        top: -105px;
+    }
+
+    .bg-service-d7 {
+        padding: 150px 50px 60px;
+    }
+
+    #ServiceSevenTitleCarousal .carousel-item {
+        height: 300px;
+    }
+
+    .ser-block-1-res {
+        width: 100%;
+    }
+
+    .ser-block-2-res,
+    .ser-block-3-res {
+        width: 50%;
+    }
+
+    .product-lrg-pt {
+        padding-top: 150px;
+        padding-bottom: 50px;
+    }
+
+    .tab-details {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .product-res-tab {
+        width: 100%;
+    }
+
+    .navbar {
+        background: #fff;
+        box-shadow: 0 10px 10px -10px #00000057;
+    }
+
+    .tab-list li.active {
+        display: inline-block;
+    }
+
+    .tab-list li {
+        width: 110px;
+        margin-left: 30px;
+    }
+
+    .tab-list li.active {
+        width: 135px;
+    }
+
+    .ServiceSevenCategory {
+        width: calc(100% - 60px);
+        left: 30px;
+    }
+
+    .service-detail {
+        height: auto;
+    }
+
+    .service-arrow-back {
+        top: calc(53% - 46.5px);
+    }
+
+    .tab-service {
+        position: relative;
+        top: 23px;
+    }
+
+    /* .map-img-mob {
+        display: block;
+    }
+
+    .map-img {
+        display: none;
+    } */
+
+    .address-grp .col {
+        flex: initial;
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .map-img .map {
+        width: 100%;
+        position: relative;
+        top: 34px;
+        left: -12px;
+    }
+
+    .map-icon {
+        position: static;
+    }
+
+    .map-address {
+        position: sticky;
+    }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width:1000px) {
+    .icon-uk {
+        margin-top: -188px;
+        height: 13px;
+        transform: translateX(-35px) translateY(-3px);
+        /* margin-left: -82px; */
+    }
+
+    .add-uk {
+        transform: translateX(91px) translateY(-98px);
+    }
+
+    .uk_map_dynamic {
+        height: 37px;
+        width: 78px;
+    }
+
+    .uk_map_dynamic.add-png {
+        width: 36%;
+        height: 1%;
+        transform: translateX(276px) translateY(-267px);
+        z-index: 2 !important;
+        /* margin-top: -33px; */
+    }
+
+    .contact-form-icon {
+        top: 35px !important;
+    }
+
+    .uk_map_dynamic.add-aus {
+        width: 110px;
+    }
+
+    .uk_map_dynamic.add-sin {
+        width: 114px;
+        transform: translateX(152px) translateY(-173px);
+    }
+
+    .icon-ind {
+        transform: translateX(42px) translateY(-131px);
+        width: 12px;
+    }
+
+    .add-ind {
+        /* margin-left: 169px; */
+        /* width: 12px; */
+        transform: translateX(185px) translateY(-190px);
+    }
+
+    .icon-sin {
+        transform: translateX(82px) translateY(-157px);
+        width: 13px;
+    }
+
+    .add-sin {
+        /* margin-top: -249px;
+        margin-left: 216px; */
+    }
+
+    .map-address.add-png {
+        left: 0;
+        bottom: 0;
+    }
+
+    .map-address.add-aus {
+        left: 0;
+        bottom: 0;
+        transform: translateX(184px) translateY(-250px);
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .main-project {
+        min-height: 800px;
+    }
+    .main-project {
+        padding: 100px 50px 0 50px;
+    }
+    .pro-des-d-none{
+        display: block;
+    }
+    .pro-mob-d-none{
+        display: none;
+    }
+    .project-details {
+        box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    .project-details-des {
+        padding: 15px 0;
+    }
+    img.pro-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+    }
+    .project-details h4 {
+        color: #303030;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .project-details-title .col{
+        display: flex;
+        align-items: center;
+    }
+    .project-details-title{
+        padding: 15px;
+        background: #EBEBEB;
+    }
+    .description-sec h3 {
+        display: none;
+    }
+    /* carousel project  */
+
+
+    #carouselProjects {
+        margin-bottom: 75px;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #carouselProjects .carousel-item {
+        min-height: 405px;
+        /* background: #cccccc54; */
+    }
+    #carouselProjects .carousel-caption {
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+    }
+    #carouselProjects .carousel-control-next, 
+    #carouselProjects .carousel-control-prev {
+        height: 30px;
+        bottom: -35px;
+        top: auto;
+        right: 15px;
+    }
+    #carouselProjects .carousel-control-prev {
+        height: 30px;
+        bottom: -65px;
+        top: auto;
+        right: 15px;
+        left: auto;
+    }
+    #carouselProjects .carousel-indicators button{
+        display: none;
+    }
+    #carouselProjects .carousel-indicators [data-bs-target]{
+        text-indent: 0;
+    }
+    #carouselProjects .carousel-indicators  .active {
+        display: block;
+        background: transparent;
+        font-size: 21px;
+        font-family: 'Raleway SemiBold';
+        color: #858585;
+        height: 30px;
+        /* margin: 0; */
+    }
+    #carouselProjects .carousel-indicators {
+        margin-left: 15px;
+        bottom: -75px;
+        justify-content: flex-start;
+    }
+    #carouselProjects .count {
+        margin-top: 18px;
+        font-size: 13px;
+        color: #9f9f9f;
+    }
+    #carouselProjects .count span {
+        color: #e5e5e5;
+    }
+    #carouselProjects .progress-bar-sec .col{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* carousel project */
+
+
+
+    #productsec {
+        padding-bottom: 50px;
+    }
+    .product-item img.product-img {
+        width: 50px;
+        height: 50px;
+    }
+    .productImgTwo .slider-img {
+        height: auto;
+        object-fit: cover;
+    }
+    .sunshine-slider02,
+    .sunempawa-slider02, 
+    .sunsmart-slider02{
+        display: none;
+    }
+    .product-details{
+        width: 100%;
+    }
+    .product-des-tab-view{
+        display: flex;
+        align-items: center;
+    }
+
+    #cleansec .cl-img,
+    #cleansec .clear-content,
+    #cleansec .clear-content-btm-sec {
+        display: none;
+    }
+
+    .about-para {
+        width: 100%;
+    }
+
+    .product-res-caro2,
+    .product-res-caro1 {
+        width: 50%;
+    }
+
+    .product-res-caro3 {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .service-title-section p {
+        line-height: 1.5;
+    }
+
+    .service-title-section::before {
+        display: none;
+    }
+
+    .service-title-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .res-joinus-1 {
+        width: 100%;
+    }
+
+    .joinus-benefit-details .modal-body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hca-list li {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #cleansec {
+        height: 700px;
+    }
+
+    #cleanVideo {
+        height: 700px;
+    }
+
+    .sm-sec {
+        display: none;
+    }
+
+    .nav-menu {
+        width: 80px;
+    }
+
+    .nav-logo {
+        width: calc(100% - 80px);
+    }
+
+    #solution7CarousalMob {
+        display: block;
+    }
+
+    #solution7Carousal {
+        display: none;
+    }
+
+    .solution7Carousal {
+        padding-left: 90px;
+    }
+
+    .solution7Carousal {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+    .solution-7-details {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+    .solution-7-details .title-dsn-2 {
+        font-size: 39px;
+    }
+
+    .solution7Carousal .carousel-control-next,
+    .solution7Carousal .carousel-control-prev {
+        top: auto;
+        width: 11%;
+        height: 50px;
+        left: 12px;
+    }
+
+    #ServiceSevenImgCarousal .carousel-item img {
+        height: 500px;
+    }
+
+    .gacarousel {
+        height: 500px;
+    }
+
+    .single-service-details {
+        height: auto;
+    }
+
+    .single-service-details {
+        padding-left: 35px;
+    }
+
+    .tab-service {
+        padding-left: 35px;
+    }
+
+    .ser-shw-mob {
+        display: block;
+    }
+
+    .ser-hid-mob {
+        display: none;
+    }
+
+    .tab-service {
+        padding-left: 0;
+    }
+
+    .ser-shw-mob .tittle-black-outline-3 {
+        top: -44px;
+        position: relative;
+    }
+
+    .title-bg-dsn {
+        font-size: 33px;
+    }
+
+    .address-grp .col {
+        width: 50%;
+    }
+
+    .login-module .col-md-5,
+    .login-module .col-md-7 {
+        width: 100%;
+    }
+
+    .login-module .col-md-5 {
+        text-align: left !important;
+    }
+
+    #jobTab .nav-link {
+        margin-bottom: 15px;
+    }
+
+    .input-dsn {
+        width: 100%;
+    }
+
+    .login-module .col-md-7 {
+        margin-top: 0;
+    }
+
+    .joinus-benefit-details p.form-link {
+        margin-left: 0;
+        text-align: right;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .offset-md-5 {
+        margin-left: 0;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .product-des-tab-view{
+        display: none;
+    }
+    div .dynamic-style h2 {
+        font-size: 45px;
+    }
+    #productSmartCarousel .carousel-caption,
+    #productSunshineCarousel .carousel-caption,
+    #productEmpawaCarousel .carousel-caption
+    {
+        padding-bottom: 0.25rem;
+    }
+
+    #productSmartCarousel .carousel-caption p,
+    #productSunshineCarousel .carousel-caption p,
+    #productEmpawaCarousel .carousel-caption p
+    {
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    
+    
+    .main-project {
+        min-height: auto;
+        padding: 20px;
+    }
+    div .tittle-black-outline-9 {
+        transform: rotate(0deg);
+        position: relative;
+        font-size: 45px;
+        top: 0;
+        left: 0;
+    }
+    div .project-des {
+        position: relative;
+        left: 0;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .product-image-small{
+        height: auto;        
+    }
+    .product-c02 img{
+        width: 45px;
+    }
+    .product-c02 h3 {
+        font-size: 21px;
+    }
+    .product-c02 h5 {
+        font-size: 12px;
+    }
+    .product-c02 {
+        padding: 10px;
+    }
+    
+
+    .dashboard {
+        padding: 120px 30px;
+    }
+
+    .icon-sec {
+        bottom: 15px;
+    }
+
+    .solution-sub-detail .col-auto {
+        padding-right: 0px;
+    }
+
+    .product-res-caro2,
+    .product-res-caro1 {
+        width: 100%;
+    }
+
+    .product-res-caro2 {
+        margin-top: 50px;
+    }
+
+    .productImgTwo .slider-img {
+        height: auto;
+    }
+
+    .productImg .slider-img {
+        height: 300px;
+    }
+
+    .productImg .carousel-inner {
+        height: 450px;
+    }
+
+    .tab-list li img {
+        height: 55px;
+    }
+
+    .ser-block-2-res,
+    .ser-block-3-res {
+        width: 100%;
+    }
+
+    .ser-block-3-res {
+        padding-top: 50px;
+    }
+
+    #ServiceSevenImgCarousal .carousel-item img {
+        height: 400px;
+    }
+
+    .gacarousel {
+        height: 400px;
+    }
+
+    .ServiceSevenCategory {
+        position: relative;
+        bottom: 0;
+        margin-top: 0;
+        top: -100px;
+    }
+
+    #ServiceSevenTitleCarousal .carousel-item {
+        height: 450px;
+    }
+
+    .ServiceSevenImgTwoCarousal {
+        display: none;
+    }
+
+    #ServiceSevenImgTwoCarousal {
+        display: none;
+    }
+
+    .mob-view-service {
+        display: block;
+    }
+
+    .des-view-service {
+        display: none;
+    }
+
+    .tittle-black-outline-3 {
+        font-size: 45px;
+    }
+
+    .engineering-img img {
+        margin-top: 5px;
+        margin-bottom: 40px;
+    }
+
+    .single-service-details {
+        padding-left: 0px;
+    }
+
+    .address-block p {
+        padding-left: 35px;
+    }
+
+    .address-block {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .address-grp .col {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+}
+
+
+@media only screen and (max-width: 640px) {
+    .icon-sec {
+        display: none;
+    }
+
+    .clear-content-grp {
+        padding: 35px;
+    }
+
+    .solution7Carousal {
+        padding-top: 50px;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .solution-7-details .title-dsn-2 {
+        font-size: 30px;
+    }
+
+    .solution-7-details {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .offcanvas-end {
+        width: 300px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 21px;
+        margin-bottom: 20px;
+    }
+
+    .onminimize {
+        display: none;
+    }
+
+    .address-grp {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .client-partner-block {
+        margin: 40px 0px;
+    }
+    #cleansec {
+        height: 800px;
+    }
+
+    #cleanVideo {
+        height: 800px;
+    }
+
+    .tab-list li {
+        margin-left: 15px;
+    }
+
+    .productImg .carousel-control-next,
+    .productImg .carousel-control-prev {
+        right: 10px;
+    }
+
+    .tittle-black-outline-5 {
+        font-size: 45px;
+        top: -60px;
+        left: 40px;
+    }
+
+    .product-lrg-pt {
+        padding-top: 95px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .tittle-black-outline-9 {
+        font-size: 45px;
+        
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .project-des {
+        position: relative;
+        left: 0;
+    }
+
+    .horizontal-scroll-wrapper {
+        top: 150px;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+
+    .tittle-black-outline-9 {
+        /* font-size: 75px; */
+        transform: rotate(0deg);
+        /* left: 70px;
+        top: -85px; */
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .project-des {
+        position: relative;
+        left: 0;
+    }
+    .horizontal-scroll-wrapper {
+        top: -55px;
+        margin-left: -69px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 480px) {
+    .product-c02{
+        display: none;
+    }
+    #cleansec {
+        height: 1000px;
+    }
+
+    #cleanVideo {
+        height: 1000px;
+    }
+
+    #home-slider .px-5 {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+
+    #ServiceSevenTitleCarousal .carousel-item {
+        height: 500px;
+    }
+
+    .title-bg-dsn {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    #ServiceSevenTitleCarousal::before {
+        display: none;
+    }
+
+    .tab-service button img {
+        margin-left: 5px;
+    }
+
+    .tab-service button {
+        padding: 10px 10px;
+        position: relative;
+        top: -30px;
+    }
+
+    .service-arrow-back {
+        left: -15.5px;
+        width: 72px;
+        height: 72px;
+    }
+
+    .service-arrow-back .text {
+        width: 55px;
+    }
+
+    .address-grp .col {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 420px) {
+    .solution7Carousal {
+        padding-right: 20px;
+    }
+    .project-details h4 {
+        font-size: 14px;
+    }
+    .pro-details .img{
+        display: none;
+    }
+    .pro-details p{
+        font-size: 13px;
+    }
+    .solution-7-details {
+        padding-right: 20px;
+    }
+
+    .service-arrow {
+        left: -15.5px;
+        width: 72px;
+        height: 72px;
+    }
+
+    .onService01 .text {
+        width: 55px;
+    }
+
+    .bg-service-d7 {
+        padding: 120px 30px 60px;
+    }
+
+    .tittle-black-outline-3 {
+        top: -75px;
+    }
+
+    .ServiceSevenCategory {
+        width: calc(100% - 10px);
+        left: 4px;
+        padding: 20px;
+    }
+
+    .ServiceSevenCategory button {
+        padding-left: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+    #cleansec {
+        height: 1200px;
+    }
+
+    #cleanVideo {
+        height: 1200px;
+    }
+    .tab-list-details {
+        padding-top: 50px;
+    }
+    .tittle-black-outline-5 {
+        font-size: 36px;
+    }
+}
+
+
+@media only screen and (max-height: 1100px) {
+    .description-sec p {
+        display: none;
+    }
+    .productImgTwo .slider-img {
+        height: 585px;
+    }
+    .productImg .slider-img {
+        height: 300px;
+    }
+    .productImg .carousel-inner {
+        height: 495px;
+    }
+    .horizontal-scroll-wrapper {
+        left: -463px;
+        width: 540px;
+    }
+    .pro-non {
+        height: 425px !important;
+    }
+    .squares>div {
+        width: 275px;
+        height: 500px;
+        margin-left: 265px;
+        margin-bottom: -208px;
+    }
+    .flip-card {
+        width: 275px;
+        height: 500px;
+    }
+    .flip-card .project-img {
+        width: 275px;
+        height: 500px;
+    }
+    .pro-details p{
+        font-size: 12px;
+    }
+    .progress-bar-sec .last{
+        font-size: 14px;
+    }
+    .pro-tab-chart p {
+        padding: 5px 15px;        
+    }
+    .main-project  .pro-title h5{
+        display: none;
+    }
+    .main-project .pro-title p{
+        display: none;
+    }
+    .chartsection{
+        height: 150px;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    .icon-sec {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .footer-button {
+        width: 63px;
+        position: relative;
+        bottom: 50.5px;
+        font-size: 11px;
+        left: 134px;
+    }
+}
+
+
+@media only screen and (min-width: 1000px) and (max-width: 1450px) {
+    .footer-button {
+        position: relative;
+        bottom: 9px;
+    }
+}
+
+@media only screen and (min-width: 1440px) and (max-width :1445px) {
+    .footer-button {
+        position: relative;
+        bottom: -1px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .media-text {
+        position: relative;
+        top: 45px;
+        right: 185px;
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .footer-media-detail {
+        position: relative;
+        right: 319px;
+        top: 30px;
+    }
+
+    .footer-margin {
+        position: relative;
+        left: -43px;
+    }
+
+    .footer-end-media {
+        left: -53px;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .media-right-align {
+        position: relative;
+        top: 32px;
+        right: 202px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .footer-input {
+        position: relative;
+        right: 16px;
+    }
+
+    .footer-button {
+        position: relative;
+        bottom: 51px;
+        left: 96px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .footer-button {
+        position: relative;
+        bottom: 51px;
+        left: 70px;
+    }
+
+    .faq-align-media {
+        position: relative;
+        left: -315px;
+        top: 6px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .footer-product-align {
+        position: relative;
+        top: 58px;
+        right: 200px;
+    }
+
+    .footer-input::placeholder {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 778px) {
+
+    .footer-button {
+        position: relative;
+        bottom: 8.6px;
+        font-size: 9px;
+    }
+}
+
+@media (min-width: 424px) and (max-width: 430px) {
+
+    .footer-button {
+        position: relative;
+        bottom: 9px;
+    }
+
+    .button-text {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+    .footer-button {
+        position: relative;
+        bottom: 8px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1450px) {
+    .footer-button {
+        position: relative;
+        bottom: -1px;
+        /* font-size: 12px; */
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+    .footer-button {
+        position: relative;
+        bottom: 8px;
+    }
+
+    .button-text {
+        font-size: 12px;
+    }
+
+    .tab-service {
+        top: -10px;
+    }
+}
+
+@media only screen and (min-height: 1000px) {
+    .solution7Carousal .card-img-top {
+        height: 570px;
+    }
+
+    /* .carousel-item {
+        height: 550px;
+
+    } */
+
+    /* .MaintenanceButton {
+        position: relative;
+        left: 600px;
+        bottom: 65px;
+    } */
+    .tab-service {
+        position: relative;
+        bottom: 250px;
+        left: -39px;
+    }
+}
+
+
+/* .engineering-img {
+    position: relative;
+    top: -138px;
+} */
+
+/* .product-main-image {
+    height: 668px;
+} */
+
+@media only screen and (min-width: 1023px) and (max-width:1550px) {
+    .MaintenanceButton {
+        position: relative;
+        left: 520px;
+        bottom: 65px;
+    }
+
+
+
+
+    /* @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+    .tittle-black-outline-9 {
+        top: -129px;
+        left: -143px;
+    }
+} */
+
+    @media only screen and (min-width: 976px) and (max-width: 1023) {
+
+        .footer-button {
+            /* top: -129px; */
+            left: -143px;
+        }
+    }
+
+    @media only screen and (min-width: 1023px) and (max-width: 1025px) {
+        .solution-7-details .title-dsn-2 {
+            position: relative;
+            top: 30px;
+        }
+    }
+
+    @media only screen and (min-width: 976px) and (max-width: 1023) {
+
+        .footer-button {
+            /* top: -129px; */
+            left: -143px;
+        }
+    }
+
+    @media only screen and (min-width: 1023px) and (max-width: 1025px) {
+        .solution-7-details .title-dsn-2 {
+            position: relative;
+            top: 30px;
+        }
+    }
+
+    @media only screen and (min-width: 1530px) and (max-width: 1600px) {
+        .solution7Carousal .card-img-top {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        #ServiceSevenImgCarousal .carousel-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        #ServiceSevenImgTwoCarousal .carousel-inner {
+            height: 500px !important;
+        }
+
+        .tittle-black-outline-3 {
+            top: 160px;
+        }
+
+        .engineering-img {
+            position: relative;
+            top: -118px;
+        }
+
+        .engineering-img img {
+            height: 230px;
+        }
+
+        .MaintenanceButton {
+            position: relative;
+            left: 598px;
+        }
+
+        .single-service-details.show {
+            position: relative;
+            top: -112px;
+        }
+
+        .tab-list li img {
+            position: relative;
+            top: 30px;
+        }
+
+        .horizontal-scroll-wrapper {
+            top: -7px;
+        }
+
+        .project-des {
+            position: relative;
+            top: -50px;
+        }
+
+        .service-title-section p {
+            position: relative;
+            top: -26px;
+        }
+
+        .solution-7-details {
+            padding-top: 100px;
+        }
+    }
+
+    @media only screen and (max-width: 1025px) {
+        .vertical-align-dashboard {
+            transform: rotate(0deg);
+            top: 74px;
+            font-size: 20px;
+            left: -1px;
+        }
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 330px) {
+        .vertical-align-dashboard {
+            position: relative;
+            top: 65px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .dynamic-style {
+        display: block !important;
+    }
+
+    .dynamic-style h2 {
+        font-family: 'Raleway Black';
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #30303050;
+        color: transparent;
+        position: relative;
+        text-transform: uppercase;
+        top: 53px;
+        left: 12px;
+        font-size: 75px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .dynamic-style h2 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .dynamic-style {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1000px) {
+    .vertical-align-jobquery {
+        transform: rotate(270deg);
+        position: relative;
+        top: 310px;
+        left: -455px;
+        letter-spacing: 5px;
+        font-family: 'Raleway Black';
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #30303050;
+        color: transparent;
+        white-space: nowrap;
+        font-size: 50px !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .vertical-align-jobquery {
+        position: relative;
+        top: 24px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .tittle-black-outline-8 {
+        transform: rotate(0deg);
+        left: 12px;
+        font-size: 45px;
+        top: 112px;
+    }
+
+    .contact-header p {
+        position: relative;
+        margin-left: 16px;
+        top: 67px;
+    }
+
+    .followus {
+        position: relative;
+        top: -13px;
+        left: -29px;
+
+    }
+    .png-div {
+        /* position: relative;
+        top: 123px;
+        left: 269px; */
+    }
+
+    .png-div img {
+        width: 12px;
+        transform: translateX(95px) translateY(-183px);
+    }
+
+    .sin-align {
+        position: relative;
+        top: -11px;
+    }
+
+    .icon-aus {
+        /* margin-left: -208px; */
+        transform: translateX(108px) translateY(-304px);
+        width: 12px;
+    }
+
+    .add-png {}
+}
+
+
+@media only screen and (min-width: 1000px) and (max-width:1400px) {
+    .tittle-black-outline-8 {
+        font-size: 108px;
+    }
+}
+
+/* @media (min-width: 1000px) {
+    #txtNewInput {
+        position: relative;
+        left: 185px;
+    }
+} */
+
+
+
+@media (min-width: 2000px) {
+    .tittle-black-outline-8 {
+        left: -283px;
+        top: 499px;
+        font-size: 192px
+    }
+}
+
+@media (min-width: 319px) and (max-width:370px) {
+    .contact-form.show{
+        right: -19px;
+    }
+    .footer-number{
+        white-space: normal;
+    }
+}
+
+@media (max-width: 1000px) {
+    .solutions-7-responsive {
+        position: relative;
+        left: -61px;
+    }
+}

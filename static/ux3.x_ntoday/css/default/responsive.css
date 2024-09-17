@@ -1,0 +1,22 @@
+@media screen and (max-width: 1400px) {
+.projectName {
+	width: 34%;
+}
+.proStatus {
+	width: 25%;
+	text-align:center;
+}
+}
+@media screen and (max-width: 1024px) {
+.date_options ul {
+	width:100%;
+}
+#plan_in_action_table {
+	min-width:1280px !important;
+	overflow-x: scroll;
+}
+.add_plan {
+	width:100%;
+}
+}
+

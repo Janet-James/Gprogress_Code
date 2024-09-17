@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GREEN</title>
+    <meta charset="utf-8" />
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="dist/images/favicon.png" />
+    <link href="/static/css/task_management_css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/static/css/task_management_css/individual_style.css" rel="stylesheet" />
+    <link href="/static/css/task_management_css/responsive.css" rel="stylesheet" />
+    <link href="/static/css/task_management_css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/static/css/task_management_css/lobibox.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/static/dev/js/task_management/task_management_main.js"></script>
+    <script src="/static/dev/js/task_management/individual_task_dashboard_main.js"></script>
+    <script src="/static/dev/js/task_management/custom.js"></script>
+  
+
+    
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Add frappe-gantt library -->
+    <script src="https://cdn.jsdelivr.net/npm/frappe-gantt/dist/frappe-gantt.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/frappe-gantt/dist/frappe-gantt.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
+  </head>
+  <body>
+    <div id="individual_div" class="new_container">
+      <div class="header_sec_new">
+        <div class="user_new_stat">
+          <p class="user_new_stat_text">Task Statistics</p>
+        </div>
+        <div class="filter_new_sec_1">
+          <div class="filter_sec_filterBy">
+            <p>Filter By</p>
+          </div>
+          {% comment %} <div class="year_sec_new">
+            <select name="cars" id="year_filter_new">
+              <option value="Jan">Jan</option>
+              <option value="Feb">Feb</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">Aug</option>
+              <option value="September">Sep</option>
+              <option value="October">Oct</option>
+              <option value="November">Nov</option>
+              <option value="December">Dec</option>
+            </select>
+          </div> {% endcomment %}
+          <div id="yearSections"></div>
+          
+          {% comment %} <div class="week_sec">
+            <select name="cars" id="cars">
+              <option value="0" selected>Week</option>
+              <option  value="1">Week 1</option>
+              <option value="2">Week 2</option>
+              <option value="3">Week 3</option>
+              <option value="4">Week 4</option>
+              <option value="5">Week 5</option>
+            </select>
+          </div> {% endcomment %}
+
+          <div id="weekContainer" class="week_sec">
+            <!-- Weeks will be dynamically added here -->
+        </div>
+          <div class="done_green">
+            <p type = "button" class="done_green_text" onclick="filterBtn()">Done</p>
+          </div>
+          <div class="quter_selection hide_select">
+            <p class="quater_select_1 selected_1" data-value = "1">Quater 1</p>
+            <p class="quater_select_1 selected_2" data-value = "2">Quater 2</p>
+            <p class="quater_select_1 selected_3" data-value = "3">Quater 3</p>
+            <p class="quater_select_1 selected_4" data-value = "4">Quater 4</p>
+          </div>
+          <div class="month_scale hide_select">
+            <p class="month_scale_jan">Jan</p>
+            <p class="month_scale_feb">Feb</p>
+            <p class="month_scale_mar">Mar</p>
+            <p class="month_scale_apr">Apr</p>
+            <p class="month_scale_may">May</p>
+            <p class="month_scale_June">June</p>
+            <p class="month_scale_July">July</p>
+            <p class="month_scale_Aug">Aug</p>
+            <p class="month_scale_Sep">Sep</p>
+            <p class="month_scale_Oct">Oct</p>
+            <p class="month_scale_Nov">Nov</p>
+            <p class="month_scale_Dec">Dec</p> 
+          </div> 
+        </div>
+      </div>
+      <div class="row new_wrapper">
+        <div class="col-md-9 new_rightSec">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="new_card_chart">
+                <div class="new_card_1">
+                  <div class="new_tick_sec">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_1120_12306)">
+                        <path
+                          d="M15 0C6.75 0 0 6.75 0 15C0 23.25 6.75 30 15 30C23.25 30 30 23.25 30 15C30 6.75 23.25 0 15 0ZM24.375 10.5L13.6875 21.5625C13.5 21.75 13.3125 21.75 12.9375 21.75C12.75 21.75 12.375 21.75 12.1875 21.5625L5.625 14.4375C5.4375 14.0625 5.4375 13.5 5.625 13.125L6.375 12.375C6.75 12 7.3125 12 7.6875 12.375L12.375 16.125C12.5625 16.3125 12.75 16.3125 12.9375 16.3125C13.125 16.3125 13.5 16.125 13.6875 15.9375L22.3125 8.25C22.6875 7.875 23.25 7.875 23.625 8.25L24.375 9.1875C24.5625 9.5625 24.5625 10.125 24.375 10.5Z"
+                          fill="#357BBD"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1120_12306">
+                          <rect width="30" height="30" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="new_span">
+                      <p class="new_completed">Tasks Completed</p>
+                    </span>
+                    <span class="new_number_sec">
+                      <p class="new_number_1">00</p>
+                      <p class="new_completed_number">00 Completed</p>
+                    </span>
+                  </div>
+                  <div class="new_loading_ind">
+                    <div class="new_filler"></div>
+                  </div>
+                  <p class="new_pending_number">00 Pending</p>
+                  <div class="new_loading_ind1">
+                    <div class="new_filler1"></div>
+                  </div>
+                  <div class="new_white_space_1">
+                    <p class="new_white_number date_range1">Completed Tasks Last Week</p>
+                    <p class="new_white_number1 Completed_task">00</p>
+                  </div>
+                </div>
+                <div class="new_card_2">
+                  <div class="new_tick_sec">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                    >
+                      <path
+                        d="M25.9219 29.7188H4.21875C3.14062 29.7188 2.25 28.8281 2.25 27.75V6.14062C2.25 5.0625 3.14062 4.17187 4.21875 4.17187H5.20312V7.125C5.20312 8.20312 6.09375 9.09375 7.17187 9.09375H22.9453C24.0234 9.09375 24.9141 8.20312 24.9141 7.125V4.17187H25.8984C26.9766 4.17187 27.8672 5.0625 27.8672 6.14062V27.75C27.8906 28.8281 27 29.7188 25.9219 29.7188ZM21.5156 16.3594C20.9297 15.7969 19.9922 15.7969 19.4062 16.3594L14.1328 21.375L11.6719 19.0312C11.0859 18.4687 10.1484 18.4687 9.5625 19.0312C8.97656 19.5937 8.97656 20.4844 9.5625 21.0234L13.0781 24.3516C13.6641 24.9141 14.6016 24.9141 15.1875 24.3516L21.5156 18.3516C22.1016 17.8125 22.1016 16.9219 21.5156 16.3594ZM19.9922 7.125H10.1484C9.07031 7.125 8.17969 6.23437 8.17969 5.15625V4.17187C12.1172 1.28906 12.1641 1.24219 13.1953 0.257812H17.1094C18.0703 1.17187 18.0469 1.28906 21.9609 4.17187V5.15625C21.9609 6.25781 21.0938 7.125 19.9922 7.125ZM15.0703 2.22656C13.9922 2.22656 13.1016 3.11719 13.1016 4.19531C13.1016 5.27344 13.9922 6.16406 15.0703 6.16406C16.1484 6.16406 17.0391 5.27344 17.0391 4.19531C17.0391 3.09375 16.1484 2.22656 15.0703 2.22656Z"
+                        fill="#23B14D"
+                      />
+                    </svg>
+                    <span class="new_span">
+                      <p class="new_completed_1">Active Task</p>
+                    </span>
+                    <span class="new_number_sec">
+                      <p class="new_number_2 active_total">00</p>
+                      <p class="new_completed_number1 active_2">00 Completed</p>
+                    </span>
+                  </div>
+                  <div class="new_loading_ind_sec2">
+                    <div class="new_filler_sec1"></div>
+                  </div>
+                  <p class="new_pending_number_1 active_1">00 Pending</p>
+                  <div class="new_loading_ind1_sec2">
+                    <div class="new_filler1_sec1"></div>
+                  </div>
+                  <div class="new_white_space_2">
+                    <p class="new_white_number date_range2">Completed Tasks Last Week</p>
+                    <p class="new_white_number1 active_task">00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="new_card_chart_1">
+                <div class="new_card_11">
+                  <div class="new_tick_sec">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="31"
+                      height="30"
+                      viewBox="0 0 31 30"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_1120_12323)">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M22.5911 2.19339C22.2612 1.96369 21.8874 1.86351 21.5062 1.93926C21.125 2.01501 20.8024 2.22027 20.5727 2.54038L19.2849 4.35597C18.828 4.15315 18.3515 3.99921 17.8432 3.87214C17.335 3.74507 16.8585 3.64244 16.3502 3.56669L15.9421 1.19152C15.8688 0.783439 15.6611 0.487764 15.3679 0.258067C15.038 0.0283687 14.6885 -0.0473827 14.2829 0.0283687L11.3042 0.563516C10.923 0.639267 10.6248 0.817649 10.3707 1.14753C10.141 1.47742 10.0408 1.82685 10.1166 2.23249L10.4978 4.4024C10.0139 4.60522 9.56433 4.83492 9.13181 5.10616C8.69929 5.36029 8.27655 5.66574 7.89291 5.96141L5.8745 4.57101C5.54462 4.34131 5.19518 4.24112 4.81398 4.31688C4.43278 4.39263 4.11023 4.59789 3.88053 4.92777L2.16268 7.38359C1.93298 7.71347 1.8328 8.08734 1.90855 8.46854C1.9843 8.87662 2.18956 9.1723 2.51945 9.40199L4.33504 10.6898C4.13222 11.1467 3.97827 11.6232 3.8512 12.1315C3.72414 12.6398 3.62151 13.1163 3.54576 13.6245L1.17303 14.0302C-0.840495 14.4089 0.298219 17.2948 0.545022 18.6681C0.620773 19.0493 0.799156 19.3474 1.12171 19.6016C1.4516 19.8313 1.80103 19.9314 2.20667 19.8557L4.37658 19.4745C4.5794 19.9583 4.80909 20.4079 5.08033 20.8405C5.33447 21.273 5.63991 21.6957 5.93559 22.1038L4.54519 24.0978C4.31549 24.4277 4.2153 24.7771 4.29105 25.1583C4.3668 25.5395 4.56962 25.862 4.89218 26.0917L7.36754 27.8291C7.69742 28.0588 8.07129 28.1346 8.45249 28.0588C8.83369 27.9831 9.15625 27.8047 9.41038 27.4821L10.7006 25.6421C11.1575 25.8449 11.634 25.9989 12.1423 26.1259C12.6506 26.253 13.1246 26.3556 13.6354 26.4314L14.0434 28.8066C14.1192 29.2147 14.3244 29.5103 14.6201 29.74C14.95 29.9697 15.2994 30.0455 15.7051 29.9697L18.6814 29.4346C19.0626 29.3588 19.3607 29.1804 19.6148 28.8579C19.8445 28.528 19.9447 28.1786 19.869 27.7729L19.4878 25.603C19.9716 25.4002 20.4212 25.1705 20.8537 24.8993C21.2862 24.6451 21.7114 24.347 22.1171 24.044L24.111 25.4344C24.4409 25.6641 24.7904 25.7643 25.196 25.6885C25.6041 25.6128 25.8997 25.4075 26.1294 25.0874L27.8668 22.6096C28.0965 22.2797 28.1723 21.9059 28.0965 21.5247C28.0208 21.1435 27.8424 20.8209 27.5125 20.5668L25.6701 19.3034C25.8729 18.8465 26.0268 18.37 26.1539 17.8617C26.281 17.3534 26.3836 16.8769 26.4593 16.3687L28.8345 15.9606C29.2426 15.8848 29.5383 15.6796 29.768 15.3766C29.9977 15.0467 30.0734 14.6973 29.9977 14.2916L29.4625 11.3153C29.3868 10.9341 29.2084 10.636 28.8858 10.3819C28.5559 10.1522 28.2065 10.052 27.8009 10.1277L25.631 10.5089C25.4281 10.052 25.1984 9.60237 24.9272 9.14297C24.6731 8.68602 24.3676 8.28771 24.0719 7.90407L25.4623 5.88566C25.692 5.55578 25.7922 5.20634 25.7165 4.82514C25.6407 4.44394 25.4355 4.12139 25.1154 3.89169L22.6595 2.16651L22.5911 2.19339ZM12.9951 16.9063H16.988C16.1205 14.8683 13.8626 14.8683 12.9951 16.9063ZM10.5906 19.301V18.5508H11.722C11.7489 17.048 12.4795 15.3741 13.931 14.7461C12.4844 14.1206 11.7538 12.4516 11.722 10.9488H10.5906V10.1986H19.4364V10.9488H18.2635C18.2342 12.4492 17.5036 14.1206 16.0545 14.7461C17.5036 15.3717 18.2342 17.0456 18.2635 18.5508H19.4364V19.301H10.5906ZM17.3301 11.1101H12.653C12.8021 15.076 17.181 15.0809 17.3301 11.1101ZM13.5401 7.03415C14.6128 6.85821 15.7002 6.85821 16.7729 7.10502C17.8115 7.34938 18.7571 7.76967 19.6197 8.35369C20.4481 8.94993 21.1836 9.70744 21.7799 10.6165C22.3761 11.5157 22.75 12.5322 22.9235 13.605C23.0994 14.6777 23.0994 15.7651 22.8526 16.8378C22.6082 17.8764 22.1879 18.822 21.6039 19.6846C21.0077 20.513 20.2502 21.2485 19.3387 21.8448C18.4395 22.441 17.4229 22.8149 16.3502 22.9884C15.2774 23.1643 14.19 23.1643 13.1173 22.9175C12.0788 22.6732 11.1331 22.2529 10.2705 21.6688C9.44215 21.0726 8.70662 20.3151 8.11039 19.4061C7.51415 18.5068 7.14028 17.4903 6.96679 16.4176C6.79085 15.3448 6.79085 14.2574 7.03765 13.1847C7.28201 12.1461 7.70231 11.2005 8.28633 10.3379C8.88256 9.50951 9.64008 8.77399 10.5515 8.17775C11.463 7.59373 12.4649 7.20765 13.5401 7.03415Z"
+                          fill="#FFAA47"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1120_12323">
+                          <rect width="30.0269" height="30" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="new_span">
+                      <p class="new_completed_3">Pending Task</p>
+                    </span>
+                    <span class="new_number_sec">
+                      <p class="new_number_13 pending_total">00</p>
+                      <p class="new_completed_number_sec1">00 Completed</p>
+                    </span>
+                  </div>
+                  <div class="new_loading_ind_sec5">
+                    <div class="new_filler_sec2"></div>
+                  </div>
+                  <p class="new_pending_number_12">00 Pending</p>
+                  <div class="new_loading_ind1_sec_6">
+                    <div class="new_filler1_sec2"></div>
+                  </div>
+                  <div class="new_white_space_12">
+                    <p class="new_white_number date_range3">Pending Tasks Last Week</p>
+                    <p class="new_white_number1 pending_task">00</p>
+                  </div>
+                </div>
+                <div class="new_card_12">
+                  <div class="new_tick_sec">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                    >
+                      <path
+                        d="M21.875 15C25.672 15 28.75 18.078 28.75 21.875C28.75 25.672 25.672 28.75 21.875 28.75C18.078 28.75 15 25.672 15 21.875C15 18.078 18.078 15 21.875 15ZM21.875 24.8438C21.4435 24.8438 21.0938 25.1935 21.0938 25.625C21.0938 26.0565 21.4435 26.4062 21.875 26.4062C22.3065 26.4062 22.6562 26.0565 22.6562 25.625C22.6562 25.1935 22.3065 24.8438 21.875 24.8438ZM26.25 10.625V15.0273C24.9871 14.2188 23.4858 13.75 21.875 13.75C17.3876 13.75 13.75 17.3876 13.75 21.875C13.75 23.3618 14.1494 24.7555 14.8468 25.9544L15.0273 26.25H7.8125C5.64621 26.25 3.87594 24.5544 3.75643 22.418L3.75 22.1875V10.625H26.25ZM21.875 17.5C21.5682 17.5 21.313 17.7211 21.2601 18.0127L21.25 18.125V23.125C21.25 23.4701 21.5299 23.75 21.875 23.75C22.1818 23.75 22.437 23.5289 22.4899 23.2373L22.5 23.125V18.125C22.5 17.7799 22.2201 17.5 21.875 17.5ZM22.1875 3.75C24.3538 3.75 26.1241 5.44556 26.2436 7.58197L26.25 7.8125V8.75H3.75V7.8125C3.75 5.64621 5.44556 3.87594 7.58197 3.75643L7.8125 3.75H22.1875Z"
+                        fill="#FF4F4F"
+                      />
+                    </svg>
+                    <span class="new_span">
+                      <p class="new_completed_12">Overdue Task</p>
+                    </span>
+                    <span class="new_number_sec">
+                      <p class="new_number_2 total_overdue">00</p>
+                      <p class="new_completed_number1 overdue_pending">00 Completed</p>
+                    </span>
+                  </div>
+                  <div class="new_loading_ind_sec2">
+                    <div class="new_filler_sec3"></div>
+                  </div>
+                  <p class="new_pending_number_1 overdue_inprogress">00 Pending</p>
+                  <div class="new_loading_ind1_sec2">
+                    <div class="new_filler1_sec3"></div>
+                  </div>
+                  <div class="new_white_space_2">
+                    <p class="new_white_number date_range4">Overdue Tasks Last Week</p>
+                    <p class="new_white_number1 overdue_task">00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 chart_card_align">
+              <div id="chart"></div>
+            </div>
+          </div>
+          <div class="new_bottom_cards">
+            <div class="new_bottom_card1">
+              <div class="new_bottom_text1">
+                <p class="new_bottom_text_sec">Total Tasks</p>
+              </div>
+              <div class="total_number">
+                <p class="total_number_text">00</p>
+              </div>
+              <div class="total_white">
+                <p class="total_white_text">Last Month</p>
+              </div>
+              <div class="new_svg_icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <rect width="24" height="24" rx="6" fill="white" />
+                  <mask
+                    id="mask0_1120_12226"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="24"
+                    height="24"
+                  >
+                    <rect width="24" height="24" fill="#1C1B1F" />
+                  </mask>
+                  <g mask="url(#mask0_1120_12226)">
+                    <path
+                      d="M7.19996 13.4C6.86997 13.4 6.58748 13.2825 6.35248 13.0475C6.11749 12.8125 6 12.53 6 12.2C6 11.87 6.11749 11.5875 6.35248 11.3525C6.58748 11.1175 6.86997 11 7.19996 11C7.52996 11 7.81245 11.1175 8.04744 11.3525C8.28244 11.5875 8.39994 11.87 8.39994 12.2C8.39994 12.53 8.28244 12.8125 8.04744 13.0475C7.81245 13.2825 7.52996 13.4 7.19996 13.4ZM11.8153 13.4C11.4854 13.4 11.2029 13.2825 10.9679 13.0475C10.7329 12.8125 10.6154 12.53 10.6154 12.2C10.6154 11.87 10.7329 11.5875 10.9679 11.3525C11.2029 11.1175 11.4854 11 11.8153 11C12.1453 11 12.4278 11.1175 12.6628 11.3525C12.8978 11.5875 13.0153 11.87 13.0153 12.2C13.0153 12.53 12.8978 12.8125 12.6628 13.0475C12.4278 13.2825 12.1453 13.4 11.8153 13.4ZM16.4307 13.4C16.1007 13.4 15.8182 13.2825 15.5832 13.0475C15.3482 12.8125 15.2307 12.53 15.2307 12.2C15.2307 11.87 15.3482 11.5875 15.5832 11.3525C15.8182 11.1175 16.1007 11 16.4307 11C16.7607 11 17.0432 11.1175 17.2782 11.3525C17.5132 11.5875 17.6307 11.87 17.6307 12.2C17.6307 12.53 17.5132 12.8125 17.2782 13.0475C17.0432 13.2825 16.7607 13.4 16.4307 13.4Z"
+                      fill="#2F81F3"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="new_bottom_card2">
+              <div class="new_bottom_text1">
+                <p class="new_bottom_text_sec1">Total Severity</p>
+              </div>
+              <div class="new_svg_icon1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <rect width="24" height="24" rx="6" fill="white" />
+                  <mask
+                    id="mask0_1120_12241"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="24"
+                    height="24"
+                  >
+                    <rect width="24" height="24" fill="#1C1B1F" />
+                  </mask>
+                  <g mask="url(#mask0_1120_12241)">
+                    <path
+                      d="M7.19996 13.4C6.86997 13.4 6.58748 13.2825 6.35248 13.0475C6.11749 12.8125 6 12.53 6 12.2C6 11.87 6.11749 11.5875 6.35248 11.3525C6.58748 11.1175 6.86997 11 7.19996 11C7.52996 11 7.81245 11.1175 8.04744 11.3525C8.28244 11.5875 8.39994 11.87 8.39994 12.2C8.39994 12.53 8.28244 12.8125 8.04744 13.0475C7.81245 13.2825 7.52996 13.4 7.19996 13.4ZM11.8153 13.4C11.4854 13.4 11.2029 13.2825 10.9679 13.0475C10.7329 12.8125 10.6154 12.53 10.6154 12.2C10.6154 11.87 10.7329 11.5875 10.9679 11.3525C11.2029 11.1175 11.4854 11 11.8153 11C12.1453 11 12.4278 11.1175 12.6628 11.3525C12.8978 11.5875 13.0153 11.87 13.0153 12.2C13.0153 12.53 12.8978 12.8125 12.6628 13.0475C12.4278 13.2825 12.1453 13.4 11.8153 13.4ZM16.4307 13.4C16.1007 13.4 15.8182 13.2825 15.5832 13.0475C15.3482 12.8125 15.2307 12.53 15.2307 12.2C15.2307 11.87 15.3482 11.5875 15.5832 11.3525C15.8182 11.1175 16.1007 11 16.4307 11C16.7607 11 17.0432 11.1175 17.2782 11.3525C17.5132 11.5875 17.6307 11.87 17.6307 12.2C17.6307 12.53 17.5132 12.8125 17.2782 13.0475C17.0432 13.2825 16.7607 13.4 16.4307 13.4Z"
+                      fill="#FF4F4F"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="second_percent">
+                <p class="second_percent_text">80%</p>
+              </div>
+              <div class="new_high">
+                <p class="new_high_text">High</p>
+              </div>
+            </div>
+            <div class="new_bottom_card3">
+              <div class="new_bottom_text2">
+                <p class="new_bottom_text_sec2">Total Completion Rate</p>
+              </div>
+              <div class="new_bottom_white">
+                <p class="new_bottom_text">Last Month</p>
+              </div>
+              <div class="third_new">
+                <p class="third_new_text">80%</p>
+              </div>
+              <div class="third_new_svg">
+                <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle id="circle" cx="50" cy="50" r="40" stroke="#63c795" stroke-width="10" fill="none" />
+                </svg>
+                
+              </div>
+            </div>
+            <div class="new_bottom_card4">
+              <div class="new_bottom_text3">
+                <p class="new_bottom_text_sec3">
+                  Time Spent <sub> (In hours) </sub>
+                </p>
+              </div>
+              <div class="new_bottom_last">
+                <p class="new_bottom_last_text">Last Week</p>
+              </div>
+              <div class="last_number">
+                <p class="last_number_text time_spend">160/168</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="statistics_sec">
+                <div class="new_stat">
+                  <p class="new_stat_text">Project Statistics</p>
+                </div>
+                <div class="green_sec_new">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="16"
+                    viewBox="0 0 18 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M6.55 12L0.875 6.325L2.3 4.9L6.55 9.15L15.7 0L17.125 1.425L6.55 12ZM2 16V14H16V16H2Z"
+                      fill="#23B14D"
+                    />
+                  </svg>
+                </div>
+                <div class="svg_detail">
+                  <p class="svg_detail_text">
+                    You completed 5% more project this week than last week
+                  </p>
+                </div>
+                <div class="circle-container">
+                  <svg width="200" height="100" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Semi-circular arch border -->
+                    <path id="archBorder" fill="none" stroke="#46A4FC" stroke-width="10" />
+                  </svg>                                                                     
+                </div>
+                <div class="stat_new_precent">
+                  <p class="stat_new_precent_text">80%</p>
+                </div>
+                <div class="stat_task">
+                  <div class="stat_task_text">Task Progress</div>
+                </div>
+                <div class="stat_completed">
+                  <p class="stat_completed_task">Completed</p>
+                  <p class="stat_completed_Text">80%</p>
+                </div>
+                <div class="stat_progress">
+                  <p class="stat_progress_text">In Progress</p>
+                  <p class="stat_progress_number">75%</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="asignee_sec">
+                <div class="asignee_task">
+                  <p class="asignee_task_text">Tasks By Assignee</p>
+                </div>
+                <div class="row task_diff_sec">
+                  <div class="col-md-3">
+                    <div class="new_tasks_diff">
+                      <div class="orange_dot_new">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                        >
+                          <circle cx="7" cy="7" r="7" fill="#FF922C" />
+                        </svg>
+                        <div class="task_diff_sec1">
+                          <p class="task_diff_sec_text">New Tasks</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 row_diff_2">
+                    <div class="new_tasks_diff">
+                      <div class="orange_dot_new">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                        >
+                          <circle cx="7" cy="7" r="7" fill="#FEED47" />
+                        </svg>
+                        <div class="task_diff_sec1">
+                          <p class="task_diff_sec_text">In Progress</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 row_diff_3">
+                    <div class="new_tasks_diff">
+                      <div class="orange_dot_new">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                        >
+                          <circle cx="7" cy="7" r="7" fill="#8DE45F" />
+                        </svg>
+                        <div class="task_diff_sec1">
+                          <p class="task_diff_sec_text">Completed</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 row_diff_4">
+                    <a onclick="refreshFunction()">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        style="cursor: pointer;"
+                      >
+                        <g clip-path="url(#clip0_1213_1026)">
+                          <path
+                            d="M13.2376 4.7625C12.1501 3.675 10.6576 3 9.00007 3C5.68507 3 3.00757 5.685 3.00757 9C3.00757 12.315 5.68507 15 9.00007 15C11.7976 15 14.1301 13.0875 14.7976 10.5H13.2376C12.6226 12.2475 10.9576 13.5 9.00007 13.5C6.51757 13.5 4.50007 11.4825 4.50007 9C4.50007 6.5175 6.51757 4.5 9.00007 4.5C10.2451 4.5 11.3551 5.0175 12.1651 5.835L9.75007 8.25H15.0001V3L13.2376 4.7625Z"
+                            fill="#23B14D"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1213_1026">
+                            <rect width="18" height="18" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="multiColorChart">
+                    <canvas id="myChartLoad" width="400" height="250"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="upcoming_task_sec">
+                <p class="upcoming_task_sec_text">Upcoming Tasks</p>
+                <div class="upcoming_task_table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Task</th>
+                        <th>Deadline</th>
+                        <th>Task Pulse</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Task 1</td>
+                        <td>Dec 15, 2023</td>
+                        <td>
+                          <div class="taskPulse">
+                            <div class="taskFiller"></div>
+                            <p class="taskIndication">30%</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Task 2</td>
+                        <td>Dec 18, 2023</td>
+                        <td>
+                          <div class="taskPulse">
+                            <div class="taskFiller"></div>
+                            <p class="taskIndication">30%</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Task 3</td>
+                        <td>Dec 19, 2023</td>
+                        <td>
+                          <div class="taskPulse">
+                            <div class="taskFiller"></div>
+                            <p class="taskIndication">40%</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Task 4</td>
+                        <td>Dec 20, 2023</td>
+                        <td>
+                          <div class="taskPulse">
+                            <div class="taskFiller"></div>
+                            <p class="taskIndication">36%</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Task 5</td>
+                        <td>Dec 21, 2023</td>
+                        <td>
+                          <div class="taskPulse">
+                            <div class="taskFiller"></div>
+                            <p class="taskIndication">41%</p>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

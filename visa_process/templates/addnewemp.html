@@ -1,0 +1,2418 @@
+{% extends 'gsolve_base.html' %} {% load staticfiles %} {% block content %}
+
+
+
+<form id='employee_info_validation_form'>  
+	<div class="row">
+		<div class="col-md-12">
+			<div class="portlet light bordered d-flex f-wrap input-grey">
+				<div class="portlet-title col-md-12 mb-30px">
+					<div class="caption">
+						<span class="caption-subject  bold uppercase">VISA Process (Add Employee)</span>
+					</div>
+				</div>
+				<div class="col-md-12 mb-90px">
+					<div class="wizrd-tab">
+						<ul class="ul-wizrd-tab">
+							<li class="tab-list enable active" id="step-1">
+								<span><img src="/static/images/tick_green.png"></span>
+								<p>Basic Information</p>
+							</li>
+							<li class="tab-list lock" id="step-2">
+								<span><img src="/static/images/edit_green.png"></span>
+								<p>Application For Entry Permit</p>
+							</li>
+							<li class="tab-list lock" id="step-3">
+								<span><img src="/static/images/edit_green.png"></span>
+								<p>Self Declaration Corona Virus Form</p>
+							</li>
+							<li class="tab-list lock" id="step-4">
+								<span><img src="/static/images/edit_green.png"></span>
+								<p>Medical Examiantion Form</p>
+							</li>
+							<li class="tab-list lock last" id="step-5">
+								<span><img src="/static/images/edit_green.png"></span>
+								<p>New Work Permit Application</p>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="col-md-12 form-visa show" id="tab-step-1-form">
+					<div class="row">
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								{% csrf_token %}
+								<label>Full Name <span class="asterisk">*</span></label>
+								<input id="full_name" name="full_name" placeholder="Full Name"
+									class="form-control form-control-inline" size="16" value="" type="text" errorTxt0>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Family Name <span class="asterisk">*</span> </label>
+								<input id="family_name" name="family_name" placeholder="Family Name" class="form-control form-control-inline"
+									size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Designation <span class="asterisk">*</span></label>
+								<input id="designation" name="designation" placeholder="Designation"
+									class="form-control form-control-inline" size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Gender <span class="asterisk">*</span></label>
+								<select id="gender" class="form-control select2" name="gender">
+									<option value='' selected>---Gender---</option>
+									{% for gen in dropdown_gender %}
+									<option value="{{gen.id}}">{{gen.gender}}</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Date of Birth <span class="asterisk">*</span></label>
+								<div class="input-icon">
+									<input onclick="calculateAge()" id="date_of_birth" name="date_of_birth" placeholder="Date of Birth "
+										class="form-control form-control-inline" data-field="date" size="16" value="" type="text">
+									<div id="date_of_birth_dtbox"></div>
+									<div style="color: rgb(248, 64, 64);" id="valid_text"></div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Country of Birth <span class="asterisk">*</span></label>
+								<select id="country_of_birth" class="form-control select2" name="country_of_birth">
+									<option value='' selected>---Choose Country---</option>
+									{% for con in country_of_birth %}
+									<option value="{{con.id}}">{{con.country}}</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Application Date <span class="asterisk">*</span></label>
+								<div class="input-icon">
+									<input id="application_date" name="application_date" placeholder="Application Date"
+										class="form-control form-control-inline" data-field="date" size="16" value=""
+										type="text">
+									<div id="application_date_dtbox"></div>
+								</div>
+							</div><div class="clearfix"></div>
+						</div>
+						
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Phone Number <span class="asterisk">*</span></label>
+								<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="phone_number" name="phone_number" placeholder="Phone Mobile"
+									class="form-control form-control-inline" size="16" value="" type="text">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Location <span class="asterisk"></span></label>
+								<input id="location" name="location" placeholder="Location"
+									class="form-control form-control-inline" size="16" value="" type="text">
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label> Citizenship <span class="asterisk">*</span></label>
+								<input id="citizenship" name="citizenship" placeholder=" Citizenship" class="form-control form-control-inline"
+									size="16" value="" type="text">
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label> Nationality <span class="asterisk">*</span></label>
+								<input id="nationality" name="nationality" placeholder="Nationality" class="form-control form-control-inline"
+									size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label> Address <span class="asterisk">*</span></label>
+								<input id="address" name="address" placeholder=" Address" class="form-control form-control-inline"
+									size="16" value="" type="text">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Marital Status <span class="asterisk">*</span></label>
+								<select id="marital_status" class="form-control select2" name="marital_status">
+									<option value='' selected>---Marital Status---</option>
+									{% for mat in marital_status %}
+									<option value="{{mat.id}}">{{mat.marital_status}}</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label> Passport / ID No <span class="asterisk">*</span></label>
+								<input id="passport_no" name="passport_no" placeholder=" Passport / ID No"
+									class="form-control form-control-inline" size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Expiry Date <span class="asterisk">*</span></label>
+								<div class="input-icon">
+									<input id="expiry_date" name="expiry_date" placeholder="Expiry Date "
+										class="form-control form-control-inline" data-field="date" size="16" value=""
+										type="text">
+									<div id="expiry_date_dtbox"></div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label> Occupation <span class="asterisk">*</span></label>
+								<input id="occupation" name="occupation" placeholder="Occupation" class="form-control form-control-inline"
+									size="16" value="" type="text">
+							</div>
+						</div>
+
+
+					</div>
+					<div class="row">					
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Passport Issue Date <span class="asterisk">*</span></label>
+								<div class="input-icon">
+									<input id="passport_issue_date" name="passport_issue_date" placeholder="Passport Issue Date "
+										class="form-control form-control-inline" data-field="date" size="16" value=""
+										type="text">
+									<div id="passport_issue_date_dtbox"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label> Passport Issuing Place<span class="asterisk">*</span></label>
+								<input id="passport_issue_place" name="passport_issue_place" placeholder="Passport Issuing Place"
+									class="form-control form-control-inline" size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label> Passport Issuing Authority <span class="asterisk">*</span></label>
+								<input id="passport_issue_authority" name="passport_issue_authority" placeholder="Passport Issuing Authority"
+									class="form-control form-control-inline" size="16" value="" type="text">
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12 col-sm-12 pull-right mt-50px">
+						<div class="pull-right group-btn-sec conform-sec">
+
+							<button onclick="EmployeeCreateUpdate()" type="button"
+								class="btn btn-primary btn-eql-wid btn-animate jq_enable_o_tab"  id="add_candidate">Add Candidate <i
+									class="fa fa-user-plus" aria-hidden="true"></i></button>
+							<button onclick="EmployeeCreateUpdate()" type="button"
+								class="btn btn-primary btn-eql-wid btn-animate " id="update_candidate">Update Candidate
+								<i class="fa fa-user-plus" aria-hidden="true"></i></button>
+							<button onclick="EmployeeDelete()" type="button"
+								class="btn btn-primary btn-eql-wid btn-animate " id="delete_candidate">Delete Candidate
+								<i class="fa fa-user-plus" aria-hidden="true"></i></button>
+							<button onclick="ClearButton()" type="reset" class="btn btn-warning btn-eql-wid btn-animate "
+								id="clear_invoice_item">Cancel / Clear</button>
+
+
+						</div>
+					</div>
+				</div>
+			</form> 	<!---FORM END-->
+
+
+				<form id="applicationforentrypermit_form_validation">       <!-- form start -->
+				
+				<div class="col-md-12 form-visa " id="tab-step-2-form">
+					<div class="row mb-30px">
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label>Tick The Purpose and Circle A Description of Your Visit to Png <span
+									class="asterisk">*</span></label>
+							<div class="radio-check ">
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="PurposePng" id="PurposePng1"
+										value="Visitor">
+									<label class="form-check-label" for="PurposePng1">Visitor</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="PurposePng" id="PurposePng2"
+										value="WorkingResident">
+									<label class="form-check-label" for="PurposePng2">Working Resident</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="PurposePng" id="PurposePng3"
+										value="Business">
+									<label class="form-check-label" for="PurposePng3">Business</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="PurposePng" id="PurposePng4"
+										value="Student">
+									<label class="form-check-label" for="PurposePng4">Student</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="PurposePng" id="PurposePng5"
+										value="Entertainer">
+									<label class="form-check-label" for="PurposePng5">Entertainer</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="PurposePng" id="PurposePng6"
+										value="SpecialExemption">
+									<label class="form-check-label" for="PurposePng6">Special Exemption</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="PurposePng" id="PurposePng7"
+										value="Accompany">
+									<label class="form-check-label" for="PurposePng7">Accompanying another applicant
+										as
+										a
+										dependant on my own passport.</label>
+								</div>
+							</div>
+
+							<div><label for="PurposePng" class="error"></label></div>
+
+						</div>
+						
+
+					</div>
+					<div class="col-md-6 col-sm-12">
+
+							<div class="form-group">
+								<label>How Long Do You Wish to Stay in Png <span class="asterisk">*</span></label>
+
+
+								<div class="radio-check row ">
+									<div class="col-md-4">
+										<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="stayPng" name="stayPng" placeholder="" class="form-control form-control-inline"
+											size="16" value="" type="text">
+									</div>
+
+									<div class="col-md-8">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="stayPngtype" id="stayPng1"
+												value="days">
+											<label class="form-check-label" for="stayPng1">Days</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="stayPngtype" id="stayPng2"
+												value="months">
+											<label class="form-check-label" for="stayPng2">Months</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="stayPngtype" id="stayPng3"
+												value="years">
+											<label class="form-check-label" for="stayPng3">Years</label>
+										</div>
+									</div>
+									<div><label for="stayPngtype" class="error"></label></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<hr />
+					<div class="row mb-10px">
+						<div class="col-md-12">
+							<h3>TRAVEL ARRANGEMENTS</h3>
+						</div>
+
+						<div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<label>Name of Vessel/Flight <span class="asterisk">*</span></label>
+								<input id="Name_of_Vessel" name="Name_of_Vessel" placeholder=""
+									class="form-control form-control-inline" size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label> Place (Departure to PNG) <span class="asterisk">*</span></label>
+								<input id="Place_Departure_to_png" name="Place_Departure_to_png" placeholder=""
+									class="form-control form-control-inline" size="16" value="" type="text">
+							</div>
+						</div>
+
+			  			<!-- <div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<label> Date (Departure to PNG) <span class="asterisk">*</span></label>
+								<input id="Date" name="Date_Departure_to_png" placeholder="Date"
+									class="form-control form-control-inline" size="16" value="date" type="text">
+							</div>
+						</div> -->
+						<div class="col-md-2 col-sm-12">
+						<div class="form-group">
+							<label>Date (Departure to PNG)<span class="asterisk">*</span></label>
+							<div class="input-icon">
+								<input id="Date_Departure_to_png" name="Date_Departure_to_png" placeholder=""
+									class="form-control form-control-inline" data-field="date" size="16" value=""
+									type="text">
+								<!-- <div class="entery_permit_datepicker"></div> -->
+								<div id="Date_Departure_to_png_dtbox"></div>
+							</div>
+						</div>
+					</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label> Place (Arrival in PNG) <span class="asterisk">*</span></label>
+								<input id="Place_Arrival_in_png" name="Place_Arrival_in_png" placeholder=""
+									class="form-control form-control-inline" size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<label> Date (Arrival in PNG) <span class="asterisk">*</span></label>
+								<div class="input-icon">
+									<input id="Date_arrival_in_png" name="Date_arrival_in_png" placeholder="Date"
+										class="form-control form-control-inline" data-field="date" size="16" value=""
+										type="text">
+									<div id="Date_arrival_in_png_dtbox"></div>
+								</div>
+							</div>
+						</div>
+
+								<!-- <input id="Date" name="Date_arrival_in_png" placeholder="Date (Departure to PNG)"
+									class="form-control form-control-inline" size="16" value="Date" type="text">
+							</div>
+						</div> -->
+
+
+					</div>
+
+					<hr />
+					<div class="row mb-10px">
+
+
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label>For entry for the purpose of employment: <span class="asterisk">*</span></label>
+								<div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" name ="purposeemployment" id="inlineCheckbox1" value="employment_offer">
+										<label class="form-check-label" for="inlineCheckbox1">A letter of offer of employment from your PNG sponsor</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" name ="purposeemployment" id="inlineCheckbox2" value="work_permit_approval">
+										<label class="form-check-label" for="inlineCheckbox2">The letter of approval of
+											your work permit, including the work
+											permit number, position number and expiry date.</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" name ="purposeemployment" id="inlineCheckbox3" value="doctor_certificate">
+										<label class="form-check-label" for="inlineCheckbox3">A certificate of good
+											health from a registered doctor, a recent chest
+											X-ray and the result of the recent HIV test.</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" name ="purposeemployment" id="inlineCheckbox4" value="character_statement">
+										<label class="form-check-label" for="inlineCheckbox4">A statement of your good
+											character from your local police authorities.</label>
+									</div>
+								</div>
+								<div><label for="purposeemployment" class="error"></label></div>
+							</div>
+						</div> 
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label> How will you be funding your Stay in PNG?<span class="asterisk">*</span></label>
+								<div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" name ="fundstaypng" id="inlineCheck1" value="Salary">
+										<label class="form-check-label" for="inlineCheck1">Salary</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" name ="fundstaypng" id="inlineCheck2" value="Company_Sponsor">
+										<label class="form-check-label" for="inlineCheck2">Company Sponsor</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" name ="fundstaypng" id="inlineCheck3" value="Own_funds">
+										<label class="form-check-label" for="inlineCheck3">Own funds </label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" name ="fundstaypng" id="inlineCheck4" value="Family">
+										<label class="form-check-label" for="inlineCheck4">Family</label>
+									</div>
+								</div>
+								<div><label for="fundstaypng" class="error"></label></div>
+							</div>
+						</div>
+
+
+					</div>
+					<hr/>
+					<div class="row mb-10px">
+						<div class="col-md-12">
+							<p>If you have ever change your name, are known by an alias, or own another passport, please
+								provide details:</p>
+							<h3>PREVIOUS NAMES/ALIAS DETAILS:</h3>
+						</div>
+
+						<div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<label>Family Name <span class="asterisk"></span></label>
+								<input id="previous_FamilyName" name="Family_Name" placeholder="" class="form-control form-control-inline"
+									size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label> Given Names <span class="asterisk"> </span></label>
+								<input id="Given_Names" name="Given_Names" placeholder="" class="form-control form-control-inline"
+									size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<label> Date of Birth <span class="asterisk"> </span></label>
+								<div class="input-icon">
+									<input onclick="EnPer_dob_Onclick()" id="previous_Date_of_Birth" name="previous_Date_of_Birth" placeholder=""
+										class="form-control form-control-inline" data-field="date" size="16" value=""
+										type="text">
+									<div id="previous_Date_of_Birth_dtbox"></div>
+									<div style="color: red;" id="ep_dob_validation"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Sex <span class="asterisk"></span></label>
+								<select id="sex" class="form-control select2" name="sex">
+									<option value='' selected>---Sex---</option>
+									{% for gen in dropdown_gender %}
+									<option value="{{gen.id}}">{{gen.gender}}</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<label> Marital Status <span class="asterisk"></span></label>
+								<select id="Marital_Status" class="form-control select2" name="Marital_Status">
+									<option value='' selected>---Marital_Status---</option>
+									{% for mar in marital_status %}
+									<option value="{{mar.id}}">{{mar.marital_status}}</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+
+
+					</div>
+					<div class="row mb-10px">
+						<div class="col-md-12">
+
+							<h3>OTHER PASSPORTS:</h3>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label>Country of Issue <span class="asterisk"></span></label>
+								<select id="country_of_issue" class="form-control select2" name="country_of_issue">
+									<option value='' selected>---country_of_issue---</option>
+									{% for country in country_of_birth %}
+									<option value="{{country.id}}">{{country.country}}</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+
+								<!-- <input id="country_of_issue" name="country_of_issue" placeholder=""
+									class="form-control form-control-inline" size="16" value="country_of_issue" type="text">
+							</div>
+						</div> -->
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label> Passport Number <span class="asterisk"> </span></label>
+								<input id="Passport_Number" name="Passport_Number" placeholder=""
+									class="form-control form-control-inline" size="16" value="" type="text">
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label>Passport Expiry Date <span class="asterisk"> </span></label>
+								<input id="Passport_Expiry_Date" name="Passport_Expiry_Date" placeholder=""
+						class="form-control form-control-inline" data-field="date" size="16" value=""
+						type="text">
+					<div id="Passport_Expiry_Date_dtbox"></div>
+				</div>
+			</div>
+
+
+					</div>
+					<hr />
+					<div class="row ">
+						<div class="col-md-12">
+
+							<h3>ORGANISATIONAL SPONSOR:</h3>
+						</div>
+
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Organisational Name <span class="asterisk">*</span></label>
+								<input id="Organisational_Name" name="Organisational_Name" placeholder=""
+									class="form-control form-control-inline" size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label> Agent <span class="asterisk">*</span></label>
+								<input id="Agent" name="Agent" placeholder="" class="form-control form-control-inline"
+									size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label> Contact Address Number and Street <span class="asterisk">*</span></label>
+								<input id="Contact_Address_Number_and_Street_organization" name="Contact_Address_Number_and_Street_organization" placeholder="Given Names" class="form-control form-control-inline"
+									size="16" value="" type="text">
+							</div>
+						</div>
+					</div>
+					<div class="row ">
+
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label>Suburb/Town <span class="asterisk">*</span></label>
+								<input id="Suburb_Town" name="Town" placeholder="" class="form-control form-control-inline"
+									size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label> State/Province <span class="asterisk">*</span></label>
+								<input id="State_Province" name="State_Province" placeholder=""
+									class="form-control form-control-inline" size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label>Postcode <span class="asterisk">*</span></label>
+								<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="Postcode" name="Postcode" placeholder="" class="form-control form-control-inline"
+									size="16" value="" type="text">
+							</div>
+						</div>
+
+
+
+
+					</div>
+					<div class="row ">
+
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label>Country <span class="asterisk">*</span></label>
+								<select id="organisational_country" class="form-control select2 " name="organisational_country">
+									<option  value='' selected>---country---</option>
+									{% for country in country_of_birth %}
+									<option value="{{country.id}}">{{country.country}}</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label> Business Telephone <span class="asterisk">*</span></label>
+								<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="Business_Telephone" name="Business_Telephone" placeholder=""
+									class="form-control form-control-inline" size="16" value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label>Facsimile <span class="asterisk">*</span></label>
+								<input id="Facsimile" name="Facsimile" placeholder="" class="form-control form-control-inline"
+									size="16" value="" type="text">
+							</div>
+						</div>
+
+
+
+
+					</div>
+					<hr />
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+
+							<div class="form-group">
+
+
+
+								<div class="radio-check row ">
+									<div class="col-md-5">
+										<label>Have you visited PNG before?<span class="asterisk">*</span></label>
+									</div>
+									<div class="col-md-7">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="preVstPng"
+												id="preVstPng1" value="true">
+											<label class="form-check-label" for="preVstPng1">Yes</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="preVstPng"
+												id="preVstPng2" value="false">
+											<label class="form-check-label" for="preVstPng2">No</label>
+										</div>
+									</div>
+								</div>	
+								<div><label for="preVstPng" class="error"></label></div>
+
+								
+							</div>
+							
+
+						</div>
+					</div>
+					<div class="row ">
+						<div class="col-md-12">
+							<p>If yes please give details of your last visit.</p>
+						</div>
+
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Date <span class="asterisk"></span></label>
+								<div class="input-icon">
+									<input id="pngvisitDate" name="pngvisitDate" placeholder=""
+										class="form-control form-control-inline" data-field="date" size="16" value="" type="text">
+										<label for="pngvisitDate" id="visitdate" class="error"></label>
+
+									<div id="pngvisitDate_dtbox"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Purpose of visit <span class="asterisk"></span></label>
+								<input id="Purpose_of_visit" name="Purpose_of_visit" placeholder=""
+									class="form-control form-control-inline" size="16" value="" type="text">
+								<label for="Purpose_of_visit" id="visit" class="error"></label>
+	
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Duration of visit <span class="asterisk"></span></label>
+								<input id="duration_of_visit" name="duration_of_visit" placeholder=""
+									class="form-control form-control-inline" size="16" value="" type="text">
+									<label for="duration_of_visit" id="durationvisit" class="error"></label>
+	
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Address during stay <span class="asterisk"></span></label>
+								<input id="adress_during_stay" name="adress_during_stay" placeholder=""
+									class="form-control form-control-inline" size="16" value="" type="text">
+									<label for="adress_during_stay" id="addressduration" class="error"></label>
+	
+							</div>
+						</div>
+
+
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label>Have you ever been charged with or
+									convicted of a criminal offence <span class="asterisk">*</span></label>
+								<div class="radio-check ">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="criminal" id="criminal1"
+											value="true">
+										<label class="form-check-label" for="criminal1">Yes</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="criminal" id="criminal2"
+											value="false">
+										<label class="form-check-label" for="criminal2">No</label>
+									</div>
+									<div><label for="criminal" class="error"></label></div>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label>If yes, please give details of the date, nature of offence, place of conviction
+									and the penalty imposed. <span class="asterisk"></span></label>
+								<input id="nature_of_offence" name="nature_of_offence" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+								<label for="nature_of_offence" id="offence" class="error"></label>	
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label>Have you been deported from, or refused entry to Papua New Guinea, or any other
+									country: <span class="asterisk">*</span></label>
+								<div class="radio-check ">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="refused" id="refused1"
+											value="true">
+										<label class="form-check-label" for="refused1">Yes</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="refused" id="refused2"
+											value="false">
+										<label class="form-check-label" for="refused2">No</label>
+									</div>
+									<div><label for="refused" id="refuse" class="error"></label></div>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label>If yes, please give details.<span class="asterisk"></span></label>
+								<input id="details" name="details" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+								<label for="details" id="det" class="error"></label>		
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label>Have you been a patient in a mental home/institution, or do you suffer from a
+									disease which may constitute
+									a health risk in Papua New Guinea: <span class="asterisk">*</span></label>
+								<div class="radio-check ">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="health" id="health1"
+											value="true">
+										<label class="form-check-label" for="health1">Yes</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="health" id="health2"
+											value="false">
+										<label class="form-check-label" for="health2">No</label>
+									</div>
+									<div><label for="health" class="error"></label></div>
+								</div>
+								
+							</div>
+
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label>If Yes, please give details.<span class="asterisk"></span></label>
+								<input id="healthdetails" name="healthdetails" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+								<label for="healthdetails" id="healthdet" class="error"></label>	
+							</div>
+						</div>
+					</div>
+					<hr />
+					<div class="row ">
+						<div class="col-md-12">
+							<h3>ADDRESS</h3>
+							<p><b>RESIDENTIAL</b></p>
+						</div>
+
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Number and Street <span class="asterisk">*</span></label>
+								<input id="Number_and_Street" name="Number_and_Street" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Suburb/Town <span class="asterisk">*</span></label>
+								<input id="resi_Town" name="resi_Town" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<label>State/Province <span class="asterisk">*</span></label>
+								<input id="State" name="State" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<label>Postcode <span class="asterisk">*</span></label>
+								<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="resi_Postcode" name="resi_Postcode" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<label>Country <span class="asterisk">*</span></label>
+								<select id="residental_country" class="form-control select2" name="residental_country">
+									<option value='' selected>---country---</option>
+									{% for country in country_of_birth %}
+									<option value="{{country.id}}">{{country.country}}</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+								<!-- <select id="Country" class="custom-select form-control form-control-inline" name="Country">
+									<option selected disabled aria-placeholder="Gender">---Country---</option>
+
+									<option value="">India</option>
+									<option value="">PNG</option>
+								</select>
+							</div>
+						</div> -->
+
+
+					</div>
+					<div class="row ">
+
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Home Telephone<span class="asterisk">*</span></label>
+								<input  onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="Home_Telephone" name="Home_Telephone" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Business Telephone <span class="asterisk">*</span></label>
+								<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="Mobile_Telephone" name="Mobile_Telephone" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Your contact email address: <span class="asterisk"></span></label>
+								<input id="email_address" name="email_address" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="email">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Do you agree to receiving? email communication? <span
+										class="asterisk">*</span></label>
+								<div class="radio-check ">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="emailVe" id="emailVe1"
+											value="true">
+										<label class="form-check-label" for="emailVe1">Yes</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="emailVe" id="emailVe2"
+											value="false">
+										<label class="form-check-label" for="emailVe2">No</label>
+									</div>
+
+								</div>
+								<div><label for="emailVe" class="error"></label></div>
+							</div>
+						</div>
+
+
+					</div>
+					<div class="row ">
+						<div class="col-md-12">
+							<p><b>PNG</b></p>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label>Number and Street <span class="asterisk">*</span></label>
+								<input id="png_Number_and_Street" name="png_Number_and_Street" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label>Town/Village<span class="asterisk">*</span></label>
+								<input id="Town_Village" name="Town_Village" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label>Province <span class="asterisk">*</span></label>
+								<input id="Province" name="Province" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+
+
+					</div>
+					<div class="row ">
+
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label>Postal Address <span class="asterisk">*</span></label>
+								<input id="Postal_Address" name="Postal_Address" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label>Home Telephone<span class="asterisk">*</span></label>
+								<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="png_Home_Telephone" name="png_Home_Telephone" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label>Business Telephone <span class="asterisk">*</span></label>
+								<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="png_Mobile_Telephone" name="png_Mobile_Telephone" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+
+
+					</div>
+					<hr />
+					<div class="row ">
+						<div class="col-md-12">
+							<h3>EMERGENCY CONTACT:</h3>
+						</div>
+
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Family Name <span class="asterisk">*</span></label>
+								<input id="em_Family_Name" name="em_Family_Name" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Given Names <span class="asterisk">*</span></label>
+								<input id="em_Given_Names" name="em_Given_Names" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<label>Relationship to Applicant <span class="asterisk">*</span></label>
+								<input id="Relationship_to_Applicant" name="Relationship_to_Applicant" placeholder="" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group">
+								<label>Contact Address Number and Street<span class="asterisk">*</span></label>
+								<input id="em_Contact_Address_Number_and_Street_organization" name="em_Contact_Address_Number_and_Street_organization" placeholder="Contact Address Number and Street" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+
+
+					</div>
+					<div class="row ">
+
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Suburb/Town <span class="asterisk">*</span></label>
+								<input id="em_Suburb_Town" name="em_Suburb_Town" placeholder="Suburb_Town" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>State/Province<span class="asterisk">*</span></label>
+								<input id="em_State_Province" name="em_State_Province" placeholder="State_Province" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Postcode <span class="asterisk">*</span></label>
+								<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="em_Postcode" name="em_Postcode" placeholder="Postcode" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Country<span class="asterisk">*</span></label>
+								<select id="em_country" class="form-control select2" name="em_country">
+									<option value='' selected>---country---</option>
+									{% for country in country_of_birth %}
+									<option value="{{country.id}}">{{country.country}}</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+
+
+
+					</div>
+					<div class="row ">
+
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Home Telephone <span class="asterisk">*</span></label>
+								<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"  id="em_Home_Telephone" name="em_Home_Telephone" placeholder="Home_Telephone" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Mobile Telephone<span class="asterisk">*</span></label>
+								<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"  id="em_Mobile_Telephone" name="em_Mobile_Telephone" placeholder="Mobile Telephone" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<div class="form-group">
+								<label>Declaration Date <span class="asterisk">*</span></label>
+							<input id="emergencontactDate" name="emergencontactDate" placeholder=""
+								class="form-control form-control-inline" data-field="date" size="16" value=""
+								type="text">
+							<div id="dob_dtbox"></div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-12 col-sm-12 pull-right mt-50px">
+						<div class="pull-right group-btn-sec conform-sec">
+
+
+							<button onclick="applicationforentrypermitCreateUpdate()" type="button"
+								class="btn btn-primary btn-eql-wid btn-animate " id="applicationforentrypermit">Submit</button>
+							<button type="reset" onclick="ClearButton()" class="btn btn-warning btn-eql-wid btn-animate "
+								id="clear_invoice_item">Cancel / Clear</button>
+						</div>
+					</div>
+				</div>
+				</form>
+
+
+				<form id="self_declaration_validation_form">    <!--- self_declaration_validation_form start --->
+
+				<div class="col-md-12 form-visa" id="tab-step-3-form">
+					<div class="row">
+						<div class="col-md-6 col-sm-12 mb-30px">
+							<div class="form-group">
+								<label> Date of arrival or intended arrival in PNG <span
+										class="asterisk">*</span></label>
+										<input id="arrival_date" name="arrival_date" placeholder="Arrival Date"
+										class="form-control form-control-inline" data-field="date" size="16" value=""
+										type="text">
+									<div id="arrival_date_dtbox"></div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12 mb-30px">
+							<div class="form-group">
+								<label> Date <span class="asterisk">*</span></label>
+								<input id="date" name="date" placeholder="Date"
+								class="form-control form-control-inline" data-field="date" size="16" value=""
+								type="text">
+								<div id="date_dtbox"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+
+						<div class="col-md-6 col-sm-12 mb-30px">
+							<div class="form-group">
+								<label>1. In the last 21 days have you visited or transited through Wuhan in China and
+									or;
+									transited through South
+									Korea, Japan, Taiwan, Macau, Hong Kong, Singapore, Malaysia and the United States of
+									America
+									where cases have been reported. <span class="asterisk">*</span></label>
+
+								<div class="radio-check  ">
+
+									<div class="row">
+										<div class="col-md-2 pr-0">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="visit" id="visityes"
+													value="true">
+												<label class="form-check-label" for="visityes">Yes</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="visit" id="visitno"
+													value="false">
+												<label class="form-check-label" for="visitno">No</label>
+											</div>
+										</div>
+
+										<div><label for="visit" class="error"></label></div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-sm-12 mb-30px">
+							<div class="form-group">
+								<label>2. If you circled “Yes” to question 1, please provide further details of when you
+									were
+									in these countries;
+									the nature/purpose of your travel/stay there; the areas in these countries you
+									visited;
+									and whether you
+									came into any contact with anyone (alive or dead) who was or may have been infected
+									by
+									the
+									Coronavirus.<span class="asterisk"></span></label>
+
+								<div class="radio-check  ">
+
+									<div class="row">
+
+										<div class="col-md-12">
+											<input id="country_visit_detail" name="country_visit_detail" placeholder="" class="form-control form-control-inline"
+												size="16" value="" type="text">
+										    <label id="visitdetails_val" for="country_visit_detail" class="error"></label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="row">
+
+						<div class="col-md-6 col-sm-12 mb-30px">
+							<div class="form-group">
+								<label>3. Do you currently have any of the following symptoms below?
+								</label>
+
+								<!-- <div id="symptoms"> -->
+								<div class="form-group col-md-12">
+									<label for="" class="col-sm-3 control-label">Coughing <span
+											class="asterisk">*</span></label>
+									<div class="col-md-3 pr-0">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="Coughing" id="yes"
+												value="True">
+											<label class="form-check-label" for="yes">Yes</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="Coughing" id="no"
+												value="False">
+											<label class="form-check-label" for="no">No</label>
+										</div>
+									</div>
+									<div><label for="Coughing" class="error"></label></div>    <!--validation placement code -->
+								</div>
+
+								<div class="form-group col-md-12">
+									<label for="" class="col-sm-3 control-label">Running nose <span
+											class="asterisk">*</span></label>
+									<div class="col-md-3 pr-0">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="running_nose" id="nyes" value="True">
+											<label class="form-check-label" for="nyes">Yes</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="running_nose" id="nno" value="False">
+											<label class="form-check-label" for="nno">No</label>
+										</div>
+									</div>
+									<div><label for="running_nose" class="error"></label></div>    <!--validation placement code -->
+								</div>
+								<div class="form-group col-md-12">
+									<label for="" class="col-sm-3 control-label">A high fever <span
+											class="asterisk">*</span></label>
+									<div class="col-md-3 pr-0">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="fever" id="fyes"
+												value="True">
+											<label class="form-check-label" for="fyes">Yes</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="fever" id="fno" value="False">
+											<label class="form-check-label" for="fno">No</label>
+										</div>
+									</div>
+									<div><label for="fever" class="error"></label></div>     <!--validation placement code -->
+								</div>
+								<div class="form-group col-md-12">
+									<label for="" class="col-sm-3 control-label">A sore throat <span
+											class="asterisk">*</span></label>
+									<div class="col-md-3 pr-0 ">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="sore_throat" id="tyes"
+												value="True">
+											<label class="form-check-label" for="tyes">Yes</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="sore_throat" id="tno"
+												value="False">
+											<label class="form-check-label" for="tno">No</label>
+										</div>
+									</div>
+									<div><label for="sore_throat" class="error"></label></div>     <!--validation placement code -->
+								</div>
+								<div class="form-group col-md-12">
+									<label for="" class="col-sm-3 control-label">Headaches <span
+											class="asterisk">*</span></label>
+									<div class="col-md-3 pr-0 symptoms_radio">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="headache" id="hyes"
+												value="True">
+											<label class="form-check-label" for="hyes">Yes</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="headache" id="hno"
+												value="False">
+											<label class="form-check-label" for="hno">No</label>
+										</div>
+									</div>
+									<div><label for="headache" class="error"></label></div>     <!--validation placement code -->
+								</div>
+							<!-- </div>   -->
+							</div>
+						</div>
+
+						<div class="col-md-6 col-sm-12 mb-30px">
+							<div class="form-group mb-30px">
+								<label>4. If you circled “Yes” to any of the above symptoms in Question 3, please
+									provide
+									full details below <span class="asterisk"></span></label>
+
+								<div class="radio-check  ">
+
+									<div class="row">
+
+										<div class="col-md-12">
+											<input id="symptoms_details" name="symptoms_details" placeholder="" class="form-control form-control-inline"
+												size="16" value="" type="text">
+											<label id="symptomsdet_val" for="symptoms_details" class="error"></label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>5. Will you be travelling to, visiting or transiting through China or any other
+									country where the
+									Coronavirus has not been contained prior to travelling to PNG? <span
+										class="asterisk">*</span></label>
+
+								<div class="radio-check  ">
+
+									<div class="row">
+										<div class="col-md-2 pr-0">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="travelling"
+													id="travellingyes" value="true">
+												<label class="form-check-label" for="travellingyes">Yes</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="travelling"
+													id="travellingno" value="false">
+												<label class="form-check-label" for="travellingno">No</label>
+											</div>
+
+										</div>
+										
+										<div><label for="travelling" class="error"></label></div>     <!--validation placement code -->
+
+										<!-- <div class="col-md-10">
+											<input id="" name="" placeholder="" class="form-control form-control-inline"
+												size="16" value="" type="text">
+										</div> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>			
+
+					<div class="col-md-12 col-sm-12 pull-right mt-50px">
+						<div class="pull-right group-btn-sec conform-sec">
+
+
+							<button onclick="Self_Declaration_Submit()" type="button"
+								class="btn btn-primary btn-eql-wid btn-animate " id="self_declaration">Submit</button>
+							<button onclick="ClearButton()" type="reset" class="btn btn-warning btn-eql-wid btn-animate "
+								id="clear_invoice_item">Cancel / Clear</button>
+						</div>
+					</div>
+				</div>
+		   		</form>       <!-- form end--->
+
+
+				
+				<form id="medicalExamination_validation_form">    <!-- medicalExamination_validation_form  start-->
+
+				<div class="col-md-12 form-visa " id="tab-step-4-form">
+					<div class="row">
+						<div class="col-md-6 col-sm-12 mb-30px">
+							<div class="form-group">
+								<label>1. Have you, or has any member of your family ever had any serious illness or
+									surgical operation?
+									If so, give details <span class="asterisk">*</span></label>
+								<input id="family_illness_detail" name="family_illness_detail" placeholder="family illness detail" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12 mb-30px">
+							<div class="form-group">
+								<label>2. Have you, or has any member of your family ever suffered from or been
+									suspected of suffering from tuber-
+									culosis? If so, give details <span class="asterisk">*</span></label>
+
+								<input id="family_illness_tb_detail" name="family_illness_tb_detail" placeholder="family illness tb detail" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-sm-12 mb-30px">
+							<div class="form-group">
+								<label>3. Have you, or has any member of your family ever suffered from a nervous or
+									mental disorder, its or epile-
+									psy, or been treated in an institution for any kind of these disorders?
+									If so, give details<span class="asterisk">*</span></label>
+								<input id="family_mental_illness_detail" name="family_mental_illness_detail" placeholder="family mental illness detail" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12 mb-30px">
+							<div class="form-group">
+								<label>4. What medical attention have you required during the last twelve months? <span
+										class="asterisk">*</span></label>
+
+								<input id="required_medical_attention" name="required_medical_attention" placeholder="required medical attention" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-sm-12 mb-30px">
+							<div class="form-group">
+								<label>5. Do you, or does any member of your family, suffer from any physical disability
+									which will prevent you/him/
+									her from leading a normal life in Papua New Guinea?
+									If so, give details <span class="asterisk">*</span></label>
+								<input id="family_physical_disability_detail" name="family_physical_disability_detail" placeholder="family physical disability detail" class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div>
+						<!-- <div class="col-md-6 col-sm-12 mb-30px">
+							<div class="form-group">
+								<label>I hereby CERTIFY that the above statements and all information about myself and
+									my dependants supplied
+									by me to the Medical Examiner are correct in every particular:
+									Signature of intending migration(To be made in the presence of the Medical Examiner)
+								</label>
+								<input id="medical_examiner" name="" placeholder=" " class="form-control form-control-inline" size="16"
+									value="" type="text">
+							</div>
+						</div> -->
+					</div>
+
+					<div class="col-md-12 col-sm-12 pull-right mt-50px">
+						<div class="pull-right group-btn-sec conform-sec">
+
+
+							<button onclick="MedicalExaminationForm()" type="button"
+								class="btn btn-primary btn-eql-wid btn-animate " id="medicalexamination">Submit</button>
+
+							<button onclick="ClearButton()" type="reset" class="btn btn-warning btn-eql-wid btn-animate "
+								id="clear_invoice_item">Cancel / Clear</button>
+						</div>
+					</div>
+				</div>
+				</form>        <!--form end-->
+				
+
+				<!-- work permit application form start-->
+				<form id="work_permit_application_validation">
+					
+
+					<div class="col-md-12 form-visa label-inline" id="tab-step-5-form">
+						<div class="row">
+							<div class="col-md-12">
+								<h3>APPLICATION CHECKLIST
+								<input style="margin-left: 1%;" type="checkbox" id="ckbCheckAll" />
+								<label style="font-size: medium;" class="form-check-label">Select All</label></h3>
+							</div>
+
+	
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group ">
+	
+									<div class="form-check ">
+										<input  class="form-check-input" type="checkbox" name="application_checklist" id="workCheck1" value="employee_passport">
+										<label class="form-check-label" for="workCheck1">Copy of photo page of employee's passport</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group ">
+	
+									<div class="form-check ">
+										<input  class="form-check-input" type="checkbox" name="application_checklist" id="workCheck2" value="curriculam_vitae">
+										<label class="form-check-label" for="workCheck2">Copy of updated curriculum
+											vitae</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group ">
+	
+									<div class="form-check ">
+										<input  class="form-check-input " type="checkbox" name="application_checklist"  id="workCheck3" value="job_description">
+										<label class="form-check-label" for="workCheck3">Copy of job description</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group ">
+	
+									<div class="form-check ">
+										<input  class="form-check-input " type="checkbox"  name="application_checklist" id="workCheck4" value="education_qualification">
+										<label class="form-check-label" for="workCheck4">Certified evidence of education
+											qualifications </label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group ">
+	
+									<div class="form-check ">
+										<input class="form-check-input " type="checkbox"  name="application_checklist" id="workCheck5" value="contract_signed">
+										<label class="form-check-label" for="workCheck5">Copy of employment contract signed
+											by both employee and employer</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group ">
+	
+									<div class="form-check ">
+										<input  class="form-check-input " type="checkbox" name="application_checklist" id="workCheck6" value="employee_photo">
+										<label class="form-check-label" for="workCheck6">Two recent, clear, colour passport
+											sized photographs of employee</label>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						<div class="row">
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group ">
+	
+									<div class="form-check ">
+										<input  class="form-check-input " type="checkbox" name="application_checklist" id="workCheck7" value="thumb_print">
+										<label class="form-check-label" for="workCheck7">Employee's right thumb print -</label>
+											<small>if you have provided your thumb print with a previous work permit
+												application, you do not need
+												to provide it again</small> 
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group ">
+	
+									<div class="form-check ">
+										<input class="form-check-input " type="checkbox" name="application_checklist" id="workCheck8" value="evidence_membership">
+										<label class="form-check-label" for="workCheck8">Evidence of membership of professional association (where relevant) </label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group ">
+	
+									<div class="form-check ">
+										<input  class="form-check-input " type="checkbox" name="application_checklist" id="workCheck9" value="language_proficiency">
+										<label class="form-check-label" for="workCheck9">Evidence of English Language Proficiency (where relevant)</label>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						<div class="row">
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group ">
+	
+									<div class="form-check ">
+										<input class="form-check-input " type="checkbox" name="application_checklist" id="workCheck10" value="employers_certificate">
+										<label class="form-check-label" for="workCheck10">Employers Certificate of Incorporation from Investment Promotion Authority (IPA)   </label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group ">
+	
+									<div class="form-check ">
+										<input  class="form-check-input " type="checkbox" name="application_checklist"  id="workCheck11" value="payment_evidence">
+										<label class="form-check-label" for="workCheck11">Evidence of payment of fee (non-refundable)</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group ">
+	
+									<div class="form-check ">
+										<input  class="form-check-input " type="checkbox" name="application_checklist" id="workCheck12" value="outside_png">
+										<label class="form-check-label" for="workCheck12">If the applicant does not hold a valid work permit, the applicant is outside PNG</label>
+									</div>
+								</div>
+							</div>
+							<div><label for="application_checklist" class="error" id="application_err"></label></div>
+							<div style="color: red;" id="err_msg_box" name="err_msg_box"></div>
+						</div>
+	
+						<hr />
+	
+						<div class="row">
+							<div class="col-md-12">
+								<h3>NATURE OF APPLICATION</h3>
+							</div>
+							
+							<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+									<label>1. Is this an application for a General Work Permit? 
+										<small>(i.e. work of a commercial nature)</small><span class="asterisk">*</span></label>
+										<div class="radio-check ">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="work" id="work1" value="true">
+												<label class="form-check-label" for="work1">Yes</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="work" id="work2" value="false">
+												<label class="form-check-label" for="work2">No</label>
+											</div>
+											
+										</div>
+										<div><label for="work" class="error"></label></div>
+										
+								</div>
+	
+							</div>
+							<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+									<label>2. Is this an application for a Volunteer Work Permit? 
+										<small>(i.e. work of a non-commercial, voluntary nature)</small> <span class="asterisk">*</span></label>
+										<div class="radio-check ">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="volunteer" id="volunteer1" value="true">
+												<label class="form-check-label" for="volunteer1">Yes</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="volunteer" id="volunteer2" value="false">
+												<label class="form-check-label" for="volunteer2">No</label>
+											</div>
+										
+										</div>
+										<div><label for="volunteer" class="error"></label></div>
+								</div>
+	
+							</div>
+							
+						</div>
+						<div class="row">
+							
+							<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+									<label>3. Is this an application for a Short Term Work Permit?									 
+										<small>(i.e. six months)</small><span class="asterisk">*</span></label>
+										<div class="radio-check ">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="shortTerm" id="shortTerm1" value="true">
+												<label class="form-check-label" for="shortTerm1">Yes</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="shortTerm" id="shortTerm2" value="false">
+												<label class="form-check-label" for="shortTerm2">No</label>
+											</div>
+										
+										</div>
+										<div><label for="shortTerm" class="error"></label></div>
+
+								</div>
+	
+							</div>
+							<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+									<label>4. Is this an application for a Long Term Work Permit?									
+										<small>(i.e for twelve months or more)</small> <span class="asterisk">*</span></label>
+										<div class="radio-check ">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="longTerm" id="longTerm1" value="true">
+												<label class="form-check-label" for="longTerm1">Yes</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="longTerm" id="longTerm2" value="false">
+												<label class="form-check-label" for="longTerm2">No</label>
+											</div>
+										
+										</div>
+										<div><label for="longTerm" class="error"></label></div>
+								</div>
+	
+							</div>
+							
+							
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+									<label>Please indicate term of work permit required:<span class="asterisk">*</span></label>
+									<div class="radio-check ">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="Term" id="Term1" value="6months">
+											<label class="form-check-label" for="Term1">6 Months (Short term)</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="Term" id="Term2" value="1yr">
+											<label class="form-check-label" for="Term2">1 Year</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="Term" id="Term3" value="2yr">
+											<label class="form-check-label" for="Term3">2 Year</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="Term" id="Term4" value="3yr">
+											<label class="form-check-label" for="Term4">3 Year</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="Term" id="Term5" value="5yr">
+											<label class="form-check-label" for="Term5">5 Year (Good Corporate Citizen Only - see Notes)</label>
+										</div>
+									
+									</div>
+								</div>
+
+								<div><label for="Term" class="error"></label></div>
+
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="col-md-12">
+								<h3>EMPLOYER DETAILS</h3>
+							</div>
+							
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>5. Employer: <span class="asterisk">*</span></label>
+									<input id="employee_name" name="employee_name" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>6. Employer Address: <span class="asterisk">*</span></label>
+									<input id="employer_address" name="employee_address" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>7. Tel: <span class="asterisk">*</span></label>
+									<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="telephone" name="telephone" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+							
+						</div>
+						<div class="row">
+							
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>8. Fax: <span class="asterisk">*</span></label>
+									<input id="fax" name="fax" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>9. e-mail: <span class="asterisk">*</span></label>
+									<input id="email" name="email" placeholder="" class="form-control form-control-inline" size="16" value="" type="email">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>10. Industrial Division <small>(selected from "PNG Classification of Industrial Divisions"):</small>		 <span class="asterisk">*</span></label>
+									<input id="division" name="division" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+							
+						</div>
+						<div class="row">
+							
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>11. Industrial Sub-Division Code <small>(selected from "PNG Classification of Industrial Divisions"):</small> <span class="asterisk">*</span></label>
+									<input id="sub_division" name="sub_division" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>12. How many Papua New Guinean employees are employed by this company? <span class="asterisk">*</span></label>
+									<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"  id="png_employee" name="png_employee" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>13. How many non-citizen employees are employed by this company?</small>		 <span class="asterisk">*</span></label>
+									<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="non_png_employee" name="non_png_employee" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+							</div>
+							
+						</div>
+	
+	
+						<hr/>
+	
+						<div class="row">
+							<div class="col-md-12">
+								<h3>EMPLOYER DETAILS</h3>
+							</div>
+							
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>14. Job Title <small>(as per position description):</small> <span class="asterisk">*</span></label>
+									<input id="job_title" name="job_title" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>15. Occupation <small>(selected from "PNG Classification of Occupations")</small> <span class="asterisk">*</span></label>
+									<input id="occupation1" name="occupation1" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>16. Job Code <small>(selected from "PNG Classification of Occupations"):</small><span class="asterisk">*</span></label>
+									<input id="job_code" name="job_code" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>17. Internal Company Position Code:<span class="asterisk">*</span></label>
+									<input id="position_code" name="position_code" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+							
+						</div>
+						<div class="row">
+							
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>18. Province of Primary Work Location: <span class="asterisk">*</span></label>
+									<input id="work_location" name="work_location" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>19. Will the employee be required to travel to locations other than the primary work location?  <span class="asterisk">*</span></label>
+									<div class="radio-check ">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="loca" id="loca1" value="true">
+											<label class="form-check-label" for="loca1">Yes</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="loca" id="loca2" value="false">
+											<label class="form-check-label" for="loca2">No (Go to question 21)</label>
+										</div>
+									
+									</div>
+								<div><label for="loca" id="location" class="error"></label></div>
+								</div>
+	
+							</div>
+	
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>20. If yes, please provide details:<span class="asterisk">*</span></label>
+									<input id="location_details" name="location_details" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+									<div><label for="location_details" class="error" id="loca_details"></label></div>
+								</div>
+	
+							</div>
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>21 Is this position a reserved occupation (see Notes)?<span class="asterisk">*</span></label>
+									<div class="radio-check ">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="reserved" id="reserved1" value="true">
+											<label class="form-check-label" for="reserved1">Yes (Application ineligible)</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="reserved" id="reserved2" value="false">
+											<label class="form-check-label" for="reserved2">No (Go to question 22)</label>
+										</div>
+									
+									</div>
+								<div><label for="reserved" class="error"></label></div>
+
+								</div>
+	
+							</div>
+							
+						</div>
+	
+						<div class="row">
+							
+						
+	
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>22. Is it a requirement that this position be advertised (see Notes)?  <span class="asterisk">*</span></label>
+									<div class="radio-check ">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="advertised" id="advertised1" value="true">
+											<label class="form-check-label" for="advertised1">Yes (Go to question 23)</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="advertised" id="advertised2" value="false">
+											<label class="form-check-label" for="advertised2">No </label>
+										</div>
+									
+									</div>
+								<div><label for="advertised" class="error"></label></div>
+								</div>
+	
+							</div>
+	
+							<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+									<label>23 <span class="asterisk"></span></label>
+									
+									<div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox" name="ad" id="Checkbox1" value="copy_ad ">
+											<label class="form-check-label" for="Checkbox1">Copy of Advertisement</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox" name="ad" id="Checkbox2" value="details_dates">
+											<label class="form-check-label" for="Checkbox2">Details of dates advertised</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox" name="ad" id="Checkbox3" value=" not_suitable">
+											<label class="form-check-label" for="Checkbox3">Statement why PNG citizen not suitable</label>
+										</div>
+									</div>
+								</div>
+
+								<div><label for="ad" class="error"></label></div>
+	
+							</div>
+							
+						</div>
+						<hr>
+	
+						<div class="row">
+							<div class="col-md-12">
+								<h3>EMPLOYEE DETAILS</h3>
+							</div>
+							
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>30. Will the employee be accompanied by dependents?<span class="asterisk">*</span></label>
+									<div class="radio-check row ">
+										<div class="col-md-4 ">
+											<div class="form-check form-check-inline">
+												<input  class="form-check-input" type="radio" name="dependent_accompanied" id="accompanied1" value="true">
+												<label class="form-check-label" for="accompanied1">Yes</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="dependent_accompanied" id="accompanied" value="false">
+												<label class="form-check-label" for="accompanied">No</label>
+											</div>
+											<div><label for="dependent_accompanied" class="error" ></label></div>
+										</div>
+
+										
+
+										<div class="col-md-3 pr-0">
+											<label>If yes, how many:</label>
+										</div>
+										<div class="col-md-5">
+											<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="dependent_accompany_count" name="dependent_accompany_count" class="form-control form-control-inline" size="16" value="" type="text">
+											<label for="dependent_accompany_count" class="error" id="input_box1"></label>
+										</div>										
+									</div>
+								</div>
+								
+	
+							</div>
+	
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>31. Is the employee a dependent of a current work permit holder in PNG? <span class="asterisk">*</span></label>
+									<div class="radio-check ">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="work_permit_holder" id="employeede1" value="true">
+											<label class="form-check-label" for="employeede1">Yes (Go to question 32)</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="work_permit_holder" id="employeede2" value="false">
+											<label class="form-check-label" for="employeede2">No (Go to question 33)</label>
+										</div>
+									
+									</div>
+									<div><label for="work_permit_holder" class="error"></label></div>
+								</div>
+	
+							</div>
+	
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>32. If yes, please indicate the work permit number:</small><span class="asterisk">*</span></label>
+									<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="permit_no" name="permit_no" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+									<label for="permit_no" class="error" id="workpermitno"></label>
+								</div>
+	
+							</div>
+							
+							
+						</div>
+	
+						<div class="row">
+							<div class="col-md-12">
+								<p>33. Details of Employee's Education/Training (two most recent qualifications):</p>
+							</div>
+							
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>Education/Training Institution (1)<span class="asterisk">*</span></label>
+									<input id="training_institution1" name="training_institution1" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label> From - Duration (dd/mm/yy)<span class="asterisk">*</span></label>
+									<div class="input-icon">
+										<input id="from_duration1" name="from_duration1" placeholder="From Date"  class="form-control form-control-inline" size="16" value="" type="text"
+											class="form-control form-control-inline" data-field="date" size="16" value=""
+											type="text">
+										<div id="from_duration1_dtbox"></div>
+									</div>
+									
+								</div>
+	
+							</div>
+	
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>To - Duration (dd/mm/yy)<span class="asterisk">*</span></label>
+									<div class="input-icon">
+										<input id="to_duration1" name="to_duration1" placeholder="To Date"  class="form-control form-control-inline" size="16" value="" type="text"
+											class="form-control form-control-inline" data-field="date" size="16" value=""
+											type="text">
+										<div id="to_duration1_dtbox"></div>
+										<div style="color: red;" id="date_validation1"></div>
+									</div>
+								</div>
+	
+							</div>
+	
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>Qualification and Field of Study<span class="asterisk">*</span></label>
+									<input id="qualification1" name="qualification1" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>					
+							
+						</div>
+						<div class="row">
+							
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>Education/Training Institution (2)<span class="asterisk">*</span></label>
+									<input id="training_institution2" name="training_institution2" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label> From - Duration (dd/mm/yy)<span class="asterisk">*</span></label>
+									<div class="input-icon">
+										<input id="from_duration2" name="from_duration2" placeholder=""  class="form-control form-control-inline" size="16" value="" type="text"
+											class="form-control form-control-inline" data-field="date" size="16" value=""
+											type="text">
+										<div id="from_duration2_dtbox"></div>
+									</div>
+									
+								</div>
+	
+							</div>
+	
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>To - Duration (dd/mm/yy)<span class="asterisk">*</span></label>
+									<div class="input-icon">
+										<input id="to_duration2" name="to_duration2" placeholder=""  class="form-control form-control-inline" size="16" value="" type="text"
+											class="form-control form-control-inline" data-field="date" size="16" value=""
+											type="text">
+										<div id="to_duration2_dtbox"></div>
+										<div style="color: red;" id="date_validation2"></div>
+
+									</div>
+									
+								</div>
+	
+							</div>
+	
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>Qualification and Field of Study<span class="asterisk">*</span></label>
+									<input id="qualification2" name="qualification2" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>					
+							
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<p>34. Details of Employee's Employment History (last two positions held):</p>
+							</div>
+							
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>Employer and Location (Town, Country)  (1)<span class="asterisk">*</span></label>
+									<input id="emp_location1" name="emp_location1" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>Industry<span class="asterisk">*</span></label>
+									<input id="industry1" name="industry1" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-2 col-sm-12">
+								<div class="form-group">
+									<label> From - Duration (dd/mm/yy)<span class="asterisk">*</span></label>
+									<div class="input-icon">
+										<input id="from_duration3" name="from_duration3" placeholder=""  class="form-control form-control-inline" size="16" value="" type="text"
+											class="form-control form-control-inline" data-field="date" size="16" value=""
+											type="text">
+										<div id="from_duration3_dtbox"></div>
+									</div>
+								</div>
+	
+							</div>
+	
+							<div class="col-md-2 col-sm-12">
+								<div class="form-group">
+									<label>To - Duration (dd/mm/yy)<span class="asterisk">*</span></label>
+									<div class="input-icon">
+										<input id="to_duration3" name="to_duration3" placeholder=""  class="form-control form-control-inline" size="16" value="" type="text"
+											class="form-control form-control-inline" data-field="date" size="16" value=""
+											type="text">
+										<div id="to_duration3_dtbox"></div>
+										<div style="color: red;" id="date_validation3"></div>
+
+									</div>
+								</div>	
+	
+							</div>
+	
+							<div class="col-md-2 col-sm-12">
+								<div class="form-group">
+									<label>Occupation<span class="asterisk">*</span></label>
+									
+									<input id="occupation2" name="occupation2" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+						</div>
+						<div class="row">
+							
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>Employer and Location (Town, Country)  (2)<span class="asterisk">*</span></label>
+									<input id="emp_location2" name="emp_location2" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-3 col-sm-12">
+								<div class="form-group">
+									<label>Industry<span class="asterisk">*</span></label>
+									<input id="industry2" name="industry2" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+							<div class="col-md-2 col-sm-12">
+								<div class="form-group">
+									<label> From - Duration (dd/mm/yy)<span class="asterisk">*</span></label>
+									<div class="input-icon">
+										<input id="from_duration4" name="from_duration4" placeholder=""  class="form-control form-control-inline" size="16" value="" type="text"
+											class="form-control form-control-inline" data-field="date" size="16" value=""
+											type="text">
+										<div id="from_duration4_dtbox"></div>
+
+									</div>
+									
+								</div>
+	
+							</div>
+	
+							<div class="col-md-2 col-sm-12">
+								<div class="form-group">
+									<label>To - Duration (dd/mm/yy)<span class="asterisk">*</span></label>
+									<div class="input-icon">
+										<input id="to_duration4" name="to_duration4" placeholder=""  class="form-control form-control-inline" size="16" value="" type="text"
+											class="form-control form-control-inline" data-field="date" size="16" value=""
+											type="text">
+										<div id="to_duration4_dtbox"></div>
+										<div style="color: red;" id="date_validation4"></div>
+
+									</div>
+								</div>
+	
+							</div>
+	
+							<div class="col-md-2 col-sm-12">
+								<div class="form-group">
+									<label>Occupation<span class="asterisk">*</span></label>
+									<input id="occupation3" name="occupation3" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+							
+						</div>
+	
+						<div class="row">
+							<div class="col-md-12">
+								<p>35. Please list the Country of Origin and Repatriation for the Employee (see Notes): </p>
+							</div>
+							
+							<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+									<label>Country<span class="asterisk">*</span></label>
+									<select id="origin_country" name="origin_country" class="form-control select2 " >
+										<option   value='' selected>------Select------</option>
+										{% for country in country_of_birth %}
+										<option value="{{country.id}}">{{country.country}}</option>
+													{% endfor %}
+									</select>
+								</div>
+							</div>
+	
+							<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+									<label>City<span class="asterisk">*</span></label>
+									<input id="city" name="city" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+	
+						</div>
+						<hr/>
+						<div class="row">
+							<div class="col-md-12">
+								<h3>ENGLISH LANGUAGE PROFICIENCY</h3>
+							</div>
+							<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+									<label>36. Is the employee from a designated English Speaking country (see Notes)? <span class="asterisk">*</span></label>
+									<div class="radio-check ">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="english_speaking" id="designated1" value="true">
+											<label class="form-check-label" for="designated1">Yes (Go to question 40)</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="english_speaking" id="designated2" value="false">
+											<label class="form-check-label" for="designated2">No (Go to question 37)</label>
+										</div>
+									
+									</div>
+
+									<div><label for="english_speaking" id="engspeaking"class="error"></label></div>
+
+								</div>
+	
+							</div>
+							<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+									<label>37. If no has the employee passed a test of English Language Proficiency?<span class="asterisk">*</span></label>
+									<div class="radio-check ">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="language_proficiency" id="English" value="true">
+											<label class="form-check-label" for="English">Yes (Go to question 38)</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="language_proficiency" id="English2" value="false">
+											<label class="form-check-label" for="English2">No (Go to question 39)</label>
+										</div>
+									
+									</div>
+									<div><label for="language_proficiency" id="langprofi" class="error"></label></div>
+								</div>
+	
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<p>38. Evidence of English Language Proficiency: </p>
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>Education Institution<span class="asterisk">*</span></label>
+									<input id="edu_institute" name="edu_institute" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+									<label for="edu_institute" id="institute" class="error"></label>
+								</div>
+	
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>Date test undertaken (dd/mm/yy)<span class="asterisk">*</span></label>
+									<div class="input-icon">
+										<input id="test_date" name="test_date" placeholder=""  class="form-control form-control-inline" size="16" value="" type="text"
+											class="form-control form-control-inline" data-field="date" size="16" value=""
+											type="text">
+										<div id="test_date_dtbox"></div>
+									</div>
+									<label for="test_date" id="test_date_input" class="error"></label>
+									
+								</div>
+	
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>Results (Attach Certified Copy)<span class="asterisk">*</span></label>
+									<input id="result" name="result" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+									<label for="result" id="res" class="error"></label>
+								</div>
+	
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>39. Please provide alternative proof of English Language Proficiency (see Notes).<span class="asterisk">*</span></label>
+									<input id="alternative_proof" name="alternative_proof" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+									<div><label for="alternative_proof" class="error" id="alternative_proof_textbox"></label></div>
+								</div>
+	
+							</div>
+						</div>
+	
+						<hr/>
+						<div class="row">
+							<div class="col-md-12">
+								<h3>SALARY PACKAGE OF EMPLOYEE</h3>
+								<p>40. What is the total salary package (Salary and Non-salary) of Employee (see Notes)?</p>
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>Salary (e.g. Take Home Pay) (K)<span class="asterisk">*</span></label>
+									<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="salary" name="salary" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>Non-salary Allowances (K)<span class="asterisk">*</span></label>
+									<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="non_salary" name="non_salary" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="form-group">
+									<label>Total Salary Package (K)<span class="asterisk">*</span></label>
+									<input onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="total_salary" name="total_salary" placeholder="" class="form-control form-control-inline" size="16" value="" type="text">
+								</div>
+	
+							</div>
+						</div>
+	
+	
+						<div class="col-md-12 col-sm-12 pull-right mt-50px">
+							<div class="pull-right group-btn-sec conform-sec">
+	
+	
+								<button onclick="Work_Permit_Submit()" type="button"
+									class="btn btn-primary btn-eql-wid btn-animate " id="work_permit">Submit</button>
+								<button type="reset" onclick="ClearButton()" class="btn btn-warning btn-eql-wid btn-animate "
+									id="clear_invoice_item">Cancel / Clear</button>
+							</div>
+						</div>
+	
+	
+					</div>
+	
+				</div>
+			</div>
+		</div>
+	
+	
+	<div class="portlet light bordered page_margin_bottom">
+		<div class="portlet-title">
+			<div class="caption">
+				<span class="caption-subject  bold uppercase">Employee
+					Info</span>
+			</div>
+		</div>
+		<div class="portlet-body">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<table class="table table-striped table-bordered table-hover" id="employee_info_table">
+						<thead>
+							<tr>
+								<th>Full Name</th>
+								<th>Designation</th>
+								<th>Gender</th>
+								<th>Date of Birth</th>
+								<th>Application Date</th>
+								<th>Phone Number</th>
+								<th>Location</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody id="employee_info_table"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	</form>
+
+
+{% endblock %} {%block scripts%}
+<script type="text/javascript"
+	src="/static/ux3.x/plugins/formValidate/jquery.validate.min.js"></script>
+
+<script type="text/javascript" src="/static/dev/js/visa_emp_add/addemp.js"></script>
+
+{% endblock %}

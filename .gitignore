@@ -1,0 +1,5 @@
+# Ignore migration files except for the initial migrations
+**/migrations/[^__init__]*.py
+/gprogress_env
+
+

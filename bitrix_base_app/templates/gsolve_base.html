@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+<head>
+	<meta charset="utf-8" />
+	<title>Home | GProgress</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta content="NEXT UX 3.X Framework" name="description" />
+	<meta content="" name="author" />
+	<link rel="shortcut icon" href="favicon.png" />
+
+	<!-- Style Part-->
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->
+	<link href="/static/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/css/default/nfonts.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<!-- END GLOBAL MANDATORY STYLES -->
+
+	<!--Data Table Style-->
+	<link href="/static/ux3.x_ntoday/plugins/datatables/css/datatables.min.css" rel="stylesheet" type="text/css" />
+	<!-- Date picker -->
+	<link href="/static/ux3.x_ntoday/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet"
+		type="text/css" />
+	<!-- Single and multi select Dropdown-->
+	<link href="/static/ux3.x_ntoday/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<!-- Bootstrap Select Dropdown with Checkbox option   -->
+	<link href="/static/ux3.x_ntoday/plugins/bootstrap-multiselect/css/bootstrap-multiselect.css" rel="stylesheet"
+		type="text/css" />
+	<!-- Multiple Select List with Search -->
+	<link href="/static/ux3.x_ntoday/plugins/multiselect-list/css/listbox-multiselected.css" rel="stylesheet"
+		type="text/css" />
+	<!-- Multiple Select with Grouped  -->
+	<link href="/static/ux3.x_ntoday/plugins/jquery-multi-select/css/multi-select.min.css" rel="stylesheet"
+		type="text/css" />
+
+	<!-- Bootstrap Switch -->
+	<link href="/static/ux3.x_ntoday/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet"
+		type="text/css" />
+
+	<!-- JQUERY ALERT NOTIFICATION-->
+	<link href="/static/ux3.x_ntoday/plugins/jquery-notification/css/lobibox.css" rel="stylesheet" type="text/css" />
+	<!-- Date Picker Mobile -->
+	<link href="/static/ux3.x_ntoday/plugins/date-picker-mobile/css/date-picker-mobile.css" rel="stylesheet"
+		type="text/css" />
+	<!-- Time Picker Mobile -->
+	<link href="/static/ux3.x_ntoday/plugins/time-picker-mobile/css/time-picker-mobile.css" rel="stylesheet"
+		type="text/css" />
+	<link href="/static/ux3.x_ntoday/plugins/bootstrap-sweetalert/css/sweetalert.css" rel="stylesheet"
+		type="text/css" />
+
+	<!-- TOOLTIP PLUGINS -->
+	<link href="/static/ux3.x_ntoday/plugins/tooltip/css/tooltip.min.css" rel="stylesheet" type="text/css" />
+	<!-- BEGIN THEME LAYOUT STYLES -->
+	<link href="/static/ux3.x_ntoday/css/default/components.min.css" rel="stylesheet" id="style_components"
+		type="text/css" />
+	<link href="/static/ux3.x_ntoday/css/default/layout.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/themes/css/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
+	<link href="/static/ux3.x_ntoday/css/default/CircleMenu.min.css" rel="stylesheet" type="text/css" />
+	<!-- END THEME LAYOUT STYLES -->
+
+	<!-- CUSTOM STYLES -->
+	<link href="/static/ux3.x_ntoday/plugins/animate/css/animate.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/plugins/Standard-menu/Standard-menu.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/css/default/Glyphter.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/css/default/ntoday.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ux3.x_ntoday/css/default/responsive.css" rel="stylesheet" type="text/css" />
+
+	<link href="/static/ux3.x_ntoday/css/default/components.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/ui/plugins/bootstrap-summernote/css/summernote.css" rel="stylesheet" type="text/css" />
+
+	<!-- Service Desk Dashboard -->
+	<link rel="stylesheet" href="/static/css/service_desk.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+	<link href="/static/css/font-awesome.min.css" rel="stylesheet">
+	{% comment %} <link rel="stylesheet" href="/static/css/responsive.css">
+	<link rel="stylesheet" href="/static/css/client_verification.css"> {% endcomment %}
+	{% comment %} <img src="/static/images/logo.png" alt="Green"> {% endcomment %}
+	<link rel="icon" type="image/x-icon" href="/static/images/foot-g.png">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	{% block module_css %}{% endblock %}
+	<!-- CUSTOM STYLES -->
+	<style>
+		/*Preloader CSS Maruthu 02/05/2019 */
+		.loader-wrapper {
+			align-items: center;
+			background: rgba(0, 0, 0, 0.65);
+			display: flex;
+			justify-content: center;
+			position: absolute;
+			z-index: 10051;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+		}
+
+		.loader {
+			animation: rotate 1s infinite;
+			height: 50px;
+			width: 50px;
+		}
+
+		.loader:before,
+		.loader:after {
+			border-radius: 50%;
+			content: '';
+			display: block;
+			height: 20px;
+			width: 20px;
+		}
+
+		.loader:before {
+			animation: ball1 1s infinite;
+			background-color: #2ce7c7;
+			box-shadow: 30px 0 0 #f6d166;
+			margin-bottom: 10px;
+		}
+
+		.loader:after {
+			animation: ball2 1s infinite;
+			background-color: #55bbff;
+			box-shadow: 30px 0 0 #ea8ecc;
+		}
+
+		@keyframes rotate {
+			0% {
+				-webkit-transform: rotate(0deg) scale(0.8);
+				-moz-transform: rotate(0deg) scale(0.8);
+			}
+
+			50% {
+				-webkit-transform: rotate(360deg) scale(1.2);
+				-moz-transform: rotate(360deg) scale(1.2);
+			}
+
+			100% {
+				-webkit-transform: rotate(720deg) scale(0.8);
+				-moz-transform: rotate(720deg) scale(0.8);
+			}
+		}
+
+		@keyframes ball1 {
+			0% {
+				box-shadow: 30px 0 0 #f6d166;
+			}
+
+			50% {
+				box-shadow: 0 0 0 #f6d166;
+				margin-bottom: 0;
+				-webkit-transform: translate(15px, 15px);
+				-moz-transform: translate(15px, 15px);
+			}
+
+			100% {
+				box-shadow: 30px 0 0 #f6d166;
+				margin-bottom: 10px;
+			}
+		}
+
+		@keyframes ball2 {
+			0% {
+				box-shadow: 30px 0 0 #ea8ecc;
+			}
+
+			50% {
+				box-shadow: 0 0 0 #ea8ecc;
+				margin-top: -20px;
+				-webkit-transform: translate(15px, 15px);
+				-moz-transform: translate(15px, 15px);
+			}
+
+			100% {
+				box-shadow: 30px 0 0 #ea8ecc;
+				margin-top: 0;
+			}
+		}
+
+		/*******************************************************/
+	</style>
+	<!-- End Style Part-->
+</head>
+<!-- END HEAD -->
+
+<body>
+
+
+	<!-- BEGIN HEADER -->
+	<div class="page-header navbar navbar-fixed-bottom" id="nav_div">
+		<!--<div class="dreadcrumb-theam">
+			 Theme Change  ->
+			<div id="switcher">
+				<div class="colors theme-panel">
+					<ul class="theme-colors">
+						<li id="btn1" data-toggle="tooltip" data-placement="bottom" title="Gradient Theme"
+							class="tooltips theme-color theme-color-default active scolor gradient" data-theme="default"
+							style="display: none;" onClick="changefunc(this.id)"></li>
+						<li id="btn2" data-toggle="tooltip" data-placement="bottom" title="Flat Theme"
+							class="tooltips theme-color theme-color-light scolor flat" data-theme="flat"
+							onClick="changefunc(this.id)"></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Theme Change
+		</div> -->
+		<!-- BEGIN HEADER INNER -->
+		<div class="page-header-inner">
+			<!-- BEGIN LOGO -->
+			<div class="page-logo">
+				<a href="index.html" class="logo-default"><img alt="Next Logo"
+						src="/static/images/foot-g.png" /></a>
+			</div>
+			<div class="logo">
+				<!--	<img alt="Next Logo"
+					src="/static/ux3.x_ntoday/images/logo-desktop.png" /> -->
+				<div class="logo_div">
+					<span class="org_name">GREEN</span>
+					<span class="app_name">GProgress</span>
+				</div>
+				<!--Tool tip Version type-->
+				<div class="grid__item">
+					<div class="tooltip tooltip--smaug" data-type="smaug">
+						<div class="tooltip__trigger" role="tooltip" aria-describedby="info-smaug">
+							<span class="tooltip__trigger-text">V.0.1</span>
+						</div>
+						<!--<div class="tooltip__base">
+							<div class="tooltip__content" id="info-smaug">
+								<div id="footerNotesdis">
+									<table class="table table-border">
+										<thead>
+											<tr>
+												<th colspan="5">Project Name</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>#</td>
+												<td>Version</td>
+												<td>Release</td>
+												<td>Build</td>
+												<td>Date</td>
+											</tr>
+											<tr>
+												<td>Latest Code</td>
+												<td>1</td>
+												<td>v0.1.0</td>
+												<td>#4</td>
+												<td>29 Jan 2018</td>
+											</tr>
+											<tr>
+												<td>Used Code</td>
+												<td>1</td>
+												<td>v0.1.0</td>
+												<td>#4</td>
+												<td>29 Jan 2018</td>
+											</tr>
+										</tbody>
+									</table>
+									<table class="table table-border">
+										<thead>
+											<tr>
+												<th colspan="5">UX 3.X</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>#</td>
+												<td>Version</td>
+												<td>Release</td>
+												<td>Build</td>
+												<td>Date</td>
+											</tr>
+											<tr>
+												<td>Latest Code</td>
+												<td>1</td>
+												<td>v0.1.0</td>
+												<td>#5</td>
+												<td>17 Aug 2018</td>
+											</tr>
+											<tr>
+												<td>Used Code</td>
+												<td>1</td>
+												<td>v0.1.0</td>
+												<td>#5</td>
+												<td>17 Aug 2018</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>-->
+					</div>
+
+					<ul class="breadcrumb footer_breadcrumb" id='footer_breadcrumb_ul'>
+
+					</ul>
+
+				</div>
+				<!--End tooltip version-->
+			</div>
+			<div class="outer-menu">
+				<div id="menu-wrapper">
+					<div class="gt-dev"></div>
+					<div class="gt-dev"></div>
+					<div class="gt-dev"></div>
+					<div class="gt-dev"></div>
+					<p class="open-dev-badge show-menu">
+						<i class="nf nf-square-box"></i>
+					</p>
+					<div class="cd-folding-panel">
+						<div class="fold-left"></div>
+						<!-- this is the left fold -->
+						<div class="fold-right"></div>
+						<!-- this is the right fold -->
+						<div class="cd-fold-content">
+							<div class="carousel">
+								<ul id="menu-ul" style="display: none;">
+									<li class="menu-li i1"><a href="/GSolve/Invoice/"> <i class="fa fa-home"></i>
+											<div class="menu-tittle">
+												<span></span>Invoice
+											</div>
+										</a></li>
+									<li class="menu-li i2"><a href="/GSolve/InvoiceTT/"> <i class="fa fa-home"></i>
+											<div class="menu-tittle">
+												<span>TT</span>
+											</div>
+										</a></li>
+									<!-- <li class="menu-li i1"><a href="/GSolve/Dashboard/"> <i
+											class="fa fa-home"></i>
+											<div class="menu-tittle">
+												<span>Dashboard</span>
+											</div>
+									</a></li>
+									<li class="menu-li i2"><a href="/GSolve/GeneralInfo/"> <i
+										class="fa fa-home"></i>
+										<div class="menu-tittle">
+											<span>General Info</span>
+										</div>
+								</a></li>
+								<li class="menu-li i3"><a href="/GSolve/PoweringHome/"> <i
+									class="fa fa-home"></i>
+									<div class="menu-tittle">
+										<span>Powering Home</span>
+									</div>
+							</a></li>
+								<li class="menu-li i4"><a href="/GSolve/PoweringHealth/"> <i
+									class="fa fa-home"></i>
+									<div class="menu-tittle">
+										<span>Powering Health Centres</span>
+									</div>
+							</a></li>
+							<li class="menu-li i5"><a href="/GSolve/PoweringEdu/"> <i
+								class="fa fa-home"></i>
+								<div class="menu-tittle">
+									<span>Powering Education</span>
+								</div>
+						</a></li>
+						<li class="menu-li i6"><a href="/GSolve/PoweringFbo/"> <i
+							class="fa fa-home"></i>
+							<div class="menu-tittle">
+								<span>Powering FBO</span>
+							</div>
+					</a></li> -->
+
+									<!-- {%if 'is_lead' in request.session%} -->
+									<li class="menu-li i2"><a href="#"> <i class="fa fa-list-alt"></i>
+											<div class="arrows ">
+												<i class="fa fa-angle-up animated fadeInUp infinite"></i>
+											</div>
+											<div class="menu-tittle">
+												<span>Configuration</span>
+											</div>
+										</a>
+										<ul class="sub-menu">
+											<li><a href="/Ntoday/category/"><i class="fa fa-calendar"></i>Category</a>
+											</li>
+											<li><a href="/Ntoday/schedule/"><i class="fa fa-upload"></i>Recurring
+													Tasks</a>
+											</li>
+										</ul>
+
+									</li>
+									<!-- {% endif %} -->
+
+								</ul>
+								<div class="left-arrow carrow carouselctrl"></div>
+								<div class="right-arrow carrow carouselctrl"></div>
+							</div>
+						</div>
+					</div>
+					<!-- .cd-folding-panel -->
+				</div>
+			</div>
+
+			<!-- BEGIN PAGE TOP -->
+			<div class="page-top">
+				<!-- BEGIN HEADER SEARCH BOX -->
+				<div class="mobilesearch">
+					<form class="search-form" action="#" method="GET">
+						<div class="input-group">
+							<input type="text" class="form-control input-sm" placeholder="Search..." name="query"> <span
+								class="input-group-btn"> <a href="javascript:;" class="btn submit"> <i
+										class="icon-magnifier"></i>
+								</a>
+							</span>
+						</div>
+					</form>
+				</div>
+				<div class="searchwrap">
+					<div class="cd-search animate-search">
+						<!-- 						<nav class="cd-main-nav-wrapper">
+							<a href="#search" class="cd-search-trigger cd-text-replace"></a>
+						</nav>
+ --> <a href="#0" class="cd-nav-trigger cd-text-replace">Menu<span></span></a>
+					</div>
+					<div id="search" class="cd-main-search">
+						<div class="cd-search-suggestions">
+							<div class="news">
+								<h3>Search Header</h3>
+								<ul>
+									<li><a class="image-wrapper" href="#0"><img alt="placeholder"
+												src="/static/ux3.x_ntoday/images/placeholder.png"></a>
+										<h4>
+											<a class="cd-nowrap" href="#0">Lorem ipsum dolor sit
+												amet, consectetur adipisicing elit.</a>
+										</h4> <time datetime="2016-01-12">Feb 03, 2016</time>
+									</li>
+									<li><a class="image-wrapper" href="#0"><img alt="placeholder"
+												src="/static/ux3.x_ntoday/images/placeholder.png"></a>
+										<h4>
+											<a class="cd-nowrap" href="#0">Incidunt voluptatem
+												adipisci voluptates fugit beatae culpa eum, distinctio,
+												assumenda est ad</a>
+										</h4> <time datetime="2016-01-12">Jan 28, 2016</time>
+									</li>
+									<li><a class="image-wrapper" href="#0"><img alt="placeholder"
+												src="/static/ux3.x_ntoday/images/placeholder.png"></a>
+										<h4>
+											<a class="cd-nowrap" href="#0">Lorem ipsum dolor sit
+												amet, consectetur adipisicing elit. Iusto, esse.</a>
+										</h4> <time datetime="2016-01-12">Jan 12, 2016</time>
+									</li>
+								</ul>
+							</div>
+							<!-- .quick-links -->
+							<div class="quick-links">
+								<h3>Quick Links</h3>
+								<ul>
+									<li><a href="dashboard.html">Home </a></li>
+									<li><a href="elements_overlay.html">Overlay </a></li>
+									<li><a href="elements_ribbons.html">Ribbons </a></li>
+									<li><a href="elements_cards.html">Cards </a></li>
+									<li><a href="form_image_crop.html">Crop</a></li>
+									<li><a href="form_wizard.html">Wizard</a></li>
+									<li><a href="page_general_portfolio_1.html">Gallery</a></li>
+								</ul>
+							</div>
+							<!-- .quick-links -->
+							<form>
+								<input type="search" placeholder="Type here...">
+								<div class="cd-select">
+									<select name="select-category">
+										<option value="all-categories">All Categories</option>
+										<option value="Web">Web</option>
+										<option value="Page">Page</option>
+										<option value="Application">Application</option>
+									</select> <span class="selected-value">All Categories</span>
+								</div>
+							</form>
+						</div>
+						<a href="#0" class="close cd-text-replace">Close Form</a>
+					</div>
+				</div>
+				<!-- END HEADER SEARCH BOX -->
+				<!-- BEGIN TOP NAVIGATION MENU -->
+				<div class="top-menu">
+					<ul class="nav navbar-nav pull-right">
+						<!-- BEGIN USER LOGIN DROPDOWN -->
+						<li class="dropdown dropdown-user dropdown-dark">
+							{% if user %}
+							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+								data-close-others="true">  <span class="username username-hide-on-mobile">{{user.username}}  <i class="fa fa-user" aria-hidden="true"></i> </span> <img alt="" class="img-circle" />
+								<!-- src="http://mygreen.green.com.pg/media/user_profile/{{ request.user.employee_image }}" /> -->
+							{% endif %}
+							</a>
+							<ul class="dropdown-menu dropdown-menu-default" role="menu">
+								<!-- <li><a href="page_user_profile_1.html"> <i
+										class="fa fa-user"></i> My Profile
+								</a></li>
+								<li><a href="#"> <i class="fa fa-tasks"></i> My Tasks
+								</a></li>
+								<li class="divider"></li> -->
+								<li><a href="/GSolve/logout"> <i class="fa fa-sign-out"></i>
+										Log Out
+									</a></li>
+							</ul>
+						</li>
+						<!-- END USER LOGIN DROPDOWN -->
+					</ul>
+					<!--Reposnive view-->
+					<div class="nav_trigger">
+						<span class="line1"></span> <span class="line2"></span> <span class="line3"></span>
+					</div>
+					<ul id="mobilemenu" class="nav_responsiv">
+						<li><a class="sa_arrow" href="index.html">Home</a></li>
+						<li><a class="sa_arrow" href="form_controls.html">Form
+								Controls</a></li>
+						<li><a href="date_time_pickers.html">Date & Time Picker</a></li>
+						<li><span class="s_arrow"></span><a class="sa_arrow" href="fileupload.html">File Upload</a>
+							<!--<ul class="sub-menu" style="">
+                <li><a href="#">Lorum Ippsume</a></li>
+                <li><a href="#">Lorum Ippsume</a></li>
+                <li><a href="#">Lorum Ippsume</a></li>
+                <li><a href="#">Lorum Ippsume</a></li>
+                <li><a href="#">Lorum Ippsume</a></li>
+                <li><a href="#">Lorum Ippsume</a></li>
+                <li><a href="#">Lorum Ippsume</a></li>
+                <li><a href="#">Lorum Ippsume</a></li>
+                <li><a href="#">Lorum Ippsume</a></li>
+              </ul>-->
+						</li>
+						<li><a href="tables.html">Data Tables</a></li>
+						<li><a href="tabs_accordions.html">Tabs & Accordions</a></li>
+						<li><a href="vertical_form_wizard.html">Vertical Form
+								Wizard</a></li>
+						<li><a href="talent-matrix.html">Talent Matrix</a></li>
+						<li><a href="charts.html">Chart</a></li>
+					</ul>
+					<!--End Responsive view-->
+
+					<div class="flip-logo"></div>
+				</div>
+				<!-- END TOP NAVIGATION MENU -->
+			</div>
+			<!-- END PAGE TOP -->
+		</div>
+		<!-- END HEADER INNER -->
+	</div>
+	<!-- END HEADER -->
+
+	<div class="clearfix"></div>
+
+	<!-- BEGIN CONTAINER -->
+
+	<div id="menuOverlay">
+		<div class="page-container" id="maincontent">
+
+			<!-- BEGIN CONTENT -->
+			<div class="page-content-wrapper">
+
+
+
+
+
+				<div class="LS-menu" id="LS-menu">
+					<!--Menu bar (new)-->
+					<div class="g-nav-bar">
+						<div class="g-nav-icon-group">
+							<div class="bg-white">
+								<div class="g-nav-icon">
+									<!-- <img src="/static/images/nav-g.png"/> -->
+								</div>
+							</div>
+							<img src="/static/images/nav-reen.png" class="nav-logo-text">
+						</div>
+
+
+
+					</div>
+
+					<div class="LS-menu-options" id="LS-menu-options">
+						<label class="menu-TopTitle">Menu</label>
+						<ul class="list-inline list-unstyled">
+							<li class="tooltips pin_menu" data-toggle="tooltip" data-placement="bottom" title=""
+								data-original-title="Pin the Menu"><i class="nf nf-pin-menu"></i></li>
+							<li class="tooltips unpin_menu" data-toggle="tooltip" data-placement="bottom" title=""
+								data-original-title="Unpin the Menu"><i class="nf nf-pin-menu"></i></li>
+							<li class="tooltips collapse-menu" data-toggle="tooltip" data-placement="bottom" title=""
+								data-original-title="Close the Menu"><i class="fa fa-close"></i></li>
+						</ul>
+					</div>
+					<!-- <button type="button"
+						class="btn btn-primary btn-animate pull-right tooltips toggle-LS-Menu"
+						id="toggle-LS-Menu" data-toggle="tooltip" data-placement="bottom"
+						title="" data-original-title="Open the Menu">Show</button> -->
+					<div class="clearfix"></div>
+					<!-- <div class="menu-content">
+						<div class="menu-panel">
+							<div class="menu_model_3">
+								<div class="menu-inner">
+									<div class="menu-room">
+										<div class="icon-room L-room CT-1">
+											<div class="dropdown-toggle" type="button"
+												data-toggle="dropdown" aria-expanded="false">
+												<div class="ilayer ilayer-1">
+													<i class="d-icon icon-icon-12">&#xe809;</i>
+												</div>
+												<div class="ilayer ilayer-2">
+													<i class="d-icon icon-icon-12">&#xe809;</i>
+												</div>
+												<div class="ilayer ilayer-3">
+													<i class="fa fa-database"></i>
+												</div>
+											</div>
+											<div class="main-title dropdown-toggle animated fadeInDown"
+												type="button" data-toggle="dropdown" aria-expanded="false">
+												<span>Supplier Invoice</span> <i class="nf nf-caret-down"></i>
+											</div>
+											<ul class="dropdown-menu" role="menu">
+												<!-- <li class="menu-title-selected">Configuration</li> 												<li><a href="/GSolve/SupplierInvoice/"> Invoice </a></li>
+												<li><a href="/GSolve/TTForm/"> TT Form </a></li>
+												
+											</ul>
+											<div class="ilayer ilayer-5">
+												<img src="/static/ux3.x_ntoday/images/connection-line.png" />
+											</div>
+										</div>
+									</div>
+									<div class="menu-room">
+										<div class="icon-room R-room CT-2">
+											<div class="dropdown-toggle" type="button"
+												data-toggle="" aria-expanded="false">
+												<div class="ilayer ilayer-1">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<div class="ilayer ilayer-2">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<a href="/GSolve/PoweringHome/">
+												<div class="ilayer ilayer-3">
+													<i class="fa fa-cogs"></i>
+												</div>
+												</a>
+											</div>
+											<div class="main-title dropdown-toggle animated fadeInDown"
+												type="button" data-toggle="dropdown" aria-expanded="false">
+												<span>Poweringc Home</span><i class="nf nf-caret-down"></i>
+											</div>
+										
+											<div class="ilayer ilayer-5">
+												<img src="/static/ux3.x_ntoday/images/connection-line-f.png" />
+											</div>
+										</div>
+									</div>
+									<div class="menu-room">
+										<div class="icon-room L-room CT-1">
+											<div class="dropdown-toggle" type="button"
+												data-toggle="" aria-expanded="false">
+												<div class="ilayer ilayer-1">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<div class="ilayer ilayer-2">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<a href="/GSolve/PoweringHealth/">
+												<div class="ilayer ilayer-3">
+													<i class="fa fa-cogs"></i>
+												</div>
+												</a>
+											</div>
+											<div class="main-title dropdown-toggle animated fadeInDown"
+												type="button" data-toggle="dropdown" aria-expanded="false">
+												<span>Powering Health</span><i class="nf nf-caret-down"></i>
+											</div>
+										
+											<div class="ilayer ilayer-5">
+												<img src="/static/ux3.x_ntoday/images/connection-line-f.png" />
+											</div>
+										</div>
+									</div>
+									<div class="menu-room">
+										<div class="icon-room R-room CT-2">
+											<div class="dropdown-toggle" type="button"
+												data-toggle="" aria-expanded="false">
+												<div class="ilayer ilayer-1">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<div class="ilayer ilayer-2">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<a href="/GSolve/PoweringEdu/">
+												<div class="ilayer ilayer-3">
+													<i class="fa fa-cogs"></i>
+												</div>
+												</a>
+											</div>
+											<div class="main-title dropdown-toggle animated fadeInDown"
+												type="button" data-toggle="dropdown" aria-expanded="false">
+												<span>Powering Education</span><i class="nf nf-caret-down"></i>
+											</div>
+											<!-- <ul class="dropdown-menu" role="menu">
+												<li class="menu-title-selected">Dashboard</li>
+												<li><a href="/Ntoday/dashboard/"> Dashboard </a></li>
+												
+											</ul>
+											<div class="ilayer ilayer-5">
+												<img src="/static/ux3.x_ntoday/images/connection-line-f.png" />
+											</div>
+										</div>
+									</div>
+									<div class="menu-room">
+										<div class="icon-room L-room CT-1">
+											<div class="dropdown-toggle" type="button"
+												data-toggle="" aria-expanded="false">
+												<div class="ilayer ilayer-1">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<div class="ilayer ilayer-2">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<a href="/GSolve/PoweringFbo/">
+												<div class="ilayer ilayer-3">
+													<i class="fa fa-cogs"></i>
+												</div>
+												</a>
+											</div>
+											<div class="main-title dropdown-toggle animated fadeInDown"
+												type="button" data-toggle="dropdown" aria-expanded="false">
+												<span>Powering Fbo</span><i class="nf nf-caret-down"></i>
+											</div>
+										
+											<div class="ilayer ilayer-5">
+												<img src="/static/ux3.x_ntoday/images/connection-line-f.png" />
+											</div>
+										</div>
+									</div>
+									<div class="menu-room">
+										<div class="icon-room R-room CT-2">
+											<div class="dropdown-toggle" type="button"
+												data-toggle="" aria-expanded="false">
+												<div class="ilayer ilayer-1">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<div class="ilayer ilayer-2">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<a href="/GSolve/GeneralInfo/">
+												<div class="ilayer ilayer-3">
+													<i class="fa fa-cogs"></i>
+												</div>
+												</a>
+											</div>
+											<div class="main-title dropdown-toggle animated fadeInDown"
+												type="button" data-toggle="dropdown" aria-expanded="false">
+												<span>General Info</span><i class="nf nf-caret-down"></i>
+											</div>
+										
+											<div class="ilayer ilayer-5">
+												<img src="/static/ux3.x_ntoday/images/connection-line-f.png" />
+											</div>
+										</div>
+									</div>
+									
+
+									<div class="menu-room">
+										<div class="icon-room L-room CT-1">
+											<div class="dropdown-toggle" type="button"
+												data-toggle="" aria-expanded="false">
+												<div class="ilayer ilayer-1">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<div class="ilayer ilayer-2">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<a href="/GSolve/AddEmp/">
+												<div class="ilayer ilayer-3">
+													<i class="fa fa-cogs"></i>
+												</div>
+												</a>
+											</div>
+											<div class="main-title dropdown-toggle animated fadeInDown"
+												type="button" data-toggle="dropdown" aria-expanded="false">
+												<span>Add Employee</span><i class="nf nf-caret-down"></i>
+											</div>
+										
+											<div class="ilayer ilayer-5">
+												<img src="/static/ux3.x_ntoday/images/connection-line-f.png" />
+											</div>
+										</div>
+									</div>
+
+									<div class="menu-room">
+										<div class="icon-room R-room CT-2">
+											<div class="dropdown-toggle" type="button"
+												data-toggle="" aria-expanded="false">
+												<div class="ilayer ilayer-1">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<div class="ilayer ilayer-2">
+													<i class="d-icon icon-icon-12---a">&#xe80c;</i>
+												</div>
+												<a href="/GSolve/visaprocessing/">
+												<div class="ilayer ilayer-3">
+													<i class="fa fa-cogs"></i>
+												</div>
+												</a>
+											</div>
+											<div class="main-title dropdown-toggle animated fadeInDown"
+												type="button" data-toggle="dropdown" aria-expanded="false">
+												<span> Visa Processing</span><i class="nf nf-caret-down"></i>
+											</div>
+										
+											<div class="ilayer ilayer-5">
+												<img src="/static/ux3.x_ntoday/images/connection-line-f.png" />
+											</div>
+										</div>
+									</div>
+									
+									<!-- {%if 'is_lead' in request.session%}
+									
+									
+									<!-- {% endif %}
+									
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+					<div class="g-nav-icon-sec">
+						<div class="g-nav-icon-list">
+							<div class="btn-arrow-4  nav-close">
+								<a href="#" data-pjax-state=""> <img class="ani-img" src="/static/images/next-2.png"
+										width="20">
+									<span class="arrow next"><img src="/static/images/next-2.png" width="20"></span></a>
+							</div>
+							<ul>
+								<li><a class="logo " data-offset="0"><img src="/static/images/green-logo.png"
+											width="200"></a></li>
+								<li>
+									<div class="clear-fix"></div>
+								</li>
+								
+
+								
+
+							<!-- Bank -->
+							
+
+
+							<!-- Bank -->
+							<li class=" dp-menu-grp"><a class="category-menu " data-offset="0">SPA<i
+								class="fa fa fa-angle-down" aria-hidden="true"></i> </a>
+							<ul role="menu" class="dp-menu">
+							<li><a href="/spa_item_view/"><i class="fa fa-building" aria-hidden="true"></i> Finac PG</a></li>
+							<!-- <li><a href="/finac_in/"><i class="fa fa-building" aria-hidden="true"></i> Finac IN</a></li> -->
+			 				</ul>
+ 							</li>
+							 <li class=" dp-menu-grp"><a class="category-menu " data-offset="0">Tasks<i
+								class="fa fa fa-angle-down" aria-hidden="true"></i> </a>
+							<ul role="menu" class="dp-menu">
+							<li><a href="/tasks/info/view/"><i class="fa fa-building" aria-hidden="true"></i>Deadline</a></li>
+							<li><a href="/tasks/tasklist/view/"><i class="fa fa-building" aria-hidden="true"></i>Task Sequence</a></li>
+
+			 				</ul>
+ 							</li>
+							 <li class=" dp-menu-grp"><a class="category-menu " data-offset="0">Service Desk<i
+								class="fa fa fa-angle-down" aria-hidden="true"></i> </a>
+							<ul role="menu" class="dp-menu">
+							<li><a href="/service_desk/homepage/"><i class="fa fa-building" aria-hidden="true"></i>Dashboard</a></li>
+
+			 				</ul>
+ 							</li>
+							 <li class=" dp-menu-grp"><a class="category-menu " data-offset="0">Visa Process<i
+								class="fa fa fa-angle-down" aria-hidden="true"></i> </a>
+							<ul role="menu" class="dp-menu">
+								<li><a href="/GSolve/AddEmp/"> Add Candidate </a></li>
+								<li><a href="/GSolve/visaprocessing/"> Visa Processing </a></li>	
+
+			 				</ul>
+ 							</li>
+
+
+							
+						</div>
+					</div>
+				</div>
+				<div class="RS-data" id="RS-data">
+					{% block content %} {% endblock %}
+				</div>
+				<!-- Rs Data -->
+			</div>
+			<!-- END CONTENT BODY -->
+		</div>
+	</div>
+	<!-- Preloader -->
+	<div class="loader-wrapper" id="loading">
+		<div class="loader"></div>
+	</div>
+	<!-- END CONTENT -->
+
+	<!-- BEGIN CORE PLUGINS -->
+	<script src="/static/ux3.x_ntoday/plugins/jquery.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--LS-Menu SCRIPTS-->
+	<script src="/static/ux3.x_ntoday/plugins/Standard-menu/Standard-menu.js"></script>
+	<!--LS-Menu SCRIPTS-->
+
+
+	<!-- Data Tables-->
+	<script src="/static/ux3.x_ntoday/plugins/datatables/js/datatables.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js"
+		type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/datatables/js/table-datatables-colreorder.min.js"
+		type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
+	<!-- Data Tables-->
+
+	<!-- VERSION TOOLTIP  PLUGINS -->
+	<script src="/static/ux3.x_ntoday/plugins/tooltip/js/anime.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/tooltip/js/tooltip.min.js" type="text/javascript"></script>
+
+	<!-- Single and multi select Dropdown-->
+	<script src="/static/ux3.x_ntoday/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/select2/js/components-select2.min.js" type="text/javascript"></script>
+	<!-- Bootstrap Select Dropdown with Checkbox option   -->
+	<script src="/static/ux3.x_ntoday/plugins/bootstrap-multiselect/js/components-bootstrap-multiselect.min.js"
+		type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"
+		type="text/javascript"></script>
+	<!-- Multiple Select List with Search -->
+	<script src="/static/ux3.x_ntoday/plugins/multiselect-list/js/listbox-multiselected.js"></script>
+	<!-- End-->
+
+	<!-- Date Picker -->
+	<script src="/static/ux3.x_ntoday/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"
+		type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/bootstrap-datepicker/js/components-date-time-pickers.min.js"
+		type="text/javascript"></script>
+
+	<!-- Bootstrap Switch -->
+	<script src="/static/ux3.x_ntoday/plugins/bootstrap-switch/js/bootstrap-switch.min.js"
+		type="text/javascript"></script>
+	<script type="text/javascript" src="/static/NTree/plugins/bootstrap-sweetalert/js/sweetalert.min.js"></script>
+	<!--  SEARCH  -->
+	<script src="/static/ux3.x_ntoday/js/default/search.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/time-picker-mobile/js/time-picker-mobile.js"
+		type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/date-picker-mobile/js/date-picker-mobile.js"
+		type="text/javascript"></script>
+
+	<script src="/static/ux3.x_ntoday/plugins/jquery-notification/js/lobibox.js" type="text/javascript"></script>
+	{% block scripts %} {% endblock %}
+
+
+	<!--Menu flip-->
+	<script src="/static/ux3.x_ntoday/plugins/menuflip/js/modernizr.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/plugins/menuflip/js/menu-flip.min.js" type="text/javascript"></script>
+	<!--End Menu flip-->
+	<script src="/static/ux3.x_ntoday/js/default/custom_script.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/themes/js/layout.min.js" type="text/javascript"></script>
+	<script src="/static/ux3.x_ntoday/themes/js/theme_switches.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/static/ux3.x_ntoday/js/default/ntoday.js"></script>
+
+</html>

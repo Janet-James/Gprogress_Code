@@ -1,0 +1,37 @@
+/* NEXT UX2.0 | NEXTKANBAN.CSS
+// Version    0.2 | Build 2
+// Released on | 22 Sep 2017
+// © 2017-2018 | www.nexttechnosolutions.com
+=====================================================*/
+
+section.box #myKanban { overflow-x: auto; padding-bottom: 20px; }
+.kanban-container { position: relative; box-sizing: border-box; width: auto; }
+.kanban-container * { box-sizing: border-box; }
+.kanban-container:after { clear: both; display: block; content: ""; }
+.kanban-board { position: relative; float: left;/* background: #E2E4E6;*/ transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
+.kanban-board.is-moving.gu-mirror { transform: rotate(3deg); }
+.kanban-board.is-moving.gu-mirror .kanban-drag { overflow: hidden; padding-right: 50px; }
+/*.kanban-board header { font-size: 16px; padding: 15px; position:relative }
+.kanban-board header .kanban-title-board { font-weight: 700; margin: 0; padding: 0; }*/
+.kanban-board .kanban-drag { background: #fff none repeat scroll 0 0; height: 100%; /* min-height: 600px; */ padding: 20px; width: 100%; cursor: move }
+.kanban-board:after { clear: both; display: block; content: ""; }
+.kanban-item { background: rgb(232, 248, 255);padding: 15px;margin-bottom: 20px;transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);border: 1px solid #b4e3f5; }
+.kanban-item:last-child { margin: 0; }
+.kanban-item.is-moving.gu-mirror { transform: rotate(3deg); height: auto !important; }
+/* Dragula CSS  */
+.gu-mirror { position: fixed !important; margin: 0 !important; z-index: 9999 !important; }
+.gu-hide { display: none !important; }
+.gu-unselectable { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; user-select: none !important; }
+.gu-transit { opacity: 0.2 !important; transform: rotate(0deg) !important; }
+.kanban-container footer { display: none }
+a.links { position: absolute; right: 30px; padding: 10px 15px 0 15px; background-color: #fff; border-top: 0 solid rgba(0,0,0,0.12); border-right: 0 solid rgba(0,0,0,0.12); font-size: 20px; font-weight: bold; cursor: pointer; }
+a.links:before { position: absolute; top: 0; left: -12px; z-index: 1; display: block; width: 23px; height: 37px; background-color: #FFF; border-top: 0 solid rgba(0,0,0,0.12); border-left: 0 solid rgba(0,0,0,0.12); content: " "; -webkit-transform: skewX(30deg); -moz-transform: skewX(30deg); -ms-transform: skewX(30deg); -o-transform: skewX(30deg); transform: skewX(30deg); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0), -1px 0 0 rgba(100,100,100,0.05); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0), -1px 0 0 rgba(100,100,100,0.05); -ms-box-shadow: 0 1px 3px rgba(0,0,0,0), -1px 0 0 rgba(100,100,100,0.05); -o-box-shadow: 0 1px 3px rgba(0,0,0,0), -1px 0 0 rgba(100,100,100,0.05); box-shadow: 0 1px 3px rgba(0,0,0,0), -1px 0 0 rgba(100,100,100,0.05); }
+a.del-links { position: absolute; right: 0; padding: 10px 15px 0 5px; background-color: #fff; border-top: 0 solid rgba(0,0,0,0.12); border-right: 0 solid rgba(0,0,0,0.12); font-size: 20px; font-weight: bold; cursor: pointer; }
+/*a.del-links:before { position: absolute; top: 0; left: -12px; z-index: 1; display: block; width: 23px; height: 37px; background-color: #FFF; border-top: 0 solid rgba(0,0,0,0.12); border-left: 0 solid rgba(0,0,0,0.12); content: " "; -webkit-transform: skewX(30deg); -moz-transform: skewX(30deg); -ms-transform: skewX(30deg); -o-transform: skewX(30deg); transform: skewX(30deg); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0), -1px 0 0 rgba(100,100,100,0.05); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0), -1px 0 0 rgba(100,100,100,0.05); -ms-box-shadow: 0 1px 3px rgba(0,0,0,0), -1px 0 0 rgba(100,100,100,0.05); -o-box-shadow: 0 1px 3px rgba(0,0,0,0), -1px 0 0 rgba(100,100,100,0.05); box-shadow: 0 1px 3px rgba(0,0,0,0), -1px 0 0 rgba(100,100,100,0.05); }*/
+
+
+.kanban-board header { position: relative; display: inline-block; width: 100%; vertical-align: top; background-color: transparent; border: 0 solid rgba(0,0,0,0.12); border-bottom: 0 solid #004b98; }
+.kanban-board-header .title { position: relative; width: auto; height: 36px; background-color: #FFF; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
+.kanban-board-header .title:after { position: absolute; top: 0; right: -18px; z-index: 1; display: block; width: 30px; height: 36px; background-color: #FFF; border-right: 0 solid rgba(0,0,0,0.12); content: " "; -webkit-transform: skewX(30deg); -moz-transform: skewX(30deg); -ms-transform: skewX(30deg); -o-transform: skewX(30deg); transform: skewX(30deg); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0), 1px 0 0 rgba(100,100,100,0.05); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0), 1px 0 0 rgba(100,100,100,0.05); -ms-box-shadow: 0 1px 3px rgba(0,0,0,0), 1px 0 0 rgba(100,100,100,0.05); -o-box-shadow: 0 1px 3px rgba(0,0,0,0), 1px 0 0 rgba(100,100,100,0.05); box-shadow: 0 1px 3px rgba(0,0,0,0), 1px 0 0 rgba(100,100,100,0.05) }
+.kanban-item [contenteditable="true"] { cursor: auto }
+.kanban-item [contenteditable="true"]:focus, .kanban-board-header .title h4:focus { outline: 0; }

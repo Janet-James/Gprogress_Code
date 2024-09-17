@@ -1,0 +1,565 @@
+<html>
+
+<head>
+	<title>Visa Medical Examiantion Form</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
+</head>
+
+<body>
+	<table cellpadding="2" style="width:100%; text-align:center;  margin-bottom:10px; margin-top: 10px;">
+		<tr>
+			<td>
+				<p style="font-size: 13px; margin-bottom:0px"> PAPUA NEW GUINEA</p>
+				<p style="font-size: 13px; margin-bottom:0px;margin-top: 0px;">DEPARTMENT OF FOREIGN AFFAIRS & TRADE </p>
+				<p style="font-size: 13px; margin-bottom:0px;margin-top: 0px; ">MIGRATION & CITIZENSHIP BRANCH</p>
+				<h2 style="font-size: 24px;letter-spacing: 1px; margin-bottom:0px;margin-top: 5px;line-height:1">MEDICAL EXAMINATION</h2> </td>
+		</tr>
+	</table>
+	<p style="font-size: 12px;padding-left: 20px; word-spacing: 6px;letter-spacing: 0.5px; border-bottom: 2px solid #000;margin-top: 0px;margin-bottom:0px;padding-bottom:0"> For Persons Seeking Permanent Admission to Papua New Guinea</p>
+	<p style="font-size: 13px;margin-bottom:0px;">Part A. DECLARATION BY INTENDING MIGRANT </p>
+	<table cellpadding="2" style="width:100%; text-align:center;  margin-bottom:0px; ">
+		<tr>
+			<td style="width:50px;">
+				<p style="font-size: 12px; margin-bottom: 0;line-height:1 ">NAME</p>
+			</td>
+			<td>
+				<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;padding-bottom:0px;line-height:1">{{json_data.full_name}}</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:50px;"> </td>
+			<td>
+				<p style="font-size: 11px; margin-bottom: 0;margin-top: 5px;text-align:center; line-height:1"> (Full name in BLOCK capitals)</p>
+			</td>
+		</tr>
+	</table>
+	<table cellpadding="2" style="width:100%; text-align:center;  margin-bottom:10px; ">
+		<tr>
+			<td style="width:70px;">
+				<p style="font-size: 12px; margin-bottom: 0; margin-top:0px; line-height:1">ADDRESS</p>
+			</td>
+			<td>
+				<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">{{json_data.address}}</p>
+			</td>
+		</tr>
+	</table>
+	<table cellpadding="2" style="width:100%;  margin-bottom:10px; ">
+		<tr>
+			<td style="width:100px;">
+				<p style="font-size: 12px; margin-bottom: 0;line-height:1">DATE OF BIRTH</p>
+			</td>
+			<td>
+				<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">{{json_data.date_of_birth}}</p>
+			</td>
+			<td style="width:180px;">
+				<p style="font-size: 12px; margin-bottom: 0;line-height:1">Identity Document/Passport No</p>
+			</td>
+			<td>
+				<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">{{json_data.passport_no}}</p>
+			</td>
+		</tr>
+	</table>
+	<ol style="font-size: 12px;line-height:1.15">
+		<li> Have you, or has any member of your family ever had any serious illness or surgical operation?
+			<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+				<tr>
+					<td style="width:115px;">
+						<p style="font-size: 12px; margin-bottom: 0;">If so, give details</p>
+					</td>
+					<td>
+						<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;">{{json_data.family_illness_detail}}</p>
+					</td>
+				</tr>
+			</table>
+		</li>
+		<li> Have you, or has any member of your family ever suffered from or been suspected of suffering from tuber- culosis?
+			<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+				<tr>
+					<td style="width:115px;">
+						<p style="font-size: 12px; margin-bottom: 0;">If so, give details</p>
+					</td>
+					<td>
+						<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;">{{json_data.family_illness_tb_detail}}</p>
+					</td>
+				</tr>
+			</table>
+		</li>
+		<li> Have you, or has any member of your family ever suffered from a nervous or mental disorder, its or epile- psy, or been treated in an institution for any kind of these disorders?
+			<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+				<tr>
+					<td style="width:115px;">
+						<p style="font-size: 12px; margin-bottom: 0;">If so, give details</p>
+					</td>
+					<td>
+						<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;">{{json_data.family_mental_illness_detail}}</p>
+					</td>
+					<td style="width:130px;">
+						<p style="font-size: 12px; margin-bottom: 0;">Examiners initials</p>
+					</td>
+					<td style="width:100px;"> </td>
+				</tr>
+			</table>
+		</li>
+		<li> What medical attention have you required during the last twelve months?
+			<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+				<tr>
+					<td>
+						<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;">{{json_data.required_medical_attention}}</p>
+					</td>
+				</tr>
+			</table>
+		</li>
+		<li> Do you, or does any member of your family, suffer from any physical disability which will prevent you/him/ her from leading a normal life in Papua New Guinea?
+			<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+				<tr>
+					<td style="width:115px;">
+						<p style="font-size: 12px; margin-bottom: 0;">If so, give details</p>
+					</td>
+					<td>
+						<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;">{{json_data.family_physical_disability_detail}}</p>
+					</td>
+				</tr>
+			</table> I hereby CERTIFY that the above statements and all information about myself and my dependants supplied by me to the Medical Examiner are correct in every particular:
+			<br>
+			<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+				<tr>
+					<td style="width:230px;">
+						<p style="font-size: 12px; margin-bottom: 0;">Signature of intending migration</p>
+					</td>
+					<td>
+						<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;">&nbsp;</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:230px;"> </td>
+					<td>
+						<p style="font-size: 11px;text-align: center; margin-bottom: 0;">(To be made in the presence of the Medical Examiner)</p>
+					</td>
+				</tr>
+			</table>
+		</li>
+	</ol>
+	<p style="font-size:11px; word-spacing: 20px;letter-spacing: 1px; border-top: 2px solid #000;padding-top: 5px;"> Part &nbsp; B. &nbsp; TO &nbsp;BE &nbsp;COMPLETED&nbsp; BY &nbsp;THE&nbsp; MEDICAL &nbsp;EXAMINER &nbsp;(All &nbsp;physical&nbsp; signs&nbsp; to&nbsp; be&nbsp; recorded&nbsp;under the&nbsp; various&nbsp;
+		<br> system&nbsp; headings&nbsp; together&nbsp; with &nbsp;an &nbsp;estimate &nbsp;"REMARKS" &nbsp;of &nbsp;any &nbsp;disability &nbsp;caused)</p>
+	<table cellpadding="2" style="width:100%;  margin-bottom:5px; margin-top: 5px;">
+		<tr>
+			<td>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">A. </p>
+						</td>
+						<td style="width:30px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Heart</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:0px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">B. </p>
+						</td>
+						<td style="width:120px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Blood Pressure Syst</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1"> </p>
+						</td>
+						<td style="width:120px;">
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+						<td style="width:35px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Diast</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">C. </p>
+						</td>
+						<td style="width:40px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Lungs</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">D. </p>
+						</td>
+						<td style="width:100px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Nervous System</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:0px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">E. </p>
+						</td>
+						<td>
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Mental condition and</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1"> </p>
+						</td>
+						<td style="width:70px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">intelligence</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">F. </p>
+						</td>
+						<td style="width:100px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Digestive Organs</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">G. </p>
+						</td>
+						<td>
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Skeleton-Bones and Joints</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1"> </p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">H. </p>
+						</td>
+						<td style="width:40px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Skin</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">I. </p>
+						</td>
+						<td style="width:50px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Hearing</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:0px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">J. </p>
+						</td>
+						<td>
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Sight</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:0px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1"> </p>
+						</td>
+						<td style="width:115px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">(a) Without glasses,</p>
+						</td>
+						<td style="width:15px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">R</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+						<td style="width:15px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">L</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:0px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1"> </p>
+						</td>
+						<td>
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">(b) With glasses (if worn)</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:0px; ">
+					<tr>
+						<td style="width:40px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1"> </p>
+						</td>
+						<td style="width:15px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">R</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+						<td style="width:15px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">L</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">K. </p>
+						</td>
+						<td style="width:130px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Genito Urinary Organs</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:0px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">L. </p>
+						</td>
+						<td>
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Urine-Is albumen or </p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1"> </p>
+						</td>
+						<td>
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">sugar present?</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1"> </p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">M. </p>
+						</td>
+						<td style="width:40px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Teeth</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">N. </p>
+						</td>
+						<td style="width:60px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Deformities</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:0px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">O. </p>
+						</td>
+						<td>
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">If pregnant, period of </p>
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+					<tr>
+						<td style="width:20px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1"> </p>
+						</td>
+						<td style="width:60px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">pregnancy</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+		<tr>
+			<td style="width:40px;">
+				<p style="font-size: 12px; margin-bottom: 0;line-height:1">Height</p>
+			</td>
+			<td style="width:80px;">
+				<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+			</td>
+			<td style="width:40px;">
+				<p style="font-size: 12px; margin-bottom: 0;line-height:1">Weight</p>
+			</td>
+			<td style="width:80px;">
+				<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+			</td>
+			<td></td>
+		</tr>
+	</table>
+	<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+		<tr>
+			<td style="width:540px;">
+				<p style="font-size: 12px; margin-bottom: 0;line-height:1">REMARKS (The Medical Examiner should comment on any departure from normal found or stated)</p>
+			</td>
+			<td>
+				<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+			</td>
+		</tr>
+	</table>
+	<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+		<tr>
+			<td>
+				<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+			</td>
+		</tr>
+	</table>
+	<table cellpadding="2" style="width:100%;  margin-bottom:5px; ">
+		<tr>
+			<td>
+				<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+			</td>
+		</tr>
+	</table>
+	<p style="font-size: 12px; margin-bottom: 3px;line-height:1">I CERTIFY that I have this day examined the above-named, that the results are as set forth, and in my opinion:</p>
+	<table cellpadding="2" style="width:100%;  margin-bottom:0px; ">
+		<tr>
+			<td style="width:20px;">
+				<p style="font-size: 12px; margin-bottom: 0;line-height:1">i</p>
+			</td>
+			<td>
+				<p style="font-size: 12px; margin-bottom: 0;line-height:1.25">subject to any special observations under 'Remarks', the above-named is in good health and of sound constitution and not suffering from any nervous, mental or physical defect which would cause in- ability to earn a living in Papua New Guinea.</p>
+			</td>
+		</tr>
+	</table>
+	<table cellpadding="2" style="width:100%;  margin-bottom:3px ">
+		<tr>
+			<td style="width:20px;">
+				<p style="font-size: 12px; margin-bottom: 0;line-height:1">ii</p>
+			</td>
+			<td>
+				<p style="font-size: 12px; margin-bottom: 0;line-height:1">the above-named suffers a nervous, mental or physical defect as quoted and/or is NOT in good health.</p>
+			</td>
+		</tr>
+	</table>
+	<table cellpadding="2" style="width:100%;  margin-bottom:3px ">
+		<tr>
+			<td style="width: 30%;">
+				<p style="font-size: 12px; margin-bottom: 0;line-height:1">*Delete whichever does not apply.</p>
+				<br>
+				<p style="font-size: 12px; margin-bottom: 0;line-height:1">Govt. Print.—A3918/20 000.-11.81</p>
+			</td>
+			<td></td>
+			<td style="width: 50%;">
+				<table cellpadding="2" style="width:100%;  margin-bottom:3px ">
+					<tr>
+						<td style="width: 60%;">
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+						<td style="width: 30px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Date</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1;text-align:center">(Signature and Qualifications)</p>
+						</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+				<table cellpadding="2" style="width:100%;  margin-bottom:3px ">
+					<tr>
+						<td style="width:50px;">
+							<p style="font-size: 12px; margin-bottom: 0;line-height:1">Address</p>
+						</td>
+						<td>
+							<p style="font-size: 12px;width:100%;border-bottom: 1.5px dotted;line-height:1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

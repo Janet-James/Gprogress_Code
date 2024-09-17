@@ -1,0 +1,112 @@
+#boxItem, #productList{
+    display: none;
+}
+#boxItem.show, #productList.show{
+    display: block;
+}
+
+.toggleContainer {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: fit-content;
+    border: 3px solid #cbcbcb;
+    border-radius: 20px !important;
+    background: #d1d1d1;
+    font-weight: bold;
+    color: #343434;
+    cursor: pointer;
+}
+.toggleContainer::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0%;
+    border-radius: 20px;
+    background: #37b152;
+    transition: all 0.3s;
+}
+.toggleCheckbox:checked + .toggleContainer::before {
+    left: 50%;
+}
+.toggleContainer div {
+padding: 6px;
+text-align: center;
+z-index: 1;
+}
+.toggleCheckbox {
+display: none;
+}
+.toggleCheckbox:checked + .toggleContainer div:first-child{
+color: white;
+transition: color 0.3s;
+}
+.toggleCheckbox:checked + .toggleContainer div:last-child {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+.toggleCheckbox + .toggleContainer div:first-child {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+.toggleCheckbox + .toggleContainer div:last-child{
+color: white;
+transition: color 0.3s;
+}
+
+.tableBox{
+    padding: 15px;
+  }
+  .showItemCount {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .showItemCount p {
+    margin-top: 10px;
+  }
+
+  .dataTitle {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 8px; */
+  background: #f4fcff;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.dataHeading {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 8px; */
+  background: transparent;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+.dataItem {
+  border: 1px solid #d7d7d7;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.dataTitle .thTitle.sno, .dataItem .data.sno{
+width: 8%;
+}
+.dataTitle .thTitle, .dataItem .data {
+  width: 15%;
+  font-weight: bold;
+}
+.dataDesc {
+  background: #f5fcffab;
+  display: flex;
+  padding: 10px;
+}
+.dataDesc .subData{
+width: 15%;
+}
+.page-pagination{
+text-align: right;
+}
